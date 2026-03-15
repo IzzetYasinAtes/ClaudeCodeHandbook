@@ -20,9 +20,9 @@ flowchart TD
     subgraph otel ["OpenTelemetry Mimarisi"]
         direction LR
         SIGNALS["📡 Sinyal Türleri"]
-        TRACES["Traces (İzler)\nİstek yaşam döngüsü"]
-        METRICS["Metrics (Metrikler)\nSayısal ölçümler"]
-        LOGS["Logs (Günlükler)\nOlay kayıtları"]
+        TRACES["Traces (İzler)<br/>İstek yaşam döngüsü"]
+        METRICS["Metrics (Metrikler)<br/>Sayısal ölçümler"]
+        LOGS["Logs (Günlükler)<br/>Olay kayıtları"]
     end
 
     SIGNALS --> TRACES
@@ -30,8 +30,8 @@ flowchart TD
     SIGNALS --> LOGS
 
     subgraph pipeline ["Veri Akışı"]
-        CC["Claude Code\n(Instrumentation)"] --> COLLECTOR["OTel Collector\n(Toplama)"]
-        COLLECTOR --> BACKEND["Backend\n(Depolama & Görselleştirme)"]
+        CC["Claude Code<br/>(Instrumentation)"] --> COLLECTOR["OTel Collector<br/>(Toplama)"]
+        COLLECTOR --> BACKEND["Backend<br/>(Depolama & Görselleştirme)"]
     end
 
     TRACES --> CC
@@ -207,11 +207,11 @@ claude-session (root span)
 flowchart TD
     CC["Claude Code"] --> OTEL["OTel Collector"]
 
-    OTEL --> DD["Datadog\nAPM + Metrics"]
-    OTEL --> GRAF["Grafana + Tempo\nTrace görselleştirme"]
-    OTEL --> NR["New Relic\nFull-stack monitoring"]
-    OTEL --> SPLUNK["Splunk\nLog analizi"]
-    OTEL --> JAEGER["Jaeger\nDistributed tracing"]
+    OTEL --> DD["Datadog<br/>APM + Metrics"]
+    OTEL --> GRAF["Grafana + Tempo<br/>Trace görselleştirme"]
+    OTEL --> NR["New Relic<br/>Full-stack monitoring"]
+    OTEL --> SPLUNK["Splunk<br/>Log analizi"]
+    OTEL --> JAEGER["Jaeger<br/>Distributed tracing"]
 
     style CC fill:#2C3E50,color:#fff
     style OTEL fill:#F39C12,color:#fff

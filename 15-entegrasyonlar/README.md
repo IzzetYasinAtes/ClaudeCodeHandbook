@@ -6,13 +6,13 @@ Claude Code, terminal tabanlı bir arayüzün ötesinde birçok IDE, platform ve
 
 ```mermaid
 flowchart TD
-    A["VS Code Entegrasyonu\nExtension, inline diff, @-mentions"] --> B["JetBrains Entegrasyonu\nIntelliJ, PyCharm, WebStorm"]
-    B --> C["Cursor IDE Kullanımı\n.cursorrules ↔ CLAUDE.md"]
-    C --> D["Masaüstü Uygulaması\nParalel oturumlar, diff review"]
-    D --> E["Chrome Entegrasyonu\nWeb test, console debug"]
-    E --> F["Slack Entegrasyonu\n@claude, görev delegasyonu"]
-    F --> G["Uzaktan Kontrol\nTelefon/tablet, claude.ai/code"]
-    G --> H["Web Üzerinde Claude Code\nBulut altyapı, asenkron görev"]
+    A["VS Code Entegrasyonu<br/>Extension, inline diff, @-mentions"] --> B["JetBrains Entegrasyonu<br/>IntelliJ, PyCharm, WebStorm"]
+    B --> C["Cursor IDE Kullanımı<br/>.cursorrules ↔ CLAUDE.md"]
+    C --> D["Masaüstü Uygulaması<br/>Paralel oturumlar, diff review"]
+    D --> E["Chrome Entegrasyonu<br/>Web test, console debug"]
+    E --> F["Slack Entegrasyonu<br/>@claude, görev delegasyonu"]
+    F --> G["Uzaktan Kontrol<br/>Telefon/tablet, claude.ai/code"]
+    G --> H["Web Üzerinde Claude Code<br/>Bulut altyapı, asenkron görev"]
 ```
 
 ## İçerik
@@ -33,23 +33,23 @@ flowchart TD
 ```mermaid
 flowchart TB
     subgraph ide ["IDE Entegrasyonları"]
-        VS["VS Code\nExtension"]
-        JB["JetBrains\nPlugin"]
-        CR["Cursor\nTerminal"]
+        VS["VS Code<br/>Extension"]
+        JB["JetBrains<br/>Plugin"]
+        CR["Cursor<br/>Terminal"]
     end
 
     subgraph platform ["Platform Entegrasyonları"]
-        DT["Masaüstü\nApp"]
-        CH["Chrome\nBağlantısı"]
-        SL["Slack\nBot"]
+        DT["Masaüstü<br/>App"]
+        CH["Chrome<br/>Bağlantısı"]
+        SL["Slack<br/>Bot"]
     end
 
     subgraph remote ["Uzaktan Erişim"]
-        RC["Uzaktan Kontrol\nclaude.ai/code"]
-        WB["Web Claude Code\nBulut Altyapı"]
+        RC["Uzaktan Kontrol<br/>claude.ai/code"]
+        WB["Web Claude Code<br/>Bulut Altyapı"]
     end
 
-    CC["Claude Code\nÇekirdek"]
+    CC["Claude Code<br/>Çekirdek"]
 
     VS --> CC
     JB --> CC

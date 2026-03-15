@@ -20,7 +20,7 @@ Cursor IDE ve Claude Code birbirini tamamlayan iki farklı yaklaşım sunar:
 flowchart TB
     subgraph cursor ["Cursor IDE"]
         direction TB
-        CA["Cursor AI\n(Dahili Motor)"]
+        CA["Cursor AI<br/>(Dahili Motor)"]
         CT["Terminal Panel"]
         CE["Editor & Diff"]
     end
@@ -28,8 +28,8 @@ flowchart TB
     subgraph claude ["Claude Code"]
         direction TB
         CC["Claude Code CLI"]
-        CM["CLAUDE.md\nBellek"]
-        CT2["Araç Seti\n(30+ araç)"]
+        CM["CLAUDE.md<br/>Bellek"]
+        CT2["Araç Seti<br/>(30+ araç)"]
     end
 
     CT --> CC
@@ -86,13 +86,13 @@ Her iki dosya da AI asistanına proje kuralları ve bağlam sağlar. Önemli ola
 ```mermaid
 flowchart TB
     subgraph rules ["Proje Kuralları"]
-        CR[".cursorrules\nCursor AI için"]
-        CM["CLAUDE.md\nClaude Code için"]
-        SH["Ortak Kurallar\nHer iki araç için geçerli"]
+        CR[".cursorrules<br/>Cursor AI için"]
+        CM["CLAUDE.md<br/>Claude Code için"]
+        SH["Ortak Kurallar<br/>Her iki araç için geçerli"]
     end
 
-    CR --> CA["Cursor AI\nInline edit, autocomplete"]
-    CM --> CC["Claude Code\nTerminal, agentic workflow"]
+    CR --> CA["Cursor AI<br/>Inline edit, autocomplete"]
+    CM --> CC["Claude Code<br/>Terminal, agentic workflow"]
     SH --> CR
     SH --> CM
 
@@ -154,11 +154,11 @@ flowchart TB
 ```mermaid
 flowchart TB
     Q["Görev nedir?"]
-    Q --> A{"Küçük, tek dosya\ndeğişikliği mi?"}
-    A -->|Evet| CA["Cursor AI\nCtrl+K / Ctrl+I"]
-    A -->|Hayır| B{"Birden fazla dosya\nveya karmaşık görev mi?"}
-    B -->|Evet| CC["Claude Code\nTerminal"]
-    B -->|Hayır| C{"Autocomplete\nveya snippet mi?"}
+    Q --> A{"Küçük, tek dosya<br/>değişikliği mi?"}
+    A -->|Evet| CA["Cursor AI<br/>Ctrl+K / Ctrl+I"]
+    A -->|Hayır| B{"Birden fazla dosya<br/>veya karmaşık görev mi?"}
+    B -->|Evet| CC["Claude Code<br/>Terminal"]
+    B -->|Hayır| C{"Autocomplete<br/>veya snippet mi?"}
     C -->|Evet| CA
     C -->|Hayır| CC
 

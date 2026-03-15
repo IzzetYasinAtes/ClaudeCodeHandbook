@@ -18,13 +18,13 @@ Claude Code, kullanılacak modeli birkaç farklı yöntemle belirlemenize olanak
 
 ```mermaid
 flowchart TD
-    START["Model Seçimi"] --> FLAG{"--model flag\nkullanıldı mı?"}
+    START["Model Seçimi"] --> FLAG{"--model flag<br/>kullanıldı mı?"}
     FLAG -->|Evet| USE_FLAG["Flag'deki modeli kullan"]
-    FLAG -->|Hayır| ENV{"ANTHROPIC_MODEL\northam değişkeni?"}
-    ENV -->|Ayarlı| USE_ENV["Ortam değişkenindeki\nmodeli kullan"]
-    ENV -->|Ayarlanmamış| ALIAS{"Model alias\ntanımlı mı?"}
-    ALIAS -->|Evet| USE_ALIAS["Alias'ın karşılığı\nmodeli kullan"]
-    ALIAS -->|Hayır| DEFAULT["Varsayılan modeli\nkullan (Sonnet)"]
+    FLAG -->|Hayır| ENV{"ANTHROPIC_MODEL<br/>ortham değişkeni?"}
+    ENV -->|Ayarlı| USE_ENV["Ortam değişkenindeki<br/>modeli kullan"]
+    ENV -->|Ayarlanmamış| ALIAS{"Model alias<br/>tanımlı mı?"}
+    ALIAS -->|Evet| USE_ALIAS["Alias'ın karşılığı<br/>modeli kullan"]
+    ALIAS -->|Hayır| DEFAULT["Varsayılan modeli<br/>kullan (Sonnet)"]
 
     style USE_FLAG fill:#27AE60,color:#fff
     style USE_ENV fill:#3498DB,color:#fff
@@ -53,8 +53,8 @@ Model alias (takma ad), uzun model ID'lerini kısa ve hatırlanabilir isimlerle 
 flowchart LR
     subgraph aliases ["Model Alias Sistemi"]
         direction TB
-        DEFAULT_ALIAS["default\nVarsayılan model\n(Ana görevler için)"]
-        PLAN_ALIAS["plan\nPlanlama modeli\n(Plan modu için)"]
+        DEFAULT_ALIAS["default<br/>Varsayılan model<br/>(Ana görevler için)"]
+        PLAN_ALIAS["plan<br/>Planlama modeli<br/>(Plan modu için)"]
     end
 
     DEFAULT_ALIAS --> SONNET["claude-sonnet-4-20250514"]
@@ -127,14 +127,14 @@ Extended Thinking, Claude'un yanıt vermeden önce daha derin düşünmesini sa�
 flowchart LR
     subgraph levels ["Thinking Effort Seviyeleri"]
         direction TB
-        LOW["🟢 low\nDüşük çaba\nHızlı yanıtlar"]
-        MEDIUM["🟡 medium\nOrta çaba\nDengeli yaklaşım"]
-        HIGH["🔴 high\nYüksek çaba\nDerin analiz"]
+        LOW["🟢 low<br/>Düşük çaba<br/>Hızlı yanıtlar"]
+        MEDIUM["🟡 medium<br/>Orta çaba<br/>Dengeli yaklaşım"]
+        HIGH["🔴 high<br/>Yüksek çaba<br/>Derin analiz"]
     end
 
-    LOW --> L_USE["Basit düzenlemeler\nDosya okuma\nKısa sorular"]
-    MEDIUM --> M_USE["Genel kodlama\nHata düzeltme\nRefactoring"]
-    HIGH --> H_USE["Mimari tasarım\nKarmaşık algoritmalar\nGüvenlik analizi"]
+    LOW --> L_USE["Basit düzenlemeler<br/>Dosya okuma<br/>Kısa sorular"]
+    MEDIUM --> M_USE["Genel kodlama<br/>Hata düzeltme<br/>Refactoring"]
+    HIGH --> H_USE["Mimari tasarım<br/>Karmaşık algoritmalar<br/>Güvenlik analizi"]
 
     style LOW fill:#27AE60,color:#fff
     style MEDIUM fill:#F39C12,color:#fff
@@ -178,14 +178,14 @@ claude --thinking-effort high
 
 ```mermaid
 flowchart TD
-    TASK["Yeni Görev"] --> ASSESS{"Görev\nKarmaşıklığı?"}
+    TASK["Yeni Görev"] --> ASSESS{"Görev<br/>Karmaşıklığı?"}
 
-    ASSESS -->|Basit| SIMPLE["Model: Sonnet\nThinking: low\n\nÖrnek: Typo düzeltme,\nimport ekleme"]
-    ASSESS -->|Orta| MEDIUM_TASK["Model: Sonnet\nThinking: medium\n\nÖrnek: Feature geliştirme,\nbug fix"]
-    ASSESS -->|Karmaşık| COMPLEX{"Mimari\nkarar var mı?"}
+    ASSESS -->|Basit| SIMPLE["Model: Sonnet<br/>Thinking: low<br/><br/>Örnek: Typo düzeltme,<br/>import ekleme"]
+    ASSESS -->|Orta| MEDIUM_TASK["Model: Sonnet<br/>Thinking: medium<br/><br/>Örnek: Feature geliştirme,<br/>bug fix"]
+    ASSESS -->|Karmaşık| COMPLEX{"Mimari<br/>karar var mı?"}
 
-    COMPLEX -->|Evet| ARCH["Model: Opus (plan)\nThinking: high\n\nÖrnek: Sistem tasarımı,\nrefactoring planı"]
-    COMPLEX -->|Hayır| DEEP["Model: Sonnet\nThinking: high\n\nÖrnek: Büyük refactoring,\nkarmaşık algoritma"]
+    COMPLEX -->|Evet| ARCH["Model: Opus (plan)<br/>Thinking: high<br/><br/>Örnek: Sistem tasarımı,<br/>refactoring planı"]
+    COMPLEX -->|Hayır| DEEP["Model: Sonnet<br/>Thinking: high<br/><br/>Örnek: Büyük refactoring,<br/>karmaşık algoritma"]
 
     style SIMPLE fill:#27AE60,color:#fff
     style MEDIUM_TASK fill:#F39C12,color:#fff
@@ -262,9 +262,9 @@ export ANTHROPIC_MODEL="claude-sonnet-4@20250514"
 flowchart TD
     subgraph providers ["Claude Code Model Erişim Yolları"]
         direction LR
-        DIRECT["🔑 Doğrudan API\nANTHROPIC_API_KEY"]
-        BEDROCK["☁️ AWS Bedrock\nCLAUDE_CODE_USE_BEDROCK"]
-        VERTEX["☁️ Google Vertex AI\nCLAUDE_CODE_USE_VERTEX"]
+        DIRECT["🔑 Doğrudan API<br/>ANTHROPIC_API_KEY"]
+        BEDROCK["☁️ AWS Bedrock<br/>CLAUDE_CODE_USE_BEDROCK"]
+        VERTEX["☁️ Google Vertex AI<br/>CLAUDE_CODE_USE_VERTEX"]
     end
 
     DIRECT --> CLAUDE["Claude Modelleri"]

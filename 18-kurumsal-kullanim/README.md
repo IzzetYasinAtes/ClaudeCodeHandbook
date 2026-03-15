@@ -6,14 +6,14 @@ Claude Code, bireysel geliştiricilerin ötesinde, büyük ekiplerin ve kurumsal
 
 ```mermaid
 flowchart TD
-    A["Takım Kullanımı\nPaylaşılan kurallar, onboarding"] --> B["Analitik ve Metrikler\nKullanım izleme, verimlilik"]
-    B --> C["İzleme ve OpenTelemetry\nPerformans monitoring"]
-    C --> D["Ağ ve Proxy\nKurumsal ağ yapılandırma"]
-    D --> E["LLM Gateway\nYönlendirme ve endpoint"]
-    E --> F["Sunucu Tabanlı Ayarlar\nMerkezi konfigürasyon"]
-    F --> G["DevContainer\nTutarlı geliştirme ortamı"]
-    G --> H["Veri Güvenliği ve ZDR\nSıfır veri saklama"]
-    H --> I["Yasal Uyumluluk\nGDPR, KVKK, sertifikalar"]
+    A["Takım Kullanımı<br/>Paylaşılan kurallar, onboarding"] --> B["Analitik ve Metrikler<br/>Kullanım izleme, verimlilik"]
+    B --> C["İzleme ve OpenTelemetry<br/>Performans monitoring"]
+    C --> D["Ağ ve Proxy<br/>Kurumsal ağ yapılandırma"]
+    D --> E["LLM Gateway<br/>Yönlendirme ve endpoint"]
+    E --> F["Sunucu Tabanlı Ayarlar<br/>Merkezi konfigürasyon"]
+    F --> G["DevContainer<br/>Tutarlı geliştirme ortamı"]
+    G --> H["Veri Güvenliği ve ZDR<br/>Sıfır veri saklama"]
+    H --> I["Yasal Uyumluluk<br/>GDPR, KVKK, sertifikalar"]
 ```
 
 ## İçerik

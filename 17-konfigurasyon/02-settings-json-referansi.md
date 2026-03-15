@@ -16,14 +16,14 @@
 
 ```mermaid
 flowchart TD
-    ROOT["settings.json"] --> PERM["permissions\nİzin kuralları"]
-    ROOT --> HOOKS["hooks\nOtomasyon hook'ları"]
-    ROOT --> ENV["env\nOrtam değişkenleri"]
-    ROOT --> MCP["mcpServers\nMCP sunucu tanımları"]
-    ROOT --> MISC["Diğer Ayarlar\nmodel, theme, vb."]
+    ROOT["settings.json"] --> PERM["permissions<br/>İzin kuralları"]
+    ROOT --> HOOKS["hooks<br/>Otomasyon hook'ları"]
+    ROOT --> ENV["env<br/>Ortam değişkenleri"]
+    ROOT --> MCP["mcpServers<br/>MCP sunucu tanımları"]
+    ROOT --> MISC["Diğer Ayarlar<br/>model, theme, vb."]
 
-    PERM --> ALLOW["allow\nİzin verilen araçlar"]
-    PERM --> DENY["deny\nEngellenen araçlar"]
+    PERM --> ALLOW["allow<br/>İzin verilen araçlar"]
+    PERM --> DENY["deny<br/>Engellenen araçlar"]
 
     HOOKS --> PRE["PreToolUse"]
     HOOKS --> POST["PostToolUse"]
@@ -398,11 +398,11 @@ Claude Code başlatıldığında `settings.json` otomatik olarak doğrulanır. G
 
 ```mermaid
 flowchart LR
-    START["Claude Code\nBaşlatılır"] --> LOAD["settings.json\nYüklenir"]
-    LOAD --> VALIDATE{"JSON\nGeçerli mi?"}
-    VALIDATE -->|Evet| MERGE["Tüm seviyeler\nbirleştirilir"]
-    VALIDATE -->|Hayır| ERROR["❌ Hata mesajı\ngösterilir"]
-    MERGE --> READY["✅ Claude Code\nHazır"]
+    START["Claude Code<br/>Başlatılır"] --> LOAD["settings.json<br/>Yüklenir"]
+    LOAD --> VALIDATE{"JSON<br/>Geçerli mi?"}
+    VALIDATE -->|Evet| MERGE["Tüm seviyeler<br/>birleştirilir"]
+    VALIDATE -->|Hayır| ERROR["❌ Hata mesajı<br/>gösterilir"]
+    MERGE --> READY["✅ Claude Code<br/>Hazır"]
 
     style START fill:#3498DB,color:#fff
     style READY fill:#27AE60,color:#fff

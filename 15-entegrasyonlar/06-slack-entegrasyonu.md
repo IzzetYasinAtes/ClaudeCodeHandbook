@@ -17,14 +17,14 @@ Claude Code, Slack workspace'inize (çalışma alanı) entegre edilerek kodlama 
 ```mermaid
 flowchart TB
     subgraph slack ["Slack Workspace"]
-        CH["#engineering\nKanal"]
-        DM["Direkt Mesaj\n@claude"]
-        TH["Thread\nGörev takibi"]
+        CH["#engineering<br/>Kanal"]
+        DM["Direkt Mesaj<br/>@claude"]
+        TH["Thread<br/>Görev takibi"]
     end
 
     subgraph claude ["Claude Code"]
-        CC["Claude Code\nAgent"]
-        GH["GitHub\nEntegrasyonu"]
+        CC["Claude Code<br/>Agent"]
+        GH["GitHub<br/>Entegrasyonu"]
         PR["PR Oluşturma"]
     end
 
@@ -46,11 +46,11 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    A["claude.ai/settings\nadresine gidin"] --> B["Integrations\nsekmesini açın"]
-    B --> C["Slack → Install\nbutonuna tıklayın"]
-    C --> D["Slack workspace\nseçin"]
-    D --> E["İzinleri\nonaylayın"]
-    E --> F["✅ Kurulum\ntamamlandı"]
+    A["claude.ai/settings<br/>adresine gidin"] --> B["Integrations<br/>sekmesini açın"]
+    B --> C["Slack → Install<br/>butonuna tıklayın"]
+    C --> D["Slack workspace<br/>seçin"]
+    D --> E["İzinleri<br/>onaylayın"]
+    E --> F["✅ Kurulum<br/>tamamlandı"]
 
     style A fill:#3B82F6,color:#fff
     style F fill:#10B981,color:#fff
@@ -105,7 +105,7 @@ sequenceDiagram
 
     U->>SL: @claude login sayfasına CAPTCHA ekle
     SL->>CC: Görev al
-    CC-->>SL: 📋 Plan oluşturuldu:\n1. CAPTCHA paketi ekle\n2. Component oluştur\n3. Test yaz
+    CC-->>SL: 📋 Plan oluşturuldu:<br/>1. CAPTCHA paketi ekle<br/>2. Component oluştur<br/>3. Test yaz
     
     Note over SL: Thread içinde devam
     
@@ -176,7 +176,7 @@ Token yenileme mekanizması ne?
 
 ```mermaid
 flowchart TB
-    ISS["GitHub Issue #78\nLogin timeout hatası"]
+    ISS["GitHub Issue #78<br/>Login timeout hatası"]
     
     ISS -->|"@claude #78'i düzelt"| CC["Claude Code"]
     CC --> A1["1. Issue'yu oku"]
@@ -185,7 +185,7 @@ flowchart TB
     A3 --> A4["4. Test yaz"]
     A4 --> A5["5. PR oluştur"]
 
-    A5 --> SL["Slack'e bildir:\n🔗 PR #89 oluşturuldu"]
+    A5 --> SL["Slack'e bildir:<br/>🔗 PR #89 oluşturuldu"]
     A5 --> PR["GitHub PR #89"]
 
     style ISS fill:#EF4444,color:#fff
@@ -255,10 +255,10 @@ Farklı kanallar için farklı davranışlar yapılandırabilirsiniz:
 flowchart TB
     subgraph security ["Güvenlik Katmanları"]
         direction TB
-        S1["Slack Workspace\nSadece yetkili üyeler"]
-        S2["Kanal Erişimi\nKanal bazlı kısıtlama"]
-        S3["Repo İzinleri\nBelirli repolarla sınırlı"]
-        S4["İşlem İzinleri\nOkuma/yazma kontrolü"]
+        S1["Slack Workspace<br/>Sadece yetkili üyeler"]
+        S2["Kanal Erişimi<br/>Kanal bazlı kısıtlama"]
+        S3["Repo İzinleri<br/>Belirli repolarla sınırlı"]
+        S4["İşlem İzinleri<br/>Okuma/yazma kontrolü"]
     end
 
     S1 --> S2 --> S3 --> S4

@@ -19,18 +19,18 @@ MCP sunucuları `.mcp.json` adlı bir JSON dosyasında tanımlanır. Bu dosya ik
 ```mermaid
 flowchart TD
     subgraph proje ["Proje Kapsamı (Project Scope)"]
-        PF[".mcp.json\n(Proje kökünde)"]
-        PD["Sadece bu projede geçerli\nTakımla paylaşılabilir\nGit'e eklenebilir"]
+        PF[".mcp.json<br/>(Proje kökünde)"]
+        PD["Sadece bu projede geçerli<br/>Takımla paylaşılabilir<br/>Git'e eklenebilir"]
     end
 
     subgraph kullanici ["Kullanıcı Kapsamı (User Scope)"]
-        UF["~/.claude/.mcp.json\n(Home dizininde)"]
-        UD["Tüm projelerde geçerli\nKişisel tercihler\nGit'e eklenmez"]
+        UF["~/.claude/.mcp.json<br/>(Home dizininde)"]
+        UD["Tüm projelerde geçerli<br/>Kişisel tercihler<br/>Git'e eklenmez"]
     end
 
-    CC["Claude Code\nBaşlatılıyor"] --> PF
+    CC["Claude Code<br/>Başlatılıyor"] --> PF
     CC --> UF
-    PF --> MERGE["Birleştirilmiş\nMCP Sunucu Listesi"]
+    PF --> MERGE["Birleştirilmiş<br/>MCP Sunucu Listesi"]
     UF --> MERGE
 
     style proje fill:#d4edda,stroke:#28a745
@@ -204,22 +204,22 @@ Bir MCP sunucusu Claude Code oturumunda şu yaşam döngüsünü izler:
 
 ```mermaid
 flowchart TD
-    START["Claude Code\nBaşlatıldı"] --> READ[".mcp.json\nOkunuyor"]
-    READ --> VALIDATE{"Konfigürasyon\nGeçerli mi?"}
+    START["Claude Code<br/>Başlatıldı"] --> READ[".mcp.json<br/>Okunuyor"]
+    READ --> VALIDATE{"Konfigürasyon<br/>Geçerli mi?"}
 
-    VALIDATE -->|"Evet"| SPAWN["Sunucu Süreci\nBaşlatılıyor"]
-    VALIDATE -->|"Hayır"| ERROR["Hata Mesajı\nKonsola yazılır"]
+    VALIDATE -->|"Evet"| SPAWN["Sunucu Süreci<br/>Başlatılıyor"]
+    VALIDATE -->|"Hayır"| ERROR["Hata Mesajı<br/>Konsola yazılır"]
 
-    SPAWN --> INIT["Başlatma\n(initialize)"]
-    INIT --> TOOLS["Araç Listesi\nAlınıyor"]
+    SPAWN --> INIT["Başlatma<br/>(initialize)"]
+    INIT --> TOOLS["Araç Listesi<br/>Alınıyor"]
     TOOLS --> READY["Sunucu Hazır ✅"]
 
-    READY --> USE["Claude Code\nAraç Çağırıyor"]
-    USE --> RESPONSE["Sunucu\nYanıt Veriyor"]
+    READY --> USE["Claude Code<br/>Araç Çağırıyor"]
+    USE --> RESPONSE["Sunucu<br/>Yanıt Veriyor"]
     RESPONSE --> USE
 
-    USE --> END["Oturum Sona\nErdi"]
-    END --> SHUTDOWN["Sunucu Süreci\nKapatılıyor"]
+    USE --> END["Oturum Sona<br/>Erdi"]
+    END --> SHUTDOWN["Sunucu Süreci<br/>Kapatılıyor"]
 
     style READY fill:#d4edda,stroke:#28a745
     style ERROR fill:#f8d7da,stroke:#dc3545
@@ -285,8 +285,8 @@ claude mcp remove github
 ```mermaid
 flowchart LR
     CLI["claude mcp add"] --> SCOPE{"--scope?"}
-    SCOPE -->|"user\n(varsayılan)"| USER_FILE["~/.claude/.mcp.json"]
-    SCOPE -->|"project"| PROJ_FILE[".mcp.json\n(proje kökü)"]
+    SCOPE -->|"user<br/>(varsayılan)"| USER_FILE["~/.claude/.mcp.json"]
+    SCOPE -->|"project"| PROJ_FILE[".mcp.json<br/>(proje kökü)"]
 ```
 
 ---

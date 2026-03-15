@@ -19,20 +19,20 @@ Claude Code'un araçları, risk düzeyine göre üç katmana ayrılır:
 flowchart TB
     subgraph katman1 ["Katman 1: Salt Okunur Araçlar"]
         direction LR
-        K1_DESC["Onay gerektirmez\nOtomatik çalışır"]
-        K1_TOOLS["Read · Glob · Grep\nAgent · Task"]
+        K1_DESC["Onay gerektirmez<br/>Otomatik çalışır"]
+        K1_TOOLS["Read · Glob · Grep<br/>Agent · Task"]
     end
 
     subgraph katman2 ["Katman 2: Bash Komutları"]
         direction LR
-        K2_DESC["İlk kullanımda onay gerekir\nProje+komut bazında hatırlanabilir"]
-        K2_TOOLS["Bash · Shell\nKomut çalıştırma"]
+        K2_DESC["İlk kullanımda onay gerekir<br/>Proje+komut bazında hatırlanabilir"]
+        K2_TOOLS["Bash · Shell<br/>Komut çalıştırma"]
     end
 
     subgraph katman3 ["Katman 3: Dosya Değişiklikleri"]
         direction LR
-        K3_DESC["Her zaman onay gerekir\nSadece oturum boyunca hatırlanır"]
-        K3_TOOLS["Write · Edit\nNotebookEdit · MultiEdit"]
+        K3_DESC["Her zaman onay gerekir<br/>Sadece oturum boyunca hatırlanır"]
+        K3_TOOLS["Write · Edit<br/>NotebookEdit · MultiEdit"]
     end
 
     katman1 -->|"Daha yüksek risk"| katman2
@@ -156,25 +156,25 @@ Bir araç çağrıldığında izin sistemi şu şekilde çalışır:
 flowchart TD
     START["Araç Çağrısı"] --> CHECK_TYPE{"Araç Türü?"}
 
-    CHECK_TYPE -->|"Salt Okunur\n(Read, Glob, Grep)"| AUTO_ALLOW["Otomatik İzin ✅"]
+    CHECK_TYPE -->|"Salt Okunur<br/>(Read, Glob, Grep)"| AUTO_ALLOW["Otomatik İzin ✅"]
 
-    CHECK_TYPE -->|"Bash Komutu"| CHECK_RULES{"İzin Kuralları\nKontrolü"}
+    CHECK_TYPE -->|"Bash Komutu"| CHECK_RULES{"İzin Kuralları<br/>Kontrolü"}
 
-    CHECK_TYPE -->|"Dosya Değişikliği\n(Write, Edit)"| CHECK_SESSION{"Oturum İzni\nVar mı?"}
+    CHECK_TYPE -->|"Dosya Değişikliği<br/>(Write, Edit)"| CHECK_SESSION{"Oturum İzni<br/>Var mı?"}
 
     CHECK_RULES -->|"allow listesinde"| AUTO_ALLOW
     CHECK_RULES -->|"deny listesinde"| AUTO_DENY["Otomatik Red ❌"]
     CHECK_RULES -->|"Listede yok"| ASK_USER_BASH{"Kullanıcıya Sor"}
 
     ASK_USER_BASH -->|"Yes"| EXECUTE["Çalıştır"]
-    ASK_USER_BASH -->|"Always"| SAVE_RULE["Kuralı Kaydet\n+ Çalıştır"]
+    ASK_USER_BASH -->|"Always"| SAVE_RULE["Kuralı Kaydet<br/>+ Çalıştır"]
     ASK_USER_BASH -->|"No"| SKIP["Atla"]
 
     CHECK_SESSION -->|"Evet"| EXECUTE
     CHECK_SESSION -->|"Hayır"| ASK_USER_EDIT{"Kullanıcıya Sor"}
 
     ASK_USER_EDIT -->|"Yes"| EXECUTE
-    ASK_USER_EDIT -->|"Don't ask\nthis session"| SESSION_SAVE["Oturum İzni\nKaydet + Çalıştır"]
+    ASK_USER_EDIT -->|"Don't ask<br/>this session"| SESSION_SAVE["Oturum İzni<br/>Kaydet + Çalıştır"]
     ASK_USER_EDIT -->|"No"| SKIP
 
     style AUTO_ALLOW fill:#d4edda,stroke:#28a745

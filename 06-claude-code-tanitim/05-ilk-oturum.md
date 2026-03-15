@@ -174,13 +174,13 @@ Bu noktada üç seçeneğiniz vardır:
 
 ```mermaid
 flowchart LR
-    PROMPT["İzin İstemi"] --> A["Allow\n(Bu sefer izin ver)"]
-    PROMPT --> B["Allow always\n(Hep izin ver)"]
-    PROMPT --> C["Deny\n(Reddet)"]
+    PROMPT["İzin İstemi"] --> A["Allow<br/>(Bu sefer izin ver)"]
+    PROMPT --> B["Allow always<br/>(Hep izin ver)"]
+    PROMPT --> C["Deny<br/>(Reddet)"]
 
-    A --> ONCE["Bu dosya için\nbir kerelik izin"]
-    B --> ALWAYS["Bu oturumda\naynı tip işlemlere\notomatik izin"]
-    C --> REJECT["İşlem iptal\nClause alternatif sorar"]
+    A --> ONCE["Bu dosya için<br/>bir kerelik izin"]
+    B --> ALWAYS["Bu oturumda<br/>aynı tip işlemlere<br/>otomatik izin"]
+    C --> REJECT["İşlem iptal<br/>Clause alternatif sorar"]
 ```
 
 | Seçenek | Kısayol | Açıklama | Ne zaman kullanılır? |

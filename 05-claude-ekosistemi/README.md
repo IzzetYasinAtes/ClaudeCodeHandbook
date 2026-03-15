@@ -6,9 +6,9 @@ Bu bölüm, Anthropic'in geliştirdiği Claude AI'ı tanıtır. Claude'un ne old
 
 ```mermaid
 flowchart TD
-    A["Claude Nedir?"] --> B["Claude Model Ailesi\n(Haiku / Sonnet / Opus)"]
-    B --> C["API ve SDK\nKullanımı"]
-    C --> D["Claude'un Özel\nYetenekleri"]
+    A["Claude Nedir?"] --> B["Claude Model Ailesi<br/>(Haiku / Sonnet / Opus)"]
+    B --> C["API ve SDK<br/>Kullanımı"]
+    C --> D["Claude'un Özel<br/>Yetenekleri"]
 ```
 
 ## İçerik
@@ -30,9 +30,9 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph hedef ["Hedef Okuyucular"]
-        A["LLM kavramını\nbilen herkes"]
-        B["Claude kullanmak\nisteyen geliştiriciler"]
-        C["AI araçlarını\nkarşılaştıranlar"]
+        A["LLM kavramını<br/>bilen herkes"]
+        B["Claude kullanmak<br/>isteyen geliştiriciler"]
+        C["AI araçlarını<br/>karşılaştıranlar"]
     end
 ```
 

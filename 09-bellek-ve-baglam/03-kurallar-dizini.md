@@ -18,17 +18,17 @@
 ```mermaid
 flowchart TD
     subgraph rules_dir [".claude/rules/ Dizini"]
-        R1["typescript.md\n(*.ts dosyalarında)"]
-        R2["testing.md\n(*.test.* dosyalarında)"]
-        R3["api-routes.md\n(src/api/ dizininde)"]
-        R4["general.md\n(her zaman)"]
-        R5["migrations.md\n(migrations/ dizininde)"]
+        R1["typescript.md<br/>(*.ts dosyalarında)"]
+        R2["testing.md<br/>(*.test.* dosyalarında)"]
+        R3["api-routes.md<br/>(src/api/ dizininde)"]
+        R4["general.md<br/>(her zaman)"]
+        R5["migrations.md<br/>(migrations/ dizininde)"]
     end
 
     subgraph yukleme ["Yükleme Mekanizması"]
-        FILE["Kullanıcı bir dosya\nüzerinde çalışıyor"]
-        MATCH{"Dosya hangi\nkurallarla eşleşiyor?"}
-        LOAD["Eşleşen kurallar\nyüklenir"]
+        FILE["Kullanıcı bir dosya<br/>üzerinde çalışıyor"]
+        MATCH{"Dosya hangi<br/>kurallarla eşleşiyor?"}
+        LOAD["Eşleşen kurallar<br/>yüklenir"]
     end
 
     FILE --> MATCH
@@ -49,12 +49,12 @@ Kurallar, dosya adındaki kalıba (pattern) göre yüklenir:
 
 ```mermaid
 flowchart TD
-    START["Claude Code\nbir dosyayla çalışıyor"] --> SCAN[".claude/rules/ dizinini tara"]
+    START["Claude Code<br/>bir dosyayla çalışıyor"] --> SCAN[".claude/rules/ dizinini tara"]
     SCAN --> TYPES{"Kural tipi?"}
 
-    TYPES -->|"Genel kural\n(ön ek yok)"| ALWAYS["Her zaman yükle"]
-    TYPES -->|"Glob pattern\n(dosya kalıbı)"| GLOB_CHECK{"Dosya kalıbı\neşleşiyor mu?"}
-    TYPES -->|"Dizin bazlı\n(path prefix)"| DIR_CHECK{"Dizin yolu\neşleşiyor mu?"}
+    TYPES -->|"Genel kural<br/>(ön ek yok)"| ALWAYS["Her zaman yükle"]
+    TYPES -->|"Glob pattern<br/>(dosya kalıbı)"| GLOB_CHECK{"Dosya kalıbı<br/>eşleşiyor mu?"}
+    TYPES -->|"Dizin bazlı<br/>(path prefix)"| DIR_CHECK{"Dizin yolu<br/>eşleşiyor mu?"}
 
     GLOB_CHECK -->|"Evet"| LOAD_RULE["Kuralı yükle"]
     GLOB_CHECK -->|"Hayır"| SKIP["Atla"]
@@ -242,17 +242,17 @@ flowchart TD
     end
 
     subgraph rules [".claude/rules/"]
-        R1["typescript.md\nDil bazlı kurallar"]
-        R2["testing.md\nTest kuralları"]
-        R3["api.md\nAPI katmanı kuralları"]
-        R4["database.md\nVeritabanı kuralları"]
+        R1["typescript.md<br/>Dil bazlı kurallar"]
+        R2["testing.md<br/>Test kuralları"]
+        R3["api.md<br/>API katmanı kuralları"]
+        R4["database.md<br/>Veritabanı kuralları"]
     end
 
     SESSION["Oturum Başlangıcı"] -->|"Her zaman yüklenir"| claude_md
-    WORK["Dosya ile çalışma"] -->|"Eşleşen kurallar\nyüklenir"| rules
+    WORK["Dosya ile çalışma"] -->|"Eşleşen kurallar<br/>yüklenir"| rules
 
-    claude_md -.->|"Genel bağlam\nsağlar"| CONTEXT["Tam Bağlam"]
-    rules -.->|"Spesifik kurallar\nekler"| CONTEXT
+    claude_md -.->|"Genel bağlam<br/>sağlar"| CONTEXT["Tam Bağlam"]
+    rules -.->|"Spesifik kurallar<br/>ekler"| CONTEXT
 
     style claude_md fill:#4A90D9,color:#fff
     style rules fill:#F39C12,color:#fff

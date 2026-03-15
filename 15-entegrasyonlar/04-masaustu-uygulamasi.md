@@ -18,13 +18,13 @@ Claude Code Desktop App (masaüstü uygulaması), Claude Code deneyimini termina
 flowchart TB
     subgraph desktop ["Claude Code Desktop App"]
         direction TB
-        UI["Görsel Arayüz\nChat + kod editör"]
-        PS["Paralel Oturumlar\nGit worktree izolasyonu"]
-        DR["Diff Review\nGörsel fark inceleme"]
-        AP["App Preview\nCanlı uygulama ön izleme"]
-        PR["PR Monitoring\nPR durumu takibi"]
-        PM["Permission Modes\nİzin yönetimi"]
-        CN["Connectors\nDış servis bağlantıları"]
+        UI["Görsel Arayüz<br/>Chat + kod editör"]
+        PS["Paralel Oturumlar<br/>Git worktree izolasyonu"]
+        DR["Diff Review<br/>Görsel fark inceleme"]
+        AP["App Preview<br/>Canlı uygulama ön izleme"]
+        PR["PR Monitoring<br/>PR durumu takibi"]
+        PM["Permission Modes<br/>İzin yönetimi"]
+        CN["Connectors<br/>Dış servis bağlantıları"]
     end
 
     style desktop fill:#F3E8FF,stroke:#7C3AED
@@ -47,10 +47,10 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    A["claude.ai/download\nadresine gidin"] --> B["Platformunuzu\nseçin"]
-    B --> C["İndirin ve\nkurun"]
-    C --> D["Giriş yapın\n(Anthropic hesabı)"]
-    D --> E["Proje klasörü\nseçin"]
+    A["claude.ai/download<br/>adresine gidin"] --> B["Platformunuzu<br/>seçin"]
+    B --> C["İndirin ve<br/>kurun"]
+    C --> D["Giriş yapın<br/>(Anthropic hesabı)"]
+    D --> E["Proje klasörü<br/>seçin"]
 
     style A fill:#3B82F6,color:#fff
     style E fill:#10B981,color:#fff
@@ -66,12 +66,12 @@ Desktop app'in en güçlü özelliklerinden biri, birden fazla oturumun aynı an
 
 ```mermaid
 flowchart TB
-    REPO["Ana Repo\nmain branch"]
+    REPO["Ana Repo<br/>main branch"]
 
     subgraph sessions ["Paralel Oturumlar"]
-        S1["Oturum 1\nÖzellik: Auth sistemi\n(worktree: feature/auth)"]
-        S2["Oturum 2\nBug fix: #234\n(worktree: fix/234)"]
-        S3["Oturum 3\nRefactoring: DB katmanı\n(worktree: refactor/db)"]
+        S1["Oturum 1<br/>Özellik: Auth sistemi<br/>(worktree: feature/auth)"]
+        S2["Oturum 2<br/>Bug fix: #234<br/>(worktree: fix/234)"]
+        S3["Oturum 3<br/>Refactoring: DB katmanı<br/>(worktree: refactor/db)"]
     end
 
     REPO --> S1
@@ -144,9 +144,9 @@ Claude Code web uygulamaları üzerinde çalışırken, Desktop app canlı ön i
 
 ```mermaid
 flowchart LR
-    CC["Claude Code\ndev server başlatır"]
-    CC --> PREV["App Preview\nPaneli"]
-    PREV --> |"localhost:3000"| WEB["Web Uygulaması\nCanlı Görünüm"]
+    CC["Claude Code<br/>dev server başlatır"]
+    CC --> PREV["App Preview<br/>Paneli"]
+    PREV --> |"localhost:3000"| WEB["Web Uygulaması<br/>Canlı Görünüm"]
 
     U["Kullanıcı"]
     U -->|"Bu butonu sola taşı"| CC
@@ -180,13 +180,13 @@ Desktop app açık PR'ların durumunu izler ve güncellemeleri gösterir:
 
 ```mermaid
 flowchart TB
-    PR["Açık PR"] --> MON["Desktop App\nPR Monitor"]
+    PR["Açık PR"] --> MON["Desktop App<br/>PR Monitor"]
     MON --> S1["✅ CI Başarılı"]
     MON --> S2["💬 Yeni Review"]
     MON --> S3["⚠️ Conflict"]
     MON --> S4["🔀 Merge Hazır"]
 
-    S2 -->|"Otomatik düzelt"| CC["Claude Code\nDüzeltme uygula"]
+    S2 -->|"Otomatik düzelt"| CC["Claude Code<br/>Düzeltme uygula"]
     S3 -->|"Çakışma çöz"| CC
 
     style PR fill:#3B82F6,color:#fff
@@ -203,14 +203,14 @@ Desktop app'te üç izin modu bulunur:
 flowchart LR
     subgraph modes ["İzin Modları"]
         direction TB
-        SM["🛡️ Supervised\n(Denetimli)"]
-        BM["⚡ Balanced\n(Dengeli)"]
-        AM["🚀 Autonomous\n(Otonom)"]
+        SM["🛡️ Supervised<br/>(Denetimli)"]
+        BM["⚡ Balanced<br/>(Dengeli)"]
+        AM["🚀 Autonomous<br/>(Otonom)"]
     end
 
-    SM -->|"Her işlem için\nonay gerekir"| LOW["Düşük Risk\nYeni projeler"]
-    BM -->|"Okuma serbest\nyazma onaylı"| MED["Orta Risk\nGünlük geliştirme"]
-    AM -->|"Tüm işlemler\notomatik"| HIGH["Yüksek Risk\nGüvenilir görevler"]
+    SM -->|"Her işlem için<br/>onay gerekir"| LOW["Düşük Risk<br/>Yeni projeler"]
+    BM -->|"Okuma serbest<br/>yazma onaylı"| MED["Orta Risk<br/>Günlük geliştirme"]
+    AM -->|"Tüm işlemler<br/>otomatik"| HIGH["Yüksek Risk<br/>Güvenilir görevler"]
 
     style SM fill:#10B981,color:#fff
     style BM fill:#F59E0B,color:#fff
@@ -276,13 +276,13 @@ Kurumsal ortamlar için özel yapılandırma seçenekleri:
 flowchart TB
     START["Proje: E-ticaret App"]
     
-    START --> S1["Oturum 1:\nÖdeme sistemi entegrasyonu"]
-    START --> S2["Oturum 2:\nKullanıcı profil sayfası"]
-    START --> S3["Oturum 3:\nArama optimizasyonu"]
+    START --> S1["Oturum 1:<br/>Ödeme sistemi entegrasyonu"]
+    START --> S2["Oturum 2:<br/>Kullanıcı profil sayfası"]
+    START --> S3["Oturum 3:<br/>Arama optimizasyonu"]
 
-    S1 --> PR1["PR #101\n+450 satır"]
-    S2 --> PR2["PR #102\n+200 satır"]
-    S3 --> PR3["PR #103\n+150 satır"]
+    S1 --> PR1["PR #101<br/>+450 satır"]
+    S2 --> PR2["PR #102<br/>+200 satır"]
+    S3 --> PR3["PR #103<br/>+150 satır"]
 
     PR1 --> REV["Review & Merge"]
     PR2 --> REV

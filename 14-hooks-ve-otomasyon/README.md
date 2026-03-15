@@ -5,11 +5,11 @@ Hooks (kancalar), Claude Code'un yaşam döngüsündeki belirli anlarda otomatik
 ## Bu Bölümde Neler Öğreneceksiniz?
 
 ```mermaid
-flowchart TD
-    A["Hooks Nedir?\nOlay tabanlı otomasyon"] --> B["Hook Olayları\n9 yaşam döngüsü olayı"]
-    B --> C["Hook Tipleri\nCommand, HTTP, Prompt, MCP"]
-    C --> D["Hook Konfigürasyonu\nJSON yapısı ve hiyerarşi"]
-    D --> E["Hook Örnekleri ve Tarifler\n8+ pratik senaryo"]
+flowchart LR
+    A["Hooks Nedir?<br/>Olay tabanlı otomasyon"] --> B["Hook Olayları<br/>9 yaşam döngüsü olayı"]
+    B --> C["Hook Tipleri<br/>Command, HTTP, Prompt, MCP"]
+    C --> D["Hook Konfigürasyonu<br/>JSON yapısı ve hiyerarşi"]
+    D --> E["Hook Örnekleri ve Tarifler<br/>8+ pratik senaryo"]
 ```
 
 ## İçerik

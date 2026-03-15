@@ -19,8 +19,8 @@ Claude Code araçları iki kategoriye ayrılır:
 flowchart TD
     TOOL["Araç çağrısı"] --> CHECK{"İzin gerekli mi?"}
 
-    CHECK -->|"Hayır\n(Okuma, navigasyon)"| EXEC["Doğrudan çalıştır"]
-    CHECK -->|"Evet\n(Yazma, çalıştırma)"| PERM{"İzin kuralı\nvar mı?"}
+    CHECK -->|"Hayır<br/>(Okuma, navigasyon)"| EXEC["Doğrudan çalıştır"]
+    CHECK -->|"Evet<br/>(Yazma, çalıştırma)"| PERM{"İzin kuralı<br/>var mı?"}
 
     PERM -->|"allow kuralı"| AUTO["Otomatik izin ver"]
     PERM -->|"deny kuralı"| BLOCK["Engelle"]
@@ -88,17 +88,17 @@ Bu araçlar dosya sistemi, ağ veya sistem durumunu değiştirebilir:
 flowchart TD
     subgraph izinsiz ["İzin Gerektirmeyen (22 araç)"]
         direction LR
-        I1["Read\nGlob\nGrep"]
-        I2["Agent\nLSP\nTodoWrite"]
-        I3["Task*\nCron*"]
-        I4["MCP Araçları\nWorktree\nAskUser\nEnterPlanMode"]
+        I1["Read<br/>Glob<br/>Grep"]
+        I2["Agent<br/>LSP<br/>TodoWrite"]
+        I3["Task*<br/>Cron*"]
+        I4["MCP Araçları<br/>Worktree<br/>AskUser<br/>EnterPlanMode"]
     end
 
     subgraph izinli ["İzin Gerektiren (8 araç)"]
         direction LR
         P_HIGH["🔴 Bash"]
-        P_MED["🟡 Write\nEdit\nSkill\nNotebookEdit"]
-        P_LOW["🟢 WebSearch\nWebFetch\nExitPlanMode"]
+        P_MED["🟡 Write<br/>Edit<br/>Skill<br/>NotebookEdit"]
+        P_LOW["🟢 WebSearch<br/>WebFetch<br/>ExitPlanMode"]
     end
 
     style izinsiz fill:#d4edda,stroke:#28a745
@@ -148,8 +148,8 @@ flowchart TD
 
     TYPE -->|'Bash'| ALL["Tüm Bash komutları"]
     TYPE -->|'Bash(npm test)'| EXACT["Sadece 'npm test'"]
-    TYPE -->|'Bash(npm *)'| PREFIX["npm ile başlayan\ntüm komutlar"]
-    TYPE -->|'Edit(src/*)'| PATH["src/ altındaki\ntüm dosyalar"]
+    TYPE -->|'Bash(npm *)'| PREFIX["npm ile başlayan<br/>tüm komutlar"]
+    TYPE -->|'Edit(src/*)'| PATH["src/ altındaki<br/>tüm dosyalar"]
 
     ALL --> MATCH["Eşleşme kontrolü"]
     EXACT --> MATCH
@@ -241,13 +241,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    CMD["Araç çağrısı"] --> L1{"Enterprise\npolicy var mı?"}
-    L1 -->|Evet| E1["Enterprise kuralı uygula\n(en yüksek öncelik)"]
-    L1 -->|Hayır| L2{"Kullanıcı\nsettings.json?"}
+    CMD["Araç çağrısı"] --> L1{"Enterprise<br/>policy var mı?"}
+    L1 -->|Evet| E1["Enterprise kuralı uygula<br/>(en yüksek öncelik)"]
+    L1 -->|Hayır| L2{"Kullanıcı<br/>settings.json?"}
     L2 -->|Evet| E2["Kullanıcı kuralı uygula"]
-    L2 -->|Hayır| L3{"Proje\n.claude/settings.json?"}
+    L2 -->|Hayır| L3{"Proje<br/>.claude/settings.json?"}
     L3 -->|Evet| E3["Proje kuralı uygula"]
-    L3 -->|Hayır| L4{"Oturum\nkuralı var mı?"}
+    L3 -->|Hayır| L4{"Oturum<br/>kuralı var mı?"}
     L4 -->|Evet| E4["Oturum kuralı uygula"]
     L4 -->|Hayır| ASK["Kullanıcıya sor"]
 ```
@@ -267,14 +267,14 @@ Kullanıcıya izin sorulduğunda üç seçenek sunulur:
 
 ```mermaid
 flowchart LR
-    ASK["İzin istemi"] --> O1["Allow Once\nBir kez izin ver"]
-    ASK --> O2["Allow for Session\nOturum boyunca izin ver"]
-    ASK --> O3["Always Allow\nHer zaman izin ver"]
-    ASK --> O4["Deny\nReddet"]
+    ASK["İzin istemi"] --> O1["Allow Once<br/>Bir kez izin ver"]
+    ASK --> O2["Allow for Session<br/>Oturum boyunca izin ver"]
+    ASK --> O3["Always Allow<br/>Her zaman izin ver"]
+    ASK --> O4["Deny<br/>Reddet"]
 
-    O1 --> TEMP["Sadece bu çağrı\niçin geçerli"]
-    O2 --> SESSION["Oturum boyunca\naynı araç/komut için geçerli"]
-    O3 --> PERM["Kalıcı kural olarak\nsettings.json'a kaydedilir"]
+    O1 --> TEMP["Sadece bu çağrı<br/>için geçerli"]
+    O2 --> SESSION["Oturum boyunca<br/>aynı araç/komut için geçerli"]
+    O3 --> PERM["Kalıcı kural olarak<br/>settings.json'a kaydedilir"]
     O4 --> BLOCK["Çağrı engellenir"]
 ```
 
@@ -404,11 +404,11 @@ Specifier, **dosya yolu** ile eşleşir:
 
 ```mermaid
 flowchart TD
-    START["İzin kuralı\ntasarla"] --> P1["1. En az yetki\nprensibi uygula"]
-    P1 --> P2["2. Güvenli komutları\nallow listesine ekle"]
-    P2 --> P3["3. Tehlikeli komutları\ndeny listesine ekle"]
-    P3 --> P4["4. Hassas dosyaları\nkoru"]
-    P4 --> P5["5. Takım kurallarını\n.claude/settings.json'da\npaylaş"]
+    START["İzin kuralı<br/>tasarla"] --> P1["1. En az yetki<br/>prensibi uygula"]
+    P1 --> P2["2. Güvenli komutları<br/>allow listesine ekle"]
+    P2 --> P3["3. Tehlikeli komutları<br/>deny listesine ekle"]
+    P3 --> P4["4. Hassas dosyaları<br/>koru"]
+    P4 --> P5["5. Takım kurallarını<br/>.claude/settings.json'da<br/>paylaş"]
 ```
 
 | Uygulama | Açıklama |

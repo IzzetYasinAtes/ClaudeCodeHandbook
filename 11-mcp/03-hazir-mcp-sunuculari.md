@@ -18,9 +18,9 @@ MCP ekosistemi, topluluk ve resmi katkılarla büyüyen yüzlerce hazır sunucu 
 flowchart TD
     MCP_ECO["MCP Sunucu Ekosistemi"]
 
-    MCP_ECO --> OFFICIAL["Resmi Sunucular\n(Anthropic / MCP Org)"]
-    MCP_ECO --> COMMUNITY["Topluluk Sunucuları\n(Açık Kaynak)"]
-    MCP_ECO --> CUSTOM["Özel Sunucular\n(Şirket içi)"]
+    MCP_ECO --> OFFICIAL["Resmi Sunucular<br/>(Anthropic / MCP Org)"]
+    MCP_ECO --> COMMUNITY["Topluluk Sunucuları<br/>(Açık Kaynak)"]
+    MCP_ECO --> CUSTOM["Özel Sunucular<br/>(Şirket içi)"]
 
     OFFICIAL --> O1["GitHub"]
     OFFICIAL --> O2["Slack"]
@@ -34,7 +34,7 @@ flowchart TD
     COMMUNITY --> C2["Jira"]
     COMMUNITY --> C3["Linear"]
     COMMUNITY --> C4["Notion"]
-    COMMUNITY --> C5["1000+\ndiğer..."]
+    COMMUNITY --> C5["1000+<br/>diğer..."]
 
     style OFFICIAL fill:#4A90D9,color:#fff
     style COMMUNITY fill:#27AE60,color:#fff

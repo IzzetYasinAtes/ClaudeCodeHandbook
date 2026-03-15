@@ -14,32 +14,38 @@ Claude Code, Anthropic tarafından geliştirilen **terminal-native** (terminal t
 ## Claude Code Bir Bakışta
 
 ```mermaid
-mindmap
-  root(("Claude Code"))
-    Kod Okuma
-      Dosya okuma
-      Proje yapısı analizi
-      Bağımlılık tarama
-      Git geçmişi inceleme
-    Kod Yazma
-      Yeni dosya oluşturma
-      Mevcut kodu düzenleme
-      Refactoring
-      Bug düzeltme
-    Komut Çalıştırma
-      Shell komutları
-      Build işlemleri
-      Test çalıştırma
-      Git işlemleri
-    Web Erişimi
-      Dokümantasyon okuma
-      API çağrıları
-      Web sayfası analizi
-    Akıllı Planlama
-      Görev analizi
-      Çok adımlı plan
-      Kendi kendini düzeltme
-      Bağlam yönetimi
+flowchart LR
+    CC(("Claude Code"))
+
+    CC --> R["Kod Okuma"]
+    CC --> W["Kod Yazma"]
+    CC --> K["Komut Çalıştırma"]
+    CC --> WEB["Web Erişimi"]
+    CC --> P["Akıllı Planlama"]
+
+    R --> R1["Dosya okuma"]
+    R --> R2["Proje yapısı analizi"]
+    R --> R3["Bağımlılık tarama"]
+    R --> R4["Git geçmişi inceleme"]
+
+    W --> W1["Yeni dosya oluşturma"]
+    W --> W2["Mevcut kodu düzenleme"]
+    W --> W3["Refactoring"]
+    W --> W4["Bug düzeltme"]
+
+    K --> K1["Shell komutları"]
+    K --> K2["Build işlemleri"]
+    K --> K3["Test çalıştırma"]
+    K --> K4["Git işlemleri"]
+
+    WEB --> WEB1["Dokümantasyon okuma"]
+    WEB --> WEB2["API çağrıları"]
+    WEB --> WEB3["Web sayfası analizi"]
+
+    P --> P1["Görev analizi"]
+    P --> P2["Çok adımlı plan"]
+    P --> P3["Kendi kendini düzeltme"]
+    P --> P4["Bağlam yönetimi"]
 ```
 
 ---
@@ -106,13 +112,13 @@ flowchart TB
 
     subgraph claude_code_layer ["Claude Code Katmanı"]
         CLI["CLI Arayüzü"]
-        TOOLS["Araç Sistemi\n(30+ araç)"]
+        TOOLS["Araç Sistemi<br/>(30+ araç)"]
         PERM["İzin Yöneticisi"]
         CTX["Bağlam Yöneticisi"]
     end
 
     subgraph api ["Anthropic API"]
-        MODEL["Claude Opus 4.6\n200K Context"]
+        MODEL["Claude Opus 4.6<br/>200K Context"]
     end
 
     T --> CLI
@@ -218,10 +224,10 @@ flowchart TD
     end
 
     subgraph kurumsal ["Kurumsal"]
-        K1["Büyük ölçekli\nmigrasyon"]
+        K1["Büyük ölçekli<br/>migrasyon"]
         K2["Güvenlik tarama"]
-        K3["Dokümantasyon\nüretimi"]
-        K4["Legacy kod\nmodernizasyon"]
+        K3["Dokümantasyon<br/>üretimi"]
+        K4["Legacy kod<br/>modernizasyon"]
     end
 
     CC["Claude Code"] --> bireysel

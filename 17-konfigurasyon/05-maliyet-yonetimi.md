@@ -20,11 +20,11 @@ Claude Code'da maliyet, iki temel token türüne dayanır:
 flowchart TD
     subgraph tokens ["Token Türleri"]
         direction LR
-        INPUT["📥 Input Tokens\nGönderilen veriler\n- Sistem promptu\n- CLAUDE.md\n- Konuşma geçmişi\n- Dosya içerikleri\n- Araç çıktıları"]
-        OUTPUT["📤 Output Tokens\nÜretilen veriler\n- Yanıtlar\n- Kod çıktıları\n- Araç çağrıları\n- Thinking tokens"]
+        INPUT["📥 Input Tokens<br/>Gönderilen veriler<br/>- Sistem promptu<br/>- CLAUDE.md<br/>- Konuşma geçmişi<br/>- Dosya içerikleri<br/>- Araç çıktıları"]
+        OUTPUT["📤 Output Tokens<br/>Üretilen veriler<br/>- Yanıtlar<br/>- Kod çıktıları<br/>- Araç çağrıları<br/>- Thinking tokens"]
     end
 
-    INPUT --> COST["💰 Toplam Maliyet\ninput_tokens × birim_fiyat +\noutput_tokens × birim_fiyat"]
+    INPUT --> COST["💰 Toplam Maliyet<br/>input_tokens × birim_fiyat +<br/>output_tokens × birim_fiyat"]
     OUTPUT --> COST
 
     style INPUT fill:#3498DB,color:#fff
@@ -65,9 +65,9 @@ Estimated cost:  $0.47
 
 ```mermaid
 flowchart LR
-    SESSION["Oturum Başlangıcı"] --> WORK["Görevler\nyapılır"]
-    WORK --> COST_CMD["/cost\nkomutu"]
-    COST_CMD --> REPORT["Maliyet Raporu\n- Token dağılımı\n- Tahmini ücret\n- Cache durumu"]
+    SESSION["Oturum Başlangıcı"] --> WORK["Görevler<br/>yapılır"]
+    WORK --> COST_CMD["/cost<br/>komutu"]
+    COST_CMD --> REPORT["Maliyet Raporu<br/>- Token dağılımı<br/>- Tahmini ücret<br/>- Cache durumu"]
 
     style SESSION fill:#3498DB,color:#fff
     style COST_CMD fill:#F39C12,color:#fff
@@ -85,9 +85,9 @@ En büyük maliyet etkeni model seçimidir. Opus, Sonnet'ten ~5x daha pahalıdı
 ```mermaid
 flowchart TD
     TASK["Görev"] --> EVAL{"Karmaşıklık?"}
-    EVAL -->|Basit| HAIKU["Haiku\n💰 $0.05/oturum\n\nBasit sorular,\nformat düzeltme"]
-    EVAL -->|Orta| SONNET["Sonnet\n💰 $0.50-2/oturum\n\nGenel geliştirme,\nbug fix, feature"]
-    EVAL -->|Karmaşık| OPUS["Opus\n💰 $5-20/oturum\n\nMimari tasarım,\nkarmaşık analiz"]
+    EVAL -->|Basit| HAIKU["Haiku<br/>💰 $0.05/oturum<br/><br/>Basit sorular,<br/>format düzeltme"]
+    EVAL -->|Orta| SONNET["Sonnet<br/>💰 $0.50-2/oturum<br/><br/>Genel geliştirme,<br/>bug fix, feature"]
+    EVAL -->|Karmaşık| OPUS["Opus<br/>💰 $5-20/oturum<br/><br/>Mimari tasarım,<br/>karmaşık analiz"]
 
     style HAIKU fill:#27AE60,color:#fff
     style SONNET fill:#F39C12,color:#fff
@@ -116,9 +116,9 @@ flowchart TD
 
     subgraph solution ["✅ Çözüm: Context Yönetimi"]
         S1["Turn 1-5: Normal çalışma"]
-        S1 --> S2["/compact\nBağlamı özetle"]
+        S1 --> S2["/compact<br/>Bağlamı özetle"]
         S2 --> S3["Turn 6-10: Azaltılmış context"]
-        S3 --> S4["Yeni oturum\nGerekirse başla"]
+        S3 --> S4["Yeni oturum<br/>Gerekirse başla"]
     end
 
     style problem fill:#FADBD8,stroke:#E74C3C
@@ -163,7 +163,7 @@ Claude Code, prompt caching (istem önbellekleme) kullanarak tekrarlayan içerik
 ```mermaid
 flowchart LR
     subgraph cache ["Cache Mekanizması"]
-        FIRST["İlk İstek\nTam fiyat 💰💰💰"] --> CACHED["Sonraki İstekler\nCache'den okuma 💰"]
+        FIRST["İlk İstek<br/>Tam fiyat 💰💰💰"] --> CACHED["Sonraki İstekler<br/>Cache'den okuma 💰"]
     end
 
     subgraph tips ["Optimizasyon İpuçları"]
@@ -212,9 +212,9 @@ Enterprise (kurumsal) planlarda takım bazında harcama limitleri tanımlanabili
 ```mermaid
 flowchart TD
     ADMIN["🏢 Admin Panel"] --> LIMITS["Harcama Limitleri"]
-    LIMITS --> USER_LIMIT["👤 Kullanıcı Limiti\n$50/gün"]
-    LIMITS --> TEAM_LIMIT["👥 Takım Limiti\n$500/gün"]
-    LIMITS --> ORG_LIMIT["🏢 Organizasyon Limiti\n$5000/ay"]
+    LIMITS --> USER_LIMIT["👤 Kullanıcı Limiti<br/>$50/gün"]
+    LIMITS --> TEAM_LIMIT["👥 Takım Limiti<br/>$500/gün"]
+    LIMITS --> ORG_LIMIT["🏢 Organizasyon Limiti<br/>$5000/ay"]
 
     USER_LIMIT --> ALERT["⚠️ %80'de uyarı"]
     TEAM_LIMIT --> ALERT

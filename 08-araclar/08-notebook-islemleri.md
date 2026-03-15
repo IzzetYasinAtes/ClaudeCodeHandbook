@@ -23,12 +23,12 @@
 
 ```mermaid
 flowchart TD
-    NB["Jupyter Notebook\n(.ipynb)"] --> CELLS["Hücreler"]
-    CELLS --> CODE["Kod Hücreleri\n(Python, JS, R...)"]
-    CELLS --> MD["Markdown Hücreleri\n(Açıklama, başlık)"]
-    CELLS --> RAW["Raw Hücreleri\n(Ham metin)"]
+    NB["Jupyter Notebook<br/>(.ipynb)"] --> CELLS["Hücreler"]
+    CELLS --> CODE["Kod Hücreleri<br/>(Python, JS, R...)"]
+    CELLS --> MD["Markdown Hücreleri<br/>(Açıklama, başlık)"]
+    CELLS --> RAW["Raw Hücreleri<br/>(Ham metin)"]
 
-    CODE --> EDIT["NotebookEdit\nDüzenle / Ekle"]
+    CODE --> EDIT["NotebookEdit<br/>Düzenle / Ekle"]
     MD --> EDIT
     RAW --> EDIT
 ```
@@ -50,13 +50,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    START["NotebookEdit çağrısı"] --> PERM{"İzin\nonaylandı mı?"}
+    START["NotebookEdit çağrısı"] --> PERM{"İzin<br/>onaylandı mı?"}
     PERM -->|Hayır| DENY["Reddedildi"]
     PERM -->|Evet| MODE{"is_new_cell?"}
-    MODE -->|true| NEW["Belirtilen indekse\nyeni hücre ekle"]
-    MODE -->|false| EXISTING["Mevcut hücrede\nold_string → new_string"]
+    MODE -->|true| NEW["Belirtilen indekse<br/>yeni hücre ekle"]
+    MODE -->|false| EXISTING["Mevcut hücrede<br/>old_string → new_string"]
     NEW --> DONE["Notebook güncellendi"]
-    EXISTING --> FIND{"old_string\nbulundu mu?"}
+    EXISTING --> FIND{"old_string<br/>bulundu mu?"}
     FIND -->|Evet| REPLACE["Metni değiştir"]
     FIND -->|Hayır| ERROR["Hata: Metin bulunamadı"]
     REPLACE --> DONE

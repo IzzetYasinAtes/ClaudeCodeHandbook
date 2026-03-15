@@ -20,17 +20,17 @@ Bir yazılım mimarının Claude Code ile tipik iş akışı:
 ```mermaid
 flowchart TD
     subgraph analiz ["Analiz"]
-        A["Codebase Analizi\nMevcut yapıyı anla"] --> B["Dependency Analizi\nBağımlılık haritası"]
-        B --> C["Teknik Borç Tespiti\nSorunlu alanları belirle"]
+        A["Codebase Analizi<br/>Mevcut yapıyı anla"] --> B["Dependency Analizi<br/>Bağımlılık haritası"]
+        B --> C["Teknik Borç Tespiti<br/>Sorunlu alanları belirle"]
     end
 
     subgraph karar ["Karar"]
-        D["Mimari Karar\nADR oluştur"] --> E["Standart Belirleme\nCLAUDE.md ile takım rehberliği"]
+        D["Mimari Karar<br/>ADR oluştur"] --> E["Standart Belirleme<br/>CLAUDE.md ile takım rehberliği"]
     end
 
     subgraph uygulama ["Uygulama"]
-        F["Refactoring Planı\nAşamalı plan oluştur"] --> G["Migration Planı\nGeçiş stratejisi"]
-        G --> H["Code Review\nMimari düzeyde inceleme"]
+        F["Refactoring Planı<br/>Aşamalı plan oluştur"] --> G["Migration Planı<br/>Geçiş stratejisi"]
+        G --> H["Code Review<br/>Mimari düzeyde inceleme"]
     end
 
     C --> D
@@ -138,9 +138,9 @@ Refactoring planlarını Claude Code'un Plan Mode'u ile hazırlayın:
 ```mermaid
 flowchart TD
     A["Mevcut Durumu Analiz Et"] --> B["Hedef Mimariyi Belirle"]
-    B --> C["Adımları Planla\n(Plan Mode)"]
+    B --> C["Adımları Planla<br/>(Plan Mode)"]
     C --> D["Risk Analizi"]
-    D --> E{"Riskler\nKabul Edilebilir mi?"}
+    D --> E{"Riskler<br/>Kabul Edilebilir mi?"}
     E -->|Evet| F["Aşama 1 Uygula"]
     E -->|Hayır| C
     F --> G["Test ve Doğrula"]

@@ -33,7 +33,7 @@ flowchart LR
         B5["Git entegrasyonu"]
     end
 
-    MODEL["Claude Opus 4.6\n(Aynı model)"] --> claude_ai
+    MODEL["Claude Opus 4.6<br/>(Aynı model)"] --> claude_ai
     MODEL --> claude_code
 ```
 
@@ -76,12 +76,12 @@ Her iki ürün de **aynı Claude modeli** üzerine inşa edilmiştir. Temel fark
 flowchart TD
     subgraph ai_kullanim ["Claude AI Kullanım Alanları"]
         direction TB
-        AI1["📝 Metin yazma ve düzenleme\nBlog, e-posta, rapor"]
-        AI2["🔍 Araştırma ve analiz\nKonu özetleme, karşılaştırma"]
-        AI3["🖼️ Görsel analiz\nEkran görüntüsü, diyagram okuma"]
-        AI4["📄 Doküman inceleme\nPDF analizi, sözleşme okuma"]
-        AI5["💡 Beyin fırtınası\nFikir üretme, planlama"]
-        AI6["📊 Veri analizi\nTablo, grafik yorumlama"]
+        AI1["📝 Metin yazma ve düzenleme<br/>Blog, e-posta, rapor"]
+        AI2["🔍 Araştırma ve analiz<br/>Konu özetleme, karşılaştırma"]
+        AI3["🖼️ Görsel analiz<br/>Ekran görüntüsü, diyagram okuma"]
+        AI4["📄 Doküman inceleme<br/>PDF analizi, sözleşme okuma"]
+        AI5["💡 Beyin fırtınası<br/>Fikir üretme, planlama"]
+        AI6["📊 Veri analizi<br/>Tablo, grafik yorumlama"]
     end
 ```
 
@@ -99,12 +99,12 @@ flowchart TD
 flowchart TD
     subgraph code_kullanim ["Claude Code Kullanım Alanları"]
         direction TB
-        CC1["💻 Kod geliştirme\nYeni özellik, refactoring"]
-        CC2["🐛 Bug düzeltme\nHata bulma ve onarma"]
-        CC3["🧪 Test yazma\nUnit test, integration test"]
-        CC4["📦 Proje yönetimi\nGit, build, deploy"]
-        CC5["🔧 DevOps görevleri\nCI/CD, otomasyon"]
-        CC6["📖 Kod dokümantasyonu\nREADME, API docs"]
+        CC1["💻 Kod geliştirme<br/>Yeni özellik, refactoring"]
+        CC2["🐛 Bug düzeltme<br/>Hata bulma ve onarma"]
+        CC3["🧪 Test yazma<br/>Unit test, integration test"]
+        CC4["📦 Proje yönetimi<br/>Git, build, deploy"]
+        CC5["🔧 DevOps görevleri<br/>CI/CD, otomasyon"]
+        CC6["📖 Kod dokümantasyonu<br/>README, API docs"]
     end
 ```
 
@@ -126,19 +126,19 @@ Hangi aracı kullanmanız gerektiğini belirlemek için bu akış şemasını ta
 
 ```mermaid
 flowchart TD
-    START(["Ne yapmak\nistiyorsunuz?"]) --> Q1{"Kod veya\nproje ile mi ilgili?"}
+    START(["Ne yapmak<br/>istiyorsunuz?"]) --> Q1{"Kod veya<br/>proje ile mi ilgili?"}
 
-    Q1 -->|"Hayır"| Q2{"Dosya analizi\ngerekiyor mu?"}
-    Q1 -->|"Evet"| Q3{"Dosya sistemi\nerişimi lazım mı?"}
+    Q1 -->|"Hayır"| Q2{"Dosya analizi<br/>gerekiyor mu?"}
+    Q1 -->|"Evet"| Q3{"Dosya sistemi<br/>erişimi lazım mı?"}
 
-    Q2 -->|"PDF/Görsel var"| CLAUDE_AI_1["Claude AI\n(Dosya yükleme ile)"]
-    Q2 -->|"Hayır"| CLAUDE_AI_2["Claude AI\n(Genel sohbet)"]
+    Q2 -->|"PDF/Görsel var"| CLAUDE_AI_1["Claude AI<br/>(Dosya yükleme ile)"]
+    Q2 -->|"Hayır"| CLAUDE_AI_2["Claude AI<br/>(Genel sohbet)"]
 
-    Q3 -->|"Hayır, tek dosya"| Q4{"Otonom çalışma\ngerekiyor mu?"}
-    Q3 -->|"Evet, proje geneli"| CLAUDE_CODE_1["Claude Code\n(Proje erişimi)"]
+    Q3 -->|"Hayır, tek dosya"| Q4{"Otonom çalışma<br/>gerekiyor mu?"}
+    Q3 -->|"Evet, proje geneli"| CLAUDE_CODE_1["Claude Code<br/>(Proje erişimi)"]
 
-    Q4 -->|"Sadece soru-cevap"| CLAUDE_AI_3["Claude AI veya\nClaude Code\n(ikisi de olur)"]
-    Q4 -->|"Okuma + Yazma + Çalıştırma"| CLAUDE_CODE_2["Claude Code\n(Otonom ajan)"]
+    Q4 -->|"Sadece soru-cevap"| CLAUDE_AI_3["Claude AI veya<br/>Claude Code<br/>(ikisi de olur)"]
+    Q4 -->|"Okuma + Yazma + Çalıştırma"| CLAUDE_CODE_2["Claude Code<br/>(Otonom ajan)"]
 
     style CLAUDE_AI_1 fill:#3498DB,color:#fff
     style CLAUDE_AI_2 fill:#3498DB,color:#fff
@@ -235,13 +235,13 @@ Claude AI ve Claude Code birbirinin rakibi değil, **tamamlayıcısıdır**. Tip
 
 ```mermaid
 flowchart TD
-    SABAH(["Sabah"]) --> AI1["Claude AI:\nGünlük e-postaları özetle"]
-    AI1 --> CODE1["Claude Code:\nDünkü PR'leri incele"]
-    CODE1 --> CODE2["Claude Code:\nBug #342'yi düzelt"]
-    CODE2 --> AI2["Claude AI:\nMimari tasarım tartışması"]
-    AI2 --> CODE3["Claude Code:\nYeni API endpoint'i oluştur"]
-    CODE3 --> CODE4["Claude Code:\nTestleri yaz ve çalıştır"]
-    CODE4 --> AI3["Claude AI:\nSprint raporu yaz"]
+    SABAH(["Sabah"]) --> AI1["Claude AI:<br/>Günlük e-postaları özetle"]
+    AI1 --> CODE1["Claude Code:<br/>Dünkü PR'leri incele"]
+    CODE1 --> CODE2["Claude Code:<br/>Bug #342'yi düzelt"]
+    CODE2 --> AI2["Claude AI:<br/>Mimari tasarım tartışması"]
+    AI2 --> CODE3["Claude Code:<br/>Yeni API endpoint'i oluştur"]
+    CODE3 --> CODE4["Claude Code:<br/>Testleri yaz ve çalıştır"]
+    CODE4 --> AI3["Claude AI:<br/>Sprint raporu yaz"]
     AI3 --> AKSAM(["Akşam"])
 
     style SABAH fill:#4A90D9,color:#fff

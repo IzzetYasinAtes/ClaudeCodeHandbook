@@ -17,10 +17,10 @@ Tipik bir kurumsal ortamda Claude Code'un Anthropic API'sine erişim yolu:
 
 ```mermaid
 flowchart LR
-    CC["💻 Claude Code\n(Geliştirici Makinesi)"] --> PROXY["🔒 Proxy Server\n(Forward Proxy)"]
-    PROXY --> FIREWALL["🧱 Firewall\n(Çıkış kuralları)"]
+    CC["💻 Claude Code<br/>(Geliştirici Makinesi)"] --> PROXY["🔒 Proxy Server<br/>(Forward Proxy)"]
+    PROXY --> FIREWALL["🧱 Firewall<br/>(Çıkış kuralları)"]
     FIREWALL --> INTERNET["🌐 İnternet"]
-    INTERNET --> API["☁️ Anthropic API\napi.anthropic.com"]
+    INTERNET --> API["☁️ Anthropic API<br/>api.anthropic.com"]
 
     subgraph corporate ["Kurumsal Ağ"]
         CC
@@ -80,11 +80,11 @@ Kurumsal ortamlarda TLS/SSL trafiğini inspect (denetim) eden sistemler genellik
 ```mermaid
 flowchart TD
     CC["Claude Code"] --> TLS["TLS Bağlantısı"]
-    TLS --> INSPECT{"SSL Inspection\nProxy?"}
-    INSPECT -->|Evet| CORP_CA["Kurumsal CA\nSertifikası gerekli"]
+    TLS --> INSPECT{"SSL Inspection<br/>Proxy?"}
+    INSPECT -->|Evet| CORP_CA["Kurumsal CA<br/>Sertifikası gerekli"]
     INSPECT -->|Hayır| DIRECT["Doğrudan bağlantı"]
 
-    CORP_CA --> CONFIG["NODE_EXTRA_CA_CERTS\nile sertifika tanımla"]
+    CORP_CA --> CONFIG["NODE_EXTRA_CA_CERTS<br/>ile sertifika tanımla"]
     CONFIG --> SUCCESS["✅ Bağlantı başarılı"]
 
     DIRECT --> SUCCESS
@@ -146,7 +146,7 @@ Bazı kurumsal ortamlarda mutual TLS (karşılıklı TLS) gereklidir. Bu durumda
 flowchart LR
     subgraph client ["İstemci (Claude Code)"]
         CC["Claude Code"]
-        CLIENT_CERT["İstemci Sertifikası\n+ Özel Anahtar"]
+        CLIENT_CERT["İstemci Sertifikası<br/>+ Özel Anahtar"]
     end
 
     subgraph server ["Sunucu (API / Gateway)"]
@@ -154,7 +154,7 @@ flowchart LR
         SERVER_CERT["Sunucu Sertifikası"]
     end
 
-    CC --> |"1. TLS Handshake\n(sunucu sertifikası doğrula)"| API
+    CC --> |"1. TLS Handshake<br/>(sunucu sertifikası doğrula)"| API
     API --> |"2. İstemci sertifikası iste"| CC
     CC --> |"3. İstemci sertifikası gönder"| API
     API --> |"4. Doğrulama başarılı ✅"| CC
@@ -222,7 +222,7 @@ export NO_PROXY="localhost,127.0.0.1,.company.internal,10.0.0.0/8,172.16.0.0/12"
 export NODE_EXTRA_CA_CERTS="/etc/ssl/certs/company-ca-chain.pem"
 
 # Claude Code API
-export ANTHROPIC_API_KEY="sk-ant-api03-xxxx"
+export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"
 
 # Opsiyonel trafiği kapat
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=true
@@ -232,17 +232,17 @@ export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=true
 
 ```mermaid
 flowchart TD
-    START["🔧 Kurulum Başla"] --> PROXY_CHECK{"Proxy\nerişimi var mı?"}
-    PROXY_CHECK -->|Evet| CERT_CHECK{"CA sertifikası\nyüklendi mi?"}
-    PROXY_CHECK -->|Hayır| FIX_PROXY["HTTPS_PROXY\nayarlayın"]
+    START["🔧 Kurulum Başla"] --> PROXY_CHECK{"Proxy<br/>erişimi var mı?"}
+    PROXY_CHECK -->|Evet| CERT_CHECK{"CA sertifikası<br/>yüklendi mi?"}
+    PROXY_CHECK -->|Hayır| FIX_PROXY["HTTPS_PROXY<br/>ayarlayın"]
     FIX_PROXY --> PROXY_CHECK
 
-    CERT_CHECK -->|Evet| API_CHECK{"API erişimi\nvar mı?"}
-    CERT_CHECK -->|Hayır| FIX_CERT["NODE_EXTRA_CA_CERTS\nayarlayın"]
+    CERT_CHECK -->|Evet| API_CHECK{"API erişimi<br/>var mı?"}
+    CERT_CHECK -->|Hayır| FIX_CERT["NODE_EXTRA_CA_CERTS<br/>ayarlayın"]
     FIX_CERT --> CERT_CHECK
 
-    API_CHECK -->|Evet| SUCCESS["✅ Claude Code\nHazır"]
-    API_CHECK -->|Hayır| DEBUG["Debug:\ncurl -v api.anthropic.com"]
+    API_CHECK -->|Evet| SUCCESS["✅ Claude Code<br/>Hazır"]
+    API_CHECK -->|Hayır| DEBUG["Debug:<br/>curl -v api.anthropic.com"]
     DEBUG --> FIX_PROXY
 
     style SUCCESS fill:#27AE60,color:#fff

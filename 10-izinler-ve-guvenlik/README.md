@@ -6,10 +6,10 @@ Claude Code, güçlü yeteneklerini kontrollü bir şekilde sunmak için katmanl
 
 ```mermaid
 flowchart TD
-    A["İzin Sistemi\nÜç Katmanlı Yapı"] --> B["İzin Kuralları\nSyntax ve Eşleştirme"]
-    B --> C["İzin Modları\nBeş Farklı Mod"]
-    C --> D["Sandboxing\nDosya ve Ağ İzolasyonu"]
-    D --> E["Güvenlik\nEn İyi Uygulamalar"]
+    A["İzin Sistemi<br/>Üç Katmanlı Yapı"] --> B["İzin Kuralları<br/>Syntax ve Eşleştirme"]
+    B --> C["İzin Modları<br/>Beş Farklı Mod"]
+    C --> D["Sandboxing<br/>Dosya ve Ağ İzolasyonu"]
+    D --> E["Güvenlik<br/>En İyi Uygulamalar"]
 ```
 
 ## İçerik
@@ -37,9 +37,9 @@ Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 ```mermaid
 flowchart LR
     subgraph risk ["Kontrolsüz AI Ajanı"]
-        R1["Hassas dosyaları\nokuyabilir"]
-        R2["Zararlı komut\nçalıştırabilir"]
-        R3["Kritik dosyaları\nsilebilir"]
+        R1["Hassas dosyaları<br/>okuyabilir"]
+        R2["Zararlı komut<br/>çalıştırabilir"]
+        R3["Kritik dosyaları<br/>silebilir"]
     end
 
     subgraph guvenli ["İzin Sistemiyle"]

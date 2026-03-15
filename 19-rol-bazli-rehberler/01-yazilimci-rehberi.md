@@ -19,18 +19,18 @@ Bir yazılımcının Claude Code ile tipik günlük iş akışı:
 ```mermaid
 flowchart TD
     subgraph sabah ["Sabah"]
-        A["Standup Özeti\nDünkü değişiklikleri özetle"] --> B["Issue Seçimi\nBugünkü görevleri belirle"]
+        A["Standup Özeti<br/>Dünkü değişiklikleri özetle"] --> B["Issue Seçimi<br/>Bugünkü görevleri belirle"]
     end
 
     subgraph gelistirme ["Geliştirme"]
-        C["Feature Branch\nYeni dal oluştur"] --> D["Kod Geliştirme\nClaude ile birlikte yaz"]
-        D --> E["Bug Fixing\nHata bul ve düzelt"]
-        E --> F["Test Yazma\nOtomatik test oluştur"]
+        C["Feature Branch<br/>Yeni dal oluştur"] --> D["Kod Geliştirme<br/>Claude ile birlikte yaz"]
+        D --> E["Bug Fixing<br/>Hata bul ve düzelt"]
+        E --> F["Test Yazma<br/>Otomatik test oluştur"]
     end
 
     subgraph teslim ["Teslim"]
-        G["Code Review\nKod inceleme"] --> H["PR Hazırlama\nPR açıklaması oluştur"]
-        H --> I["PR Merge\nBirleştirme"]
+        G["Code Review<br/>Kod inceleme"] --> H["PR Hazırlama<br/>PR açıklaması oluştur"]
+        H --> I["PR Merge<br/>Birleştirme"]
     end
 
     B --> C
@@ -65,12 +65,12 @@ Bug düzeltme, yazılımcının en sık karşılaştığı görevdir. Claude Cod
 
 ```mermaid
 flowchart TD
-    A["Bug Raporu / Hata Mesajı"] --> B["Hata Tekrarlama\nAdımları belirle"]
-    B --> C["Log Analizi\nHata kayıtlarını incele"]
-    C --> D["Kök Neden Analizi\nNeden oluşuyor?"]
-    D --> E["Fix Geliştirme\nDüzeltme yaz"]
-    E --> F["Test Ekleme\nRegresyon testi"]
-    F --> G{"Testler\nGeçiyor mu?"}
+    A["Bug Raporu / Hata Mesajı"] --> B["Hata Tekrarlama<br/>Adımları belirle"]
+    B --> C["Log Analizi<br/>Hata kayıtlarını incele"]
+    C --> D["Kök Neden Analizi<br/>Neden oluşuyor?"]
+    D --> E["Fix Geliştirme<br/>Düzeltme yaz"]
+    E --> F["Test Ekleme<br/>Regresyon testi"]
+    F --> G{"Testler<br/>Geçiyor mu?"}
     G -->|Evet| H["PR Aç"]
     G -->|Hayır| E
 
@@ -266,10 +266,10 @@ Context window'un %80'ine ulaştığında Claude Code performans kaybetmeye baş
 ```mermaid
 flowchart TD
     A["Context %80'e ulaştı"] --> B{"Görev tamamlandı mı?"}
-    B -->|Evet| C["/compact ile sıkıştır\nveya yeni oturum başlat"]
+    B -->|Evet| C["/compact ile sıkıştır<br/>veya yeni oturum başlat"]
     B -->|Hayır| D{"Görev bölünebilir mi?"}
-    D -->|Evet| E["Görevi parçalara böl\nHer parça yeni oturum"]
-    D -->|Hayır| F["/compact çalıştır\nve devam et"]
+    D -->|Evet| E["Görevi parçalara böl<br/>Her parça yeni oturum"]
+    D -->|Hayır| F["/compact çalıştır<br/>ve devam et"]
     
     style A fill:#E74C3C,color:#fff
     style C fill:#27AE60,color:#fff

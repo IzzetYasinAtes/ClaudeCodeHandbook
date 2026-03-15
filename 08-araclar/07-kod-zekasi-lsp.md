@@ -23,10 +23,10 @@ flowchart LR
     end
 
     subgraph servers ["Dil Sunucuları"]
-        TS["TypeScript\nLanguage Server"]
-        PY["Python\nLanguage Server"]
-        RS["Rust\nAnalyzer"]
-        GO["Go\nLanguage Server"]
+        TS["TypeScript<br/>Language Server"]
+        PY["Python<br/>Language Server"]
+        RS["Rust<br/>Analyzer"]
+        GO["Go<br/>Language Server"]
     end
 
     subgraph output ["Çıktılar"]
@@ -221,12 +221,12 @@ LSP.callHierarchy("validateToken")
 
 ```mermaid
 flowchart TD
-    START["Refactoring görevi:\nIPaymentGateway interface'ini\nyeniden tasarla"] --> FIND["LSP: Implementasyonları bul"]
-    FIND --> LIST["StripeGateway\nPayPalGateway\nSquareGateway"]
-    LIST --> REFS["LSP: Referansları bul\n(tüm kullanım noktaları)"]
+    START["Refactoring görevi:<br/>IPaymentGateway interface'ini<br/>yeniden tasarla"] --> FIND["LSP: Implementasyonları bul"]
+    FIND --> LIST["StripeGateway<br/>PayPalGateway<br/>SquareGateway"]
+    LIST --> REFS["LSP: Referansları bul<br/>(tüm kullanım noktaları)"]
     REFS --> EDIT_IF["Interface'i düzenle"]
     EDIT_IF --> LSP_CHECK["LSP: Tip hataları kontrol"]
-    LSP_CHECK --> ERRORS["Hata listesi:\n3 dosyada 7 hata"]
+    LSP_CHECK --> ERRORS["Hata listesi:<br/>3 dosyada 7 hata"]
     ERRORS --> FIX["Hataları sırayla düzelt"]
     FIX --> RECHECK["LSP: Tekrar kontrol"]
     RECHECK --> CLEAN["✅ Tüm hatalar temizlendi"]

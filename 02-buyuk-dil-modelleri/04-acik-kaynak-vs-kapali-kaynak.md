@@ -65,12 +65,12 @@ flowchart TD
 flowchart TD
     START["LLM Seçimi"]
     
-    START --> Q1{"Veri gizliliği\nkritik mi?"}
-    Q1 -->|"Evet"| ACIK["Açık Kaynak\n(Self-host)"]
-    Q1 -->|"Hayır"| Q2{"Aylık kullanım\nhacmi?"}
+    START --> Q1{"Veri gizliliği<br/>kritik mi?"}
+    Q1 -->|"Evet"| ACIK["Açık Kaynak<br/>(Self-host)"]
+    Q1 -->|"Hayır"| Q2{"Aylık kullanım<br/>hacmi?"}
     
-    Q2 -->|"Düşük\n(<1M Token/gün)"| KAPALI["Kapalı Kaynak\n(API)"]
-    Q2 -->|"Yüksek\n(>10M Token/gün)"| Q3{"GPU altyapınız\nvar mı?"}
+    Q2 -->|"Düşük<br/>(<1M Token/gün)"| KAPALI["Kapalı Kaynak<br/>(API)"]
+    Q2 -->|"Yüksek<br/>(>10M Token/gün)"| Q3{"GPU altyapınız<br/>var mı?"}
     
     Q3 -->|"Evet"| ACIK
     Q3 -->|"Hayır"| KAPALI

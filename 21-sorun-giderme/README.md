@@ -6,8 +6,8 @@ Claude Code kullanırken karşılaşabileceğiniz sorunların çözümlerini ve 
 
 ```mermaid
 flowchart TD
-    A["Çok Karşılaşılan Sorunlar\nKurulum, bağlantı, izin"] --> B["Context Window Sorunları\nToken yönetimi ve optimizasyon"]
-    B --> C["SSS\n20+ sıkça sorulan soru"]
+    A["Çok Karşılaşılan Sorunlar<br/>Kurulum, bağlantı, izin"] --> B["Context Window Sorunları<br/>Token yönetimi ve optimizasyon"]
+    B --> C["SSS<br/>20+ sıkça sorulan soru"]
 ```
 
 ## İçerik
@@ -32,13 +32,13 @@ Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 
 ```mermaid
 flowchart TD
-    A{"Sorununuz\nnedir?"}
+    A{"Sorununuz<br/>nedir?"}
     
-    A -->|"Claude Code\nyüklenmiyor"| B["01: Kurulum Sorunları"]
-    A -->|"API bağlantısı\nkurulamıyor"| C["01: Bağlantı Sorunları"]
-    A -->|"İzin reddedildi\nhatası"| D["01: İzin Sorunları"]
-    A -->|"Claude yavaşladı\nveya durdu"| E["02: Context Window"]
-    A -->|"Genel sorular\nvar"| F["03: SSS"]
+    A -->|"Claude Code<br/>yüklenmiyor"| B["01: Kurulum Sorunları"]
+    A -->|"API bağlantısı<br/>kurulamıyor"| C["01: Bağlantı Sorunları"]
+    A -->|"İzin reddedildi<br/>hatası"| D["01: İzin Sorunları"]
+    A -->|"Claude yavaşladı<br/>veya durdu"| E["02: Context Window"]
+    A -->|"Genel sorular<br/>var"| F["03: SSS"]
     
     style B fill:#E74C3C,color:#fff
     style C fill:#E67E22,color:#fff

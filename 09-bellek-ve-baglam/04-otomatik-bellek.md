@@ -18,9 +18,9 @@ Claude Code, çalışma sırasında yaptığınız düzeltmeleri ve verdiğiniz 
 ```mermaid
 flowchart TD
     subgraph oturum ["Çalışma Oturumu"]
-        U1["Kullanıcı: 'Hayır, burada\nsingle quote kullan'"]
-        U2["Kullanıcı: 'Test dosyalarını\n__tests__/ altına koy'"]
-        U3["Kullanıcı: 'Commit mesajlarını\nİngilizce yaz'"]
+        U1["Kullanıcı: 'Hayır, burada<br/>single quote kullan'"]
+        U2["Kullanıcı: 'Test dosyalarını<br/>__tests__/ altına koy'"]
+        U3["Kullanıcı: 'Commit mesajlarını<br/>İngilizce yaz'"]
     end
 
     subgraph ogrenme ["Claude'un Öğrenmesi"]
@@ -72,9 +72,9 @@ flowchart LR
         A5["Organik öğrenmeler"]
     end
 
-    SESSION["Oturum\nBaşlangıcı"] --> claude_md
+    SESSION["Oturum<br/>Başlangıcı"] --> claude_md
     SESSION --> auto_mem
-    claude_md --> CONTEXT["Birleşik\nBağlam"]
+    claude_md --> CONTEXT["Birleşik<br/>Bağlam"]
     auto_mem --> CONTEXT
 
     style claude_md fill:#4A90D9,color:#fff
@@ -163,11 +163,11 @@ Otomatik bellek dosyası **ilk 200 satır** ile sınırlıdır. Claude Code yaln
 
 ```mermaid
 flowchart TD
-    MEM["user_memory.md"] --> READ{"Dosya kaç\nsatır?"}
+    MEM["user_memory.md"] --> READ{"Dosya kaç<br/>satır?"}
     READ -->|"≤ 200 satır"| ALL["Tümü okunur ✅"]
-    READ -->|"> 200 satır"| PARTIAL["İlk 200 satır okunur ⚠️\nGeri kalanı göz ardı edilir"]
+    READ -->|"> 200 satır"| PARTIAL["İlk 200 satır okunur ⚠️<br/>Geri kalanı göz ardı edilir"]
 
-    PARTIAL --> ACTION["Dosyayı düzenleyin:\n- Eski/gereksiz girdileri silin\n- Benzer girdileri birleştirin\n- Önceliklendirin"]
+    PARTIAL --> ACTION["Dosyayı düzenleyin:<br/>- Eski/gereksiz girdileri silin<br/>- Benzer girdileri birleştirin<br/>- Önceliklendirin"]
 
     style ALL fill:#27AE60,color:#fff
     style PARTIAL fill:#F39C12,color:#fff
@@ -233,10 +233,10 @@ Bir oturum başlangıcında tüm bellek katmanları birlikte yüklenir:
 flowchart TD
     subgraph katmanlar ["Bellek Katmanları"]
         direction TB
-        UM["~/.claude/user_memory.md\n(Otomatik Bellek)"]
-        UC["~/.claude/CLAUDE.md\n(Kullanıcı CLAUDE.md)"]
-        PC["./CLAUDE.md\n(Proje CLAUDE.md)"]
-        PR[".claude/rules/*.md\n(Kural Dosyaları)"]
+        UM["~/.claude/user_memory.md<br/>(Otomatik Bellek)"]
+        UC["~/.claude/CLAUDE.md<br/>(Kullanıcı CLAUDE.md)"]
+        PC["./CLAUDE.md<br/>(Proje CLAUDE.md)"]
+        PR[".claude/rules/*.md<br/>(Kural Dosyaları)"]
     end
 
     SESSION["Oturum Başlangıcı"] --> UM
@@ -249,7 +249,7 @@ flowchart TD
     PC --> CTX
     PR -.->|"İstek üzerine"| CTX
 
-    CTX --> CLAUDE["Claude Code\nyönlendirilmiş çalışır"]
+    CTX --> CLAUDE["Claude Code<br/>yönlendirilmiş çalışır"]
 
     style UM fill:#E67E22,color:#fff
     style UC fill:#3498DB,color:#fff

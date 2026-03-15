@@ -6,11 +6,11 @@ Claude Code, Anthropic tarafından geliştirilen terminal tabanlı bir AI coding
 
 ```mermaid
 flowchart TD
-    A["Claude Code Nedir?"] --> B["Nasıl Çalışır?\nAgentic Loop"]
-    B --> C["Kurulum ve\nGereksinimler"]
-    C --> D["Kimlik Doğrulama\nve Planlar"]
+    A["Claude Code Nedir?"] --> B["Nasıl Çalışır?<br/>Agentic Loop"]
+    B --> C["Kurulum ve<br/>Gereksinimler"]
+    C --> D["Kimlik Doğrulama<br/>ve Planlar"]
     D --> E["İlk Oturum"]
-    E --> F["Claude Code vs\nClaude AI"]
+    E --> F["Claude Code vs<br/>Claude AI"]
 ```
 
 ## İçerik

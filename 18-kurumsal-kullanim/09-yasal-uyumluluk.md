@@ -17,11 +17,11 @@ Claude Code kullanımı birden fazla hukuki alan ile ilişkilidir:
 
 ```mermaid
 flowchart TD
-    CC["Claude Code\nKurumsal Kullanım"] --> CONTRACTS["📝 Sözleşmeler\nKullanım şartları, SLA"]
-    CC --> PRIVACY["🔒 Gizlilik\nGDPR, KVKK"]
-    CC --> IP["⚖️ Fikri Mülkiyet\nÜretilen kodun hakları"]
-    CC --> SECURITY["🛡️ Güvenlik\nSOC 2, ISO 27001"]
-    CC --> INDUSTRY["🏭 Sektörel\nFinans, sağlık, kamu"]
+    CC["Claude Code<br/>Kurumsal Kullanım"] --> CONTRACTS["📝 Sözleşmeler<br/>Kullanım şartları, SLA"]
+    CC --> PRIVACY["🔒 Gizlilik<br/>GDPR, KVKK"]
+    CC --> IP["⚖️ Fikri Mülkiyet<br/>Üretilen kodun hakları"]
+    CC --> SECURITY["🛡️ Güvenlik<br/>SOC 2, ISO 27001"]
+    CC --> INDUSTRY["🏭 Sektörel<br/>Finans, sağlık, kamu"]
 
     style CC fill:#2C3E50,color:#fff
     style CONTRACTS fill:#3498DB,color:#fff
@@ -40,14 +40,14 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph agreements ["Sözleşme Türleri"]
-        TOS["Terms of Service\n(Kullanım Şartları)\nBireysel kullanıcılar"]
-        API_TOS["API Terms\n(API Şartları)\nAPI kullanıcıları"]
-        ENTERPRISE["Enterprise Agreement\n(Kurumsal Sözleşme)\nBüyük organizasyonlar"]
+        TOS["Terms of Service<br/>(Kullanım Şartları)<br/>Bireysel kullanıcılar"]
+        API_TOS["API Terms<br/>(API Şartları)<br/>API kullanıcıları"]
+        ENTERPRISE["Enterprise Agreement<br/>(Kurumsal Sözleşme)<br/>Büyük organizasyonlar"]
     end
 
     TOS --> CLAUDE_AI["claude.ai"]
-    API_TOS --> API_USAGE["Claude Code\n(API üzerinden)"]
-    ENTERPRISE --> CUSTOM["Özelleştirilmiş\nkurumsal kullanım"]
+    API_TOS --> API_USAGE["Claude Code<br/>(API üzerinden)"]
+    ENTERPRISE --> CUSTOM["Özelleştirilmiş<br/>kurumsal kullanım"]
 
     style TOS fill:#3498DB,color:#fff
     style API_TOS fill:#F39C12,color:#fff
@@ -74,16 +74,16 @@ Anthropic'in sahip olduğu güvenlik sertifikaları:
 ```mermaid
 flowchart TD
     subgraph certs ["Güvenlik Sertifikaları"]
-        SOC2["SOC 2 Type II\nGüvenlik, erişilebilirlik,\ngizlilik kontrolleri"]
-        CSA["CSA STAR\nCloud güvenlik\ndeğerlendirmesi"]
-        PENTEST["Penetration Testing\nDüzenli güvenlik\ntestleri"]
+        SOC2["SOC 2 Type II<br/>Güvenlik, erişilebilirlik,<br/>gizlilik kontrolleri"]
+        CSA["CSA STAR<br/>Cloud güvenlik<br/>değerlendirmesi"]
+        PENTEST["Penetration Testing<br/>Düzenli güvenlik<br/>testleri"]
     end
 
     subgraph practices ["Güvenlik Uygulamaları"]
-        ENCRYPT["Şifreleme\nTransit + At-rest\nTLS 1.3, AES-256"]
-        ACCESS["Erişim Kontrolü\nRole-based access\nMFA zorunlu"]
-        MONITOR["İzleme\n7/24 güvenlik\nmonitoring"]
-        INCIDENT["Olay Müdahale\nIncident response\nplanı"]
+        ENCRYPT["Şifreleme<br/>Transit + At-rest<br/>TLS 1.3, AES-256"]
+        ACCESS["Erişim Kontrolü<br/>Role-based access<br/>MFA zorunlu"]
+        MONITOR["İzleme<br/>7/24 güvenlik<br/>monitoring"]
+        INCIDENT["Olay Müdahale<br/>Incident response<br/>planı"]
     end
 
     certs --> practices
@@ -113,12 +113,12 @@ GDPR (General Data Protection Regulation / Genel Veri Koruma Tüzüğü), Avrupa
 
 ```mermaid
 flowchart TD
-    GDPR["GDPR Gereksinimleri"] --> LAWFUL["Yasal Dayanak\nVeri işleme için hukuki temel"]
-    GDPR --> PURPOSE["Amaç Sınırlaması\nBelirlenen amaçla sınırlı"]
-    GDPR --> MINIMIZE["Veri Minimizasyonu\nGerekli minimum veri"]
-    GDPR --> RIGHTS["Veri Sahibi Hakları\nSilme, erişim, düzeltme"]
-    GDPR --> TRANSFER["Veri Transferi\nAB dışına aktarım kuralları"]
-    GDPR --> DPA["DPA\nVeri İşleme Sözleşmesi"]
+    GDPR["GDPR Gereksinimleri"] --> LAWFUL["Yasal Dayanak<br/>Veri işleme için hukuki temel"]
+    GDPR --> PURPOSE["Amaç Sınırlaması<br/>Belirlenen amaçla sınırlı"]
+    GDPR --> MINIMIZE["Veri Minimizasyonu<br/>Gerekli minimum veri"]
+    GDPR --> RIGHTS["Veri Sahibi Hakları<br/>Silme, erişim, düzeltme"]
+    GDPR --> TRANSFER["Veri Transferi<br/>AB dışına aktarım kuralları"]
+    GDPR --> DPA["DPA<br/>Veri İşleme Sözleşmesi"]
 
     style GDPR fill:#003399,color:#fff
     style DPA fill:#E74C3C,color:#fff
@@ -159,11 +159,11 @@ KVKK (Kişisel Verilerin Korunması Kanunu), Türkiye'nin kişisel veri koruma d
 
 ```mermaid
 flowchart TD
-    KVKK["KVKK Gereksinimleri"] --> EXPLICIT["Açık Rıza\nKişisel veri işleme için"]
-    KVKK --> REGISTER["VERBİS Kaydı\nVeri sorumlusu sicili"]
-    KVKK --> CROSS_BORDER["Yurt Dışı Aktarım\nYeterli koruma veya taahhüt"]
-    KVKK --> SECURITY_KVKK["Güvenlik Önlemleri\nTeknik ve idari tedbirler"]
-    KVKK --> NOTIFY["İhlal Bildirimi\n72 saat içinde KVK Kurulu'na"]
+    KVKK["KVKK Gereksinimleri"] --> EXPLICIT["Açık Rıza<br/>Kişisel veri işleme için"]
+    KVKK --> REGISTER["VERBİS Kaydı<br/>Veri sorumlusu sicili"]
+    KVKK --> CROSS_BORDER["Yurt Dışı Aktarım<br/>Yeterli koruma veya taahhüt"]
+    KVKK --> SECURITY_KVKK["Güvenlik Önlemleri<br/>Teknik ve idari tedbirler"]
+    KVKK --> NOTIFY["İhlal Bildirimi<br/>72 saat içinde KVK Kurulu'na"]
 
     style KVKK fill:#E30A17,color:#fff
 ```
@@ -185,12 +185,12 @@ Claude Code kullanıldığında veriler Anthropic sunucularına (ABD) aktarılı
 
 ```mermaid
 flowchart LR
-    TR["🇹🇷 Türkiye\nKaynak veri"] --> TRANSFER{"Yurt dışı\naktarım?"}
-    TRANSFER -->|"Doğrudan API"| US["🇺🇸 ABD\nAnthropic sunucuları"]
-    TRANSFER -->|"Bedrock"| AWS_REGION["☁️ AWS\nSeçilen bölge"]
-    TRANSFER -->|"Vertex AI"| GCP_REGION["☁️ GCP\nSeçilen bölge"]
+    TR["🇹🇷 Türkiye<br/>Kaynak veri"] --> TRANSFER{"Yurt dışı<br/>aktarım?"}
+    TRANSFER -->|"Doğrudan API"| US["🇺🇸 ABD<br/>Anthropic sunucuları"]
+    TRANSFER -->|"Bedrock"| AWS_REGION["☁️ AWS<br/>Seçilen bölge"]
+    TRANSFER -->|"Vertex AI"| GCP_REGION["☁️ GCP<br/>Seçilen bölge"]
 
-    US --> MECHANISM["Aktarım Mekanizması:\n- Yeterli koruma kararı\n- Taahhütname\n- Açık rıza"]
+    US --> MECHANISM["Aktarım Mekanizması:<br/>- Yeterli koruma kararı<br/>- Taahhütname<br/>- Açık rıza"]
 
     style TR fill:#E30A17,color:#fff
     style US fill:#3C3B6E,color:#fff
@@ -221,10 +221,10 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    IP_PROTECT["Fikri Mülkiyet Koruma"] --> REVIEW["Kod İnceleme\nÜretilen kodu review edin"]
-    IP_PROTECT --> LICENSE["Lisans Kontrolü\nAçık kaynak lisans uyumu"]
-    IP_PROTECT --> DOCUMENT["Belgeleme\nHangi kodun AI ile üretildiğini belirtin"]
-    IP_PROTECT --> POLICY["Politika\nAI kullanım politikası oluşturun"]
+    IP_PROTECT["Fikri Mülkiyet Koruma"] --> REVIEW["Kod İnceleme<br/>Üretilen kodu review edin"]
+    IP_PROTECT --> LICENSE["Lisans Kontrolü<br/>Açık kaynak lisans uyumu"]
+    IP_PROTECT --> DOCUMENT["Belgeleme<br/>Hangi kodun AI ile üretildiğini belirtin"]
+    IP_PROTECT --> POLICY["Politika<br/>AI kullanım politikası oluşturun"]
 
     style IP_PROTECT fill:#F39C12,color:#fff
 ```
@@ -283,20 +283,20 @@ ve benzeri AI kodlama araçlarını kullanımını düzenler.
 
 ```mermaid
 flowchart TD
-    START["Claude Code\nkullanmak istiyorum"] --> PII{"Kişisel veri\nişlenecek mi?"}
+    START["Claude Code<br/>kullanmak istiyorum"] --> PII{"Kişisel veri<br/>işlenecek mi?"}
 
-    PII -->|Evet| GDPR_KVKK["GDPR/KVKK\nuyumluluk kontrolü"]
-    PII -->|Hayır| SECTOR{"Sektörel\ndüzenleme var mı?"}
+    PII -->|Evet| GDPR_KVKK["GDPR/KVKK<br/>uyumluluk kontrolü"]
+    PII -->|Hayır| SECTOR{"Sektörel<br/>düzenleme var mı?"}
 
-    GDPR_KVKK --> DPA_CHECK{"DPA\nimzalandı mı?"}
-    DPA_CHECK -->|Evet| ZDR_CHECK{"ZDR\netkin mi?"}
+    GDPR_KVKK --> DPA_CHECK{"DPA<br/>imzalandı mı?"}
+    DPA_CHECK -->|Evet| ZDR_CHECK{"ZDR<br/>etkin mi?"}
     DPA_CHECK -->|Hayır| GET_DPA["DPA talep edin"]
 
-    SECTOR -->|Evet| SECTOR_CHECK["Sektörel uyumluluk\ndeğerlendirmesi"]
+    SECTOR -->|Evet| SECTOR_CHECK["Sektörel uyumluluk<br/>değerlendirmesi"]
     SECTOR -->|Hayır| READY["✅ Kullanıma hazır"]
 
     ZDR_CHECK -->|Evet| READY
-    ZDR_CHECK -->|Hayır| EVALUATE["ZDR gerekli mi?\ndeğerlendirin"]
+    ZDR_CHECK -->|Hayır| EVALUATE["ZDR gerekli mi?<br/>değerlendirin"]
 
     GET_DPA --> DPA_CHECK
     SECTOR_CHECK --> ZDR_CHECK

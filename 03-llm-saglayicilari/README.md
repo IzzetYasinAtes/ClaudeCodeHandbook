@@ -6,11 +6,11 @@ Büyük dil modellerini geliştiren şirketleri, stratejilerini, model ailelerin
 
 ```mermaid
 flowchart TD
-    A["OpenAI\nGPT & o-serisi"] --> B["Anthropic\nClaude & AI Safety"]
-    B --> C["Google DeepMind\nGemini"]
-    C --> D["Meta & Llama\nAçık Kaynak"]
-    D --> E["Diğer Sağlayıcılar\nDeepSeek, Mistral, Qwen..."]
-    E --> F["Büyük Karşılaştırma\nBenchmark & Fiyat"]
+    A["OpenAI<br/>GPT & o-serisi"] --> B["Anthropic<br/>Claude & AI Safety"]
+    B --> C["Google DeepMind<br/>Gemini"]
+    C --> D["Meta & Llama<br/>Açık Kaynak"]
+    D --> E["Diğer Sağlayıcılar<br/>DeepSeek, Mistral, Qwen..."]
+    E --> F["Büyük Karşılaştırma<br/>Benchmark & Fiyat"]
 ```
 
 ## İçerik

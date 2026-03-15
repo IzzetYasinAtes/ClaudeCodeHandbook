@@ -17,13 +17,13 @@ Claude Code şu anda üç dahili subagent sunar:
 
 ```mermaid
 flowchart LR
-    AGENT["Agent Aracı"] --> EXPLORE["🔍 Explore\n(Keşfet)"]
-    AGENT --> PLAN["📋 Plan\n(Planla)"]
-    AGENT --> GP["⚙️ GeneralPurpose\n(Genel Amaçlı)"]
+    AGENT["Agent Aracı"] --> EXPLORE["🔍 Explore<br/>(Keşfet)"]
+    AGENT --> PLAN["📋 Plan<br/>(Planla)"]
+    AGENT --> GP["⚙️ GeneralPurpose<br/>(Genel Amaçlı)"]
 
-    EXPLORE --> E_DESC["Salt okunur\nHızlı keşif\nHafif model"]
-    PLAN --> P_DESC["Araştırma + plan\nKarar desteği\nVarsayılan model"]
-    GP --> GP_DESC["Tam araç erişimi\nÇok adımlı görevler\nVarsayılan model"]
+    EXPLORE --> E_DESC["Salt okunur<br/>Hızlı keşif<br/>Hafif model"]
+    PLAN --> P_DESC["Araştırma + plan<br/>Karar desteği<br/>Varsayılan model"]
+    GP --> GP_DESC["Tam araç erişimi<br/>Çok adımlı görevler<br/>Varsayılan model"]
 
     style EXPLORE fill:#3498DB,color:#fff
     style PLAN fill:#E67E22,color:#fff
@@ -84,9 +84,9 @@ sequenceDiagram
 flowchart TD
     subgraph explore_strength ["Explore'un Gücü"]
         direction LR
-        S1["📁 Dosya keşfi\nGlob ile hızlı tarama"]
-        S2["🔍 Kod arama\nGrep ile regex arama"]
-        S3["📖 İçerik okuma\nRead ile anlama"]
+        S1["📁 Dosya keşfi<br/>Glob ile hızlı tarama"]
+        S2["🔍 Kod arama<br/>Grep ile regex arama"]
+        S3["📖 İçerik okuma<br/>Read ile anlama"]
     end
 
     subgraph explore_limit ["Explore'un Sınırları"]
@@ -238,19 +238,19 @@ Hangi dahili subagent'ı kullanmanız gerektiğini belirlemek için:
 
 ```mermaid
 flowchart TD
-    START["Görev nedir?"] --> Q1{"Dosya değişikliği\nveya komut çalıştırma\ngerekiyor mu?"}
+    START["Görev nedir?"] --> Q1{"Dosya değişikliği<br/>veya komut çalıştırma<br/>gerekiyor mu?"}
 
-    Q1 --> |"Evet"| GP["⚙️ GeneralPurpose\nKullan"]
-    Q1 --> |"Hayır"| Q2{"Web araştırması\nveya karmaşık analiz\ngerekiyor mu?"}
+    Q1 --> |"Evet"| GP["⚙️ GeneralPurpose<br/>Kullan"]
+    Q1 --> |"Hayır"| Q2{"Web araştırması<br/>veya karmaşık analiz<br/>gerekiyor mu?"}
 
-    Q2 --> |"Evet"| PLAN["📋 Plan\nKullan"]
-    Q2 --> |"Hayır"| Q3{"Sadece dosya\naraması / okuma\ngerekiyor mu?"}
+    Q2 --> |"Evet"| PLAN["📋 Plan<br/>Kullan"]
+    Q2 --> |"Hayır"| Q3{"Sadece dosya<br/>araması / okuma<br/>gerekiyor mu?"}
 
-    Q3 --> |"Evet"| EXPLORE["🔍 Explore\nKullan"]
-    Q3 --> |"Hayır"| DIRECT["Ana agent ile\ndoğrudan yap"]
+    Q3 --> |"Evet"| EXPLORE["🔍 Explore<br/>Kullan"]
+    Q3 --> |"Hayır"| DIRECT["Ana agent ile<br/>doğrudan yap"]
 
     GP --> TIP1["💡 En güçlü ama en maliyetli"]
-    PLAN --> TIP2["💡 Araştır ve planla,\nuygulamadan önce"]
+    PLAN --> TIP2["💡 Araştır ve planla,<br/>uygulamadan önce"]
     EXPLORE --> TIP3["💡 En hızlı ve en ucuz"]
 
     style GP fill:#27AE60,color:#fff
@@ -311,8 +311,8 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    E["🔍 Explore\nN+1 sorunlarını bul"] --> P["📋 Plan\nDüzeltme stratejisi"]
-    P --> G["⚙️ GeneralPurpose\nDüzeltmeleri uygula"]
+    E["🔍 Explore<br/>N+1 sorunlarını bul"] --> P["📋 Plan<br/>Düzeltme stratejisi"]
+    P --> G["⚙️ GeneralPurpose<br/>Düzeltmeleri uygula"]
 
     style E fill:#3498DB,color:#fff
     style P fill:#E67E22,color:#fff

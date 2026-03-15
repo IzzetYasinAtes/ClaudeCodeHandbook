@@ -42,7 +42,7 @@ flowchart TD
     TOOLS --> T1["/plugin"]
     TOOLS --> T2["/vim"]
 
-    DISPLAY --> D1["Çıktı stilleri\n(Bölüm 06)"]
+    DISPLAY --> D1["Çıktı stilleri<br/>(Bölüm 06)"]
 ```
 
 ---
@@ -100,9 +100,9 @@ Conversation history'yi (konuşma geçmişini) sıkıştırarak **context window
 
 ```mermaid
 flowchart LR
-    BEFORE["Konuşma Geçmişi\n45,230 token"] --> COMPACT["/compact"]
-    COMPACT --> AFTER["Sıkıştırılmış Geçmiş\n12,450 token"]
-    AFTER --> FREE["Serbest Alan\n+32,780 token"]
+    BEFORE["Konuşma Geçmişi<br/>45,230 token"] --> COMPACT["/compact"]
+    COMPACT --> AFTER["Sıkıştırılmış Geçmiş<br/>12,450 token"]
+    AFTER --> FREE["Serbest Alan<br/>+32,780 token"]
 ```
 
 > **İpucu:** `/compact` çalıştırdıktan sonra önceki mesajların detayları kaybolabilir. Önemli bağlamı korumak istiyorsanız `/compact [talimat]` şeklinde hangi bilgilerin korunacağını belirtin.
@@ -462,23 +462,23 @@ Terminal entegrasyonunu yapılandırır. Shell integration (kabuk entegrasyonu),
 ```mermaid
 flowchart TD
     START["Oturum başlat"] --> INIT{İlk kullanım?}
-    INIT -->|"Evet"| SETUP["/init\nCLAUDE.md oluştur"]
+    INIT -->|"Evet"| SETUP["/init<br/>CLAUDE.md oluştur"]
     INIT -->|"Hayır"| RESUME{Devam mı?}
     
     SETUP --> WORK["Çalışmaya başla"]
-    RESUME -->|"Evet"| RES["/resume\nOturum seç"]
+    RESUME -->|"Evet"| RES["/resume<br/>Oturum seç"]
     RESUME -->|"Hayır"| WORK
     RES --> WORK
     
     WORK --> TASK["Görevler ver"]
-    TASK --> CHECK{Context\ndoldu mu?}
-    CHECK -->|"Evet"| COMPACT["/compact\nSıkıştır"]
+    TASK --> CHECK{Context<br/>doldu mu?}
+    CHECK -->|"Evet"| COMPACT["/compact<br/>Sıkıştır"]
     CHECK -->|"Hayır"| CONTINUE["Devam et"]
     COMPACT --> CONTINUE
     
     CONTINUE --> PROBLEM{Sorun var mı?}
-    PROBLEM -->|"Evet"| DOCTOR["/doctor\nKontrol et"]
-    PROBLEM -->|"Hayır"| COST["/cost\nMaliyet kontrol"]
+    PROBLEM -->|"Evet"| DOCTOR["/doctor<br/>Kontrol et"]
+    PROBLEM -->|"Hayır"| COST["/cost<br/>Maliyet kontrol"]
     DOCTOR --> TASK
     
     COST --> END{Bitti mi?}

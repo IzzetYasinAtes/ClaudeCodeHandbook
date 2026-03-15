@@ -19,20 +19,20 @@ Bir Vibe Coder'ın tipik proje yaşam döngüsü:
 ```mermaid
 flowchart TD
     subgraph fikir ["Fikir"]
-        A["Doğal Dilde Tanım\n'Şöyle bir uygulama istiyorum...'"] --> B["CLAUDE.md Oluştur\nProje kuralları ve yapısı"]
+        A["Doğal Dilde Tanım<br/>'Şöyle bir uygulama istiyorum...'"] --> B["CLAUDE.md Oluştur<br/>Proje kuralları ve yapısı"]
     end
 
     subgraph uretim ["Üretim"]
-        C["Scaffold\nProje iskeleti oluştur"] --> D["İteratif Geliştirme\nPrompt → Sonuç → Geri bildirim"]
-        D --> E["Paralel Denemeler\n--worktree ile alternatifler"]
+        C["Scaffold<br/>Proje iskeleti oluştur"] --> D["İteratif Geliştirme<br/>Prompt → Sonuç → Geri bildirim"]
+        D --> E["Paralel Denemeler<br/>--worktree ile alternatifler"]
     end
 
     subgraph dogrulama ["Doğrulama"]
-        F["Çalıştır ve Test Et\nManuel doğrulama"] --> G["Düzelt ve İyileştir\nGeri bildirim döngüsü"]
+        F["Çalıştır ve Test Et<br/>Manuel doğrulama"] --> G["Düzelt ve İyileştir<br/>Geri bildirim döngüsü"]
     end
 
     subgraph yayinla ["Yayınla"]
-        H["Deploy Hazırlığı\nCI/CD, README, env"] --> I["Yayınla\nVercel, Netlify, vb."]
+        H["Deploy Hazırlığı<br/>CI/CD, README, env"] --> I["Yayınla<br/>Vercel, Netlify, vb."]
     end
 
     B --> C
@@ -55,24 +55,29 @@ Vibe Coding'de geliştirme süreci prompt yazarak başlar, kod yazarak değil:
 ### Temel Prensipler
 
 ```mermaid
-mindmap
-  root(("Prompt-First\nDevelopment"))
-    Niyet Odaklı
-      Ne istediğini söyle
-      Nasıl yapılacağını AI belirlesin
-      Sonucu değerlendir
-    İteratif
-      Küçük adımlarla ilerle
-      Her adımda doğrula
-      Geri bildirim ver
-    Bağlam Zengin
-      CLAUDE.md ile kurallar
-      Mevcut kodu referans göster
-      Örneklerle açıkla
-    Minimal Müdahale
-      Kodu doğrudan düzenleme
-      Prompt ile yönlendir
-      AI'ın kararlarına güven
+flowchart LR
+    ROOT(("Prompt-First<br/>Development"))
+
+    ROOT --> N["Niyet Odaklı"]
+    ROOT --> I["İteratif"]
+    ROOT --> B["Bağlam Zengin"]
+    ROOT --> M["Minimal Müdahale"]
+
+    N --> N1["Ne istediğini söyle"]
+    N --> N2["Nasıl yapılacağını<br/>AI belirlesin"]
+    N --> N3["Sonucu değerlendir"]
+
+    I --> I1["Küçük adımlarla ilerle"]
+    I --> I2["Her adımda doğrula"]
+    I --> I3["Geri bildirim ver"]
+
+    B --> B1["CLAUDE.md ile kurallar"]
+    B --> B2["Mevcut kodu<br/>referans göster"]
+    B --> B3["Örneklerle açıkla"]
+
+    M --> M1["Kodu doğrudan düzenleme"]
+    M --> M2["Prompt ile yönlendir"]
+    M --> M3["AI'ın kararlarına güven"]
 ```
 
 ---
@@ -214,14 +219,14 @@ claude --worktree experiment/calendar "Dashboard'u takvim görünümü olarak ta
 
 ```mermaid
 flowchart LR
-    A["Ana Branch\n(main)"] --> B["experiment/kanban\nKanban Board"]
-    A --> C["experiment/table\nTablo Görünümü"]
-    A --> D["experiment/calendar\nTakvim Görünümü"]
+    A["Ana Branch<br/>(main)"] --> B["experiment/kanban<br/>Kanban Board"]
+    A --> C["experiment/table<br/>Tablo Görünümü"]
+    A --> D["experiment/calendar<br/>Takvim Görünümü"]
     
     B --> E{"Hangisi daha iyi?"}
     C --> E
     D --> E
-    E --> F["Seçilen yaklaşımı\nmain'e merge et"]
+    E --> F["Seçilen yaklaşımı<br/>main'e merge et"]
 
     style A fill:#3498DB,color:#fff
     style F fill:#27AE60,color:#fff

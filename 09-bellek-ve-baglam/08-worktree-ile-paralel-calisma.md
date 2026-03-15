@@ -20,17 +20,17 @@ Geleneksel iş akışında, bir görev bitmeden diğerine geçmek **branch switc
 flowchart TD
     subgraph seri ["❌ Seri Çalışma"]
         direction TB
-        S1["Görev 1: Auth modülü\n(30 dk)"] --> S2["Görev 2: UI düzeltme\n(15 dk)"]
-        S2 --> S3["Görev 3: API endpoint\n(20 dk)"]
-        S3 --> TOTAL_S["Toplam: 65 dk\n(sıralı)"]
+        S1["Görev 1: Auth modülü<br/>(30 dk)"] --> S2["Görev 2: UI düzeltme<br/>(15 dk)"]
+        S2 --> S3["Görev 3: API endpoint<br/>(20 dk)"]
+        S3 --> TOTAL_S["Toplam: 65 dk<br/>(sıralı)"]
     end
 
     subgraph paralel ["✅ Paralel Çalışma (Worktree)"]
         direction TB
-        P1["Görev 1: Auth modülü\n(Worktree 1)"]
-        P2["Görev 2: UI düzeltme\n(Worktree 2)"]
-        P3["Görev 3: API endpoint\n(Worktree 3)"]
-        P1 --> TOTAL_P["Toplam: ~30 dk\n(paralel)"]
+        P1["Görev 1: Auth modülü<br/>(Worktree 1)"]
+        P2["Görev 2: UI düzeltme<br/>(Worktree 2)"]
+        P3["Görev 3: API endpoint<br/>(Worktree 3)"]
+        P1 --> TOTAL_P["Toplam: ~30 dk<br/>(paralel)"]
         P2 --> TOTAL_P
         P3 --> TOTAL_P
     end
@@ -53,13 +53,13 @@ Claude Code `--worktree` bayrağı kullanıldığında:
 ```mermaid
 flowchart TD
     subgraph main_repo ["Ana Repo (my-project/)"]
-        MAIN["main branch\n(ana çalışma dizini)"]
+        MAIN["main branch<br/>(ana çalışma dizini)"]
     end
 
     subgraph worktrees [".claude/worktrees/"]
-        WT1["auth-feature/\n(worktree-auth-feature branch)\nGörev: Auth modülü"]
-        WT2["ui-fix/\n(worktree-ui-fix branch)\nGörev: UI düzeltme"]
-        WT3["api-endpoint/\n(worktree-api-endpoint branch)\nGörev: API endpoint"]
+        WT1["auth-feature/<br/>(worktree-auth-feature branch)<br/>Görev: Auth modülü"]
+        WT2["ui-fix/<br/>(worktree-ui-fix branch)<br/>Görev: UI düzeltme"]
+        WT3["api-endpoint/<br/>(worktree-api-endpoint branch)<br/>Görev: API endpoint"]
     end
 
     MAIN --> WT1
@@ -67,9 +67,9 @@ flowchart TD
     MAIN --> WT3
 
     subgraph sessions ["Claude Code Oturumları"]
-        CS1["Oturum 1\n(auth-feature üzerinde)"]
-        CS2["Oturum 2\n(ui-fix üzerinde)"]
-        CS3["Oturum 3\n(api-endpoint üzerinde)"]
+        CS1["Oturum 1<br/>(auth-feature üzerinde)"]
+        CS2["Oturum 2<br/>(ui-fix üzerinde)"]
+        CS3["Oturum 3<br/>(api-endpoint üzerinde)"]
     end
 
     WT1 --> CS1
@@ -175,14 +175,14 @@ Claude Code **Desktop** uygulaması kullanıldığında, her oturum otomatik ola
 ```mermaid
 flowchart TD
     subgraph desktop ["Claude Code Desktop"]
-        DA["Oturum otomatik\nizole edilir"]
-        DA --> ISO1["Her görev kendi\nworktree'sinde çalışır"]
-        ISO1 --> SAFE["Ana branch\nguvenli kalır"]
+        DA["Oturum otomatik<br/>izole edilir"]
+        DA --> ISO1["Her görev kendi<br/>worktree'sinde çalışır"]
+        ISO1 --> SAFE["Ana branch<br/>guvenli kalır"]
     end
 
     subgraph terminal ["Claude Code Terminal"]
-        TA["-w bayrağı ile\nmanuel izolasyon"]
-        TA --> ISO2["İstenen görevler\niçin worktree oluşturulur"]
+        TA["-w bayrağı ile<br/>manuel izolasyon"]
+        TA --> ISO2["İstenen görevler<br/>için worktree oluşturulur"]
     end
 
     style desktop fill:#4A90D9,color:#fff
@@ -197,15 +197,15 @@ Claude Code'un **subagent** (alt ajan) sistemi de worktree ile izole çalışabi
 
 ```mermaid
 flowchart TD
-    MAIN["Ana Claude Code\nOturumu"] --> SUB1["Subagent 1\nisolation: worktree\n(auth görevi)"]
-    MAIN --> SUB2["Subagent 2\nisolation: worktree\n(test görevi)"]
-    MAIN --> SUB3["Subagent 3\nisolation: worktree\n(docs görevi)"]
+    MAIN["Ana Claude Code<br/>Oturumu"] --> SUB1["Subagent 1<br/>isolation: worktree<br/>(auth görevi)"]
+    MAIN --> SUB2["Subagent 2<br/>isolation: worktree<br/>(test görevi)"]
+    MAIN --> SUB3["Subagent 3<br/>isolation: worktree<br/>(docs görevi)"]
 
     SUB1 --> WT1["worktree-sub-1/"]
     SUB2 --> WT2["worktree-sub-2/"]
     SUB3 --> WT3["worktree-sub-3/"]
 
-    SUB1 -->|"Tamamlandı"| MERGE["Ana oturuma\nbirleştir"]
+    SUB1 -->|"Tamamlandı"| MERGE["Ana oturuma<br/>birleştir"]
     SUB2 -->|"Tamamlandı"| MERGE
     SUB3 -->|"Tamamlandı"| MERGE
 
@@ -310,11 +310,11 @@ Worktree oturumları sona erdiğinde otomatik temizlik yapılır:
 ```mermaid
 flowchart TD
     SESSION["Oturum sona erdi"] --> CLEANUP["Otomatik Temizlik"]
-    CLEANUP --> REMOVE_DIR["Worktree dizini\nsilinir"]
-    CLEANUP --> KEEP_BRANCH["Git branch'i\nkorunur"]
-    CLEANUP --> KEEP_CHANGES["Commit'lenmiş değişiklikler\nkorunur"]
+    CLEANUP --> REMOVE_DIR["Worktree dizini<br/>silinir"]
+    CLEANUP --> KEEP_BRANCH["Git branch'i<br/>korunur"]
+    CLEANUP --> KEEP_CHANGES["Commit'lenmiş değişiklikler<br/>korunur"]
 
-    KEEP_BRANCH --> MERGE{"Merge\netmek ister\nmisiniz?"}
+    KEEP_BRANCH --> MERGE{"Merge<br/>etmek ister<br/>misiniz?"}
     MERGE -->|"Evet"| GIT_MERGE["git merge worktree-<isim>"]
     MERGE -->|"Hayır"| DELETE_BRANCH["git branch -d worktree-<isim>"]
 
@@ -343,12 +343,12 @@ $ git worktree prune
 
 ```mermaid
 flowchart TD
-    Q1{"Kaç görev\nvar?"} -->|"1 görev"| NORMAL["Normal oturum\n(worktree gerekmez)"]
-    Q1 -->|"2-3 görev"| Q2{"Görevler\nbağımsız mı?"}
-    Q1 -->|"3+ görev"| MULTI["Kesinlikle worktree\nkullanın"]
+    Q1{"Kaç görev<br/>var?"} -->|"1 görev"| NORMAL["Normal oturum<br/>(worktree gerekmez)"]
+    Q1 -->|"2-3 görev"| Q2{"Görevler<br/>bağımsız mı?"}
+    Q1 -->|"3+ görev"| MULTI["Kesinlikle worktree<br/>kullanın"]
 
-    Q2 -->|"Evet, bağımsız"| WORKTREE["Worktree ile\nparalel çalışın"]
-    Q2 -->|"Hayır, birbirine\nbağlı"| SERIAL["Sıralı oturumlar\n(biri bitsin diğeri başlasın)"]
+    Q2 -->|"Evet, bağımsız"| WORKTREE["Worktree ile<br/>paralel çalışın"]
+    Q2 -->|"Hayır, birbirine<br/>bağlı"| SERIAL["Sıralı oturumlar<br/>(biri bitsin diğeri başlasın)"]
 
     style NORMAL fill:#95A5A6,color:#fff
     style WORKTREE fill:#27AE60,color:#fff

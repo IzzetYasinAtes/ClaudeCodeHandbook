@@ -23,16 +23,16 @@ Sandbox, Claude Code'un bash komutlarını **izole bir ortamda** çalıştırmas
 ```mermaid
 flowchart TB
     subgraph normal ["Sandboxsız Çalışma"]
-        N_CMD["Bash Komutu"] --> N_FS["Tüm Dosya Sistemi\n✅ Erişim var"]
-        N_CMD --> N_NET["Tüm Ağ\n✅ Erişim var"]
-        N_CMD --> N_SYS["Sistem Kaynakları\n✅ Erişim var"]
+        N_CMD["Bash Komutu"] --> N_FS["Tüm Dosya Sistemi<br/>✅ Erişim var"]
+        N_CMD --> N_NET["Tüm Ağ<br/>✅ Erişim var"]
+        N_CMD --> N_SYS["Sistem Kaynakları<br/>✅ Erişim var"]
     end
 
     subgraph sandbox ["Sandbox ile Çalışma"]
         S_CMD["Bash Komutu"] --> S_SANDBOX["Sandbox Katmanı"]
-        S_SANDBOX --> S_FS["Proje Dizini\n✅ Kısıtlı erişim"]
-        S_SANDBOX --> S_NET["Ağ\n❌ Engelli"]
-        S_SANDBOX --> S_SYS["Sistem\n❌ Engelli"]
+        S_SANDBOX --> S_FS["Proje Dizini<br/>✅ Kısıtlı erişim"]
+        S_SANDBOX --> S_NET["Ağ<br/>❌ Engelli"]
+        S_SANDBOX --> S_SYS["Sistem<br/>❌ Engelli"]
     end
 
     style normal fill:#f8d7da,stroke:#dc3545
@@ -51,20 +51,20 @@ flowchart TD
     end
 
     subgraph sandbox_layer ["Sandbox Katmanı"]
-        BASH_CALL --> SANDBOX_CHECK{"Sandbox\naktif mi?"}
+        BASH_CALL --> SANDBOX_CHECK{"Sandbox<br/>aktif mi?"}
 
         SANDBOX_CHECK -->|"Evet"| ISOLATED["İzole Ortam"]
         SANDBOX_CHECK -->|"Hayır"| DIRECT["Doğrudan Çalıştırma"]
 
         subgraph isolated_env ["İzole Ortam"]
-            ISOLATED --> FS_FILTER["Dosya Sistemi\nFiltresi"]
+            ISOLATED --> FS_FILTER["Dosya Sistemi<br/>Filtresi"]
             ISOLATED --> NET_FILTER["Ağ Filtresi"]
 
-            FS_FILTER --> ALLOWED_FS["İzin Verilen Yollar\n• Proje dizini\n• /tmp\n• node_modules"]
-            FS_FILTER --> BLOCKED_FS["Engellenen Yollar\n• ~/ (home)\n• /etc\n• /usr\n• Diğer projeler"]
+            FS_FILTER --> ALLOWED_FS["İzin Verilen Yollar<br/>• Proje dizini<br/>• /tmp<br/>• node_modules"]
+            FS_FILTER --> BLOCKED_FS["Engellenen Yollar<br/>• ~/ (home)<br/>• /etc<br/>• /usr<br/>• Diğer projeler"]
 
-            NET_FILTER --> ALLOWED_NET["İzin Verilen\n• localhost\n• 127.0.0.1"]
-            NET_FILTER --> BLOCKED_NET["Engellenen\n• Dış IP'ler\n• DNS sorguları"]
+            NET_FILTER --> ALLOWED_NET["İzin Verilen<br/>• localhost<br/>• 127.0.0.1"]
+            NET_FILTER --> BLOCKED_NET["Engellenen<br/>• Dış IP'ler<br/>• DNS sorguları"]
         end
     end
 
@@ -97,16 +97,16 @@ Claude Code, farklı işletim sistemlerinde farklı sandbox teknolojileri kullan
 ```mermaid
 flowchart LR
     subgraph macos ["macOS"]
-        M1["sandbox-exec"] --> M2["Seatbelt profili\nile kısıtlama"]
+        M1["sandbox-exec"] --> M2["Seatbelt profili<br/>ile kısıtlama"]
     end
 
     subgraph linux ["Linux"]
-        L1["Namespaces"] --> L2["Mount/Net/PID\nizolasyonu"]
-        L3["seccomp"] --> L4["Sistem çağrısı\nfiltresi"]
+        L1["Namespaces"] --> L2["Mount/Net/PID<br/>izolasyonu"]
+        L3["seccomp"] --> L4["Sistem çağrısı<br/>filtresi"]
     end
 
     subgraph docker ["Docker"]
-        D1["Container"] --> D2["Doğal\nizolasyon"]
+        D1["Container"] --> D2["Doğal<br/>izolasyon"]
     end
 ```
 
@@ -252,11 +252,11 @@ $ claude --sandbox --mode default
 ```mermaid
 flowchart TD
     subgraph combinations ["Mod + Sandbox Kombinasyonları"]
-        C1["default + sandbox\n✅ Güvenli geliştirme"]
-        C2["acceptEdits + sandbox\n✅ Güvenli toplu düzenleme"]
-        C3["bypassPermissions + sandbox\n✅ Güvenli otomasyon"]
-        C4["plan + sandbox\n✅ Güvenli analiz"]
-        C5["bypassPermissions - sandbox\n⚠️ Yalnızca container içi"]
+        C1["default + sandbox<br/>✅ Güvenli geliştirme"]
+        C2["acceptEdits + sandbox<br/>✅ Güvenli toplu düzenleme"]
+        C3["bypassPermissions + sandbox<br/>✅ Güvenli otomasyon"]
+        C4["plan + sandbox<br/>✅ Güvenli analiz"]
+        C5["bypassPermissions - sandbox<br/>⚠️ Yalnızca container içi"]
     end
 
     style C1 fill:#d4edda,stroke:#28a745

@@ -43,12 +43,12 @@ flowchart TD
     CLI --> CAT5["Araç ve İzin"]
     CLI --> CAT6["Bilgi ve Yardım"]
 
-    CAT1 --> F1["-p / --print\n--fast\n--plan"]
-    CAT2 --> F2["-c / --continue\n-r / --resume\n--session-id\n-w / --worktree"]
-    CAT3 --> F3["--output-format\n--verbose"]
-    CAT4 --> F4["--model\n--max-tokens"]
-    CAT5 --> F5["--allowedTools\n--disallowedTools\n--dangerously-skip-permissions"]
-    CAT6 --> F6["--version\n--help"]
+    CAT1 --> F1["-p / --print<br/>--fast<br/>--plan"]
+    CAT2 --> F2["-c / --continue<br/>-r / --resume<br/>--session-id<br/>-w / --worktree"]
+    CAT3 --> F3["--output-format<br/>--verbose"]
+    CAT4 --> F4["--model<br/>--max-tokens"]
+    CAT5 --> F5["--allowedTools<br/>--disallowedTools<br/>--dangerously-skip-permissions"]
+    CAT6 --> F6["--version<br/>--help"]
 ```
 
 ---
@@ -416,13 +416,13 @@ $ claude --session-id feature-123 -c "Testleri yaz ve çalıştır"
 ```mermaid
 flowchart TD
     subgraph session ["Oturum Tabanlı İş Akışı"]
-        S1["claude --session-id feat-123\n'Analiz et'"] --> S2["claude --session-id feat-123 -c\n'Planı uygula'"]
-        S2 --> S3["claude --session-id feat-123 -c\n'Test yaz'"]
-        S3 --> S4["claude --session-id feat-123 -c\n'PR oluştur'"]
+        S1["claude --session-id feat-123<br/>'Analiz et'"] --> S2["claude --session-id feat-123 -c<br/>'Planı uygula'"]
+        S2 --> S3["claude --session-id feat-123 -c<br/>'Test yaz'"]
+        S3 --> S4["claude --session-id feat-123 -c<br/>'PR oluştur'"]
     end
 
     subgraph context ["Paylaşılan Bağlam"]
-        CTX["Tüm oturumlarda\naynı bağlam korunur"]
+        CTX["Tüm oturumlarda<br/>aynı bağlam korunur"]
     end
 
     session --> CTX

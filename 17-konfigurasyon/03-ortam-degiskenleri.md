@@ -17,17 +17,17 @@ Claude Code, birçok davranışını environment variables (ortam değişkenleri
 flowchart TD
     subgraph sources ["Ortam Değişkeni Kaynakları"]
         direction TB
-        SHELL["🖥️ Shell / Terminal\nexport ANTHROPIC_API_KEY=..."]
-        ENV_FILE["📄 .env Dosyası\nCLAUDE_ENV_FILE ile yüklenir"]
-        SETTINGS["⚙️ settings.json env bloğu\nenv: { KEY: value }"]
+        SHELL["🖥️ Shell / Terminal<br/>export ANTHROPIC_API_KEY=..."]
+        ENV_FILE["📄 .env Dosyası<br/>CLAUDE_ENV_FILE ile yüklenir"]
+        SETTINGS["⚙️ settings.json env bloğu<br/>env: { KEY: value }"]
     end
 
     subgraph categories ["Değişken Kategorileri"]
         direction TB
-        AUTH["🔑 Kimlik Doğrulama\nAPI anahtarları"]
-        BEHAVIOR["🎛️ Davranış\nMod, yol, dizin ayarları"]
-        NETWORK["🌐 Ağ\nProxy, SSL ayarları"]
-        DISPLAY["🎨 Görünüm\nTema, renk ayarları"]
+        AUTH["🔑 Kimlik Doğrulama<br/>API anahtarları"]
+        BEHAVIOR["🎛️ Davranış<br/>Mod, yol, dizin ayarları"]
+        NETWORK["🌐 Ağ<br/>Proxy, SSL ayarları"]
+        DISPLAY["🎨 Görünüm<br/>Tema, renk ayarları"]
     end
 
     sources --> categories
@@ -50,7 +50,7 @@ flowchart TD
 
 ```bash
 # Doğrudan API anahtarı ile
-export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxx"
+export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"
 
 # Kurumsal OAuth token ile
 export ANTHROPIC_AUTH_TOKEN="eyJhbGciOiJSUzI1NiIs..."
@@ -118,9 +118,9 @@ claude
 
 ```mermaid
 flowchart LR
-    ENV_FILE[".env.claude\nDosyası"] --> LOAD["CLAUDE_ENV_FILE\nDeğişkeni ile yüklenir"]
-    LOAD --> SESSION["Claude Code\nOturumu"]
-    SESSION --> USE["Değişkenler\nBash komutlarında kullanılır"]
+    ENV_FILE[".env.claude<br/>Dosyası"] --> LOAD["CLAUDE_ENV_FILE<br/>Değişkeni ile yüklenir"]
+    LOAD --> SESSION["Claude Code<br/>Oturumu"]
+    SESSION --> USE["Değişkenler<br/>Bash komutlarında kullanılır"]
 
     style ENV_FILE fill:#27AE60,color:#fff
     style SESSION fill:#3498DB,color:#fff
@@ -243,7 +243,7 @@ flowchart TD
 # ~/.bashrc veya ~/.zshrc
 
 # Claude Code Kimlik Doğrulama
-export ANTHROPIC_API_KEY="sk-ant-api03-xxxx"
+export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"
 
 # Proxy Ayarları
 export HTTPS_PROXY="http://proxy.company.com:8080"

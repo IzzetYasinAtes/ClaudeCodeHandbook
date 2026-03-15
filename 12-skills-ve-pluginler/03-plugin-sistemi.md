@@ -18,13 +18,13 @@ Bir plugin, Claude Code'un yeteneklerini genişleten bileşenlerin organize bir 
 
 ```mermaid
 flowchart TD
-    PLUGIN["Plugin\n(Paketlenmiş Genişletme)"]
+    PLUGIN["Plugin<br/>(Paketlenmiş Genişletme)"]
 
-    PLUGIN --> SKILLS["Skills\n(Beceriler)"]
-    PLUGIN --> AGENTS["Agents\n(Ajanlar)"]
-    PLUGIN --> HOOKS["Hooks\n(Kancalar)"]
-    PLUGIN --> MCP["MCP Servers\n(Protokol Sunucuları)"]
-    PLUGIN --> MANIFEST["plugin.json\n(Manifest Dosyası)"]
+    PLUGIN --> SKILLS["Skills<br/>(Beceriler)"]
+    PLUGIN --> AGENTS["Agents<br/>(Ajanlar)"]
+    PLUGIN --> HOOKS["Hooks<br/>(Kancalar)"]
+    PLUGIN --> MCP["MCP Servers<br/>(Protokol Sunucuları)"]
+    PLUGIN --> MANIFEST["plugin.json<br/>(Manifest Dosyası)"]
 
     SKILLS --> S1["lint skill"]
     SKILLS --> S2["format skill"]
@@ -240,15 +240,15 @@ Plugin'ler harici veri kaynaklarına erişim sağlayan MCP sunucuları içerebil
 ```mermaid
 flowchart LR
     subgraph install ["Kurulum Yöntemleri"]
-        I1["Marketplace'den\n/plugin install"]
-        I2["Git'ten\n/plugin add URL"]
-        I3["Yerel dizinden\n/plugin add ./path"]
+        I1["Marketplace'den<br/>/plugin install"]
+        I2["Git'ten<br/>/plugin add URL"]
+        I3["Yerel dizinden<br/>/plugin add ./path"]
     end
 
     subgraph manage ["Yönetim"]
-        M1["/plugin list\nKurulu plugin'leri listele"]
-        M2["/plugin update\nPlugin güncelle"]
-        M3["/plugin remove\nPlugin kaldır"]
+        M1["/plugin list<br/>Kurulu plugin'leri listele"]
+        M2["/plugin update<br/>Plugin güncelle"]
+        M3["/plugin remove<br/>Plugin kaldır"]
     end
 
     install --> manage
@@ -306,12 +306,12 @@ flowchart LR
 flowchart TD
     subgraph benefits ["Plugin Sistemi Avantajları"]
         direction TB
-        B1["Modülerlik\nBileşenleri organize et"]
-        B2["Versiyon Kontrolü\nSemantic Versioning"]
-        B3["Takım Paylaşımı\nGit ile dağıt"]
-        B4["Marketplace\nTopluluk ekosistemi"]
-        B5["İzolasyon\nPlugin bazlı izinler"]
-        B6["Tekrar Kullanım\nProjeler arası taşınabilir"]
+        B1["Modülerlik<br/>Bileşenleri organize et"]
+        B2["Versiyon Kontrolü<br/>Semantic Versioning"]
+        B3["Takım Paylaşımı<br/>Git ile dağıt"]
+        B4["Marketplace<br/>Topluluk ekosistemi"]
+        B5["İzolasyon<br/>Plugin bazlı izinler"]
+        B6["Tekrar Kullanım<br/>Projeler arası taşınabilir"]
     end
 
     B1 --> B2

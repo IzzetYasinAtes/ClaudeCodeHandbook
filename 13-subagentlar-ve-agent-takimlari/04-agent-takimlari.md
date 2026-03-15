@@ -19,12 +19,12 @@ Bir agent takımı, bir **orkestratör agent** (conductor) tarafından yönetile
 
 ```mermaid
 flowchart TD
-    USER["👤 Kullanıcı"] --> ORCH["🎯 Orkestratör Agent\n(Conductor)"]
+    USER["👤 Kullanıcı"] --> ORCH["🎯 Orkestratör Agent<br/>(Conductor)"]
 
-    ORCH --> |"Modül A"| W1["🔧 Worker 1\nFrontend"]
-    ORCH --> |"Modül B"| W2["🔧 Worker 2\nBackend API"]
-    ORCH --> |"Modül C"| W3["🔧 Worker 3\nVeritabanı"]
-    ORCH --> |"Test"| W4["🔧 Worker 4\nTest & QA"]
+    ORCH --> |"Modül A"| W1["🔧 Worker 1<br/>Frontend"]
+    ORCH --> |"Modül B"| W2["🔧 Worker 2<br/>Backend API"]
+    ORCH --> |"Modül C"| W3["🔧 Worker 3<br/>Veritabanı"]
+    ORCH --> |"Test"| W4["🔧 Worker 4<br/>Test & QA"]
 
     W1 --> |"Sonuç"| ORCH
     W2 --> |"Sonuç"| ORCH
@@ -116,10 +116,10 @@ Worker'lar sıralı bir zincir oluşturur. Bir öncekinin çıktısı sonrakinin
 
 ```mermaid
 flowchart LR
-    ORCH["🎯 Orkestratör"] --> W1["Worker 1\nAnaliz"]
-    W1 --> W2["Worker 2\nTasarım"]
-    W2 --> W3["Worker 3\nUygulama"]
-    W3 --> W4["Worker 4\nTest"]
+    ORCH["🎯 Orkestratör"] --> W1["Worker 1<br/>Analiz"]
+    W1 --> W2["Worker 2<br/>Tasarım"]
+    W2 --> W3["Worker 3<br/>Uygulama"]
+    W3 --> W4["Worker 4<br/>Test"]
     W4 --> ORCH
 
     style ORCH fill:#E74C3C,color:#fff
@@ -136,11 +136,11 @@ flowchart TD
     ORCH["🎯 Ana Orkestratör"] --> SUB1["🎯 Frontend Lideri"]
     ORCH --> SUB2["🎯 Backend Lideri"]
 
-    SUB1 --> W1["Worker\nReact"]
-    SUB1 --> W2["Worker\nCSS"]
+    SUB1 --> W1["Worker<br/>React"]
+    SUB1 --> W2["Worker<br/>CSS"]
 
-    SUB2 --> W3["Worker\nAPI"]
-    SUB2 --> W4["Worker\nDB"]
+    SUB2 --> W3["Worker<br/>API"]
+    SUB2 --> W4["Worker<br/>DB"]
 
     W1 --> SUB1
     W2 --> SUB1
@@ -167,11 +167,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    ORCH["🎯 Orkestratör\nMigrasyon Planlayıcı"] --> ANALYZE["🔍 Worker 1\nMevcut Şema Analizi"]
-    ORCH --> SCHEMA["📋 Worker 2\nPrisma Schema Oluşturma"]
-    ORCH --> MODELS["🔧 Worker 3\nModel Dönüşümü"]
-    ORCH --> QUERIES["🔧 Worker 4\nSorgu Dönüşümü"]
-    ORCH --> TESTS["✅ Worker 5\nTest Güncelleme"]
+    ORCH["🎯 Orkestratör<br/>Migrasyon Planlayıcı"] --> ANALYZE["🔍 Worker 1<br/>Mevcut Şema Analizi"]
+    ORCH --> SCHEMA["📋 Worker 2<br/>Prisma Schema Oluşturma"]
+    ORCH --> MODELS["🔧 Worker 3<br/>Model Dönüşümü"]
+    ORCH --> QUERIES["🔧 Worker 4<br/>Sorgu Dönüşümü"]
+    ORCH --> TESTS["✅ Worker 5<br/>Test Güncelleme"]
 
     ANALYZE --> |"Mevcut tablo/ilişki haritası"| SCHEMA
     SCHEMA --> |"Yeni şema"| MODELS
@@ -201,13 +201,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    ORCH["🎯 Orkestratör\nSprint Planlayıcı"] --> F1["🔧 Worker 1\nKullanıcı Profili"]
-    ORCH --> F2["🔧 Worker 2\nBildirim Sistemi"]
-    ORCH --> F3["🔧 Worker 3\nRaporlama Modülü"]
+    ORCH["🎯 Orkestratör<br/>Sprint Planlayıcı"] --> F1["🔧 Worker 1<br/>Kullanıcı Profili"]
+    ORCH --> F2["🔧 Worker 2<br/>Bildirim Sistemi"]
+    ORCH --> F3["🔧 Worker 3<br/>Raporlama Modülü"]
 
-    F1 --> |"Git branch:\nfeature/user-profile"| MERGE["🔗 Orkestratör\nMerge & Test"]
-    F2 --> |"Git branch:\nfeature/notifications"| MERGE
-    F3 --> |"Git branch:\nfeature/reporting"| MERGE
+    F1 --> |"Git branch:<br/>feature/user-profile"| MERGE["🔗 Orkestratör<br/>Merge & Test"]
+    F2 --> |"Git branch:<br/>feature/notifications"| MERGE
+    F3 --> |"Git branch:<br/>feature/reporting"| MERGE
 
     MERGE --> FINAL["✅ Integration Test"]
 
@@ -232,10 +232,10 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    ORCH["🎯 Orkestratör\nAPI Değişiklik Koordinatörü"] --> W1["🔧 Worker 1\nBackend API Repo\nEndpoint değişikliği"]
-    ORCH --> W2["🔧 Worker 2\nFrontend Repo\nClient güncelleme"]
-    ORCH --> W3["🔧 Worker 3\nMobile Repo\nSDK güncelleme"]
-    ORCH --> W4["🔧 Worker 4\nDocs Repo\nAPI dokümantasyonu"]
+    ORCH["🎯 Orkestratör<br/>API Değişiklik Koordinatörü"] --> W1["🔧 Worker 1<br/>Backend API Repo<br/>Endpoint değişikliği"]
+    ORCH --> W2["🔧 Worker 2<br/>Frontend Repo<br/>Client güncelleme"]
+    ORCH --> W3["🔧 Worker 3<br/>Mobile Repo<br/>SDK güncelleme"]
+    ORCH --> W4["🔧 Worker 4<br/>Docs Repo<br/>API dokümantasyonu"]
 
     W1 --> |"Yeni API kontratı"| W2
     W1 --> |"Yeni API kontratı"| W3
@@ -291,10 +291,10 @@ Birden fazla worker aynı dosyayı değiştirmeye çalışırsa:
 
 ```mermaid
 flowchart TD
-    W1["Worker 1\nDosyaA'yı değiştirdi"] --> CHECK{"Çakışma\nvar mı?"}
-    W2["Worker 2\nDosyaA'yı değiştirdi"] --> CHECK
+    W1["Worker 1<br/>DosyaA'yı değiştirdi"] --> CHECK{"Çakışma<br/>var mı?"}
+    W2["Worker 2<br/>DosyaA'yı değiştirdi"] --> CHECK
 
-    CHECK --> |"Evet"| RESOLVE["Orkestratör\nçakışmayı çözer"]
+    CHECK --> |"Evet"| RESOLVE["Orkestratör<br/>çakışmayı çözer"]
     CHECK --> |"Hayır"| MERGE["Doğrudan birleştir"]
 
     RESOLVE --> STRATEGIES{"Çözüm Stratejisi"}
@@ -312,11 +312,11 @@ Her worker kendi git worktree'sinde çalışarak çakışma riskini minimize ede
 
 ```mermaid
 flowchart LR
-    REPO["Ana Repository"] --> WT1["Worktree 1\nfeature/auth\nWorker 1"]
-    REPO --> WT2["Worktree 2\nfeature/billing\nWorker 2"]
-    REPO --> WT3["Worktree 3\nfeature/search\nWorker 3"]
+    REPO["Ana Repository"] --> WT1["Worktree 1<br/>feature/auth<br/>Worker 1"]
+    REPO --> WT2["Worktree 2<br/>feature/billing<br/>Worker 2"]
+    REPO --> WT3["Worktree 3<br/>feature/search<br/>Worker 3"]
 
-    WT1 --> MERGE["Main branch\nmerge"]
+    WT1 --> MERGE["Main branch<br/>merge"]
     WT2 --> MERGE
     WT3 --> MERGE
 
@@ -334,7 +334,7 @@ flowchart TD
     S2 --> S3["3. Bağımlılıkları haritle"]
     S3 --> S4["4. Worker rollerini tanımla"]
     S4 --> S5["5. Orkestrasyon modelini seç"]
-    S5 --> S6["6. Her worker için\nagent tanımı oluştur"]
+    S5 --> S6["6. Her worker için<br/>agent tanımı oluştur"]
     S6 --> S7["7. Çalıştır ve izle"]
     S7 --> S8["8. Sonuçları birleştir"]
 

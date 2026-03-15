@@ -15,20 +15,20 @@ Claude'u kendi uygulamalarınıza entegre etmek için Anthropic'in Messages API'
 ```mermaid
 flowchart LR
     subgraph client ["İstemci (Client)"]
-        APP["Uygulamanız\n(Python / TypeScript)"]
+        APP["Uygulamanız<br/>(Python / TypeScript)"]
     end
 
     subgraph api ["Anthropic API"]
-        ENDPOINT["api.anthropic.com\n/v1/messages"]
-        AUTH["API Key\nDoğrulama"]
-        PROCESS["Model\nİşleme"]
+        ENDPOINT["api.anthropic.com<br/>/v1/messages"]
+        AUTH["API Key<br/>Doğrulama"]
+        PROCESS["Model<br/>İşleme"]
     end
 
     subgraph response ["Yanıt"]
-        RESP["JSON\nResponse"]
+        RESP["JSON<br/>Response"]
     end
 
-    APP -->|"HTTP POST\n+ API Key"| AUTH
+    APP -->|"HTTP POST<br/>+ API Key"| AUTH
     AUTH --> ENDPOINT
     ENDPOINT --> PROCESS
     PROCESS --> RESP
@@ -54,15 +54,15 @@ Messages API, Claude ile etkileşim kurmanın temel yoludur. RESTful bir yapıya
 ```mermaid
 flowchart TD
     subgraph request ["Messages API Request"]
-        MODEL["model\n(kullanılacak model)"]
-        MAX["max_tokens\n(max çıktı uzunluğu)"]
-        SYSTEM["system\n(sistem talimatı)"]
-        MESSAGES["messages\n(konuşma geçmişi)"]
+        MODEL["model<br/>(kullanılacak model)"]
+        MAX["max_tokens<br/>(max çıktı uzunluğu)"]
+        SYSTEM["system<br/>(sistem talimatı)"]
+        MESSAGES["messages<br/>(konuşma geçmişi)"]
     end
 
     subgraph msg ["Her message"]
-        ROLE["role\n(user / assistant)"]
-        CONTENT["content\n(metin veya multimodal)"]
+        ROLE["role<br/>(user / assistant)"]
+        CONTENT["content<br/>(metin veya multimodal)"]
     end
 
     MESSAGES --> msg
@@ -105,7 +105,7 @@ pip install anthropic
 import anthropic
 
 client = anthropic.Anthropic(
-    api_key="sk-ant-..."  # veya ANTHROPIC_API_KEY env variable
+    api_key="YOUR_API_KEY_HERE"  # veya ANTHROPIC_API_KEY env variable
 )
 
 message = client.messages.create(
@@ -280,7 +280,7 @@ npm install @anthropic-ai/sdk
 import Anthropic from "@anthropic-ai/sdk";
 
 const client = new Anthropic({
-  apiKey: "sk-ant-...", // veya ANTHROPIC_API_KEY env variable
+  apiKey: "YOUR_API_KEY_HERE", // veya ANTHROPIC_API_KEY env variable
 });
 
 async function main() {
@@ -547,11 +547,11 @@ except anthropic.APIConnectionError:
 flowchart TD
     OPT["API Optimizasyonu"]
 
-    OPT --> CACHE["Prompt Caching\nTekrarlanan içerikleri\nönbelleğe al"]
-    OPT --> MODEL["Model Seçimi\nGörev karmaşıklığına\ngöre model seç"]
-    OPT --> STREAM["Streaming\nUzun yanıtlarda\nstreaming kullan"]
-    OPT --> BATCH["Batching\nToplu istekleri\ngrupla"]
-    OPT --> TOKEN["Token Yönetimi\nmax_tokens'ı\noptimal ayarla"]
+    OPT --> CACHE["Prompt Caching<br/>Tekrarlanan içerikleri<br/>önbelleğe al"]
+    OPT --> MODEL["Model Seçimi<br/>Görev karmaşıklığına<br/>göre model seç"]
+    OPT --> STREAM["Streaming<br/>Uzun yanıtlarda<br/>streaming kullan"]
+    OPT --> BATCH["Batching<br/>Toplu istekleri<br/>grupla"]
+    OPT --> TOKEN["Token Yönetimi<br/>max_tokens'ı<br/>optimal ayarla"]
 ```
 
 ---

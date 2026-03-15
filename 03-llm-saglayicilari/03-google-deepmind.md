@@ -14,25 +14,25 @@ Google DeepMind, Google'ın yapay zeka araştırma bölümü olan Google Brain i
 ```mermaid
 flowchart TD
     subgraph gecmis ["Geçmiş (Ayrı Kuruluşlar)"]
-        DM["DeepMind\n(2010, Londra)\nDemis Hassabis"]
-        GB["Google Brain\n(2011, Google içi)\nJeff Dean"]
+        DM["DeepMind<br/>(2010, Londra)<br/>Demis Hassabis"]
+        GB["Google Brain<br/>(2011, Google içi)<br/>Jeff Dean"]
     end
 
     subgraph google_satin_alma ["2014: Google Satın Alma"]
-        GA["Google, DeepMind'ı\n~$500M'a satın aldı"]
+        GA["Google, DeepMind'ı<br/>~$500M'a satın aldı"]
     end
 
     subgraph basarilar ["Büyük Başarılar"]
-        AP["AlphaGo (2016)\nGo şampiyonunu yendi"]
-        AF["AlphaFold (2020)\nProtein katlanma problemi"]
+        AP["AlphaGo (2016)<br/>Go şampiyonunu yendi"]
+        AF["AlphaFold (2020)<br/>Protein katlanma problemi"]
     end
 
     subgraph birlesme ["2023: Birleşme"]
-        GDM["Google DeepMind\nCEO: Demis Hassabis"]
+        GDM["Google DeepMind<br/>CEO: Demis Hassabis"]
     end
 
     subgraph guncel ["2024-2026: Gemini Çağı"]
-        GEM["Gemini Model Ailesi\n1.0 → 2 → 2.5 → 3.1"]
+        GEM["Gemini Model Ailesi<br/>1.0 → 2 → 2.5 → 3.1"]
     end
 
     DM --> GA
@@ -66,29 +66,29 @@ flowchart TD
 flowchart TD
     G["Gemini Model Ailesi"]
 
-    G --> G1["Gemini 1.0\n(Aralık 2023)"]
-    G --> G15["Gemini 1.5\n(2024)"]
-    G --> G2["Gemini 2.0\n(2024-2025)"]
-    G --> G25["Gemini 2.5\n(2025)"]
-    G --> G31["Gemini 3.1\n(2026)"]
+    G --> G1["Gemini 1.0<br/>(Aralık 2023)"]
+    G --> G15["Gemini 1.5<br/>(2024)"]
+    G --> G2["Gemini 2.0<br/>(2024-2025)"]
+    G --> G25["Gemini 2.5<br/>(2025)"]
+    G --> G31["Gemini 3.1<br/>(2026)"]
 
     G1 --> G1U["Ultra"]
     G1 --> G1P["Pro"]
     G1 --> G1N["Nano"]
 
-    G15 --> G15P["Pro\n1M context"]
-    G15 --> G15F["Flash\nHızlı & ucuz"]
+    G15 --> G15P["Pro<br/>1M context"]
+    G15 --> G15F["Flash<br/>Hızlı & ucuz"]
 
     G2 --> G2P["Pro"]
     G2 --> G2F["Flash"]
     G2 --> G2FT["Flash Thinking"]
 
-    G25 --> G25P["Pro ⭐\nReasoning"]
+    G25 --> G25P["Pro ⭐<br/>Reasoning"]
     G25 --> G25F["Flash"]
 
-    G31 --> G31P["Pro ⭐⭐\n2M context"]
-    G31 --> G31F["Flash\nÇok düşük maliyet"]
-    G31 --> G31N["Nano\nOn-device"]
+    G31 --> G31P["Pro ⭐⭐<br/>2M context"]
+    G31 --> G31F["Flash<br/>Çok düşük maliyet"]
+    G31 --> G31N["Nano<br/>On-device"]
 
     style G31P fill:#4285f4,color:#fff
     style G31F fill:#34a853,color:#fff
@@ -145,7 +145,7 @@ flowchart LR
     end
 
     subgraph gemini ["Gemini 3.1 Pro"]
-        BM["Birleşik\nMultimodal\nMimari"]
+        BM["Birleşik<br/>Multimodal<br/>Mimari"]
     end
 
     subgraph cikis ["Çıkış Modaliteleri"]
@@ -183,18 +183,18 @@ flowchart LR
 ```mermaid
 flowchart TD
     subgraph tuketici ["Tüketici"]
-        GEM_APP["Gemini App\n(Web & Mobil)"]
-        GEM_ADV["Gemini Advanced\n($20/ay, Google One AI)"]
+        GEM_APP["Gemini App<br/>(Web & Mobil)"]
+        GEM_ADV["Gemini Advanced<br/>($20/ay, Google One AI)"]
     end
 
     subgraph gelistirici ["Geliştirici"]
-        AIS["Google AI Studio\n(Ücretsiz deneme)"]
-        VAI["Vertex AI\n(Kurumsal platform)"]
+        AIS["Google AI Studio<br/>(Ücretsiz deneme)"]
+        VAI["Vertex AI<br/>(Kurumsal platform)"]
         GEM_API["Gemini API"]
     end
 
     subgraph entegrasyon ["Entegrasyonlar"]
-        GWS["Google Workspace\n(Docs, Sheets, Gmail)"]
+        GWS["Google Workspace<br/>(Docs, Sheets, Gmail)"]
         AND["Android & Chrome"]
         GCP["Google Cloud Platform"]
     end

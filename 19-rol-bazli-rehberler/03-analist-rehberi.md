@@ -19,16 +19,16 @@ Bir iş analistinin Claude Code ile tipik iş akışı:
 ```mermaid
 flowchart TD
     subgraph toplama ["Gereksinim Toplama"]
-        A["Doküman Analizi\nMevcut dokümanları incele"] --> B["Gereksinim Çıkarma\nİş kurallarını belirle"]
+        A["Doküman Analizi<br/>Mevcut dokümanları incele"] --> B["Gereksinim Çıkarma<br/>İş kurallarını belirle"]
     end
 
     subgraph modelleme ["Modelleme"]
-        C["User Story\nKullanıcı hikayesi oluştur"] --> D["Workflow Modeli\nİş akışı diyagramı"]
-        D --> E["Prototip\nHızlı prototip oluştur"]
+        C["User Story<br/>Kullanıcı hikayesi oluştur"] --> D["Workflow Modeli<br/>İş akışı diyagramı"]
+        D --> E["Prototip<br/>Hızlı prototip oluştur"]
     end
 
     subgraph iletisim ["İletişim"]
-        F["Dokümantasyon\nAnaliz dokümanı hazırla"] --> G["Sunum\nPaydaş sunumu"]
+        F["Dokümantasyon<br/>Analiz dokümanı hazırla"] --> G["Sunum<br/>Paydaş sunumu"]
     end
 
     B --> C

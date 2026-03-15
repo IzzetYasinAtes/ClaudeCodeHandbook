@@ -384,19 +384,19 @@ async function migrationPipeline(targetDir: string) {
 
 ```mermaid
 flowchart TD
-    START["Agent Tool çağrıldı"] --> PARSE["Parametreleri ayrıştır\n(görev, talimatlar, araçlar, model)"]
-    PARSE --> CREATE["Yeni subagent\nörneği oluştur"]
-    CREATE --> CONTEXT["Boş context window\nile başlat"]
-    CONTEXT --> INJECT["Talimatları ve görevi\ncontext'e ekle"]
-    INJECT --> LOOP{"Görev\ntamamlandı mı?"}
+    START["Agent Tool çağrıldı"] --> PARSE["Parametreleri ayrıştır<br/>(görev, talimatlar, araçlar, model)"]
+    PARSE --> CREATE["Yeni subagent<br/>örneği oluştur"]
+    CREATE --> CONTEXT["Boş context window<br/>ile başlat"]
+    CONTEXT --> INJECT["Talimatları ve görevi<br/>context'e ekle"]
+    INJECT --> LOOP{"Görev<br/>tamamlandı mı?"}
 
-    LOOP --> |"Hayır"| TOOL_USE["Araç kullan\n(Read, Write, Bash...)"]
+    LOOP --> |"Hayır"| TOOL_USE["Araç kullan<br/>(Read, Write, Bash...)"]
     TOOL_USE --> ANALYZE["Sonucu analiz et"]
     ANALYZE --> LOOP
 
     LOOP --> |"Evet"| RESULT["Nihai sonucu oluştur"]
-    RESULT --> RETURN["Sonucu ana agent'a\ndöndür"]
-    RETURN --> CLEANUP["Subagent context'ini\ntemizle"]
+    RESULT --> RETURN["Sonucu ana agent'a<br/>döndür"]
+    RETURN --> CLEANUP["Subagent context'ini<br/>temizle"]
 
     style START fill:#3498DB,color:#fff
     style LOOP fill:#E67E22,color:#fff
@@ -459,15 +459,15 @@ reader_agent = AgentDefinition(
 ```mermaid
 flowchart LR
     subgraph direct ["1. Doğrudan Talimat"]
-        D1["Görev tanımında\nbağlam bilgisi"]
+        D1["Görev tanımında<br/>bağlam bilgisi"]
     end
 
     subgraph chain ["2. Sonuç Zinciri"]
-        C1["Agent 1\nSonuç"] --> C2["Agent 2\nGirdi"]
+        C1["Agent 1<br/>Sonuç"] --> C2["Agent 2<br/>Girdi"]
     end
 
     subgraph file ["3. Dosya Paylaşımı"]
-        F1["Agent 1\nDosya yaz"] --> F2["Dosya\nsistemi"] --> F3["Agent 2\nDosya oku"]
+        F1["Agent 1<br/>Dosya yaz"] --> F2["Dosya<br/>sistemi"] --> F3["Agent 2<br/>Dosya oku"]
     end
 
     style direct fill:#dbeafe,stroke:#3b82f6
@@ -573,11 +573,11 @@ flowchart TD
         R3["Agent 3 Sonuç"] --> MERGE
     end
 
-    MERGE --> FORMAT{"Birleştirme\nStratejisi"}
+    MERGE --> FORMAT{"Birleştirme<br/>Stratejisi"}
 
-    FORMAT --> CONCAT["Ardışık ekleme\n(basit)"]
-    FORMAT --> STRUCTURED["Yapılandırılmış\nrapor (JSON)"]
-    FORMAT --> SUMMARY["Özet çıkarma\n(LLM ile)"]
+    FORMAT --> CONCAT["Ardışık ekleme<br/>(basit)"]
+    FORMAT --> STRUCTURED["Yapılandırılmış<br/>rapor (JSON)"]
+    FORMAT --> SUMMARY["Özet çıkarma<br/>(LLM ile)"]
 
     style MERGE fill:#E67E22,color:#fff
 ```
@@ -751,11 +751,11 @@ async def full_code_review(pr_branch: str):
 flowchart TD
     subgraph tips ["Optimizasyon İpuçları"]
         direction TB
-        T1["🎯 Minimum araç\nGereksiz araç verme"]
-        T2["⚡ Hafif model\nBasit görevler için"]
-        T3["🔄 Paralel çalıştır\nBağımsız görevleri"]
-        T4["📏 Kısa talimatlar\nGereksiz detay verme"]
-        T5["🎯 Tek sorumluluk\nHer agent tek konuya"]
+        T1["🎯 Minimum araç<br/>Gereksiz araç verme"]
+        T2["⚡ Hafif model<br/>Basit görevler için"]
+        T3["🔄 Paralel çalıştır<br/>Bağımsız görevleri"]
+        T4["📏 Kısa talimatlar<br/>Gereksiz detay verme"]
+        T5["🎯 Tek sorumluluk<br/>Her agent tek konuya"]
     end
 
     style tips fill:#d4edda,stroke:#28a745

@@ -14,13 +14,13 @@ Anthropic, farklı kullanım senaryolarına yönelik üç model katmanı sunar: 
 flowchart LR
     subgraph models ["Claude Model Ailesi"]
         direction LR
-        HAIKU["🟢 Haiku\nHızlı & Ekonomik"]
-        SONNET["🔵 Sonnet\nDengeli"]
-        OPUS["🟣 Opus\nEn Yetenekli"]
+        HAIKU["🟢 Haiku<br/>Hızlı & Ekonomik"]
+        SONNET["🔵 Sonnet<br/>Dengeli"]
+        OPUS["🟣 Opus<br/>En Yetenekli"]
     end
 
-    HAIKU ---|"Hız ⬆️\nMaliyet ⬇️"| SONNET
-    SONNET ---|"Yetenek ⬆️\nMaliyet ⬆️"| OPUS
+    HAIKU ---|"Hız ⬆️<br/>Maliyet ⬇️"| SONNET
+    SONNET ---|"Yetenek ⬆️<br/>Maliyet ⬆️"| OPUS
 ```
 
 ### Hız vs Yetenek Dengesi
@@ -62,7 +62,7 @@ flowchart TD
     Q --> S1["Basit sınıflandırma"]
     Q --> S2["Kısa metin özetleme"]
     Q --> S3["Chatbot yanıtları"]
-    Q --> S4["Veri çıkarma\n(extraction)"]
+    Q --> S4["Veri çıkarma<br/>(extraction)"]
     Q --> S5["Routing / yönlendirme"]
 
     S1 --> HAIKU["✅ Haiku kullan"]
@@ -212,11 +212,11 @@ flowchart LR
     end
 
     subgraph thinking ["Extended Thinking"]
-        T1["Soru"] --> T2["Düşünme Süreci\n(thinking tokens)"]
-        T2 --> T3["Yapılandırılmış\nYanıt"]
+        T1["Soru"] --> T2["Düşünme Süreci<br/>(thinking tokens)"]
+        T2 --> T3["Yapılandırılmış<br/>Yanıt"]
     end
 
-    thinking --> BETTER["Daha doğru,\ndaha detaylı yanıtlar"]
+    thinking --> BETTER["Daha doğru,<br/>daha detaylı yanıtlar"]
 ```
 
 ### Effort Levels (Çaba Seviyeleri)
@@ -259,9 +259,9 @@ Yanıt:
 flowchart TD
     subgraph pricing ["Fiyatlandırma (1M Token başına)"]
         direction TB
-        H["Haiku\n$0.25 input\n$1.25 output"]
-        S["Sonnet\n$3 input\n$15 output"]
-        O["Opus\n$15 input\n$75 output"]
+        H["Haiku<br/>$0.25 input<br/>$1.25 output"]
+        S["Sonnet<br/>$3 input<br/>$15 output"]
+        O["Opus<br/>$15 input<br/>$75 output"]
     end
 
     H ---|"6x"| S
@@ -295,15 +295,15 @@ Tipik bir kod inceleme görevi (2K input + 1K output token):
 
 ```mermaid
 flowchart TD
-    START["Görevin\nkarmaşıklığı?"]
+    START["Görevin<br/>karmaşıklığı?"]
 
-    START -->|"Basit"| SIMPLE["Sınıflandırma, özetleme,\nbasit soru-cevap"]
-    START -->|"Orta"| MEDIUM["Kod yazma, analiz,\ndokümantasyon"]
-    START -->|"Karmaşık"| COMPLEX["Mimari tasarım,\ndeep debugging"]
+    START -->|"Basit"| SIMPLE["Sınıflandırma, özetleme,<br/>basit soru-cevap"]
+    START -->|"Orta"| MEDIUM["Kod yazma, analiz,<br/>dokümantasyon"]
+    START -->|"Karmaşık"| COMPLEX["Mimari tasarım,<br/>deep debugging"]
 
-    SIMPLE --> HAIKU["✅ Haiku\nHızlı ve ucuz"]
-    MEDIUM --> SONNET["✅ Sonnet\nDengeli performans"]
-    COMPLEX --> OPUS["✅ Opus\nMaksimum yetenek"]
+    SIMPLE --> HAIKU["✅ Haiku<br/>Hızlı ve ucuz"]
+    MEDIUM --> SONNET["✅ Sonnet<br/>Dengeli performans"]
+    COMPLEX --> OPUS["✅ Opus<br/>Maksimum yetenek"]
 
     MEDIUM -->|"Bütçe kısıtlı"| HAIKU
     COMPLEX -->|"Hız önemli"| SONNET

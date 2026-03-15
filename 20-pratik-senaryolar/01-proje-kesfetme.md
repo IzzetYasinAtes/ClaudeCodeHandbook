@@ -17,13 +17,13 @@ Yeni bir kod tabanını anlamak için sistematik bir yaklaşım:
 
 ```mermaid
 flowchart TD
-    A["Projeyi Klonla\ngit clone"] --> B["Genel Bakış\nDizin yapısı ve README"]
-    B --> C["Teknoloji Tespiti\nDil, framework, bağımlılıklar"]
-    C --> D["Entry Point Bulma\nUygulamanın başlangıç noktası"]
-    D --> E["Mimari Anlama\nKatmanlar ve modüller"]
-    E --> F["Veri Akışı\nRequest → Response"]
-    F --> G["Bağımlılık Haritası\nModüller arası ilişkiler"]
-    G --> H["Kritik Dosyalar\nEn çok değişen dosyalar"]
+    A["Projeyi Klonla<br/>git clone"] --> B["Genel Bakış<br/>Dizin yapısı ve README"]
+    B --> C["Teknoloji Tespiti<br/>Dil, framework, bağımlılıklar"]
+    C --> D["Entry Point Bulma<br/>Uygulamanın başlangıç noktası"]
+    D --> E["Mimari Anlama<br/>Katmanlar ve modüller"]
+    E --> F["Veri Akışı<br/>Request → Response"]
+    F --> G["Bağımlılık Haritası<br/>Modüller arası ilişkiler"]
+    G --> H["Kritik Dosyalar<br/>En çok değişen dosyalar"]
 
     style A fill:#3498DB,color:#fff
     style H fill:#27AE60,color:#fff

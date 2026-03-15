@@ -17,19 +17,19 @@ Remote Control (uzaktan kontrol), yerel makinenizde çalışan Claude Code oturu
 ```mermaid
 flowchart TB
     subgraph local ["Yerel Makine"]
-        CC["Claude Code\nAktif Oturum"]
+        CC["Claude Code<br/>Aktif Oturum"]
         FS["Dosya Sistemi"]
         GIT["Git"]
         TERM["Terminal"]
     end
 
     subgraph cloud ["Anthropic Cloud"]
-        RELAY["Relay Service\n(Aktarma Servisi)"]
+        RELAY["Relay Service<br/>(Aktarma Servisi)"]
     end
 
     subgraph remote ["Uzak Cihaz"]
-        WEB["claude.ai/code\nTarayıcı"]
-        MOB["Claude Mobile\nApp"]
+        WEB["claude.ai/code<br/>Tarayıcı"]
+        MOB["Claude Mobile<br/>App"]
     end
 
     CC <-->|"Güvenli bağlantı"| RELAY
@@ -84,12 +84,12 @@ Or scan QR code with Claude mobile app.
 flowchart LR
     subgraph options ["Bağlanma Yöntemleri"]
         direction TB
-        O1["🌐 Tarayıcı\nclaude.ai/code"]
-        O2["📱 Mobil App\nQR kod tarama"]
-        O3["💻 Başka PC\nclaude.ai/code"]
+        O1["🌐 Tarayıcı<br/>claude.ai/code"]
+        O2["📱 Mobil App<br/>QR kod tarama"]
+        O3["💻 Başka PC<br/>claude.ai/code"]
     end
 
-    options --> CC["Yerel\nClaude Code\nOturumu"]
+    options --> CC["Yerel<br/>Claude Code<br/>Oturumu"]
 
     style CC fill:#7C3AED,color:#fff
 ```
@@ -192,11 +192,11 @@ Production'da hata olduğunda herhangi bir cihazdan müdahale:
 flowchart TB
     subgraph security ["Güvenlik Katmanları"]
         direction TB
-        AUTH["🔐 Kimlik Doğrulama\nAnthropic hesap girişi"]
-        E2E["🔒 Uçtan Uca Şifreleme\nKomutlar ve çıktılar"]
-        LOCAL["💻 Yerel Çalışma\nKod yerel makinede kalır"]
-        TIMEOUT["⏱️ Oturum Zaman Aşımı\nOtomatik bağlantı kesme"]
-        PERM["🛡️ İzin Modları\nYerel izin kuralları geçerli"]
+        AUTH["🔐 Kimlik Doğrulama<br/>Anthropic hesap girişi"]
+        E2E["🔒 Uçtan Uca Şifreleme<br/>Komutlar ve çıktılar"]
+        LOCAL["💻 Yerel Çalışma<br/>Kod yerel makinede kalır"]
+        TIMEOUT["⏱️ Oturum Zaman Aşımı<br/>Otomatik bağlantı kesme"]
+        PERM["🛡️ İzin Modları<br/>Yerel izin kuralları geçerli"]
     end
 
     style security fill:#FEF3C7,stroke:#F59E0B
@@ -218,7 +218,7 @@ flowchart TB
 ```mermaid
 flowchart TB
     subgraph morning ["☀️ Sabah - Masaüstü"]
-        M1["Büyük refactoring\ngörevini başlat"]
+        M1["Büyük refactoring<br/>görevini başlat"]
         M2["/remote enable"]
     end
 

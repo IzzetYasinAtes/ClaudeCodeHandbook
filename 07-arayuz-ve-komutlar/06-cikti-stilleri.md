@@ -17,18 +17,18 @@ Claude Code üç temel çıktı formatını destekler:
 
 ```mermaid
 flowchart TD
-    OUTPUT["Claude Code Çıktısı"] --> TEXT["text\n(Düz Metin)"]
-    OUTPUT --> JSON["json\n(JSON)"]
-    OUTPUT --> STREAM["stream-json\n(Streaming JSON)"]
+    OUTPUT["Claude Code Çıktısı"] --> TEXT["text<br/>(Düz Metin)"]
+    OUTPUT --> JSON["json<br/>(JSON)"]
+    OUTPUT --> STREAM["stream-json<br/>(Streaming JSON)"]
 
-    TEXT --> T1["İnsan tarafından\nokunabilir"]
-    TEXT --> T2["Terminal çıktısı\niçin ideal"]
+    TEXT --> T1["İnsan tarafından<br/>okunabilir"]
+    TEXT --> T2["Terminal çıktısı<br/>için ideal"]
 
-    JSON --> J1["Makine tarafından\nparse edilebilir"]
-    JSON --> J2["Script ve otomasyon\niçin ideal"]
+    JSON --> J1["Makine tarafından<br/>parse edilebilir"]
+    JSON --> J2["Script ve otomasyon<br/>için ideal"]
 
-    STREAM --> S1["Gerçek zamanlı\nveri akışı"]
-    STREAM --> S2["Uzun görevlerin\ntakibi için ideal"]
+    STREAM --> S1["Gerçek zamanlı<br/>veri akışı"]
+    STREAM --> S2["Uzun görevlerin<br/>takibi için ideal"]
 ```
 
 ---
@@ -159,10 +159,10 @@ $ claude -p "Projeyi analiz et ve düzelt" --output-format stream-json
 
 ```mermaid
 flowchart LR
-    STREAM["Stream JSON"] --> ASST["assistant\n(Model yanıtı)"]
-    STREAM --> TOOL["tool_use\n(Araç çağrısı)"]
-    STREAM --> RESULT_T["tool_result\n(Araç sonucu)"]
-    STREAM --> FINAL["result\n(Son sonuç)"]
+    STREAM["Stream JSON"] --> ASST["assistant<br/>(Model yanıtı)"]
+    STREAM --> TOOL["tool_use<br/>(Araç çağrısı)"]
+    STREAM --> RESULT_T["tool_result<br/>(Araç sonucu)"]
+    STREAM --> FINAL["result<br/>(Son sonuç)"]
 ```
 
 | Tip | Açıklama | İçerik |
@@ -385,19 +385,19 @@ done
 flowchart LR
     subgraph input ["Girdi"]
         PROMPT["Prompt"]
-        PIPE_IN["Pipe girdi\n(stdin)"]
-        FILE_IN["Dosya\n(cat file)"]
+        PIPE_IN["Pipe girdi<br/>(stdin)"]
+        FILE_IN["Dosya<br/>(cat file)"]
     end
 
     subgraph claude ["Claude Code"]
-        PROCESS["İşle ve\nyanıt üret"]
+        PROCESS["İşle ve<br/>yanıt üret"]
     end
 
     subgraph output ["Çıktı"]
-        TERMINAL["Terminal\n(stdout)"]
-        FILE_OUT["Dosya\n(> file)"]
-        PIPE_OUT["Pipe çıktı\n(| command)"]
-        JSON_OUT["JSON\n(| jq)"]
+        TERMINAL["Terminal<br/>(stdout)"]
+        FILE_OUT["Dosya<br/>(> file)"]
+        PIPE_OUT["Pipe çıktı<br/>(| command)"]
+        JSON_OUT["JSON<br/>(| jq)"]
     end
 
     PROMPT --> PROCESS
@@ -427,7 +427,7 @@ flowchart TD
     GOAL --> REALTIME["Gerçek zamanlı takip"]
     GOAL --> CUSTOM["Özel format"]
 
-    HUMAN --> TEXT["--output-format text\n(varsayılan)"]
+    HUMAN --> TEXT["--output-format text<br/>(varsayılan)"]
     MACHINE --> JSON["--output-format json"]
     REALTIME --> SJSON["--output-format stream-json"]
     CUSTOM --> PROMPT_STYLE["Prompt'ta formatı belirt"]

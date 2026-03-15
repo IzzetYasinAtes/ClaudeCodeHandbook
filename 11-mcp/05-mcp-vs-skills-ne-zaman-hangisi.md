@@ -19,7 +19,7 @@ Claude Code'un yeteneklerini genişletmenin iki temel yolu vardır: **MCP Server
 flowchart LR
     subgraph mcp_side ["MCP Server"]
         direction TB
-        M1["Kalıcı süreç\n(Persistent process)"]
+        M1["Kalıcı süreç<br/>(Persistent process)"]
         M2["JSON-RPC iletişimi"]
         M3["Karmaşık API sarmalama"]
         M4["Gerçek zamanlı veri"]
@@ -28,7 +28,7 @@ flowchart LR
 
     subgraph skill_side ["Skill"]
         direction TB
-        S1["Markdown dosyası\n(Statik doküman)"]
+        S1["Markdown dosyası<br/>(Statik doküman)"]
         S2["İstek üzerine okunur"]
         S3["CLI komut talimatları"]
         S4["Düşük bağlam maliyeti"]
@@ -61,19 +61,19 @@ Hangi yaklaşımı kullanmanız gerektiğine karar vermek için şu akışı izl
 
 ```mermaid
 flowchart TD
-    START["Harici bir yeteneğe\nihtiyacım var"] --> Q1{"Gerçek zamanlı\nveri gerekli mi?"}
+    START["Harici bir yeteneğe<br/>ihtiyacım var"] --> Q1{"Gerçek zamanlı<br/>veri gerekli mi?"}
 
-    Q1 -->|"Evet"| Q2{"Karmaşık API\netkileşimi var mı?"}
-    Q1 -->|"Hayır"| Q3{"CLI komutuyla\nyapılabilir mi?"}
+    Q1 -->|"Evet"| Q2{"Karmaşık API<br/>etkileşimi var mı?"}
+    Q1 -->|"Hayır"| Q3{"CLI komutuyla<br/>yapılabilir mi?"}
 
-    Q2 -->|"Evet\n(Çok endpoint, auth, webhook)"| MCP["✅ MCP Server\nKullan"]
-    Q2 -->|"Hayır\n(Tek endpoint, basit)"| Q3
+    Q2 -->|"Evet<br/>(Çok endpoint, auth, webhook)"| MCP["✅ MCP Server<br/>Kullan"]
+    Q2 -->|"Hayır<br/>(Tek endpoint, basit)"| Q3
 
-    Q3 -->|"Evet"| Q4{"Bağlam maliyeti\nönemli mi?"}
+    Q3 -->|"Evet"| Q4{"Bağlam maliyeti<br/>önemli mi?"}
     Q3 -->|"Hayır"| MCP
 
-    Q4 -->|"Evet\n(Token tasarrufu gerekli)"| SKILL["✅ Skill\nKullan"]
-    Q4 -->|"Hayır"| Q5{"Takımla paylaşım\ngerekli mi?"}
+    Q4 -->|"Evet<br/>(Token tasarrufu gerekli)"| SKILL["✅ Skill<br/>Kullan"]
+    Q4 -->|"Hayır"| Q5{"Takımla paylaşım<br/>gerekli mi?"}
 
     Q5 -->|"Evet, standart araç olarak"| MCP
     Q5 -->|"Evet, doküman olarak"| SKILL
@@ -99,14 +99,14 @@ flowchart TD
         M_DEF["Sunucu tanımı: ~500 token"]
         M_TOOLS["12 araç tanımı: ~2400 token"]
         M_INIT["Başlatma mesajları: ~300 token"]
-        M_TOTAL["TOPLAM: ~3200 token\nher oturumda 😰"]
+        M_TOTAL["TOPLAM: ~3200 token<br/>her oturumda 😰"]
 
         M_DEF --> M_TOOLS --> M_INIT --> M_TOTAL
     end
 
     subgraph skill_approach ["Yaklaşım 2: CLI Skill"]
-        S_FILE["Skill dosyası: ~200 token\nsadece ihtiyaç anında"]
-        S_TOTAL["TOPLAM: ~200 token\nve sadece kullanıldığında 🚀"]
+        S_FILE["Skill dosyası: ~200 token<br/>sadece ihtiyaç anında"]
+        S_TOTAL["TOPLAM: ~200 token<br/>ve sadece kullanıldığında 🚀"]
 
         S_FILE --> S_TOTAL
     end
@@ -321,14 +321,14 @@ flowchart TD
         direction TB
 
         subgraph mcp_katman ["MCP Sunucuları (Kalıcı Bağlantı)"]
-            G["GitHub MCP\nPR, issue yönetimi"]
-            P["PostgreSQL MCP\nVeritabanı sorguları"]
+            G["GitHub MCP<br/>PR, issue yönetimi"]
+            P["PostgreSQL MCP<br/>Veritabanı sorguları"]
         end
 
         subgraph skill_katman ["Skill Dosyaları (Düşük Maliyet)"]
-            S1["Docker Skill\nContainer yönetimi"]
-            S2["AWS CLI Skill\nBulut operasyonları"]
-            S3["Testing Skill\nTest stratejileri"]
+            S1["Docker Skill<br/>Container yönetimi"]
+            S2["AWS CLI Skill<br/>Bulut operasyonları"]
+            S3["Testing Skill<br/>Test stratejileri"]
         end
     end
 
@@ -459,11 +459,11 @@ Bir e-ticaret projesinde hangi entegrasyonlar için ne kullanılmalı:
 ```mermaid
 flowchart LR
     subgraph butce ["200K Token Context Window"]
-        SYSTEM["System Prompt\n~5K token"]
-        TOOLS["Dahili Araçlar\n~3K token"]
-        MCP_TOOLS["MCP Araçları\n~4K token\n(2 sunucu)"]
-        SKILLS["Skill'ler\n~0K token\n(kullanılana kadar)"]
-        CONVERSATION["Konuşma\n~188K token\nkullanılabilir ✅"]
+        SYSTEM["System Prompt<br/>~5K token"]
+        TOOLS["Dahili Araçlar<br/>~3K token"]
+        MCP_TOOLS["MCP Araçları<br/>~4K token<br/>(2 sunucu)"]
+        SKILLS["Skill'ler<br/>~0K token<br/>(kullanılana kadar)"]
+        CONVERSATION["Konuşma<br/>~188K token<br/>kullanılabilir ✅"]
     end
 
     style CONVERSATION fill:#27AE60,color:#fff

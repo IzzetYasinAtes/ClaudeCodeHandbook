@@ -14,18 +14,18 @@ Bu dosya, Mart 2026 itibariyle piyasadaki en önemli LLM modellerini, özellikle
 ```mermaid
 flowchart TD
     subgraph kapali ["Kapalı Kaynak (Proprietary)"]
-        GPT["GPT-5.4\n(OpenAI)"]
-        CLAUDE["Claude 4.6 Opus\n(Anthropic)"]
-        GEMINI["Gemini 3.1 Pro\n(Google)"]
+        GPT["GPT-5.4<br/>(OpenAI)"]
+        CLAUDE["Claude 4.6 Opus<br/>(Anthropic)"]
+        GEMINI["Gemini 3.1 Pro<br/>(Google)"]
     end
 
     subgraph acik ["Açık Kaynak (Open Source)"]
-        LLAMA["Llama 4\n(Meta)"]
-        DS["DeepSeek-R1 / V3.2\n(DeepSeek)"]
-        QWEN["Qwen 3.5\n(Alibaba)"]
-        MISTRAL["Mistral Large 2\n(Mistral)"]
-        PHI["Phi-4\n(Microsoft)"]
-        GEMMA["Gemma 3\n(Google)"]
+        LLAMA["Llama 4<br/>(Meta)"]
+        DS["DeepSeek-R1 / V3.2<br/>(DeepSeek)"]
+        QWEN["Qwen 3.5<br/>(Alibaba)"]
+        MISTRAL["Mistral Large 2<br/>(Mistral)"]
+        PHI["Phi-4<br/>(Microsoft)"]
+        GEMMA["Gemma 3<br/>(Google)"]
     end
 
     kapali --> KULLANIM["Kullanım"]
@@ -158,10 +158,10 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph context ["Context Window Karşılaştırması"]
-        CL["Claude 4.6\n200K"]
-        GPT["GPT-5.4\n256K"]
-        GEM["Gemini 3.1\n2M"]
-        LLAMA_S["Llama 4 Scout\n10M"]
+        CL["Claude 4.6<br/>200K"]
+        GPT["GPT-5.4<br/>256K"]
+        GEM["Gemini 3.1<br/>2M"]
+        LLAMA_S["Llama 4 Scout<br/>10M"]
     end
     
     CL --> GPT --> GEM --> LLAMA_S

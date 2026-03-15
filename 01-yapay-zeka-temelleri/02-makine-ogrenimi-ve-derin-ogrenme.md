@@ -17,15 +17,15 @@ flowchart TD
     subgraph AI ["Artificial Intelligence (Yapay Zeka)"]
         subgraph ML ["Machine Learning (Makine Öğrenimi)"]
             subgraph DL ["Deep Learning (Derin Öğrenme)"]
-                LLM["Large Language Models\n(Büyük Dil Modelleri)"]
+                LLM["Large Language Models<br/>(Büyük Dil Modelleri)"]
             end
         end
     end
 
-    note1["En geniş kavram:\nMakinelerin zeki\ndavranış sergilemesi"]
-    note2["Veriden öğrenme\nyeteneği"]
-    note3["Çok katmanlı\nsinir ağları"]
-    note4["Claude, GPT, Gemini\ngibi modeller"]
+    note1["En geniş kavram:<br/>Makinelerin zeki<br/>davranış sergilemesi"]
+    note2["Veriden öğrenme<br/>yeteneği"]
+    note3["Çok katmanlı<br/>sinir ağları"]
+    note4["Claude, GPT, Gemini<br/>gibi modeller"]
 
     AI ~~~ note1
     ML ~~~ note2
@@ -109,7 +109,7 @@ Deep Learning, Machine Learning'in çok katmanlı Artificial Neural Network (yap
 ```mermaid
 flowchart LR
     subgraph shallow ["Sığ Model (1-2 katman)"]
-        I1["Girdi"] --> H1["Gizli\nKatman"] --> O1["Çıktı"]
+        I1["Girdi"] --> H1["Gizli<br/>Katman"] --> O1["Çıktı"]
     end
 
     subgraph deep ["Derin Model (çok katman)"]
@@ -203,11 +203,11 @@ Bu kavramları anlamak, Claude Code'un neden bazı şeyleri çok iyi yapıp baz�
 
 ```mermaid
 flowchart TD
-    AI["Artificial Intelligence\n(En geniş kavram)"]
-    ML["Machine Learning\n(Veriden öğrenme)"]
-    DL["Deep Learning\n(Çok katmanlı sinir ağları)"]
-    TR["Transformer\n(2017'den beri dominant mimari)"]
-    LLM["Large Language Models\n(GPT, Claude, Gemini)"]
+    AI["Artificial Intelligence<br/>(En geniş kavram)"]
+    ML["Machine Learning<br/>(Veriden öğrenme)"]
+    DL["Deep Learning<br/>(Çok katmanlı sinir ağları)"]
+    TR["Transformer<br/>(2017'den beri dominant mimari)"]
+    LLM["Large Language Models<br/>(GPT, Claude, Gemini)"]
 
     AI --> ML --> DL --> TR --> LLM
 ```

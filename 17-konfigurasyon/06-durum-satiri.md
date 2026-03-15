@@ -20,10 +20,10 @@ Claude Code durum çubuğu şu bilgileri gösterir:
 flowchart LR
     subgraph statusbar ["Durum Çubuğu"]
         direction LR
-        MODEL["🤖 Model\nsonnet-4"]
-        CONTEXT["📊 Context\n45K / 200K"]
-        COST["💰 Maliyet\n$0.47"]
-        MODE["📋 Mod\nagent"]
+        MODEL["🤖 Model<br/>sonnet-4"]
+        CONTEXT["📊 Context<br/>45K / 200K"]
+        COST["💰 Maliyet<br/>$0.47"]
+        MODE["📋 Mod<br/>agent"]
     end
 
     style MODEL fill:#3498DB,color:#fff
@@ -50,13 +50,13 @@ Durum çubuğundaki en kritik metrik context window kullanımıdır:
 ```mermaid
 flowchart TD
     subgraph usage ["Context Window Durumları"]
-        GREEN["🟢 %0-%60\nNormal kullanım\nDevam edin"]
-        YELLOW["🟡 %60-%80\n/compact düşünün\nBağlam büyüyor"]
-        RED["🔴 %80-%100\n/compact gerekli!\nOtomatik compact yakın"]
+        GREEN["🟢 %0-%60<br/>Normal kullanım<br/>Devam edin"]
+        YELLOW["🟡 %60-%80<br/>/compact düşünün<br/>Bağlam büyüyor"]
+        RED["🔴 %80-%100<br/>/compact gerekli!<br/>Otomatik compact yakın"]
     end
 
     GREEN --> YELLOW --> RED
-    RED --> COMPACT["/compact\nBağlamı özetle"]
+    RED --> COMPACT["/compact<br/>Bağlamı özetle"]
     COMPACT --> GREEN
 
     style GREEN fill:#27AE60,color:#fff
@@ -109,9 +109,9 @@ Claude Code durum çubuğu, proje Git durumunu da yansıtabilir:
 
 ```mermaid
 flowchart LR
-    GIT["Git Bilgisi"] --> BRANCH["🌿 Branch\nmain"]
-    GIT --> CHANGES["📝 Değişiklikler\n3 modified, 1 added"]
-    GIT --> STATUS["🔄 Durum\nClean / Dirty"]
+    GIT["Git Bilgisi"] --> BRANCH["🌿 Branch<br/>main"]
+    GIT --> CHANGES["📝 Değişiklikler<br/>3 modified, 1 added"]
+    GIT --> STATUS["🔄 Durum<br/>Clean / Dirty"]
 
     style GIT fill:#2C3E50,color:#fff
     style BRANCH fill:#27AE60,color:#fff

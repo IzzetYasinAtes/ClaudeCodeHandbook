@@ -6,10 +6,10 @@ Bu bölüm, yapay zeka hakkında hiçbir ön bilgisi olmayan okuyucular için ha
 
 ```mermaid
 flowchart TD
-    A["Yapay Zeka Nedir?"] --> B["Machine Learning ve\nDeep Learning"]
-    B --> C["Natural Language\nProcessing"]
-    C --> D["Sinir Ağları ve\nTransformer"]
-    D --> E["Temel Kavramlar\nSözlüğü"]
+    A["Yapay Zeka Nedir?"] --> B["Machine Learning ve<br/>Deep Learning"]
+    B --> C["Natural Language<br/>Processing"]
+    C --> D["Sinir Ağları ve<br/>Transformer"]
+    D --> E["Temel Kavramlar<br/>Sözlüğü"]
 ```
 
 ## İçerik

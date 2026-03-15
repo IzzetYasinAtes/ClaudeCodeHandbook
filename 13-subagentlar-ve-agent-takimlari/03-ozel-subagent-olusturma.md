@@ -272,13 +272,13 @@ Hangi araçları vermeniz gerektiğini belirlemek için şu matrisi kullanabilir
 
 ```mermaid
 flowchart TD
-    Q1{"Agent dosya\nyazacak mı?"} --> |"Evet"| WRITE_YES["Write, Edit ekle"]
+    Q1{"Agent dosya<br/>yazacak mı?"} --> |"Evet"| WRITE_YES["Write, Edit ekle"]
     Q1 --> |"Hayır"| WRITE_NO["Salt okunur bırak"]
 
     Q2{"Komut çalıştıracak mı?"} --> |"Evet"| BASH_YES["Bash ekle"]
     Q2 --> |"Hayır"| BASH_NO["Bash ekleme"]
 
-    Q3{"Web araştırması\nyapacak mı?"} --> |"Evet"| WEB_YES["WebSearch,\nWebFetch ekle"]
+    Q3{"Web araştırması<br/>yapacak mı?"} --> |"Evet"| WEB_YES["WebSearch,<br/>WebFetch ekle"]
     Q3 --> |"Hayır"| WEB_NO["Web araçları ekleme"]
 
     WRITE_YES --> FINAL["Araç listesini oluştur"]
@@ -511,10 +511,10 @@ CI/CD pipeline hatalarını analiz et ve düzeltme öner.
 flowchart TD
     subgraph best ["✅ En İyi Uygulamalar"]
         direction TB
-        B1["Tek sorumluluk:\nHer agent bir konuya odaklansın"]
-        B2["Minimum araç:\nSadece gerekli araçları ver"]
-        B3["Net talimatlar:\nBeklenen çıktı formatını belirle"]
-        B4["Model seçimi:\nBasit görevler için hafif model"]
+        B1["Tek sorumluluk:<br/>Her agent bir konuya odaklansın"]
+        B2["Minimum araç:<br/>Sadece gerekli araçları ver"]
+        B3["Net talimatlar:<br/>Beklenen çıktı formatını belirle"]
+        B4["Model seçimi:<br/>Basit görevler için hafif model"]
     end
 
     subgraph avoid ["❌ Kaçınılması Gerekenler"]

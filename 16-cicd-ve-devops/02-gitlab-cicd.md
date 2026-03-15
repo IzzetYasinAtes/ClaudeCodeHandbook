@@ -17,14 +17,14 @@ Claude Code, GitLab CI/CD pipeline'larına (sürekli entegrasyon/dağıtım hatl
 ```mermaid
 flowchart TB
     subgraph gitlab ["GitLab"]
-        MR["Merge Request\n🔀"]
-        ISS["Issue\n📋"]
-        NOTE["MR Comment\n💬 @claude"]
-        PIPE["CI/CD Pipeline\n⚙️"]
+        MR["Merge Request<br/>🔀"]
+        ISS["Issue<br/>📋"]
+        NOTE["MR Comment<br/>💬 @claude"]
+        PIPE["CI/CD Pipeline<br/>⚙️"]
     end
 
     subgraph runner ["GitLab Runner"]
-        CC["Claude Code\nAgent"]
+        CC["Claude Code<br/>Agent"]
         TOOLS["Araçlar"]
     end
 
@@ -62,7 +62,7 @@ GitLab'da CI/CD değişkenlerini ekleyin:
 ```
 Settings → CI/CD → Variables → Add variable
 
-ANTHROPIC_API_KEY = sk-ant-xxxxx (Masked, Protected)
+ANTHROPIC_API_KEY = YOUR_API_KEY_HERE (Masked, Protected)
 ```
 
 ### Adım 2: .gitlab-ci.yml Oluşturma
@@ -154,18 +154,18 @@ GitLab Runner'ın Claude Code çalıştırabilmesi için yeterli kaynaklara sahi
 ```mermaid
 flowchart TB
     subgraph trigger ["Tetikleyiciler"]
-        MR_EVENT["MR Oluşturuldu/\nGüncellendi"]
-        COMMENT["MR Yorumu\n@claude"]
-        SCHEDULE["Zamanlama\nCron"]
-        MANUAL["Manuel\nTetikleme"]
+        MR_EVENT["MR Oluşturuldu/<br/>Güncellendi"]
+        COMMENT["MR Yorumu<br/>@claude"]
+        SCHEDULE["Zamanlama<br/>Cron"]
+        MANUAL["Manuel<br/>Tetikleme"]
     end
 
     subgraph pipeline ["GitLab Pipeline"]
         direction TB
-        S1["Stage: review\nKod inceleme"]
-        S2["Stage: fix\nOtomatik düzeltme"]
-        S3["Stage: test\nTest çalıştırma"]
-        S4["Stage: report\nRapor oluşturma"]
+        S1["Stage: review<br/>Kod inceleme"]
+        S2["Stage: fix<br/>Otomatik düzeltme"]
+        S3["Stage: test<br/>Test çalıştırma"]
+        S4["Stage: report<br/>Rapor oluşturma"]
     end
 
     MR_EVENT --> S1

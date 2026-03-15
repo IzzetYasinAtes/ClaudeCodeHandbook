@@ -20,18 +20,18 @@ Hook, "bir olay gerçekleştiğinde otomatik olarak bir şey yap" demektir. Clau
 flowchart LR
     subgraph hook ["Hook Bileşenleri"]
         direction TB
-        EVENT["🎯 Event (Olay)\nNe zaman tetiklensin?"]
-        MATCHER["🔍 Matcher (Eşleştirici)\nHangi araç için? (opsiyonel)"]
-        ACTION["⚡ Hook Action (Eylem)\nNe yapılsın?"]
+        EVENT["🎯 Event (Olay)<br/>Ne zaman tetiklensin?"]
+        MATCHER["🔍 Matcher (Eşleştirici)<br/>Hangi araç için? (opsiyonel)"]
+        ACTION["⚡ Hook Action (Eylem)<br/>Ne yapılsın?"]
     end
 
     EVENT --> MATCHER --> ACTION
 
     subgraph ornekler ["Örnek"]
         direction TB
-        E1["PostToolUse\n(Araç kullanıldıktan sonra)"]
-        M1["tool_name == 'Edit'\n(Sadece Edit aracı için)"]
-        A1["prettier --write $file\n(Dosyayı formatla)"]
+        E1["PostToolUse<br/>(Araç kullanıldıktan sonra)"]
+        M1["tool_name == 'Edit'<br/>(Sadece Edit aracı için)"]
+        A1["prettier --write $file<br/>(Dosyayı formatla)"]
     end
 
     E1 --> M1 --> A1
@@ -56,28 +56,33 @@ flowchart LR
 Hooks, Claude Code deneyiminizi dört ana alanda güçlendirir:
 
 ```mermaid
-mindmap
-  root(("Hooks\nKullanım\nAlanları"))
-    Otomasyon
-      Dosya formatlama
-      Test çalıştırma
-      Lint kontrolü
-      Dependency güncelleme
-    Kural Zorlama
-      Tehlikeli komut engelleme
-      Kod standartları
-      Branch koruma
-      Dosya boyut limiti
-    Entegrasyon
-      Slack bildirimi
-      Jira güncelleme
-      Webhook tetikleme
-      Loglama
-    İş Akışı
-      Otomatik onay
-      Ortam doğrulama
-      Checkpoint oluşturma
-      Metrik toplama
+flowchart LR
+    ROOT(("Hooks<br/>Kullanım Alanları"))
+
+    ROOT --> OT["Otomasyon"]
+    ROOT --> KZ["Kural Zorlama"]
+    ROOT --> EN["Entegrasyon"]
+    ROOT --> IA["İş Akışı"]
+
+    OT --> OT1["Dosya formatlama"]
+    OT --> OT2["Test çalıştırma"]
+    OT --> OT3["Lint kontrolü"]
+    OT --> OT4["Dependency güncelleme"]
+
+    KZ --> KZ1["Tehlikeli komut engelleme"]
+    KZ --> KZ2["Kod standartları"]
+    KZ --> KZ3["Branch koruma"]
+    KZ --> KZ4["Dosya boyut limiti"]
+
+    EN --> EN1["Slack bildirimi"]
+    EN --> EN2["Jira güncelleme"]
+    EN --> EN3["Webhook tetikleme"]
+    EN --> EN4["Loglama"]
+
+    IA --> IA1["Otomatik onay"]
+    IA --> IA2["Ortam doğrulama"]
+    IA --> IA3["Checkpoint oluşturma"]
+    IA --> IA4["Metrik toplama"]
 ```
 
 ### Somut Faydalar
@@ -192,11 +197,11 @@ Bu hook şu şekilde çalışır:
 
 ```mermaid
 flowchart LR
-    A["Claude Edit aracını\nkullanır"] --> B["PostToolUse\nolayı tetiklenir"]
-    B --> C{"Matcher:\nAraç == Edit?"}
-    C -->|Evet| D["prettier --write\nçalıştırılır"]
+    A["Claude Edit aracını<br/>kullanır"] --> B["PostToolUse<br/>olayı tetiklenir"]
+    B --> C{"Matcher:<br/>Araç == Edit?"}
+    C -->|Evet| D["prettier --write<br/>çalıştırılır"]
     C -->|Hayır| E["Hook atlanır"]
-    D --> F["Dosya\nformatlandı ✅"]
+    D --> F["Dosya<br/>formatlandı ✅"]
 
     style A fill:#3498DB,color:#fff
     style D fill:#27AE60,color:#fff
@@ -273,8 +278,8 @@ flowchart TB
     subgraph hooks ["✅ Hook Yaklaşımı"]
         direction TB
         H1["Claude dosya düzenler"]
-        H2["PostToolUse hook:\nprettier otomatik çalışır"]
-        H3["PostToolUse hook:\ntestler otomatik çalışır"]
+        H2["PostToolUse hook:<br/>prettier otomatik çalışır"]
+        H3["PostToolUse hook:<br/>testler otomatik çalışır"]
         H1 --> H2
         H1 --> H3
     end

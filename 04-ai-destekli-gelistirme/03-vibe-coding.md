@@ -65,12 +65,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["📝 PROMPT\nNe istediğini tarif et"] --> B["🤖 GENERATE\nAI kodu üretir"]
-    B --> C["👁️ REVIEW\nSonucu incele"]
+    A["📝 PROMPT<br/>Ne istediğini tarif et"] --> B["🤖 GENERATE<br/>AI kodu üretir"]
+    B --> C["👁️ REVIEW<br/>Sonucu incele"]
     C --> D{"Tatmin edici mi?"}
-    D -->|"Hayır"| E["🔄 ITERATE\nGeri bildirim ver"]
+    D -->|"Hayır"| E["🔄 ITERATE<br/>Geri bildirim ver"]
     E --> A
-    D -->|"Evet"| F["✅ ACCEPT\nKodu kabul et"]
+    D -->|"Evet"| F["✅ ACCEPT<br/>Kodu kabul et"]
     
     style A fill:#4CAF50,color:#fff
     style B fill:#2196F3,color:#fff
@@ -120,8 +120,8 @@ AI:        [ThemeProvider, toggle bileşeni, CSS değişkenleri ekler]
 
 ```mermaid
 flowchart LR
-    A["Fikir"] -->|"Vibe Coding\n~30 dk"| B["Çalışan Prototip"]
-    A -->|"Geleneksel\n~3-5 gün"| B
+    A["Fikir"] -->|"Vibe Coding<br/>~30 dk"| B["Çalışan Prototip"]
+    A -->|"Geleneksel<br/>~3-5 gün"| B
 
     style A fill:#FFF9C4
     style B fill:#C8E6C9
@@ -277,8 +277,8 @@ git revert HEAD
 
 ```mermaid
 flowchart TD
-    A["🎯 Proje Fikri"] --> B["📋 CLAUDE.md Hazırla\nProje kuralları, mimari"]
-    B --> C["📝 İlk Prompt\nTemel yapıyı oluştur"]
+    A["🎯 Proje Fikri"] --> B["📋 CLAUDE.md Hazırla<br/>Proje kuralları, mimari"]
+    B --> C["📝 İlk Prompt<br/>Temel yapıyı oluştur"]
     C --> D["🤖 AI Üretir"]
     D --> E["👁️ İncele"]
     E --> F{"Çalışıyor mu?"}
@@ -287,12 +287,12 @@ flowchart TD
     G --> D
     
     F -->|"Evet"| H["🧪 Test"]
-    H --> I{"Testler\ngeçiyor mu?"}
+    H --> I{"Testler<br/>geçiyor mu?"}
     
     I -->|"Hayır"| G
     I -->|"Evet"| J["💾 Git Commit"]
     
-    J --> K{"Proje\ntamamlandı mı?"}
+    J --> K{"Proje<br/>tamamlandı mı?"}
     K -->|"Hayır"| L["📝 Sonraki Görev"]
     L --> D
     K -->|"Evet"| M["🔒 Güvenlik Taraması"]

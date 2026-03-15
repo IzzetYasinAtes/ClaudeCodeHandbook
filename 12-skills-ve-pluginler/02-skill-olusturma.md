@@ -63,8 +63,8 @@ Her SKILL.md dosyası iki bölümden oluşur: **metadata** (üst bilgi) ve **ins
 
 ```mermaid
 flowchart TD
-    SKILLMD["SKILL.md"] --> META["Metadata\n(YAML Front Matter)"]
-    SKILLMD --> INST["Instructions\n(Markdown İçerik)"]
+    SKILLMD["SKILL.md"] --> META["Metadata<br/>(YAML Front Matter)"]
+    SKILLMD --> INST["Instructions<br/>(Markdown İçerik)"]
 
     META --> M1["name: Skill adı"]
     META --> M2["description: Açıklama"]
@@ -119,10 +119,10 @@ Skill'in nasıl kullanılacağına dair örnekler.
 
 ```mermaid
 flowchart LR
-    A["1. Dizin Oluştur\n.claude/skills/skill-adi/"] --> B["2. SKILL.md Yaz\nMetadata + Talimatlar"]
-    B --> C["3. Test Et\nSlash komutla dene"]
-    C --> D["4. İzinleri Ayarla\nsettings.json"]
-    D --> E["5. Paylaş\nGit ile takıma dağıt"]
+    A["1. Dizin Oluştur<br/>.claude/skills/skill-adi/"] --> B["2. SKILL.md Yaz<br/>Metadata + Talimatlar"]
+    B --> C["3. Test Et<br/>Slash komutla dene"]
+    C --> D["4. İzinleri Ayarla<br/>settings.json"]
+    D --> E["5. Paylaş<br/>Git ile takıma dağıt"]
 ```
 
 ### Adım 1: Dizin Oluşturun
@@ -333,11 +333,11 @@ flowchart TD
     CONTINUE -->|"Hayır"| STOP["Deploy iptal"]
     CONTINUE -->|"Evet"| CHECK_BRANCH
 
-    CHECK_GIT -->|"Evet"| CHECK_BRANCH{"Branch\nkontrolü"}
-    CHECK_BRANCH -->|"Production +\nyanlış branch"| STOP
+    CHECK_GIT -->|"Evet"| CHECK_BRANCH{"Branch<br/>kontrolü"}
+    CHECK_BRANCH -->|"Production +<br/>yanlış branch"| STOP
     CHECK_BRANCH -->|"OK"| RUN_TESTS["Testleri çalıştır"]
 
-    RUN_TESTS --> TEST_RESULT{"Testler\ngeçti mi?"}
+    RUN_TESTS --> TEST_RESULT{"Testler<br/>geçti mi?"}
     TEST_RESULT -->|"Hayır"| STOP
     TEST_RESULT -->|"Evet"| BUILD["Build al"]
 
@@ -513,11 +513,11 @@ Kodu düzenle ve iyileştir.
 
 ```mermaid
 flowchart TD
-    CREATE["Skill Oluştur\n.claude/skills/adi/SKILL.md"] --> TEST["Yerel Test\nClaude Code'da dene"]
-    TEST --> ITERATE["İyileştir\nTalimatları güncelle"]
+    CREATE["Skill Oluştur<br/>.claude/skills/adi/SKILL.md"] --> TEST["Yerel Test<br/>Claude Code'da dene"]
+    TEST --> ITERATE["İyileştir<br/>Talimatları güncelle"]
     ITERATE --> TEST
-    ITERATE --> COMMIT["Git'e Ekle\ngit add + commit"]
-    COMMIT --> SHARE["Takımla Paylaş\ngit push"]
+    ITERATE --> COMMIT["Git'e Ekle<br/>git add + commit"]
+    COMMIT --> SHARE["Takımla Paylaş<br/>git push"]
     SHARE --> FEEDBACK["Geri Bildirim Al"]
     FEEDBACK --> ITERATE
 

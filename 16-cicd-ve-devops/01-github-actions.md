@@ -17,9 +17,9 @@ Claude Code GitHub Actions, GitHub issue'larında ve PR'larda `@claude` mention 
 ```mermaid
 flowchart TB
     subgraph github ["GitHub"]
-        ISS["Issue oluşturulur\n📋 #42"]
-        PR_COMMENT["PR'da yorum\n💬 @claude"]
-        ACTION["GitHub Actions\nWorkflow çalışır"]
+        ISS["Issue oluşturulur<br/>📋 #42"]
+        PR_COMMENT["PR'da yorum<br/>💬 @claude"]
+        ACTION["GitHub Actions<br/>Workflow çalışır"]
     end
 
     subgraph claude ["Claude Code Agent"]
@@ -65,10 +65,10 @@ Adım adım manuel kurulum:
 
 ```mermaid
 flowchart TB
-    A["1. GitHub App\nyükle"] --> B["2. ANTHROPIC_API_KEY\nSecret ekle"]
-    B --> C["3. Workflow YAML\ndosyası oluştur"]
-    C --> D["4. İzinleri\nyapılandır"]
-    D --> E["✅ Kurulum\ntamamlandı"]
+    A["1. GitHub App<br/>yükle"] --> B["2. ANTHROPIC_API_KEY<br/>Secret ekle"]
+    B --> C["3. Workflow YAML<br/>dosyası oluştur"]
+    C --> D["4. İzinleri<br/>yapılandır"]
+    D --> E["✅ Kurulum<br/>tamamlandı"]
 
     style A fill:#3B82F6,color:#fff
     style E fill:#10B981,color:#fff
@@ -85,7 +85,7 @@ flowchart TB
 Repository → Settings → Secrets and variables → Actions → New repository secret
 
 Name: ANTHROPIC_API_KEY
-Value: sk-ant-xxxxx...
+Value: YOUR_API_KEY_HERE...
 ```
 
 #### Adım 3: Workflow Dosyası Oluşturma
@@ -195,13 +195,13 @@ Claude Code GitHub Actions dört farklı authentication (kimlik doğrulama) yön
 ```mermaid
 flowchart TB
     subgraph auth ["Authentication Seçenekleri"]
-        A1["Anthropic API\nsk-ant-xxx"]
-        A2["AWS Bedrock\nAWS credentials"]
-        A3["Google Vertex\nGCP credentials"]
-        A4["Microsoft Foundry\nAzure credentials"]
+        A1["Anthropic API<br/>YOUR_API_KEY_HERE"]
+        A2["AWS Bedrock<br/>AWS credentials"]
+        A3["Google Vertex<br/>GCP credentials"]
+        A4["Microsoft Foundry<br/>Azure credentials"]
     end
 
-    auth --> CC["Claude Code\nGitHub Actions"]
+    auth --> CC["Claude Code<br/>GitHub Actions"]
 
     style A1 fill:#7C3AED,color:#fff
     style A2 fill:#FF9900,color:#fff
@@ -377,11 +377,11 @@ jobs:
 
 ```mermaid
 flowchart LR
-    BUG["🐛 Bug Issue\n@claude fix this"]
+    BUG["🐛 Bug Issue<br/>@claude fix this"]
     BUG --> GA["GitHub Actions"]
-    GA --> CC["Claude Code\nAnaliz → Düzelt → Test"]
-    CC --> PR["✅ PR #44\nBug fix"]
-    CC --> CMT["💬 Issue yorumu\nDüzeltme detayları"]
+    GA --> CC["Claude Code<br/>Analiz → Düzelt → Test"]
+    CC --> PR["✅ PR #44<br/>Bug fix"]
+    CC --> CMT["💬 Issue yorumu<br/>Düzeltme detayları"]
 
     style BUG fill:#EF4444,color:#fff
     style PR fill:#10B981,color:#fff

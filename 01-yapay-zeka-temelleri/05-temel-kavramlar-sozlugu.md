@@ -117,12 +117,12 @@ Modelin tek seferde işleyebildiği maksimum Token sayısı. Giriş ve çıkış
 ```mermaid
 flowchart LR
     subgraph cw ["Context Window (örnek: 200K Token)"]
-        INPUT["Girdi\n(System Prompt\n+ Kullanıcı mesajı\n+ Geçmiş)"]
-        OUTPUT["Çıktı\n(Model yanıtı)"]
+        INPUT["Girdi<br/>(System Prompt<br/>+ Kullanıcı mesajı<br/>+ Geçmiş)"]
+        OUTPUT["Çıktı<br/>(Model yanıtı)"]
         INPUT --> OUTPUT
     end
     
-    NOTE["Toplam Girdi + Çıktı\n≤ 200.000 Token"]
+    NOTE["Toplam Girdi + Çıktı<br/>≤ 200.000 Token"]
 ```
 
 | Model | Context Window | Sayfa Karşılığı |
@@ -192,7 +192,7 @@ Model Yanıtı: "Pozitif"
 
 ```mermaid
 flowchart LR
-    A["Genel Model\n(Pre-trained)"] -->|"Fine-tuning"| B["Uzmanlaşmış Model"]
+    A["Genel Model<br/>(Pre-trained)"] -->|"Fine-tuning"| B["Uzmanlaşmış Model"]
     
     A1["Genel metin anlama"] --> B1["Tıbbi metin anlama"]
     A2["Genel kod yazma"] --> B2["Python uzmanı"]
@@ -290,9 +290,9 @@ Modelin büyük, etiketlenmemiş veri üzerinde genel dil anlayışı kazanması
 
 ```mermaid
 flowchart LR
-    A["Büyük Metin Verisi\n(Web, kitaplar, kod)"] -->|"Pre-training\n(aylar sürer)"| B["Base Model\n(Genel dil anlayışı)"]
-    B -->|"Fine-tuning\n(günler sürer)"| C["Chat Model\n(Talimat takip eden)"]
-    C -->|"RLHF\n(haftalar sürer)"| D["Hizalanmış Model\n(Güvenli, yardımcı)"]
+    A["Büyük Metin Verisi<br/>(Web, kitaplar, kod)"] -->|"Pre-training<br/>(aylar sürer)"| B["Base Model<br/>(Genel dil anlayışı)"]
+    B -->|"Fine-tuning<br/>(günler sürer)"| C["Chat Model<br/>(Talimat takip eden)"]
+    C -->|"RLHF<br/>(haftalar sürer)"| D["Hizalanmış Model<br/>(Güvenli, yardımcı)"]
 ```
 
 ### Prompt (İstem)
@@ -315,10 +315,10 @@ Modelin yanıt vermeden önce harici kaynaklardan ilgili bilgiyi çekip (retriev
 
 ```mermaid
 flowchart LR
-    Q["Kullanıcı Sorusu"] --> SEARCH["Bilgi Tabanında\nArama"]
-    SEARCH --> CONTEXT["İlgili Belgeleri\nBağlama Ekle"]
-    CONTEXT --> MODEL["LLM'e Gönder\n(Soru + Bağlam)"]
-    MODEL --> ANSWER["Kaynaklara Dayalı\nYanıt"]
+    Q["Kullanıcı Sorusu"] --> SEARCH["Bilgi Tabanında<br/>Arama"]
+    SEARCH --> CONTEXT["İlgili Belgeleri<br/>Bağlama Ekle"]
+    CONTEXT --> MODEL["LLM'e Gönder<br/>(Soru + Bağlam)"]
+    MODEL --> ANSWER["Kaynaklara Dayalı<br/>Yanıt"]
 ```
 
 ```
@@ -336,9 +336,9 @@ Prompt (RAG ile):
 
 ```mermaid
 flowchart TD
-    A["Model 2 farklı yanıt üretir"] --> B["İnsan değerlendirici\nbirini seçer"]
-    B --> C["Reward Model\n(ödül modeli) eğitilir"]
-    C --> D["Model, ödül modeline\ngöre güncellenir"]
+    A["Model 2 farklı yanıt üretir"] --> B["İnsan değerlendirici<br/>birini seçer"]
+    B --> C["Reward Model<br/>(ödül modeli) eğitilir"]
+    C --> D["Model, ödül modeline<br/>göre güncellenir"]
     D --> A
 ```
 

@@ -14,15 +14,15 @@ LLM'lerin çalışma prensibi temelde çok basittir: **bir sonraki Token'ı tahm
 
 ```mermaid
 flowchart LR
-    A["Kullanıcı\nMetni Girer"] --> B["Tokenization\n(Parçalama)"]
-    B --> C["Embedding\n(Vektöre Dönüştürme)"]
-    C --> D["Transformer\nKatmanları"]
-    D --> E["Olasılık\nDağılımı"]
-    E --> F["Token\nSeçimi"]
-    F --> G["Detokenization\n(Metin Oluşturma)"]
-    G --> H["Kullanıcıya\nYanıt"]
+    A["Kullanıcı<br/>Metni Girer"] --> B["Tokenization<br/>(Parçalama)"]
+    B --> C["Embedding<br/>(Vektöre Dönüştürme)"]
+    C --> D["Transformer<br/>Katmanları"]
+    D --> E["Olasılık<br/>Dağılımı"]
+    E --> F["Token<br/>Seçimi"]
+    F --> G["Detokenization<br/>(Metin Oluşturma)"]
+    G --> H["Kullanıcıya<br/>Yanıt"]
     
-    F -->|"Sonraki Token\niçin tekrarla"| C
+    F -->|"Sonraki Token<br/>için tekrarla"| C
 ```
 
 ### Adım Adım Örnek
@@ -59,11 +59,11 @@ Girdi: "Python'da bir liste nasıl sıralanır"
 ```mermaid
 flowchart TD
     subgraph model ["Bir LLM'nin Anatomisi"]
-        ARCH["Mimari\n(Transformer)"]
-        PARAMS["Parametreler\n(Milyarlarca weight)"]
-        TOKENIZER["Tokenizer\n(Metin parçalayıcı)"]
-        CONTEXT["Context Window\n(Bağlam penceresi)"]
-        TRAIN["Eğitim Verisi\n(Terabaytlarca metin)"]
+        ARCH["Mimari<br/>(Transformer)"]
+        PARAMS["Parametreler<br/>(Milyarlarca weight)"]
+        TOKENIZER["Tokenizer<br/>(Metin parçalayıcı)"]
+        CONTEXT["Context Window<br/>(Bağlam penceresi)"]
+        TRAIN["Eğitim Verisi<br/>(Terabaytlarca metin)"]
     end
 
     ARCH --> CORE["Model Çekirdeği"]
@@ -156,18 +156,18 @@ Prompt: "Bir kıdemli yazılım mimarı gibi bu tasarımı değerlendir"
 ```mermaid
 flowchart TD
     subgraph stage1 ["Aşama 1: Pre-training"]
-        PT1["Büyük Metin Verisi\n(Trilyon Token)"] --> PT2["Next Token Prediction\n(Aylarca eğitim)"]
-        PT2 --> PT3["Base Model\n(Ham dil anlayışı)"]
+        PT1["Büyük Metin Verisi<br/>(Trilyon Token)"] --> PT2["Next Token Prediction<br/>(Aylarca eğitim)"]
+        PT2 --> PT3["Base Model<br/>(Ham dil anlayışı)"]
     end
 
     subgraph stage2 ["Aşama 2: Supervised Fine-tuning"]
-        SFT1["İnsan tarafından\nhazırlanan soru-cevaplar"] --> SFT2["Talimat takibi\neğitimi"]
-        SFT2 --> SFT3["Instruction-Tuned Model\n(Talimat takip eder)"]
+        SFT1["İnsan tarafından<br/>hazırlanan soru-cevaplar"] --> SFT2["Talimat takibi<br/>eğitimi"]
+        SFT2 --> SFT3["Instruction-Tuned Model<br/>(Talimat takip eder)"]
     end
 
     subgraph stage3 ["Aşama 3: RLHF / Constitutional AI"]
-        RL1["İnsan değerlendiriciler\nyanıtları sıralar"] --> RL2["Reward Model\neğitimi"]
-        RL2 --> RL3["Hizalanmış Model\n(Güvenli ve yardımcı)"]
+        RL1["İnsan değerlendiriciler<br/>yanıtları sıralar"] --> RL2["Reward Model<br/>eğitimi"]
+        RL2 --> RL3["Hizalanmış Model<br/>(Güvenli ve yardımcı)"]
     end
 
     PT3 --> SFT1
@@ -192,17 +192,17 @@ flowchart TD
     LLM --> API_USE["API"]
     LLM --> TOOL["AI Araçları"]
     
-    WEB --> W1["ChatGPT\nchat.openai.com"]
-    WEB --> W2["Claude\nclaude.ai"]
-    WEB --> W3["Gemini\ngemini.google.com"]
+    WEB --> W1["ChatGPT<br/>chat.openai.com"]
+    WEB --> W2["Claude<br/>claude.ai"]
+    WEB --> W3["Gemini<br/>gemini.google.com"]
     
-    API_USE --> A1["REST API\ncurl, Postman"]
-    API_USE --> A2["Python SDK\nanthropic, openai"]
-    API_USE --> A3["TypeScript SDK\n@anthropic-ai/sdk"]
+    API_USE --> A1["REST API<br/>curl, Postman"]
+    API_USE --> A2["Python SDK<br/>anthropic, openai"]
+    API_USE --> A3["TypeScript SDK<br/>@anthropic-ai/sdk"]
     
-    TOOL --> T1["Claude Code\n(Terminal agent)"]
-    TOOL --> T2["GitHub Copilot\n(IDE eklentisi)"]
-    TOOL --> T3["Cursor\n(AI-native IDE)"]
+    TOOL --> T1["Claude Code<br/>(Terminal agent)"]
+    TOOL --> T2["GitHub Copilot<br/>(IDE eklentisi)"]
+    TOOL --> T3["Cursor<br/>(AI-native IDE)"]
 ```
 
 ---

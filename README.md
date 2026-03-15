@@ -102,36 +102,36 @@ Yapay zeka hakkında hiçbir şey bilmeyen birinden, Claude Code'u profesyonel d
 ```mermaid
 flowchart LR
     subgraph temel ["Temel Bilgiler"]
-        A["01\nYapay Zeka\nTemelleri"] --> B["02\nBüyük Dil\nModelleri"]
-        B --> C["03\nLLM\nSağlayıcıları"]
+        A["01<br/>Yapay Zeka<br/>Temelleri"] --> B["02<br/>Büyük Dil<br/>Modelleri"]
+        B --> C["03<br/>LLM<br/>Sağlayıcıları"]
     end
 
     subgraph gecis ["AI Geliştirme"]
-        D["04\nAI Destekli\nGeliştirme"] --> E["05\nClaude\nEkosistemi"]
+        D["04<br/>AI Destekli<br/>Geliştirme"] --> E["05<br/>Claude<br/>Ekosistemi"]
     end
 
     subgraph ccode ["Claude Code"]
-        F["06\nTanıtım ve\nKurulum"] --> G["07\nArayüz ve\nKomutlar"]
-        G --> H["08\nAraçlar"]
-        H --> I["09\nBellek ve\nBağlam"]
-        I --> J["10\nİzinler ve\nGüvenlik"]
+        F["06<br/>Tanıtım ve<br/>Kurulum"] --> G["07<br/>Arayüz ve<br/>Komutlar"]
+        G --> H["08<br/>Araçlar"]
+        H --> I["09<br/>Bellek ve<br/>Bağlam"]
+        I --> J["10<br/>İzinler ve<br/>Güvenlik"]
     end
 
     subgraph genisletme ["Genişletme"]
-        K["11\nMCP"] --> L["12\nSkills ve\nPluginler"]
-        L --> M["13\nSubagent'lar"]
-        M --> N["14\nHooks"]
+        K["11<br/>MCP"] --> L["12<br/>Skills ve<br/>Pluginler"]
+        L --> M["13<br/>Subagent'lar"]
+        M --> N["14<br/>Hooks"]
     end
 
     subgraph operasyon ["Operasyon"]
-        O["15\nEntegrasyonlar"] --> P["16\nCI/CD"]
-        P --> Q["17\nKonfigürasyon"]
-        Q --> R["18\nKurumsal"]
+        O["15<br/>Entegrasyonlar"] --> P["16<br/>CI/CD"]
+        P --> Q["17<br/>Konfigürasyon"]
+        Q --> R["18<br/>Kurumsal"]
     end
 
     subgraph pratik ["Pratik"]
-        S["19\nRol Bazlı\nRehberler"] --> T["20\nSenaryolar"]
-        T --> U["21\nSorun\nGiderme"]
+        S["19<br/>Rol Bazlı<br/>Rehberler"] --> T["20<br/>Senaryolar"]
+        T --> U["21<br/>Sorun<br/>Giderme"]
     end
 
     C --> D

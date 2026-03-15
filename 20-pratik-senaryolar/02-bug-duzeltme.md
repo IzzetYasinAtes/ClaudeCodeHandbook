@@ -17,17 +17,17 @@ Sistematik bir hata düzeltme süreci:
 
 ```mermaid
 flowchart TD
-    A["Bug Raporu\nHata bildirimi geldi"] --> B["Hata Tekrarlama\nAynı hatayı üret"]
+    A["Bug Raporu<br/>Hata bildirimi geldi"] --> B["Hata Tekrarlama<br/>Aynı hatayı üret"]
     B --> C{"Tekrarlanabildi mi?"}
-    C -->|Hayır| D["Daha Fazla Bilgi Topla\nLog, ortam, versiyon"]
+    C -->|Hayır| D["Daha Fazla Bilgi Topla<br/>Log, ortam, versiyon"]
     D --> B
-    C -->|Evet| E["Log Analizi\nHata kayıtlarını incele"]
-    E --> F["Kök Neden Analizi\nNeden oluşuyor?"]
-    F --> G["Fix Geliştirme\nDüzeltmeyi uygula"]
-    G --> H["Regresyon Testi\nEski ve yeni testler"]
-    H --> I{"Testler\nGeçti mi?"}
+    C -->|Evet| E["Log Analizi<br/>Hata kayıtlarını incele"]
+    E --> F["Kök Neden Analizi<br/>Neden oluşuyor?"]
+    F --> G["Fix Geliştirme<br/>Düzeltmeyi uygula"]
+    G --> H["Regresyon Testi<br/>Eski ve yeni testler"]
+    H --> I{"Testler<br/>Geçti mi?"}
     I -->|Hayır| G
-    I -->|Evet| J["PR Aç\nCode review"]
+    I -->|Evet| J["PR Aç<br/>Code review"]
 
     style A fill:#E74C3C,color:#fff
     style J fill:#27AE60,color:#fff
@@ -85,17 +85,17 @@ claude "src/services/user-service.ts:45 satırındaki hatanın kök nedenini bul
 flowchart TD
     A["Hata Mesajı"] --> B{"Hata Türü?"}
     
-    B -->|TypeError| C["Null/Undefined\nKontrolü eksik"]
-    B -->|ReferenceError| D["Değişken tanımlı\ndeğil veya scope dışı"]
-    B -->|SyntaxError| E["Sözdizimi hatası\nParse edilemiyor"]
-    B -->|NetworkError| F["Bağlantı sorunu\nTimeout, DNS, firewall"]
-    B -->|DatabaseError| G["Veritabanı sorunu\nSchema, query, connection"]
+    B -->|TypeError| C["Null/Undefined<br/>Kontrolü eksik"]
+    B -->|ReferenceError| D["Değişken tanımlı<br/>değil veya scope dışı"]
+    B -->|SyntaxError| E["Sözdizimi hatası<br/>Parse edilemiyor"]
+    B -->|NetworkError| F["Bağlantı sorunu<br/>Timeout, DNS, firewall"]
+    B -->|DatabaseError| G["Veritabanı sorunu<br/>Schema, query, connection"]
     
-    C --> H["Defensive coding:\nnull check, optional chaining"]
-    D --> I["Import kontrol,\nscope düzelt"]
-    E --> J["Dosyayı parse et,\nsözdizimini düzelt"]
-    F --> K["Bağlantı ayarları,\nretry mekanizması"]
-    G --> L["Migration, index,\nquery optimizasyonu"]
+    C --> H["Defensive coding:<br/>null check, optional chaining"]
+    D --> I["Import kontrol,<br/>scope düzelt"]
+    E --> J["Dosyayı parse et,<br/>sözdizimini düzelt"]
+    F --> K["Bağlantı ayarları,<br/>retry mekanizması"]
+    G --> L["Migration, index,<br/>query optimizasyonu"]
 
     style A fill:#E74C3C,color:#fff
 ```

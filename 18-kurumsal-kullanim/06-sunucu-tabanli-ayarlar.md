@@ -17,10 +17,10 @@ Geleneksel kurumsal yazılım yapılandırması, her cihaza ayrı ayrı politika
 
 ```mermaid
 flowchart LR
-    ADMIN["🏢 Admin\nPolitika tanımlar"] --> SERVER["☁️ Anthropic Sunucu\nAyarları barındırır"]
-    SERVER --> CC1["💻 Dev Makinesi 1\nOtomatik uygular"]
-    SERVER --> CC2["💻 Dev Makinesi 2\nOtomatik uygular"]
-    SERVER --> CC3["💻 CI/CD Runner\nOtomatik uygular"]
+    ADMIN["🏢 Admin<br/>Politika tanımlar"] --> SERVER["☁️ Anthropic Sunucu<br/>Ayarları barındırır"]
+    SERVER --> CC1["💻 Dev Makinesi 1<br/>Otomatik uygular"]
+    SERVER --> CC2["💻 Dev Makinesi 2<br/>Otomatik uygular"]
+    SERVER --> CC3["💻 CI/CD Runner<br/>Otomatik uygular"]
 
     style ADMIN fill:#8E44AD,color:#fff
     style SERVER fill:#3498DB,color:#fff
@@ -177,10 +177,10 @@ Sunucu tabanlı ayarlar Enterprise plan gerektirir. Anthropic sales ekibiyle ile
 
 ```mermaid
 flowchart TD
-    LOGIN["console.anthropic.com\nGiriş yapın"] --> ORG["Organization\nSeçin"]
-    ORG --> SETTINGS["Settings\nMenüsü"]
-    SETTINGS --> MANAGED["Managed Policies\nBölümü"]
-    MANAGED --> CREATE["Yeni Politika\nOluşturun"]
+    LOGIN["console.anthropic.com<br/>Giriş yapın"] --> ORG["Organization<br/>Seçin"]
+    ORG --> SETTINGS["Settings<br/>Menüsü"]
+    SETTINGS --> MANAGED["Managed Policies<br/>Bölümü"]
+    MANAGED --> CREATE["Yeni Politika<br/>Oluşturun"]
 
     style LOGIN fill:#3498DB,color:#fff
     style CREATE fill:#27AE60,color:#fff

@@ -6,9 +6,9 @@ Claude Code, farklı rollerdeki profesyoneller için farklı iş akışları sun
 
 ```mermaid
 flowchart TD
-    A["Yazılımcı Rehberi\nGünlük geliştirme iş akışı"] --> B["Yazılım Mimarı Rehberi\nMimari analiz ve karar alma"]
-    B --> C["Analist Rehberi\nGereksinim analizi ve modelleme"]
-    C --> D["Vibe Coder Rehberi\nPrompt-first hızlı geliştirme"]
+    A["Yazılımcı Rehberi<br/>Günlük geliştirme iş akışı"] --> B["Yazılım Mimarı Rehberi<br/>Mimari analiz ve karar alma"]
+    B --> C["Analist Rehberi<br/>Gereksinim analizi ve modelleme"]
+    C --> D["Vibe Coder Rehberi<br/>Prompt-first hızlı geliştirme"]
 ```
 
 ## İçerik
@@ -35,12 +35,12 @@ Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 
 ```mermaid
 flowchart TD
-    START{"Günlük işinizde\nne yapıyorsunuz?"}
+    START{"Günlük işinizde<br/>ne yapıyorsunuz?"}
     
-    START -->|"Kod yazıyorum,\nbug düzeltiyorum"| DEV["Yazılımcı Rehberi\n01-yazilimci-rehberi.md"]
-    START -->|"Mimari kararlar\nalıyorum"| ARCH["Yazılım Mimarı Rehberi\n02-yazilim-mimari-rehberi.md"]
-    START -->|"Gereksinim topluyorum,\nanaliz yapıyorum"| ANALYST["Analist Rehberi\n03-analist-rehberi.md"]
-    START -->|"Hızlıca proje\noluşturuyorum"| VIBE["Vibe Coder Rehberi\n04-vibe-coder-rehberi.md"]
+    START -->|"Kod yazıyorum,<br/>bug düzeltiyorum"| DEV["Yazılımcı Rehberi<br/>01-yazilimci-rehberi.md"]
+    START -->|"Mimari kararlar<br/>alıyorum"| ARCH["Yazılım Mimarı Rehberi<br/>02-yazilim-mimari-rehberi.md"]
+    START -->|"Gereksinim topluyorum,<br/>analiz yapıyorum"| ANALYST["Analist Rehberi<br/>03-analist-rehberi.md"]
+    START -->|"Hızlıca proje<br/>oluşturuyorum"| VIBE["Vibe Coder Rehberi<br/>04-vibe-coder-rehberi.md"]
     
     style DEV fill:#3498DB,color:#fff
     style ARCH fill:#9B59B6,color:#fff

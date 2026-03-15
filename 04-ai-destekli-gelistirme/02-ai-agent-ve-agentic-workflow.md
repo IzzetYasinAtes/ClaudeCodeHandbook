@@ -30,7 +30,7 @@ flowchart LR
         A1["Kullanıcı görev verir"] --> A2["Agent planlar"]
         A2 --> A3["Araç kullanır"]
         A3 --> A4["Sonucu gözlemler"]
-        A4 --> A5{"Hedef\ntamam mı?"}
+        A4 --> A5{"Hedef<br/>tamam mı?"}
         A5 -->|"Hayır"| A2
         A5 -->|"Evet"| A6["Sonuç sunar"]
     end
@@ -56,29 +56,34 @@ flowchart LR
 Bir AI Agent'ı chatbot'tan ayıran dört temel yetenek vardır:
 
 ```mermaid
-mindmap
-  root((AI Agent))
-    Reasoning
-      Görevi anlama
-      Plan oluşturma
-      Karar verme
-      Hata analizi
-    Tool Use
-      Dosya okuma/yazma
-      Terminal komutları
-      Web arama
-      API çağrıları
-    Memory
-      Kısa süreli bellek
-        Context window
-      Uzun süreli bellek
-        CLAUDE.md
-        Session history
-    Autonomy
-      Kendi kararını verme
-      İterasyon yapma
-      Hata düzeltme
-      İzin isteme
+flowchart LR
+    AG((AI Agent))
+
+    AG --> R["Reasoning<br/>(Akıl Yürütme)"]
+    AG --> TU["Tool Use<br/>(Araç Kullanımı)"]
+    AG --> M["Memory<br/>(Bellek)"]
+    AG --> AU["Autonomy<br/>(Özerklik)"]
+
+    R --> R1["Görevi anlama"]
+    R --> R2["Plan oluşturma"]
+    R --> R3["Karar verme"]
+    R --> R4["Hata analizi"]
+
+    TU --> T1["Dosya okuma/yazma"]
+    TU --> T2["Terminal komutları"]
+    TU --> T3["Web arama"]
+    TU --> T4["API çağrıları"]
+
+    M --> M1["Kısa süreli bellek"]
+    M --> M2["Uzun süreli bellek"]
+    M1 --> M1A["Context window"]
+    M2 --> M2A["CLAUDE.md"]
+    M2 --> M2B["Session history"]
+
+    AU --> A1["Kendi kararını verme"]
+    AU --> A2["İterasyon yapma"]
+    AU --> A3["Hata düzeltme"]
+    AU --> A4["İzin isteme"]
 ```
 
 ### 1. Reasoning (Akıl Yürütme)
@@ -164,7 +169,7 @@ sequenceDiagram
     A->>S: Test çalıştır: npm test
     S-->>A: Tüm testler geçti ✅
     
-    A-->>İ: "Bug düzeltildi. Sorun state\nyönetimindeki race condition'dı.\n12/12 test geçiyor."
+    A-->>İ: "Bug düzeltildi. Sorun state<br/>yönetimindeki race condition'dı.<br/>12/12 test geçiyor."
 ```
 
 ---
@@ -177,12 +182,12 @@ AI Agent'ların çalışma prensibi, sürekli tekrarlanan bir döngüye dayanır
 
 ```mermaid
 flowchart TD
-    A["🎯 PLAN\n(Planla)"] --> B["⚡ EXECUTE\n(Uygula)"]
-    B --> C["👁️ OBSERVE\n(Gözlemle)"]
-    C --> D{"✅ Hedef\ntamam mı?"}
-    D -->|"Hayır"| E["🔄 ITERATE\n(Tekrarla)"]
+    A["🎯 PLAN<br/>(Planla)"] --> B["⚡ EXECUTE<br/>(Uygula)"]
+    B --> C["👁️ OBSERVE<br/>(Gözlemle)"]
+    C --> D{"✅ Hedef<br/>tamam mı?"}
+    D -->|"Hayır"| E["🔄 ITERATE<br/>(Tekrarla)"]
     E --> A
-    D -->|"Evet"| F["📦 RESULT\n(Sonuç)"]
+    D -->|"Evet"| F["📦 RESULT<br/>(Sonuç)"]
 
     style A fill:#4CAF50,color:#fff
     style B fill:#2196F3,color:#fff
@@ -258,10 +263,10 @@ Tam bir Agentic Workflow, aşağıdaki beş bileşenden oluşur:
 
 ```mermaid
 flowchart LR
-    A["1️⃣\nTask Input\n(Görev Girdisi)"] --> B["2️⃣\nContext Assembly\n(Bağlam Derleme)"]
-    B --> C["3️⃣\nSandbox Execution\n(Korumalı Çalışma)"]
-    C --> D["4️⃣\nPR Output\n(Çıktı Üretme)"]
-    D --> E["5️⃣\nHuman Review\n(İnsan İncelemesi)"]
+    A["1️⃣<br/>Task Input<br/>(Görev Girdisi)"] --> B["2️⃣<br/>Context Assembly<br/>(Bağlam Derleme)"]
+    B --> C["3️⃣<br/>Sandbox Execution<br/>(Korumalı Çalışma)"]
+    C --> D["4️⃣<br/>PR Output<br/>(Çıktı Üretme)"]
+    D --> E["5️⃣<br/>Human Review<br/>(İnsan İncelemesi)"]
     
     E -->|"Revizyon gerekli"| B
     
@@ -290,15 +295,15 @@ Agent, görevi anlamak için gerekli bağlamı derler:
 ```mermaid
 flowchart TD
     subgraph sources ["Bağlam Kaynakları"]
-        S1["CLAUDE.md\nProje kuralları"]
-        S2["Dosya sistemi\nKod tabanı"]
-        S3["Git geçmişi\nDeğişiklik kaydı"]
-        S4["Test sonuçları\nMevcut durum"]
-        S5["Hata logları\nStack trace"]
+        S1["CLAUDE.md<br/>Proje kuralları"]
+        S2["Dosya sistemi<br/>Kod tabanı"]
+        S3["Git geçmişi<br/>Değişiklik kaydı"]
+        S4["Test sonuçları<br/>Mevcut durum"]
+        S5["Hata logları<br/>Stack trace"]
     end
 
     subgraph assembly ["Bağlam Derleme"]
-        A["Agent ilgili bilgileri\nseçer ve birleştirir"]
+        A["Agent ilgili bilgileri<br/>seçer ve birleştirir"]
     end
 
     S1 --> A
@@ -307,7 +312,7 @@ flowchart TD
     S4 --> A
     S5 --> A
 
-    A --> R["Zenginleştirilmiş\nBağlam"]
+    A --> R["Zenginleştirilmiş<br/>Bağlam"]
 ```
 
 **Bağlam derleme süreci:**
@@ -371,7 +376,7 @@ flowchart TD
     B -->|"✅ Onay"| C["Merge / Deploy"]
     B -->|"📝 Revizyon"| D["Geri bildirim"]
     B -->|"❌ Red"| E["İptal"]
-    D --> F["Agent revizyonu\nuygular"]
+    D --> F["Agent revizyonu<br/>uygular"]
     F --> B
 ```
 
@@ -449,7 +454,7 @@ sequenceDiagram
 ```mermaid
 flowchart LR
     subgraph spectrum ["Özerklik Spektrumu"]
-        A["Tamamen Manuel\n(İnsan yapar)"] ---- B["Copilot Mode\n(AI öneri yapar)"] ---- C["Supervised Agent\n(AI yapar,\ninsan onaylar)"] ---- D["Autonomous Agent\n(AI yapar,\ninsan inceler)"]
+        A["Tamamen Manuel<br/>(İnsan yapar)"] ---- B["Copilot Mode<br/>(AI öneri yapar)"] ---- C["Supervised Agent<br/>(AI yapar,<br/>insan onaylar)"] ---- D["Autonomous Agent<br/>(AI yapar,<br/>insan inceler)"]
     end
 
     style A fill:#ffcccc

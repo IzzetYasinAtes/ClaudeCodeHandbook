@@ -32,9 +32,9 @@ Extension yüklendikten sonra VS Code'u yeniden başlatın:
 
 ```mermaid
 flowchart LR
-    A["Extension\nYükle"] --> B["VS Code'u\nYeniden Başlat"]
-    B --> C["Terminal Paneli\nClaude Code Görünür"]
-    C --> D["Status Bar\nClaude İkonu ✅"]
+    A["Extension<br/>Yükle"] --> B["VS Code'u<br/>Yeniden Başlat"]
+    B --> C["Terminal Paneli<br/>Claude Code Görünür"]
+    C --> D["Status Bar<br/>Claude İkonu ✅"]
 
     style A fill:#3B82F6,color:#fff
     style D fill:#10B981,color:#fff
@@ -114,11 +114,11 @@ Claude Code Plan Mode'da çalışırken, VS Code üzerinden plan adımlarını g
 
 ```mermaid
 flowchart TB
-    A["Claude Code\nPlan oluşturur"] --> B["VS Code Panel\nPlan adımları listelenir"]
-    B --> C{"Kullanıcı\nİnceleme"}
-    C -->|"Tümünü Onayla"| D["Plan\nçalıştırılır"]
-    C -->|"Düzenle"| E["Adımları\ndeğiştir"]
-    C -->|"Reddet"| F["Plan\niptal edilir"]
+    A["Claude Code<br/>Plan oluşturur"] --> B["VS Code Panel<br/>Plan adımları listelenir"]
+    B --> C{"Kullanıcı<br/>İnceleme"}
+    C -->|"Tümünü Onayla"| D["Plan<br/>çalıştırılır"]
+    C -->|"Düzenle"| E["Adımları<br/>değiştir"]
+    C -->|"Reddet"| F["Plan<br/>iptal edilir"]
     E --> B
 
     style A fill:#3B82F6,color:#fff
@@ -176,11 +176,11 @@ Kısayolları özelleştirmek için:
 
 ```mermaid
 flowchart LR
-    A["Dosyayı\naçın"] --> B["Kodu\nseçin"]
-    B --> C["Ctrl+I\nInline Chat"]
-    C --> D["'Bu kodu incele'\nyazın"]
-    D --> E["Önerileri\ninceleyin"]
-    E --> F["Accept/Reject\nher değişiklik"]
+    A["Dosyayı<br/>açın"] --> B["Kodu<br/>seçin"]
+    B --> C["Ctrl+I<br/>Inline Chat"]
+    C --> D["'Bu kodu incele'<br/>yazın"]
+    D --> E["Önerileri<br/>inceleyin"]
+    E --> F["Accept/Reject<br/>her değişiklik"]
 
     style A fill:#3B82F6,color:#fff
     style F fill:#10B981,color:#fff

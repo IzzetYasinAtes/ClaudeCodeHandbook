@@ -19,12 +19,12 @@ Geleneksel süreçte her adım insan emeğine bağlıdır:
 
 ```mermaid
 flowchart LR
-    A["Gereksinim\nAnalizi\n👤 İnsan"] --> B["Sistem\nTasarımı\n👤 İnsan"]
-    B --> C["Kodlama\n👤 İnsan"]
-    C --> D["Test Yazma\n👤 İnsan"]
-    D --> E["Code Review\n👤 İnsan"]
-    E --> F["Hata Ayıklama\n👤 İnsan"]
-    F --> G["Deployment\n👤 İnsan"]
+    A["Gereksinim<br/>Analizi<br/>👤 İnsan"] --> B["Sistem<br/>Tasarımı<br/>👤 İnsan"]
+    B --> C["Kodlama<br/>👤 İnsan"]
+    C --> D["Test Yazma<br/>👤 İnsan"]
+    D --> E["Code Review<br/>👤 İnsan"]
+    E --> F["Hata Ayıklama<br/>👤 İnsan"]
+    F --> G["Deployment<br/>👤 İnsan"]
 
     style A fill:#ffcccc
     style B fill:#ffcccc
@@ -41,12 +41,12 @@ AI destekli süreçte birçok adım insan-AI işbirliğiyle yürütülür:
 
 ```mermaid
 flowchart LR
-    A["Gereksinim\nAnalizi\n👤 + 🤖"] --> B["Sistem\nTasarımı\n👤 + 🤖"]
-    B --> C["Kodlama\n🤖 + 👤"]
-    C --> D["Test Üretme\n🤖 + 👤"]
-    D --> E["Code Review\n🤖 + 👤"]
-    E --> F["Hata Tespiti\n🤖 + 👤"]
-    F --> G["Deployment\n👤 + 🤖"]
+    A["Gereksinim<br/>Analizi<br/>👤 + 🤖"] --> B["Sistem<br/>Tasarımı<br/>👤 + 🤖"]
+    B --> C["Kodlama<br/>🤖 + 👤"]
+    C --> D["Test Üretme<br/>🤖 + 👤"]
+    D --> E["Code Review<br/>🤖 + 👤"]
+    E --> F["Hata Tespiti<br/>🤖 + 👤"]
+    F --> G["Deployment<br/>👤 + 🤖"]
 
     style A fill:#ccffcc
     style B fill:#ccffcc
@@ -200,16 +200,16 @@ Agent:     Planımı oluşturuyorum...
 ```mermaid
 flowchart TD
     subgraph n1 ["Nesil 1: Autocomplete"]
-        A1["Tek satır\ntamamlama"]
+        A1["Tek satır<br/>tamamlama"]
     end
     subgraph n2 ["Nesil 2: Code Suggestions"]
-        A2["Çok satırlı\nöneri"]
+        A2["Çok satırlı<br/>öneri"]
     end
     subgraph n3 ["Nesil 3: Chat Assistants"]
-        A3["Diyalog ile\nkod üretme"]
+        A3["Diyalog ile<br/>kod üretme"]
     end
     subgraph n4 ["Nesil 4: Autonomous Agents"]
-        A4["Otonom planlama\nve uygulama"]
+        A4["Otonom planlama<br/>ve uygulama"]
     end
 
     n1 -->|"LLM gücü"| n2
@@ -292,11 +292,11 @@ AI güçlü bir araçtır, ancak sınırsız değildir:
 flowchart TD
     A["Yeni bir görev"] --> B{"Görev türü?"}
     
-    B -->|"Boilerplate,\nCRUD, testler"| C["✅ AI İdeal"]
-    B -->|"Karmaşık algoritma,\nperformans-kritik"| D["⚠️ AI + Dikkatli İnceleme"]
-    B -->|"Güvenlik-kritik,\nkriptografi"| E["❌ Uzman İncelemesi Şart"]
-    B -->|"Yeni framework\nöğrenme"| F["✅ AI Mükemmel Öğretici"]
-    B -->|"Mimari karar"| G["⚠️ AI Fikir Verir,\nKarar İnsanda"]
+    B -->|"Boilerplate,<br/>CRUD, testler"| C["✅ AI İdeal"]
+    B -->|"Karmaşık algoritma,<br/>performans-kritik"| D["⚠️ AI + Dikkatli İnceleme"]
+    B -->|"Güvenlik-kritik,<br/>kriptografi"| E["❌ Uzman İncelemesi Şart"]
+    B -->|"Yeni framework<br/>öğrenme"| F["✅ AI Mükemmel Öğretici"]
+    B -->|"Mimari karar"| G["⚠️ AI Fikir Verir,<br/>Karar İnsanda"]
     
     C --> H["Üret → İncele → Kullan"]
     D --> I["Üret → Derinlemesine İncele → Test → Kullan"]

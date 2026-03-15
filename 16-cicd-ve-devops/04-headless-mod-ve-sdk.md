@@ -17,16 +17,16 @@ Claude Code'u programmatik olarak çalıştırmanın üç ana yolu vardır: CLI'
 ```mermaid
 flowchart TB
     subgraph methods ["Programmatik Kullanım Yöntemleri"]
-        CLI["CLI Headless\nclaude -p 'prompt'"]
-        PY["Python SDK\nClaudeCodeAgent"]
-        TS["TypeScript SDK\n@anthropic-ai/claude-code"]
+        CLI["CLI Headless<br/>claude -p 'prompt'"]
+        PY["Python SDK<br/>ClaudeCodeAgent"]
+        TS["TypeScript SDK<br/>@anthropic-ai/claude-code"]
     end
 
     subgraph features ["Ortak Özellikler"]
-        SO["Structured Outputs\n(Yapılandırılmış Çıktı)"]
-        TA["Tool Approval\n(Araç Onayı)"]
-        SS["Setting Sources\n(CLAUDE.md, Rules, Hooks)"]
-        SM["Session Management\n(Oturum Yönetimi)"]
+        SO["Structured Outputs<br/>(Yapılandırılmış Çıktı)"]
+        TA["Tool Approval<br/>(Araç Onayı)"]
+        SS["Setting Sources<br/>(CLAUDE.md, Rules, Hooks)"]
+        SM["Session Management<br/>(Oturum Yönetimi)"]
     end
 
     CLI --> features
@@ -331,14 +331,14 @@ Agent SDK, Claude Code'un `CLAUDE.md`, `rules/` ve `hooks` gibi yapılandırma k
 ```mermaid
 flowchart TB
     subgraph sources ["Setting Sources"]
-        CM["CLAUDE.md\nProje kuralları"]
-        RULES["Rules Directory\n.claude/rules/"]
-        HOOKS["Hooks\nsettings.json"]
-        CUSTOM["Custom Config\nÖzel yapılandırma"]
+        CM["CLAUDE.md<br/>Proje kuralları"]
+        RULES["Rules Directory<br/>.claude/rules/"]
+        HOOKS["Hooks<br/>settings.json"]
+        CUSTOM["Custom Config<br/>Özel yapılandırma"]
     end
 
-    sources --> SS["setting_sources\nAPI"]
-    SS --> AGENT["Claude Code\nAgent"]
+    sources --> SS["setting_sources<br/>API"]
+    SS --> AGENT["Claude Code<br/>Agent"]
 
     style SS fill:#7C3AED,color:#fff
     style AGENT fill:#10B981,color:#fff

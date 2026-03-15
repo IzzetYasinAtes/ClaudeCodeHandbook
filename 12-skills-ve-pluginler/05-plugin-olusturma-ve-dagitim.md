@@ -19,11 +19,11 @@ Plugin geliştirme süreci 6 aşamadan oluşur:
 
 ```mermaid
 flowchart LR
-    A["1. Planlama\nBileşenleri belirle"] --> B["2. İskele\nDizin yapısı oluştur"]
-    B --> C["3. Geliştirme\nBileşenleri yaz"]
-    C --> D["4. Test\nYerel ortamda dene"]
-    D --> E["5. Yayınlama\nMarketplace'e gönder"]
-    E --> F["6. Bakım\nVersiyon yönetimi"]
+    A["1. Planlama<br/>Bileşenleri belirle"] --> B["2. İskele<br/>Dizin yapısı oluştur"]
+    B --> C["3. Geliştirme<br/>Bileşenleri yaz"]
+    C --> D["4. Test<br/>Yerel ortamda dene"]
+    D --> E["5. Yayınlama<br/>Marketplace'e gönder"]
+    E --> F["6. Bakım<br/>Versiyon yönetimi"]
     F -.-> C
 ```
 
@@ -35,12 +35,12 @@ Plugin'inize hangi bileşenlerin dahil olacağını belirleyin:
 
 ```mermaid
 flowchart TD
-    PLAN["Plugin Planı"] --> WHAT{"Ne tür bileşenler\ngerekiyor?"}
+    PLAN["Plugin Planı"] --> WHAT{"Ne tür bileşenler<br/>gerekiyor?"}
 
-    WHAT --> SK["Skills\nKomut veya yetenek mi?"]
-    WHAT --> AG["Agents\nÖzel ajan mı?"]
-    WHAT --> HK["Hooks\nOtomatik tetiklenme mi?"]
-    WHAT --> MC["MCP\nHarici veri kaynağı mı?"]
+    WHAT --> SK["Skills<br/>Komut veya yetenek mi?"]
+    WHAT --> AG["Agents<br/>Özel ajan mı?"]
+    WHAT --> HK["Hooks<br/>Otomatik tetiklenme mi?"]
+    WHAT --> MC["MCP<br/>Harici veri kaynağı mı?"]
 
     SK --> DESIGN["Tasarımı Belirle"]
     AG --> DESIGN
@@ -185,17 +185,17 @@ flowchart TD
     SCHEMA["plugin.json Schema"] --> REQUIRED["Zorunlu Alanlar"]
     SCHEMA --> OPTIONAL["Opsiyonel Alanlar"]
 
-    REQUIRED --> R1["name: string\nBenzersiz plugin adı"]
-    REQUIRED --> R2["description: string\nKısa açıklama"]
-    REQUIRED --> R3["version: string\nSemver formatı"]
-    REQUIRED --> R4["author: object\nYazar bilgileri"]
-    REQUIRED --> R5["components: object\nBileşen yolları"]
+    REQUIRED --> R1["name: string<br/>Benzersiz plugin adı"]
+    REQUIRED --> R2["description: string<br/>Kısa açıklama"]
+    REQUIRED --> R3["version: string<br/>Semver formatı"]
+    REQUIRED --> R4["author: object<br/>Yazar bilgileri"]
+    REQUIRED --> R5["components: object<br/>Bileşen yolları"]
 
-    OPTIONAL --> O1["license: string\nLisans türü"]
-    OPTIONAL --> O2["claude_code_version: string\nMin. versiyon"]
-    OPTIONAL --> O3["dependencies: object\nHarici bağımlılıklar"]
-    OPTIONAL --> O4["repository: string\nRepo URL'si"]
-    OPTIONAL --> O5["keywords: string[]\nArama etiketleri"]
+    OPTIONAL --> O1["license: string<br/>Lisans türü"]
+    OPTIONAL --> O2["claude_code_version: string<br/>Min. versiyon"]
+    OPTIONAL --> O3["dependencies: object<br/>Harici bağımlılıklar"]
+    OPTIONAL --> O4["repository: string<br/>Repo URL'si"]
+    OPTIONAL --> O5["keywords: string[]<br/>Arama etiketleri"]
 
     style REQUIRED fill:#ffcdd2,stroke:#e53935
     style OPTIONAL fill:#c8e6c9,stroke:#43a047
@@ -516,16 +516,16 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    CHANGE{"Değişiklik Türü?"} --> PATCH["Bug Fix\n1.0.0 → 1.0.1"]
-    CHANGE --> MINOR["Yeni Özellik\n(Geriye Uyumlu)\n1.0.0 → 1.1.0"]
-    CHANGE --> MAJOR["Kırılma Değişikliği\n(Breaking Change)\n1.0.0 → 2.0.0"]
+    CHANGE{"Değişiklik Türü?"} --> PATCH["Bug Fix<br/>1.0.0 → 1.0.1"]
+    CHANGE --> MINOR["Yeni Özellik<br/>(Geriye Uyumlu)<br/>1.0.0 → 1.1.0"]
+    CHANGE --> MAJOR["Kırılma Değişikliği<br/>(Breaking Change)<br/>1.0.0 → 2.0.0"]
 
-    PATCH --> UPDATE_JSON["plugin.json\nversion güncelle"]
+    PATCH --> UPDATE_JSON["plugin.json<br/>version güncelle"]
     MINOR --> UPDATE_JSON
     MAJOR --> UPDATE_JSON
 
     UPDATE_JSON --> TEST_NEW["Tekrar test et"]
-    TEST_NEW --> PUBLISH_NEW["Yeni versiyon yayınla\n/plugin publish"]
+    TEST_NEW --> PUBLISH_NEW["Yeni versiyon yayınla<br/>/plugin publish"]
 
     style PATCH fill:#d4edda,stroke:#28a745
     style MINOR fill:#fff3cd,stroke:#ffc107
@@ -566,10 +566,10 @@ Marketplace kullanmadan da plugin'leri Git ile paylaşabilirsiniz:
 
 ```mermaid
 flowchart LR
-    DEV["Geliştirici\nPlugin oluştur"] --> GIT["Git Repository\nPush et"]
-    GIT --> TEAM1["Takım Üyesi 1\n/plugin add URL"]
-    GIT --> TEAM2["Takım Üyesi 2\n/plugin add URL"]
-    GIT --> TEAM3["Takım Üyesi 3\n/plugin add URL"]
+    DEV["Geliştirici<br/>Plugin oluştur"] --> GIT["Git Repository<br/>Push et"]
+    GIT --> TEAM1["Takım Üyesi 1<br/>/plugin add URL"]
+    GIT --> TEAM2["Takım Üyesi 2<br/>/plugin add URL"]
+    GIT --> TEAM3["Takım Üyesi 3<br/>/plugin add URL"]
 ```
 
 ### Yöntem 1: Bağımsız Repository
@@ -696,18 +696,18 @@ cp -r .claude/skills/test-runner code-quality-pack/skills/
 
 ```mermaid
 flowchart TD
-    IDEA["Fikir\nBir ihtiyaç belirle"] --> PLAN["Planla\nBileşenleri belirle"]
-    PLAN --> INIT["Oluştur\n/plugin init"]
-    INIT --> DEV["Geliştir\nSkills + Agents + Hooks"]
-    DEV --> LOCAL_TEST["Yerel Test\n/plugin add ./path"]
+    IDEA["Fikir<br/>Bir ihtiyaç belirle"] --> PLAN["Planla<br/>Bileşenleri belirle"]
+    PLAN --> INIT["Oluştur<br/>/plugin init"]
+    INIT --> DEV["Geliştir<br/>Skills + Agents + Hooks"]
+    DEV --> LOCAL_TEST["Yerel Test<br/>/plugin add ./path"]
     LOCAL_TEST --> FIX{"Sorun var mı?"}
     FIX -->|"Evet"| DEV
-    FIX -->|"Hayır"| BETA["Beta Sürüm\nTakım ile paylaş"]
-    BETA --> FEEDBACK["Geri Bildirim\nTakımdan"]
-    FEEDBACK --> IMPROVE{"İyileştirme\ngerekli mi?"}
+    FIX -->|"Hayır"| BETA["Beta Sürüm<br/>Takım ile paylaş"]
+    BETA --> FEEDBACK["Geri Bildirim<br/>Takımdan"]
+    FEEDBACK --> IMPROVE{"İyileştirme<br/>gerekli mi?"}
     IMPROVE -->|"Evet"| DEV
-    IMPROVE -->|"Hayır"| PUBLISH["Yayınla\n/plugin publish"]
-    PUBLISH --> MAINTAIN["Bakım\nBug fix + yeni özellik"]
+    IMPROVE -->|"Hayır"| PUBLISH["Yayınla<br/>/plugin publish"]
+    PUBLISH --> MAINTAIN["Bakım<br/>Bug fix + yeni özellik"]
     MAINTAIN --> DEV
 
     style PUBLISH fill:#d4edda,stroke:#28a745

@@ -19,25 +19,25 @@ Claude Code, modern terminal özelliklerinden (Unicode, true color, ligature) ya
 flowchart TD
     subgraph recommended ["✅ Önerilen Terminaller"]
         direction TB
-        ITERM["iTerm2\nmacOS\nTrue color, ligature, Unicode"]
-        GHOSTTY["Ghostty\nmacOS / Linux\nGPU hızlandırmalı, modern"]
-        WARP["Warp\nmacOS / Linux\nAI-native, hızlı"]
-        WEZTERM["WezTerm\nÇapraz platform\nGPU, yapılandırılabilir"]
-        WTERM["Windows Terminal\nWindows\nTrue color, Unicode"]
+        ITERM["iTerm2<br/>macOS<br/>True color, ligature, Unicode"]
+        GHOSTTY["Ghostty<br/>macOS / Linux<br/>GPU hızlandırmalı, modern"]
+        WARP["Warp<br/>macOS / Linux<br/>AI-native, hızlı"]
+        WEZTERM["WezTerm<br/>Çapraz platform<br/>GPU, yapılandırılabilir"]
+        WTERM["Windows Terminal<br/>Windows<br/>True color, Unicode"]
     end
 
     subgraph acceptable ["🟡 Kabul Edilebilir"]
         direction TB
-        ALACRITTY["Alacritty\nÇapraz platform\nGPU, minimal"]
-        KITTY["Kitty\nmacOS / Linux\nGPU, font özelleştirme"]
-        HYPER["Hyper\nÇapraz platform\nElectron tabanlı"]
+        ALACRITTY["Alacritty<br/>Çapraz platform<br/>GPU, minimal"]
+        KITTY["Kitty<br/>macOS / Linux<br/>GPU, font özelleştirme"]
+        HYPER["Hyper<br/>Çapraz platform<br/>Electron tabanlı"]
     end
 
     subgraph avoid ["❌ Sorunlu Olabilecekler"]
         direction TB
-        XTERM["xterm\nEski, sınırlı Unicode"]
-        CMD["cmd.exe\nSınırlı renk desteği"]
-        TERM_APP["Terminal.app\nmacOS varsayılanı\nSınırlı true color"]
+        XTERM["xterm<br/>Eski, sınırlı Unicode"]
+        CMD["cmd.exe<br/>Sınırlı renk desteği"]
+        TERM_APP["Terminal.app<br/>macOS varsayılanı<br/>Sınırlı true color"]
     end
 
     style recommended fill:#D5F5E3,stroke:#27AE60
@@ -74,8 +74,8 @@ flowchart TD
     COLOR --> UNICODE["Unicode desteğini kontrol et"]
     UNICODE --> REPORT["Rapor ve Öneriler"]
 
-    REPORT --> OK["✅ Uyumlu\nHer şey hazır"]
-    REPORT --> WARN["⚠️ Sorunlar\nÖneriler gösterilir"]
+    REPORT --> OK["✅ Uyumlu<br/>Her şey hazır"]
+    REPORT --> WARN["⚠️ Sorunlar<br/>Öneriler gösterilir"]
 
     style CMD fill:#3498DB,color:#fff
     style OK fill:#27AE60,color:#fff
@@ -180,9 +180,9 @@ echo $TERM
 ```mermaid
 flowchart LR
     subgraph levels ["Renk Seviyeleri"]
-        L1["8 Renk\nTemel\n❌ Yetersiz"]
-        L2["256 Renk\nOrta\n🟡 Kabul edilebilir"]
-        L3["True Color (24-bit)\nTam\n✅ Önerilen"]
+        L1["8 Renk<br/>Temel<br/>❌ Yetersiz"]
+        L2["256 Renk<br/>Orta<br/>🟡 Kabul edilebilir"]
+        L3["True Color (24-bit)<br/>Tam<br/>✅ Önerilen"]
     end
 
     L1 --> L2 --> L3
@@ -265,10 +265,10 @@ Set-PSReadLineOption -PredictionSource History
 
 ```mermaid
 flowchart TD
-    INSTALL["1. iTerm2 İndir"] --> FONT["2. JetBrains Mono\nNerd Font yükle"]
+    INSTALL["1. iTerm2 İndir"] --> FONT["2. JetBrains Mono<br/>Nerd Font yükle"]
     FONT --> CONFIG["3. iTerm2 Ayarları"]
     CONFIG --> SHELL["4. Zsh Konfigürasyonu"]
-    SHELL --> VERIFY["5. /terminal-setup\nile doğrula"]
+    SHELL --> VERIFY["5. /terminal-setup<br/>ile doğrula"]
 
     style INSTALL fill:#3498DB,color:#fff
     style VERIFY fill:#27AE60,color:#fff
@@ -366,10 +366,10 @@ window-padding-y = 8
 ```mermaid
 flowchart TD
     subgraph perf ["Terminal Performans Optimizasyonu"]
-        GPU["🎮 GPU Hızlandırma\nAlacritty, Ghostty, WezTerm"]
-        SCROLL["📜 Scrollback Limiti\n10K satır yeterli"]
-        EFFECT["✨ Efektler\nSaydamlık ve blur kapatın"]
-        SHELL["🐚 Shell Başlatma\nPlugin sayısını azaltın"]
+        GPU["🎮 GPU Hızlandırma<br/>Alacritty, Ghostty, WezTerm"]
+        SCROLL["📜 Scrollback Limiti<br/>10K satır yeterli"]
+        EFFECT["✨ Efektler<br/>Saydamlık ve blur kapatın"]
+        SHELL["🐚 Shell Başlatma<br/>Plugin sayısını azaltın"]
     end
 
     style GPU fill:#27AE60,color:#fff

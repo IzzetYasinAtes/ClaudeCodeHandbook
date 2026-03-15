@@ -18,9 +18,9 @@ LLM Gateway, tüm LLM API çağrılarını merkezi bir noktadan geçirerek kontr
 ```mermaid
 flowchart LR
     subgraph clients ["İstemciler"]
-        CC1["Claude Code\n(Geliştirici 1)"]
-        CC2["Claude Code\n(Geliştirici 2)"]
-        CC3["Claude Code\n(CI/CD)"]
+        CC1["Claude Code<br/>(Geliştirici 1)"]
+        CC2["Claude Code<br/>(Geliştirici 2)"]
+        CC3["Claude Code<br/>(CI/CD)"]
     end
 
     subgraph gateway ["LLM Gateway"]
@@ -77,8 +77,8 @@ claude
 
 ```mermaid
 flowchart LR
-    CC["Claude Code\nANTHROPIC_BASE_URL=\nhttps://gateway/v1"] --> GW["LLM Gateway\nhttps://gateway/v1"]
-    GW --> API["Anthropic API\nhttps://api.anthropic.com"]
+    CC["Claude Code<br/>ANTHROPIC_BASE_URL=<br/>https://gateway/v1"] --> GW["LLM Gateway<br/>https://gateway/v1"]
+    GW --> API["Anthropic API<br/>https://api.anthropic.com"]
 
     style CC fill:#3498DB,color:#fff
     style GW fill:#F39C12,color:#fff
@@ -94,9 +94,9 @@ flowchart LR
 ```mermaid
 flowchart TD
     subgraph opensource ["Açık Kaynak LLM Gateway'ler"]
-        LITELLM["LiteLLM Proxy\nPython tabanlı\nÇoklu provider desteği"]
-        PORTKEY["Portkey\nEnterprise-ready\nObservability"]
-        KONG["Kong AI Gateway\nKong tabanlı\nPlugin ekosistemi"]
+        LITELLM["LiteLLM Proxy<br/>Python tabanlı<br/>Çoklu provider desteği"]
+        PORTKEY["Portkey<br/>Enterprise-ready<br/>Observability"]
+        KONG["Kong AI Gateway<br/>Kong tabanlı<br/>Plugin ekosistemi"]
     end
 
     style LITELLM fill:#3498DB,color:#fff
@@ -116,15 +116,15 @@ model_list:
   - model_name: "claude-sonnet-4"
     litellm_params:
       model: "claude-sonnet-4-20250514"
-      api_key: "sk-ant-api03-xxxx"
+      api_key: "YOUR_API_KEY_HERE"
 
   - model_name: "claude-opus-4"
     litellm_params:
       model: "claude-opus-4-20250514"
-      api_key: "sk-ant-api03-xxxx"
+      api_key: "YOUR_API_KEY_HERE"
 
 general_settings:
-  master_key: "sk-gateway-master-key"
+  master_key: "YOUR_GATEWAY_KEY_HERE"
 
 litellm_settings:
   max_budget: 1000
@@ -139,7 +139,7 @@ Claude Code'da kullanım:
 
 ```bash
 export ANTHROPIC_BASE_URL="http://localhost:4000/v1"
-export ANTHROPIC_API_KEY="sk-gateway-master-key"
+export ANTHROPIC_API_KEY="YOUR_GATEWAY_KEY_HERE"
 claude
 ```
 
@@ -172,9 +172,9 @@ export ANTHROPIC_MODEL="claude-sonnet-4@20250514"
 flowchart TD
     CC["Claude Code"] --> GW["LLM Gateway"]
 
-    GW --> |"Yüksek öncelik"| BEDROCK["AWS Bedrock\n(Birincil)"]
-    GW --> |"Failover"| VERTEX["Google Vertex AI\n(Yedek)"]
-    GW --> |"Son çare"| DIRECT["Anthropic API\n(Doğrudan)"]
+    GW --> |"Yüksek öncelik"| BEDROCK["AWS Bedrock<br/>(Birincil)"]
+    GW --> |"Failover"| VERTEX["Google Vertex AI<br/>(Yedek)"]
+    GW --> |"Son çare"| DIRECT["Anthropic API<br/>(Doğrudan)"]
 
     style CC fill:#3498DB,color:#fff
     style GW fill:#F39C12,color:#fff
@@ -191,18 +191,18 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    ADMIN["🏢 Admin"] --> GW_KEY["Gateway Master Key\noluştur"]
-    GW_KEY --> USER_KEYS["Kullanıcı Anahtarları\noluştur"]
+    ADMIN["🏢 Admin"] --> GW_KEY["Gateway Master Key<br/>oluştur"]
+    GW_KEY --> USER_KEYS["Kullanıcı Anahtarları<br/>oluştur"]
 
-    USER_KEYS --> K1["Dev Key 1\nLimit: $50/gün"]
-    USER_KEYS --> K2["Dev Key 2\nLimit: $50/gün"]
-    USER_KEYS --> K3["CI/CD Key\nLimit: $200/gün"]
+    USER_KEYS --> K1["Dev Key 1<br/>Limit: $50/gün"]
+    USER_KEYS --> K2["Dev Key 2<br/>Limit: $50/gün"]
+    USER_KEYS --> K3["CI/CD Key<br/>Limit: $200/gün"]
 
     K1 --> GW["LLM Gateway"]
     K2 --> GW
     K3 --> GW
 
-    GW --> API["Anthropic API\nTek master key"]
+    GW --> API["Anthropic API<br/>Tek master key"]
 
     style ADMIN fill:#8E44AD,color:#fff
     style GW fill:#F39C12,color:#fff
@@ -235,9 +235,9 @@ rate_limits:
 ```mermaid
 flowchart TD
     subgraph devs ["Geliştiriciler"]
-        D1["Dev 1\nFrontend"]
-        D2["Dev 2\nBackend"]
-        D3["Dev 3\nDevOps"]
+        D1["Dev 1<br/>Frontend"]
+        D2["Dev 2<br/>Backend"]
+        D3["Dev 3<br/>DevOps"]
     end
 
     subgraph cicd ["CI/CD"]
@@ -251,8 +251,8 @@ flowchart TD
     end
 
     subgraph monitoring ["İzleme"]
-        METRICS["Prometheus\nMetrikler"]
-        LOGS["ELK Stack\nLoglar"]
+        METRICS["Prometheus<br/>Metrikler"]
+        LOGS["ELK Stack<br/>Loglar"]
     end
 
     devs --> LB

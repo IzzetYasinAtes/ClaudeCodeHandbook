@@ -19,21 +19,21 @@ Claude Code'da kullanılabilecek temel klavye kısayolları:
 ```mermaid
 flowchart TD
     subgraph navigation ["🧭 Navigasyon"]
-        N1["↑ / ↓\nGeçmiş komutlar"]
-        N2["Ctrl+C\nMevcut işlemi iptal et"]
-        N3["Ctrl+D\nOturumu sonlandır"]
+        N1["↑ / ↓<br/>Geçmiş komutlar"]
+        N2["Ctrl+C<br/>Mevcut işlemi iptal et"]
+        N3["Ctrl+D<br/>Oturumu sonlandır"]
     end
 
     subgraph editing ["✏️ Düzenleme"]
-        E1["Tab\nOtomatik tamamlama"]
-        E2["Ctrl+A / Ctrl+E\nSatır başı / sonu"]
-        E3["Ctrl+U\nSatırı temizle"]
+        E1["Tab<br/>Otomatik tamamlama"]
+        E2["Ctrl+A / Ctrl+E<br/>Satır başı / sonu"]
+        E3["Ctrl+U<br/>Satırı temizle"]
     end
 
     subgraph special ["⚡ Özel İşlemler"]
-        S1["Esc\nMevcut girişi iptal et"]
-        S2["Shift+Tab\nGirinti azalt"]
-        S3["Ctrl+L\nEkranı temizle"]
+        S1["Esc<br/>Mevcut girişi iptal et"]
+        S2["Shift+Tab<br/>Girinti azalt"]
+        S3["Ctrl+L<br/>Ekranı temizle"]
     end
 
     style navigation fill:#3498DB,color:#fff
@@ -68,11 +68,11 @@ Claude Code bir araç kullanmak istediğinde izin ister. Bu izin diyaloğunda ku
 
 ```mermaid
 flowchart TD
-    PROMPT["🔐 İzin İsteği\nClaude 'Edit' aracını kullanmak istiyor"] --> OPTIONS{"Seçenekler"}
-    OPTIONS --> Y["y / Enter\nBu seferlik izin ver"]
-    OPTIONS --> A["a\nBu oturumda her zaman izin ver"]
-    OPTIONS --> D["d\nHer zaman izin ver (settings'e ekle)"]
-    OPTIONS --> N["n / Esc Esc\nReddet"]
+    PROMPT["🔐 İzin İsteği<br/>Claude 'Edit' aracını kullanmak istiyor"] --> OPTIONS{"Seçenekler"}
+    OPTIONS --> Y["y / Enter<br/>Bu seferlik izin ver"]
+    OPTIONS --> A["a<br/>Bu oturumda her zaman izin ver"]
+    OPTIONS --> D["d<br/>Her zaman izin ver (settings'e ekle)"]
+    OPTIONS --> N["n / Esc Esc<br/>Reddet"]
 
     style PROMPT fill:#F39C12,color:#fff
     style Y fill:#27AE60,color:#fff
@@ -96,7 +96,7 @@ Uzun mesajlar veya kod blokları girmek için çok satırlı giriş modunu kulla
 
 ```mermaid
 flowchart LR
-    SINGLE["Tek Satır\nEnter = Gönder"] --> MULTI["Çok Satır\nShift+Enter = Yeni satır\nEnter = Gönder"]
+    SINGLE["Tek Satır<br/>Enter = Gönder"] --> MULTI["Çok Satır<br/>Shift+Enter = Yeni satır<br/>Enter = Gönder"]
 
     style SINGLE fill:#3498DB,color:#fff
     style MULTI fill:#27AE60,color:#fff
@@ -157,14 +157,14 @@ Claude Code, IDE entegrasyonlarında (VS Code, JetBrains) ek kısayollarla kulla
 ```mermaid
 flowchart TD
     subgraph vscode ["VS Code"]
-        V1["Ctrl+Shift+P\nKomut paleti → Claude Code"]
-        V2["Ctrl+L\nClaude Code panelini aç"]
-        V3["Ctrl+I\nInline düzenleme"]
+        V1["Ctrl+Shift+P<br/>Komut paleti → Claude Code"]
+        V2["Ctrl+L<br/>Claude Code panelini aç"]
+        V3["Ctrl+I<br/>Inline düzenleme"]
     end
 
     subgraph jetbrains ["JetBrains IDEs"]
-        J1["Alt+C\nClaude Code panelini aç"]
-        J2["Özelleştirilebilir\nKeymap ayarlarından"]
+        J1["Alt+C<br/>Claude Code panelini aç"]
+        J2["Özelleştirilebilir<br/>Keymap ayarlarından"]
     end
 
     style vscode fill:#007ACC,color:#fff

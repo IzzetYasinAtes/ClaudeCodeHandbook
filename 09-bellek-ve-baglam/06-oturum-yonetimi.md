@@ -17,16 +17,16 @@ Her Claude Code oturumu bir yaşam döngüsüne sahiptir:
 
 ```mermaid
 flowchart TD
-    START(["claude komutu\nçalıştırılır"]) --> INIT["Oturum Başlatma"]
-    INIT --> LOAD["Bağlam Yükleme\n- CLAUDE.md\n- Auto Memory\n- Rules"]
-    LOAD --> WORK["Çalışma\n(Görevler yürütülür)"]
-    WORK --> CHECK{"Oturum\nbitiyor mu?"}
+    START(["claude komutu<br/>çalıştırılır"]) --> INIT["Oturum Başlatma"]
+    INIT --> LOAD["Bağlam Yükleme<br/>- CLAUDE.md<br/>- Auto Memory<br/>- Rules"]
+    LOAD --> WORK["Çalışma<br/>(Görevler yürütülür)"]
+    WORK --> CHECK{"Oturum<br/>bitiyor mu?"}
     CHECK -->|"Hayır"| WORK
-    CHECK -->|"Evet"| SAVE["Oturum Kaydedilir\n(Geçmiş + Durum)"]
+    CHECK -->|"Evet"| SAVE["Oturum Kaydedilir<br/>(Geçmiş + Durum)"]
     SAVE --> END(["Oturum Sona Erer"])
 
-    END -.->|"--continue"| RESUME_LATEST["En son oturuma\ndevam et"]
-    END -.->|"--resume"| RESUME_PICK["Belirli oturuma\ndevam et"]
+    END -.->|"--continue"| RESUME_LATEST["En son oturuma<br/>devam et"]
+    END -.->|"--resume"| RESUME_PICK["Belirli oturuma<br/>devam et"]
     END -.->|"Yeni oturum"| START
 
     style START fill:#4A90D9,color:#fff
@@ -49,17 +49,17 @@ flowchart LR
         C2["Auto memory oku (~1-2K)"]
         C3["Proje yapısını tara (~3-5K)"]
         C4["Git durumunu kontrol et (~1K)"]
-        C5["Toplam: ~7-13K token\nharcanır"]
+        C5["Toplam: ~7-13K token<br/>harcanır"]
     end
 
     subgraph warm ["Devam Eden Oturum (Warm)"]
         direction TB
         W1["Mevcut bağlam korunur"]
         W2["Ek yükleme yok"]
-        W3["Hemen çalışmaya\ndevam edilir"]
+        W3["Hemen çalışmaya<br/>devam edilir"]
     end
 
-    cold -.->|"--continue ile\nönlenebilir"| warm
+    cold -.->|"--continue ile<br/>önlenebilir"| warm
 
     style C5 fill:#E74C3C,color:#fff
     style W3 fill:#27AE60,color:#fff
@@ -103,7 +103,7 @@ sequenceDiagram
     H-->>CC: session_abc123 (dün 18:45)
     CC->>H: Oturum özetini yükle
     H-->>CC: "Auth modülünde rate limiting üzerinde çalışıldı..."
-    CC-->>U: "Önceki oturumdan devam ediyorum.\nAuth modülünde rate limiting üzerinde çalışıyorduk."
+    CC-->>U: "Önceki oturumdan devam ediyorum.<br/>Auth modülünde rate limiting üzerinde çalışıyorduk."
     U->>CC: "Rate limiting'i tamamla"
     CC->>CC: Bağlamı kullanarak devam eder
 ```
@@ -160,16 +160,16 @@ $ claude
 
 ```mermaid
 flowchart TD
-    NEED["Oturuma devam\netmem gerekiyor"] --> Q1{"Hangi oturum?"}
+    NEED["Oturuma devam<br/>etmem gerekiyor"] --> Q1{"Hangi oturum?"}
 
-    Q1 -->|"En son"| CONTINUE["--continue / -c\nEn hızlı yol"]
+    Q1 -->|"En son"| CONTINUE["--continue / -c<br/>En hızlı yol"]
     Q1 -->|"Belirli bir oturum"| Q2{"Nasıl seçeceğim?"}
-    Q1 -->|"Script'te kullanıyorum"| SESSION_ID["--session-id\nProgramatik erişim"]
+    Q1 -->|"Script'te kullanıyorum"| SESSION_ID["--session-id<br/>Programatik erişim"]
 
-    Q2 -->|"Listeden seçeceğim"| RESUME["--resume / -r\nİnteraktif seçim"]
+    Q2 -->|"Listeden seçeceğim"| RESUME["--resume / -r<br/>İnteraktif seçim"]
     Q2 -->|"ID biliyorum"| SESSION_ID
 
-    Q2 -->|"Zaten oturumdayım"| REPL_RESUME["/resume\nREPL içi geçiş"]
+    Q2 -->|"Zaten oturumdayım"| REPL_RESUME["/resume<br/>REPL içi geçiş"]
 
     style CONTINUE fill:#27AE60,color:#fff
     style RESUME fill:#4A90D9,color:#fff
@@ -264,10 +264,10 @@ $ claude
 
 ```mermaid
 flowchart LR
-    S1["Oturum 1\n(Plan oluştur)"] -->|"PLAN.md\nyazılır"| FILE["📄 PLAN.md\n(Oturumlar arası\nbağlam köprüsü)"]
-    FILE -->|"PLAN.md\nokunur"| S2["Oturum 2\n(Adım 1 uygula)"]
-    S2 -->|"PLAN.md\ngüncellenir"| FILE
-    FILE -->|"PLAN.md\nokunur"| S3["Oturum 3\n(Adım 2 uygula)"]
+    S1["Oturum 1<br/>(Plan oluştur)"] -->|"PLAN.md<br/>yazılır"| FILE["📄 PLAN.md<br/>(Oturumlar arası<br/>bağlam köprüsü)"]
+    FILE -->|"PLAN.md<br/>okunur"| S2["Oturum 2<br/>(Adım 1 uygula)"]
+    S2 -->|"PLAN.md<br/>güncellenir"| FILE
+    FILE -->|"PLAN.md<br/>okunur"| S3["Oturum 3<br/>(Adım 2 uygula)"]
 
     style FILE fill:#F39C12,color:#fff
 ```

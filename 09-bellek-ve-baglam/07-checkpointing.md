@@ -19,15 +19,15 @@ Claude Code her araç çağrısından sonra otomatik olarak bir **checkpoint** (
 flowchart LR
     subgraph timeline ["Oturum Zaman Çizelgesi"]
         direction LR
-        CP1["🔵 Checkpoint 1\nDosya oluşturuldu\nauth.ts"]
-        CP2["🔵 Checkpoint 2\nDüzenleme yapıldı\nmiddleware.ts"]
-        CP3["🔵 Checkpoint 3\nTest eklendi\nauth.test.ts"]
-        CP4["🔴 Checkpoint 4\nHata! Yanlış\nrefactoring"]
-        CP5["🟢 Şu an\nCheckpoint 3'e\ngeri dönülebilir"]
+        CP1["🔵 Checkpoint 1<br/>Dosya oluşturuldu<br/>auth.ts"]
+        CP2["🔵 Checkpoint 2<br/>Düzenleme yapıldı<br/>middleware.ts"]
+        CP3["🔵 Checkpoint 3<br/>Test eklendi<br/>auth.test.ts"]
+        CP4["🔴 Checkpoint 4<br/>Hata! Yanlış<br/>refactoring"]
+        CP5["🟢 Şu an<br/>Checkpoint 3'e<br/>geri dönülebilir"]
     end
 
     CP1 --> CP2 --> CP3 --> CP4
-    CP4 -.->|"Geri al\n(undo)"| CP3
+    CP4 -.->|"Geri al<br/>(undo)"| CP3
 
     style CP1 fill:#4A90D9,color:#fff
     style CP2 fill:#4A90D9,color:#fff
@@ -121,13 +121,13 @@ flowchart TD
     end
 
     subgraph git_layer ["Git Katmanı (Kalıcı)"]
-        GC1["Commit: abc123\n'önceki durum'"]
-        GC2["Commit: def456\n'auth modülü eklendi'"]
+        GC1["Commit: abc123<br/>'önceki durum'"]
+        GC2["Commit: def456<br/>'auth modülü eklendi'"]
         GC1 --> GC2
     end
 
-    CP3 -->|"Değişiklikler onaylandıktan\nsonra commit"| GC2
-    CP1 -.->|"Checkpoint geri alma\n(git stash veya restore)"| GC1
+    CP3 -->|"Değişiklikler onaylandıktan<br/>sonra commit"| GC2
+    CP1 -.->|"Checkpoint geri alma<br/>(git stash veya restore)"| GC1
 
     style checkpoint_layer fill:#f0f0ff
     style git_layer fill:#f0fff0
@@ -199,10 +199,10 @@ $ claude
 
 ```mermaid
 flowchart TD
-    START["Performans sorunu"] --> A1["Yaklaşım 1:\nMemoization"]
+    START["Performans sorunu"] --> A1["Yaklaşım 1:<br/>Memoization"]
     A1 --> TEST1["Benchmark: %10 ⚠️"]
     TEST1 --> UNDO["Geri al ↩️"]
-    UNDO --> A2["Yaklaşım 2:\nVirtualization"]
+    UNDO --> A2["Yaklaşım 2:<br/>Virtualization"]
     A2 --> TEST2["Benchmark: %85 ✅"]
     TEST2 --> COMMIT["Commit et 🎉"]
 
@@ -239,9 +239,9 @@ $ claude
 flowchart TD
     subgraph strateji ["Checkpoint Kullanım Stratejileri"]
         direction TB
-        S1["🧪 Deney Stratejisi\nDene → Değerlendir → Tut/Geri al"]
-        S2["🔄 İterasyon Stratejisi\nYap → İyileştir → İyileştir → Commit"]
-        S3["🛡️ Güvenlik Stratejisi\nBüyük değişiklik öncesi\ndurumu not et"]
+        S1["🧪 Deney Stratejisi<br/>Dene → Değerlendir → Tut/Geri al"]
+        S2["🔄 İterasyon Stratejisi<br/>Yap → İyileştir → İyileştir → Commit"]
+        S3["🛡️ Güvenlik Stratejisi<br/>Büyük değişiklik öncesi<br/>durumu not et"]
     end
 
     S1 --> USE1["Yeni yaklaşım denemelerinde"]

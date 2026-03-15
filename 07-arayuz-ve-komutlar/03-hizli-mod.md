@@ -31,8 +31,8 @@ flowchart LR
         F2 --> F3["Sonuç"]
     end
 
-    normal -.->|"Daha yavaş\nDaha kapsamlı"| R1["⏱️ 15-60 saniye"]
-    fast -.->|"Daha hızlı\nDaha yüzeysel"| R2["⏱️ 3-15 saniye"]
+    normal -.->|"Daha yavaş<br/>Daha kapsamlı"| R1["⏱️ 15-60 saniye"]
+    fast -.->|"Daha hızlı<br/>Daha yüzeysel"| R2["⏱️ 3-15 saniye"]
 ```
 
 ---
@@ -63,15 +63,15 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    TASK["Görev geldi"] --> EVAL{Görev ne\nkadar karmaşık?}
+    TASK["Görev geldi"] --> EVAL{Görev ne<br/>kadar karmaşık?}
     
-    EVAL -->|"Basit / Tekil dosya"| FAST["⚡ Fast Mode\nHızlı çözüm"]
-    EVAL -->|"Orta / Birkaç dosya"| NORMAL["🔧 Normal Mode\nStandart akış"]
-    EVAL -->|"Karmaşık / Çok dosya"| PLAN["📋 Plan Mode\nÖnce araştır"]
+    EVAL -->|"Basit / Tekil dosya"| FAST["⚡ Fast Mode<br/>Hızlı çözüm"]
+    EVAL -->|"Orta / Birkaç dosya"| NORMAL["🔧 Normal Mode<br/>Standart akış"]
+    EVAL -->|"Karmaşık / Çok dosya"| PLAN["📋 Plan Mode<br/>Önce araştır"]
 
-    FAST --> EX1["Typo düzelt\nDeğişken yeniden adlandır\nImport ekle"]
-    NORMAL --> EX2["Fonksiyon yaz\nBug düzelt\nTest ekle"]
-    PLAN --> EX3["Mimari değişiklik\nBüyük refactoring\nKök neden analizi"]
+    FAST --> EX1["Typo düzelt<br/>Değişken yeniden adlandır<br/>Import ekle"]
+    NORMAL --> EX2["Fonksiyon yaz<br/>Bug düzelt<br/>Test ekle"]
+    PLAN --> EX3["Mimari değişiklik<br/>Büyük refactoring<br/>Kök neden analizi"]
 ```
 
 ---
@@ -206,18 +206,18 @@ $ claude --fast
 flowchart TD
     START["Yeni görev"] --> CHECK{Görev tipi?}
     
-    CHECK -->|"Tek satır değişiklik\nBasit soru"| FAST["⚡ Fast Mode"]
-    CHECK -->|"Özellik ekleme\nBug düzeltme"| NORMAL["🔧 Normal Mode"]
-    CHECK -->|"Büyük refactoring\nMimari karar"| PLAN["📋 Plan Mode"]
+    CHECK -->|"Tek satır değişiklik<br/>Basit soru"| FAST["⚡ Fast Mode"]
+    CHECK -->|"Özellik ekleme<br/>Bug düzeltme"| NORMAL["🔧 Normal Mode"]
+    CHECK -->|"Büyük refactoring<br/>Mimari karar"| PLAN["📋 Plan Mode"]
     
-    FAST --> FEVAL{Sonuç\nyeterli mi?}
+    FAST --> FEVAL{Sonuç<br/>yeterli mi?}
     FEVAL -->|"Evet"| DONE["✅ Tamamlandı"]
     FEVAL -->|"Hayır"| UPGRADE["Normal Mode'a geç"]
     
     PLAN --> PRESULT["Plan hazır"]
     PRESULT --> NORMAL
     
-    NORMAL --> NEVAL{Sonuç\nyeterli mi?}
+    NORMAL --> NEVAL{Sonuç<br/>yeterli mi?}
     NEVAL -->|"Evet"| DONE
     NEVAL -->|"Hayır"| PLAN
     

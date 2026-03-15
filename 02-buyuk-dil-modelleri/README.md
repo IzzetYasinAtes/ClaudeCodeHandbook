@@ -6,10 +6,10 @@ Large Language Model (büyük dil modeli), milyarlarca parametre ile eğitilmiş
 
 ```mermaid
 flowchart TD
-    A["LLM Nedir?\nNasıl Çalışır?"] --> B["LLM Tarihçesi\n2017-2026"]
-    B --> C["Güncel Modeller\nMart 2026"]
-    C --> D["Açık vs Kapalı\nKaynak"]
-    D --> E["Değerlendirme\nKriterleri"]
+    A["LLM Nedir?<br/>Nasıl Çalışır?"] --> B["LLM Tarihçesi<br/>2017-2026"]
+    B --> C["Güncel Modeller<br/>Mart 2026"]
+    C --> D["Açık vs Kapalı<br/>Kaynak"]
+    D --> E["Değerlendirme<br/>Kriterleri"]
 ```
 
 ## İçerik

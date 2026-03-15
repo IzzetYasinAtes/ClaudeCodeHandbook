@@ -67,12 +67,12 @@ stateDiagram-v2
 ```mermaid
 flowchart TD
     CREATE["TaskCreate"] --> MODE{"background?"}
-    MODE -->|false| FOREGROUND["Ön Plan Görevi\nSonuç beklenene kadar\nana ajan durur"]
-    MODE -->|true| BACKGROUND["Arka Plan Görevi\nAna ajan çalışmaya\ndevam eder"]
+    MODE -->|false| FOREGROUND["Ön Plan Görevi<br/>Sonuç beklenene kadar<br/>ana ajan durur"]
+    MODE -->|true| BACKGROUND["Arka Plan Görevi<br/>Ana ajan çalışmaya<br/>devam eder"]
 
-    FOREGROUND --> RESULT1["Sonuç doğrudan\nana ajana döner"]
-    BACKGROUND --> CHECK["TaskGet ile\ndurum kontrol et"]
-    CHECK --> OUTPUT["TaskOutput ile\nsonucu al"]
+    FOREGROUND --> RESULT1["Sonuç doğrudan<br/>ana ajana döner"]
+    BACKGROUND --> CHECK["TaskGet ile<br/>durum kontrol et"]
+    CHECK --> OUTPUT["TaskOutput ile<br/>sonucu al"]
 ```
 
 ### Pratik Örnekler
@@ -202,18 +202,18 @@ Task araçlarının en güçlü özelliği **paralel yürütme** (parallel execu
 
 ```mermaid
 flowchart TD
-    USER["Kullanıcı: Tüm modülleri\ntest et ve dokümante et"] --> PLAN["Claude Code planlar"]
+    USER["Kullanıcı: Tüm modülleri<br/>test et ve dokümante et"] --> PLAN["Claude Code planlar"]
 
-    PLAN --> T1["TaskCreate\nbackground=true\nAuth modülü testleri"]
-    PLAN --> T2["TaskCreate\nbackground=true\nAPI modülü testleri"]
-    PLAN --> T3["TaskCreate\nbackground=true\nDokümantasyon üretimi"]
+    PLAN --> T1["TaskCreate<br/>background=true<br/>Auth modülü testleri"]
+    PLAN --> T2["TaskCreate<br/>background=true<br/>API modülü testleri"]
+    PLAN --> T3["TaskCreate<br/>background=true<br/>Dokümantasyon üretimi"]
 
-    T1 --> WAIT["Tüm görevleri bekle\nTaskGet ile kontrol"]
+    T1 --> WAIT["Tüm görevleri bekle<br/>TaskGet ile kontrol"]
     T2 --> WAIT
     T3 --> WAIT
 
-    WAIT --> COLLECT["TaskOutput ile\nsonuçları topla"]
-    COLLECT --> REPORT["Birleşik rapor\noluştur"]
+    WAIT --> COLLECT["TaskOutput ile<br/>sonuçları topla"]
+    COLLECT --> REPORT["Birleşik rapor<br/>oluştur"]
 ```
 
 ### Paralel Görev Örneği

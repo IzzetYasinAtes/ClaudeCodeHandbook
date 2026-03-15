@@ -17,15 +17,15 @@ Claude Code'un en sık kullandığı araç grubu **dosya işlemleri**dir (file o
 flowchart LR
     subgraph okuma ["Okuma Araçları (İzin Gereksiz)"]
         direction TB
-        Read["Read\nDosya içeriği oku"]
-        Glob["Glob\nDosya adı deseniyle bul"]
-        Grep["Grep\nİçerik ara (regex)"]
+        Read["Read<br/>Dosya içeriği oku"]
+        Glob["Glob<br/>Dosya adı deseniyle bul"]
+        Grep["Grep<br/>İçerik ara (regex)"]
     end
 
     subgraph yazma ["Yazma Araçları (İzin Gerekli)"]
         direction TB
-        Write["Write\nDosya oluştur/üzerine yaz"]
-        Edit["Edit\nHedefli metin değiştir"]
+        Write["Write<br/>Dosya oluştur/üzerine yaz"]
+        Edit["Edit<br/>Hedefli metin değiştir"]
     end
 
     Glob -->|"dosya yolları"| Read
@@ -56,9 +56,9 @@ flowchart TD
     CHECK -->|Hayır| ERROR["Hata döndür"]
     CHECK -->|Evet| TYPE{"Dosya türü?"}
     TYPE -->|Metin| TEXT["Metin olarak oku"]
-    TYPE -->|Görsel| IMAGE["Görsel olarak işle\nJPEG, PNG, GIF, WebP"]
+    TYPE -->|Görsel| IMAGE["Görsel olarak işle<br/>JPEG, PNG, GIF, WebP"]
     TYPE -->|PDF| PDF["PDF → metin dönüştür"]
-    TEXT --> RANGE{"offset/limit\nvar mı?"}
+    TEXT --> RANGE{"offset/limit<br/>var mı?"}
     RANGE -->|Evet| PARTIAL["Belirtilen aralığı döndür"]
     RANGE -->|Hayır| FULL["Tüm içeriği döndür"]
 ```
@@ -127,11 +127,11 @@ Read(file_path="docs/api-spec.pdf")
 
 ```mermaid
 flowchart TD
-    START["Write çağrısı"] --> PERM{"İzin\nonaylandı mı?"}
+    START["Write çağrısı"] --> PERM{"İzin<br/>onaylandı mı?"}
     PERM -->|Hayır| DENY["Reddedildi"]
     PERM -->|Evet| CHECK{"Dosya mevcut mu?"}
-    CHECK -->|Hayır| CREATE["Yeni dosya oluştur\n(gerekirse dizinleri de oluştur)"]
-    CHECK -->|Evet| OVERWRITE["Mevcut dosyanın\nüzerine yaz"]
+    CHECK -->|Hayır| CREATE["Yeni dosya oluştur<br/>(gerekirse dizinleri de oluştur)"]
+    CHECK -->|Evet| OVERWRITE["Mevcut dosyanın<br/>üzerine yaz"]
     CREATE --> DONE["Başarılı"]
     OVERWRITE --> DONE
 ```
@@ -180,13 +180,13 @@ Read("src/utils/helpers.ts") → Write("src/utils/helpers.test.ts", content="...
 
 ```mermaid
 flowchart TD
-    START["Edit çağrısı"] --> PERM{"İzin\nonaylandı mı?"}
+    START["Edit çağrısı"] --> PERM{"İzin<br/>onaylandı mı?"}
     PERM -->|Hayır| DENY["Reddedildi"]
-    PERM -->|Evet| FIND{"old_string\ndosyada var mı?"}
+    PERM -->|Evet| FIND{"old_string<br/>dosyada var mı?"}
     FIND -->|Hayır| ERROR["Hata: Metin bulunamadı"]
-    FIND -->|Evet| UNIQUE{"old_string\nbenzersiz mi?"}
-    UNIQUE -->|Hayır| ERROR2["Hata: Birden fazla eşleşme\nDaha fazla bağlam ekleyin"]
-    UNIQUE -->|Evet| REPLACE["old_string → new_string\ndeğiştir"]
+    FIND -->|Evet| UNIQUE{"old_string<br/>benzersiz mi?"}
+    UNIQUE -->|Hayır| ERROR2["Hata: Birden fazla eşleşme<br/>Daha fazla bağlam ekleyin"]
+    UNIQUE -->|Evet| REPLACE["old_string → new_string<br/>değiştir"]
     REPLACE --> DONE["Başarılı"]
 ```
 
@@ -268,8 +268,8 @@ Edit(
 
 ```mermaid
 flowchart LR
-    PATTERN["Glob Deseni\n**/*.test.ts"] --> SEARCH["Dosya sisteminde\nara"]
-    SEARCH --> RESULTS["Eşleşen dosyalar\n(değişiklik zamanına göre sıralı)"]
+    PATTERN["Glob Deseni<br/>**/*.test.ts"] --> SEARCH["Dosya sisteminde<br/>ara"]
+    SEARCH --> RESULTS["Eşleşen dosyalar<br/>(değişiklik zamanına göre sıralı)"]
     RESULTS --> R1["src/auth/login.test.ts"]
     RESULTS --> R2["src/utils/helpers.test.ts"]
     RESULTS --> R3["src/api/users.test.ts"]
@@ -329,9 +329,9 @@ Glob(pattern="*.{json,yml,yaml,toml,ini,env}")
 ```mermaid
 flowchart TD
     GREP["Grep Çağrısı"] --> MODE{"output_mode?"}
-    MODE -->|content| CONTENT["Eşleşen satırlar\nve bağlamları gösterilir"]
-    MODE -->|files_with_matches| FILES["Sadece dosya\nyolları listelenir"]
-    MODE -->|count| COUNT["Dosya başına eşleşme\nsayısı gösterilir"]
+    MODE -->|content| CONTENT["Eşleşen satırlar<br/>ve bağlamları gösterilir"]
+    MODE -->|files_with_matches| FILES["Sadece dosya<br/>yolları listelenir"]
+    MODE -->|count| COUNT["Dosya başına eşleşme<br/>sayısı gösterilir"]
 ```
 
 | Mod | Açıklama | Kullanım Senaryosu |

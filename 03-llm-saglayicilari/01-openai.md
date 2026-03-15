@@ -46,19 +46,19 @@ OpenAI'nin Mart 2026 itibarıyla iki ana model ailesi bulunmaktadır:
 flowchart TD
     OAI["OpenAI Model Ailesi"]
 
-    OAI --> GPT["GPT Serisi\n(Genel Amaçlı)"]
-    OAI --> O["o-Serisi\n(Reasoning / Akıl Yürütme)"]
+    OAI --> GPT["GPT Serisi<br/>(Genel Amaçlı)"]
+    OAI --> O["o-Serisi<br/>(Reasoning / Akıl Yürütme)"]
 
-    GPT --> GPT4O["GPT-4o\n(Önceki nesil)"]
-    GPT --> GPT4OM["GPT-4o-mini\n(Hafif & hızlı)"]
-    GPT --> GPT5["GPT-5\n(Ana model)"]
-    GPT --> GPT5M["GPT-5-mini\n(Küçük & verimli)"]
-    GPT --> GPT54["GPT-5.4\n(En güncel)"]
+    GPT --> GPT4O["GPT-4o<br/>(Önceki nesil)"]
+    GPT --> GPT4OM["GPT-4o-mini<br/>(Hafif & hızlı)"]
+    GPT --> GPT5["GPT-5<br/>(Ana model)"]
+    GPT --> GPT5M["GPT-5-mini<br/>(Küçük & verimli)"]
+    GPT --> GPT54["GPT-5.4<br/>(En güncel)"]
 
-    O --> O1["o1\n(İlk reasoning model)"]
-    O --> O1M["o1-mini\n(Hafif reasoning)"]
-    O --> O3["o3\n(Gelişmiş reasoning)"]
-    O --> O4M["o4-mini\n(Hızlı reasoning)"]
+    O --> O1["o1<br/>(İlk reasoning model)"]
+    O --> O1M["o1-mini<br/>(Hafif reasoning)"]
+    O --> O3["o3<br/>(Gelişmiş reasoning)"]
+    O --> O4M["o4-mini<br/>(Hızlı reasoning)"]
 
     style GPT54 fill:#10a37f,color:#fff
     style O3 fill:#10a37f,color:#fff
@@ -110,23 +110,23 @@ sequenceDiagram
 ```mermaid
 flowchart LR
     subgraph tuketici ["Tüketici Ürünleri"]
-        CG["ChatGPT\n(Web & Mobil)"]
-        CGP["ChatGPT Plus\n($20/ay)"]
-        CGT["ChatGPT Team\n($25/kişi/ay)"]
-        CGE["ChatGPT Enterprise\n(Özel fiyat)"]
+        CG["ChatGPT<br/>(Web & Mobil)"]
+        CGP["ChatGPT Plus<br/>($20/ay)"]
+        CGT["ChatGPT Team<br/>($25/kişi/ay)"]
+        CGE["ChatGPT Enterprise<br/>(Özel fiyat)"]
     end
 
     subgraph gelistirici ["Geliştirici Araçları"]
         API["OpenAI API"]
-        CDX["Codex CLI\n(Terminal AI Agent)"]
+        CDX["Codex CLI<br/>(Terminal AI Agent)"]
         PG["Playground"]
     end
 
     subgraph medya ["Medya Modelleri"]
-        DE["DALL-E 3\n(Görsel üretim)"]
-        WH["Whisper\n(Konuşma tanıma)"]
-        SO["Sora\n(Video üretim)"]
-        TTS["TTS\n(Metin → Konuşma)"]
+        DE["DALL-E 3<br/>(Görsel üretim)"]
+        WH["Whisper<br/>(Konuşma tanıma)"]
+        SO["Sora<br/>(Video üretim)"]
+        TTS["TTS<br/>(Metin → Konuşma)"]
     end
 
     API --> CG
@@ -198,7 +198,7 @@ Açık kaynaklı Speech-to-Text (konuşmadan metne) modelidir. 99 dili destekler
 ```python
 from openai import OpenAI
 
-client = OpenAI(api_key="sk-...")
+client = OpenAI(api_key="YOUR_API_KEY_HERE")
 
 # GPT-5 ile kod üretme
 response = client.chat.completions.create(

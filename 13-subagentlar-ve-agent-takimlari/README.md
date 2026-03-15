@@ -5,11 +5,11 @@ Claude Code, karmaşık görevleri daha küçük, odaklanmış parçalara böler
 ## Bu Bölümde Neler Öğreneceksiniz?
 
 ```mermaid
-flowchart TD
-    A["Subagent Nedir?\nTemel kavramlar ve mimari"] --> B["Dahili Subagent'lar\nExplore, Plan, GeneralPurpose"]
-    B --> C["Özel Subagent Oluşturma\n.claude/agents/ ile tanımlama"]
-    C --> D["Agent Takımları\nÇoklu agent koordinasyonu"]
-    D --> E["Agent Tool Kullanımı\nSDK ile programatik yönetim"]
+flowchart LR
+    A["Subagent Nedir?<br/>Temel kavramlar ve mimari"] --> B["Dahili Subagent'lar<br/>Explore, Plan, GeneralPurpose"]
+    B --> C["Özel Subagent Oluşturma<br/>.claude/agents/ ile tanımlama"]
+    C --> D["Agent Takımları<br/>Çoklu agent koordinasyonu"]
+    D --> E["Agent Tool Kullanımı<br/>SDK ile programatik yönetim"]
 
     style A fill:#4A90D9,color:#fff
     style C fill:#E67E22,color:#fff

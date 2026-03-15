@@ -24,7 +24,7 @@ Chrome entegrasyonu, Chrome DevTools Protocol (CDP) üzerinden tarayıcıyla ile
 
 ```mermaid
 flowchart LR
-    CC["Claude Code"] -->|CDP Bağlantısı| CHROME["Chrome\nTarayıcı"]
+    CC["Claude Code"] -->|CDP Bağlantısı| CHROME["Chrome<br/>Tarayıcı"]
     
     subgraph ops ["Yapılabilecekler"]
         direction TB
@@ -113,12 +113,12 @@ Chrome console çıktılarını okuyarak hataları tespit etme:
 flowchart TB
     CH["Chrome Console"]
     
-    CH --> E1["❌ Error\nUncaught TypeError"]
-    CH --> W1["⚠️ Warning\nDeprecation warning"]
-    CH --> I1["ℹ️ Info\nAPI response log"]
+    CH --> E1["❌ Error<br/>Uncaught TypeError"]
+    CH --> W1["⚠️ Warning<br/>Deprecation warning"]
+    CH --> I1["ℹ️ Info<br/>API response log"]
 
-    E1 --> CC["Claude Code\nHata analizi"]
-    CC --> FIX["Düzeltme\nönerisi"]
+    E1 --> CC["Claude Code<br/>Hata analizi"]
+    CC --> FIX["Düzeltme<br/>önerisi"]
 
     style E1 fill:#EF4444,color:#fff
     style W1 fill:#F59E0B,color:#fff
@@ -153,7 +153,7 @@ Web sayfalarından yapılandırılmış veri çıkarma:
 ```mermaid
 flowchart LR
     WEB["Web Sayfası"]
-    WEB --> CC["Claude Code\nDOM analizi"]
+    WEB --> CC["Claude Code<br/>DOM analizi"]
     CC --> DATA["Yapılandırılmış Veri"]
     
     subgraph output ["Çıktı Formatları"]

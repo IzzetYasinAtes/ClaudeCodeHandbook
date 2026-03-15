@@ -19,16 +19,16 @@ Bu bölüm, gerçek dünya senaryolarına yönelik hazır hook tarifleri (recipe
 flowchart TD
     subgraph recipes ["Hook Tarifleri"]
         direction TB
-        R1["🎨 Tarif 1\nOtomatik Formatlama"]
-        R2["🛡️ Tarif 2\nTehlikeli Komut Engelleme"]
-        R3["💬 Tarif 3\nSlack Bildirimi"]
-        R4["✅ Tarif 4\nOtomatik İzin Onaylama"]
-        R5["📏 Tarif 5\nProje Kuralı Zorlama"]
-        R6["📝 Tarif 6\nAraç Kullanım Logu"]
-        R7["🧪 Tarif 7\nOtomatik Test Çalıştırma"]
-        R8["🔍 Tarif 8\nOrtam Doğrulama"]
-        R9["📊 Tarif 9\nMetrik ve Telemetri"]
-        R10["🔐 Tarif 10\nGizli Bilgi Sızıntı Koruması"]
+        R1["🎨 Tarif 1<br/>Otomatik Formatlama"]
+        R2["🛡️ Tarif 2<br/>Tehlikeli Komut Engelleme"]
+        R3["💬 Tarif 3<br/>Slack Bildirimi"]
+        R4["✅ Tarif 4<br/>Otomatik İzin Onaylama"]
+        R5["📏 Tarif 5<br/>Proje Kuralı Zorlama"]
+        R6["📝 Tarif 6<br/>Araç Kullanım Logu"]
+        R7["🧪 Tarif 7<br/>Otomatik Test Çalıştırma"]
+        R8["🔍 Tarif 8<br/>Ortam Doğrulama"]
+        R9["📊 Tarif 9<br/>Metrik ve Telemetri"]
+        R10["🔐 Tarif 10<br/>Gizli Bilgi Sızıntı Koruması"]
     end
 
     style R1 fill:#3498DB,color:#fff
@@ -55,7 +55,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    A["Claude dosya\ndüzenler"] --> B["PostToolUse\ntetiklenir"]
+    A["Claude dosya<br/>düzenler"] --> B["PostToolUse<br/>tetiklenir"]
     B --> C{"Dosya uzantısı?"}
     C -->|".ts/.tsx/.js"| D["Prettier"]
     C -->|".py"| E["Black"]
@@ -133,11 +133,11 @@ Projeniz yalnızca JavaScript/TypeScript kullanıyorsa:
 
 ```mermaid
 flowchart TD
-    A["Claude Bash komutu\nçalıştırmak istiyor"] --> B["PreToolUse\ntetiklenir"]
-    B --> C["Komut içeriği\nanaliz edilir"]
-    C --> D{"Tehlikeli\nkalıp var mı?"}
-    D -->|"rm -rf /, DROP TABLE,\ngit push --force, mkfs..."| E["❌ Exit 1\nKomut engellendi"]
-    D -->|"Güvenli"| F["✅ Exit 0\nKomut çalışabilir"]
+    A["Claude Bash komutu<br/>çalıştırmak istiyor"] --> B["PreToolUse<br/>tetiklenir"]
+    B --> C["Komut içeriği<br/>analiz edilir"]
+    C --> D{"Tehlikeli<br/>kalıp var mı?"}
+    D -->|"rm -rf /, DROP TABLE,<br/>git push --force, mkfs..."| E["❌ Exit 1<br/>Komut engellendi"]
+    D -->|"Güvenli"| F["✅ Exit 0<br/>Komut çalışabilir"]
 
     style E fill:#E74C3C,color:#fff
     style F fill:#27AE60,color:#fff
@@ -271,13 +271,13 @@ Slack webhook URL'sini ortam değişkeninden alan versiyon:
 
 ```mermaid
 flowchart TD
-    A["Claude bir araç\nkullanmak istiyor"] --> B["PermissionRequest\ntetiklenir"]
-    B --> C{"Araç ve komut\nanalizi"}
+    A["Claude bir araç<br/>kullanmak istiyor"] --> B["PermissionRequest<br/>tetiklenir"]
+    B --> C{"Araç ve komut<br/>analizi"}
     
-    C -->|"Read, Glob, Grep"| D["Exit 0\n✅ Otomatik onayla"]
-    C -->|"Bash: ls, pwd, git status,\necho, cat, head"| E["Exit 0\n✅ Otomatik onayla"]
-    C -->|"Bash: rm, mv, chmod,\ngit push, npm publish"| F["Exit 1\n❌ Otomatik reddet"]
-    C -->|"Diğer"| G["Exit 2\n❓ Kullanıcıya sor"]
+    C -->|"Read, Glob, Grep"| D["Exit 0<br/>✅ Otomatik onayla"]
+    C -->|"Bash: ls, pwd, git status,<br/>echo, cat, head"| E["Exit 0<br/>✅ Otomatik onayla"]
+    C -->|"Bash: rm, mv, chmod,<br/>git push, npm publish"| F["Exit 1<br/>❌ Otomatik reddet"]
+    C -->|"Diğer"| G["Exit 2<br/>❓ Kullanıcıya sor"]
 
     style D fill:#27AE60,color:#fff
     style E fill:#27AE60,color:#fff
@@ -374,9 +374,9 @@ flowchart TD
 ```mermaid
 flowchart LR
     A["Araç kullanıldı"] --> B{"Başarılı mı?"}
-    B -->|Evet| C["PostToolUse\n→ changes.log"]
-    B -->|Hayır| D["PostToolUseFailure\n→ errors.log"]
-    C --> E["📊 Analiz için\nhazır loglar"]
+    B -->|Evet| C["PostToolUse<br/>→ changes.log"]
+    B -->|Hayır| D["PostToolUseFailure<br/>→ errors.log"]
+    C --> E["📊 Analiz için<br/>hazır loglar"]
     D --> E
 
     style C fill:#27AE60,color:#fff
@@ -457,13 +457,13 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A["Claude\nsrc/utils/math.ts\ndosyasını düzenler"] --> B["PostToolUse tetiklenir"]
-    B --> C{"Test dosyası\nvar mı?"}
-    C -->|"src/utils/math.test.ts\nmevcut"| D["npm test -- math.test.ts"]
-    C -->|"Test dosyası\nbulunamadı"| E["Atla"]
-    D --> F{"Test\nsonucu?"}
-    F -->|"✅ Geçti"| G["Claude'a bildir:\n'Testler geçti'"]
-    F -->|"❌ Kaldı"| H["Claude'a bildir:\n'Testler kaldı, düzelt'"]
+    A["Claude<br/>src/utils/math.ts<br/>dosyasını düzenler"] --> B["PostToolUse tetiklenir"]
+    B --> C{"Test dosyası<br/>var mı?"}
+    C -->|"src/utils/math.test.ts<br/>mevcut"| D["npm test -- math.test.ts"]
+    C -->|"Test dosyası<br/>bulunamadı"| E["Atla"]
+    D --> F{"Test<br/>sonucu?"}
+    F -->|"✅ Geçti"| G["Claude'a bildir:<br/>'Testler geçti'"]
+    F -->|"❌ Kaldı"| H["Claude'a bildir:<br/>'Testler kaldı, düzelt'"]
 
     style G fill:#27AE60,color:#fff
     style H fill:#E74C3C,color:#fff
@@ -523,7 +523,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["Oturum\nbaşlatıldı"] --> B["SessionStart\ntetiklenir"]
+    A["Oturum<br/>başlatıldı"] --> B["SessionStart<br/>tetiklenir"]
     B --> C["Araç kontrolleri"]
     C --> D{"Node.js?"}
     D -->|✅| E{"npm?"}
@@ -535,7 +535,7 @@ flowchart TD
     G -->|✅| H{"node_modules?"}
     G -->|❌| WARN
     H -->|✅| OK["✅ Ortam hazır"]
-    H -->|❌| INSTALL["npm install\nçalıştır"]
+    H -->|❌| INSTALL["npm install<br/>çalıştır"]
     INSTALL --> OK
 
     style OK fill:#27AE60,color:#fff
@@ -806,15 +806,15 @@ Yukarıdaki tariflerin en önemli parçalarını bir araya getiren gerçek düny
 
 ```mermaid
 flowchart TD
-    START["Ne yapmak\nistiyorsunuz?"] --> Q1{"Kod kalitesi\nmi?"}
-    Q1 -->|Evet| R1["Tarif 1: Formatlama\nTarif 7: Test"]
-    Q1 -->|Hayır| Q2{"Güvenlik\nmi?"}
-    Q2 -->|Evet| R2["Tarif 2: Komut engelleme\nTarif 10: Sızıntı koruması"]
-    Q2 -->|Hayır| Q3{"Bildirim\nmi?"}
-    Q3 -->|Evet| R3["Tarif 3: Slack\nTarif 6: Loglama"]
-    Q3 -->|Hayır| Q4{"İş akışı\noptimizasyonu mu?"}
-    Q4 -->|Evet| R4["Tarif 4: Otomatik onay\nTarif 5: Kural zorlama\nTarif 8: Ortam doğrulama"]
-    Q4 -->|Hayır| R5["Tarif 9: Metrik\nve telemetri"]
+    START["Ne yapmak<br/>istiyorsunuz?"] --> Q1{"Kod kalitesi<br/>mi?"}
+    Q1 -->|Evet| R1["Tarif 1: Formatlama<br/>Tarif 7: Test"]
+    Q1 -->|Hayır| Q2{"Güvenlik<br/>mi?"}
+    Q2 -->|Evet| R2["Tarif 2: Komut engelleme<br/>Tarif 10: Sızıntı koruması"]
+    Q2 -->|Hayır| Q3{"Bildirim<br/>mi?"}
+    Q3 -->|Evet| R3["Tarif 3: Slack<br/>Tarif 6: Loglama"]
+    Q3 -->|Hayır| Q4{"İş akışı<br/>optimizasyonu mu?"}
+    Q4 -->|Evet| R4["Tarif 4: Otomatik onay<br/>Tarif 5: Kural zorlama<br/>Tarif 8: Ortam doğrulama"]
+    Q4 -->|Hayır| R5["Tarif 9: Metrik<br/>ve telemetri"]
 
     style R1 fill:#3498DB,color:#fff
     style R2 fill:#E74C3C,color:#fff

@@ -26,10 +26,10 @@ flowchart LR
     end
 
     pencere --> G{"Doluluk?"}
-    G -->|"%0-60\nSağlıklı"| H["Normal performans\nKaliteli yanıtlar"]
-    G -->|"%60-80\nUyarı"| I["Yavaşlama başlar\n/compact düşünün"]
-    G -->|"%80-95\nKritik"| J["Belirgin yavaşlama\nKalite düşüşü"]
-    G -->|"%95-100\nAşım"| K["Oturum sonlanır\nVeri kaybı riski"]
+    G -->|"%0-60<br/>Sağlıklı"| H["Normal performans<br/>Kaliteli yanıtlar"]
+    G -->|"%60-80<br/>Uyarı"| I["Yavaşlama başlar<br/>/compact düşünün"]
+    G -->|"%80-95<br/>Kritik"| J["Belirgin yavaşlama<br/>Kalite düşüşü"]
+    G -->|"%95-100<br/>Aşım"| K["Oturum sonlanır<br/>Veri kaybı riski"]
 
     style H fill:#27AE60,color:#fff
     style I fill:#F39C12,color:#fff
@@ -70,10 +70,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["Dolu Context\n(100k+ token)"] --> B["/compact"]
-    B --> C["Konuşma özeti\noluşturulur"]
-    C --> D["Eski mesajlar\nkaldırılır"]
-    D --> E["Temiz Context\n(~10k token)"]
+    A["Dolu Context<br/>(100k+ token)"] --> B["/compact"]
+    B --> C["Konuşma özeti<br/>oluşturulur"]
+    C --> D["Eski mesajlar<br/>kaldırılır"]
+    D --> E["Temiz Context<br/>(~10k token)"]
 
     style A fill:#E74C3C,color:#fff
     style E fill:#27AE60,color:#fff
@@ -113,12 +113,12 @@ claude "Dönüştürülen dosyalar için TypeScript testleri yaz."
 
 ```mermaid
 flowchart TD
-    A["Büyük Görev"] --> B["Parça 1\nOturum 1"]
-    A --> C["Parça 2\nOturum 2"]
-    A --> D["Parça 3\nOturum 3"]
-    A --> E["Parça 4\nOturum 4"]
+    A["Büyük Görev"] --> B["Parça 1<br/>Oturum 1"]
+    A --> C["Parça 2<br/>Oturum 2"]
+    A --> D["Parça 3<br/>Oturum 3"]
+    A --> E["Parça 4<br/>Oturum 4"]
     
-    B --> F["CLAUDE.md'ye\nnot al"]
+    B --> F["CLAUDE.md'ye<br/>not al"]
     C --> F
     D --> F
     E --> F
@@ -186,14 +186,14 @@ CLAUDE.md dosyanız context'ten yer kaplar. Optimize edin:
 ```mermaid
 flowchart TD
     A["Oturum Başla"] --> B["Görev Ver"]
-    B --> C{"Yanıt süresi\nnormal mi?"}
+    B --> C{"Yanıt süresi<br/>normal mi?"}
     C -->|Evet| D["Devam Et"]
-    C -->|Hayır| E{"Context\n%60+ mı?"}
-    E -->|Hayır| F["Ağ/API sorunu\nolabilir"]
+    C -->|Hayır| E{"Context<br/>%60+ mı?"}
+    E -->|Hayır| F["Ağ/API sorunu<br/>olabilir"]
     E -->|Evet| G["/compact uygula"]
     G --> D
-    D --> H{"Görev\nbitti mi?"}
-    H -->|Evet| I["Yeni oturum\nveya devam"]
+    D --> H{"Görev<br/>bitti mi?"}
+    H -->|Evet| I["Yeni oturum<br/>veya devam"]
     H -->|Hayır| B
 
     style A fill:#3498DB,color:#fff

@@ -5,11 +5,11 @@ Claude Code'un yeteneklerini genişletmenin en güçlü yollarından biri **Skil
 ## Bu Bölümde Neler Öğreneceksiniz?
 
 ```mermaid
-flowchart TD
-    A["Skills Nedir?\nTemel kavramlar ve türler"] --> B["Skill Oluşturma\nSKILL.md yapısı ve örnekler"]
-    B --> C["Plugin Sistemi\nMimari ve bileşenler"]
-    C --> D["Plugin Marketplace\nEkosistem ve keşif"]
-    D --> E["Plugin Oluşturma\nve Dağıtım"]
+flowchart LR
+    A["Skills Nedir?<br/>Temel kavramlar ve türler"] --> B["Skill Oluşturma<br/>SKILL.md yapısı ve örnekler"]
+    B --> C["Plugin Sistemi<br/>Mimari ve bileşenler"]
+    C --> D["Plugin Marketplace<br/>Ekosistem ve keşif"]
+    D --> E["Plugin Oluşturma<br/>ve Dağıtım"]
 ```
 
 ## İçerik
@@ -55,9 +55,9 @@ flowchart LR
         H3["Yaşam döngüsü"]
     end
 
-    skills -.->|"Talimat bazlı\nesneklik"| USER["Claude Code"]
-    mcp -.->|"Araç bazlı\nentegrasyon"| USER
-    hooks -.->|"Olay bazlı\notomasyon"| USER
+    skills -.->|"Talimat bazlı<br/>esneklik"| USER["Claude Code"]
+    mcp -.->|"Araç bazlı<br/>entegrasyon"| USER
+    hooks -.->|"Olay bazlı<br/>otomasyon"| USER
 ```
 
 > **İpucu:** Skills doğal dil talimatlarıyla çalışırken, MCP yapılandırılmış protokolle çalışır. Hooks ise belirli olaylara tepki verir. Bu üç mekanizma birbirini tamamlar.

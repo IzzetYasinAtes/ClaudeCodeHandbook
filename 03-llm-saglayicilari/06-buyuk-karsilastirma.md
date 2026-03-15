@@ -14,23 +14,23 @@ Bu bölüm, önceki dosyalarda incelediğimiz tüm büyük dil modellerini bench
 ```mermaid
 flowchart TD
     subgraph kapali ["Kapalı Kaynak"]
-        GPT5["GPT-5.4\n(OpenAI)"]
-        CLAUDE["Claude 4.6 Opus\n(Anthropic)"]
-        GEM["Gemini 3.1 Pro\n(Google)"]
+        GPT5["GPT-5.4<br/>(OpenAI)"]
+        CLAUDE["Claude 4.6 Opus<br/>(Anthropic)"]
+        GEM["Gemini 3.1 Pro<br/>(Google)"]
     end
 
     subgraph acik ["Açık Kaynak / Ağırlıklar"]
-        LLAMA["Llama 4 Maverick\n(Meta)"]
-        DS["DeepSeek-R1\n(DeepSeek)"]
-        QW["Qwen 3.5-122B\n(Alibaba)"]
-        MI["Mistral Large 2\n(Mistral)"]
+        LLAMA["Llama 4 Maverick<br/>(Meta)"]
+        DS["DeepSeek-R1<br/>(DeepSeek)"]
+        QW["Qwen 3.5-122B<br/>(Alibaba)"]
+        MI["Mistral Large 2<br/>(Mistral)"]
     end
 
     subgraph kucuk ["Küçük / Verimli"]
-        PHI["Phi-4 (14B)\n(Microsoft)"]
-        FLASH["Gemini 3.1 Flash\n(Google)"]
-        HAIKU["Claude 4 Haiku\n(Anthropic)"]
-        MINI["GPT-4o-mini\n(OpenAI)"]
+        PHI["Phi-4 (14B)<br/>(Microsoft)"]
+        FLASH["Gemini 3.1 Flash<br/>(Google)"]
+        HAIKU["Claude 4 Haiku<br/>(Anthropic)"]
+        MINI["GPT-4o-mini<br/>(OpenAI)"]
     end
 ```
 
@@ -219,16 +219,16 @@ xychart-beta
 
 ```mermaid
 flowchart TD
-    Q["Yazılım geliştirme\niçin model seçimi"]
+    Q["Yazılım geliştirme<br/>için model seçimi"]
 
-    Q --> Q1{"Bütçe\ndurumu?"}
+    Q --> Q1{"Bütçe<br/>durumu?"}
 
-    Q1 -->|"Sınırsız"| A1["Claude 4.6 Opus\n+ Claude Code\nEn iyi kodlama deneyimi"]
-    Q1 -->|"Orta"| A2["Claude 4.6 Sonnet\nEn iyi fiyat/performans"]
-    Q1 -->|"Kısıtlı"| Q2{"Gizlilik\ngereksinimi?"}
+    Q1 -->|"Sınırsız"| A1["Claude 4.6 Opus<br/>+ Claude Code<br/>En iyi kodlama deneyimi"]
+    Q1 -->|"Orta"| A2["Claude 4.6 Sonnet<br/>En iyi fiyat/performans"]
+    Q1 -->|"Kısıtlı"| Q2{"Gizlilik<br/>gereksinimi?"}
 
-    Q2 -->|"Veri dışarı çıkamaz"| A3["Llama 4 Maverick\n(lokal) veya\nQwen2.5-Coder"]
-    Q2 -->|"Sorun değil"| A4["DeepSeek-R1\nEn ucuz reasoning"]
+    Q2 -->|"Veri dışarı çıkamaz"| A3["Llama 4 Maverick<br/>(lokal) veya<br/>Qwen2.5-Coder"]
+    Q2 -->|"Sorun değil"| A4["DeepSeek-R1<br/>En ucuz reasoning"]
 
     style A1 fill:#7c3aed,color:#fff
     style A2 fill:#4a9eff,color:#fff
@@ -260,19 +260,19 @@ flowchart TD
 flowchart TD
     K["Kurumsal Model Seçimi"]
 
-    K --> K1{"Veri gizliliği\nönceliği?"}
+    K --> K1{"Veri gizliliği<br/>önceliği?"}
 
     K1 -->|"Maksimum"| K2["Lokal Deployment"]
     K1 -->|"Standart"| K3{"Konum?"}
 
-    K2 --> K2A["Llama 4 Maverick\n(kendi sunucunuz)"]
-    K2 --> K2B["Qwen 3.5-122B\n(açık kaynak)"]
+    K2 --> K2A["Llama 4 Maverick<br/>(kendi sunucunuz)"]
+    K2 --> K2B["Qwen 3.5-122B<br/>(açık kaynak)"]
 
-    K3 -->|"Avrupa"| K3A["Mistral Large 2\n(GDPR uyumlu)"]
+    K3 -->|"Avrupa"| K3A["Mistral Large 2<br/>(GDPR uyumlu)"]
     K3 -->|"Global"| K4{"Kullanım hacmi?"}
 
-    K4 -->|"Yüksek"| K4A["Claude Sonnet\n(API)"]
-    K4 -->|"Düşük/Orta"| K4B["GPT-5\n(Azure OpenAI)"]
+    K4 -->|"Yüksek"| K4A["Claude Sonnet<br/>(API)"]
+    K4 -->|"Düşük/Orta"| K4B["GPT-5<br/>(Azure OpenAI)"]
 
     style K2A fill:#51cf66,color:#fff
     style K3A fill:#7c3aed,color:#fff
@@ -304,14 +304,14 @@ Aşağıdaki tablo, her modelin farklı alanlardaki göreceli gücünü 10 üzer
 ```mermaid
 flowchart TD
     subgraph kazananlar ["Alan Şampiyonları"]
-        K1["🏆 Kodlama\nClaude 4.6 Opus/Sonnet"]
-        K2["🏆 Reasoning\nDeepSeek-R1 / o3"]
-        K3["🏆 Multimodal\nGemini 3.1 Pro"]
-        K4["🏆 Fiyat/Performans\nDeepSeek-R1"]
-        K5["🏆 Context Window\nGemini 3.1 Pro (2M)"]
-        K6["🏆 Güvenlik\nClaude (Constitutional AI)"]
-        K7["🏆 Açık Kaynak\nLlama 4 / DeepSeek"]
-        K8["🏆 Ekosistem\nOpenAI (ChatGPT)"]
+        K1["🏆 Kodlama<br/>Claude 4.6 Opus/Sonnet"]
+        K2["🏆 Reasoning<br/>DeepSeek-R1 / o3"]
+        K3["🏆 Multimodal<br/>Gemini 3.1 Pro"]
+        K4["🏆 Fiyat/Performans<br/>DeepSeek-R1"]
+        K5["🏆 Context Window<br/>Gemini 3.1 Pro (2M)"]
+        K6["🏆 Güvenlik<br/>Claude (Constitutional AI)"]
+        K7["🏆 Açık Kaynak<br/>Llama 4 / DeepSeek"]
+        K8["🏆 Ekosistem<br/>OpenAI (ChatGPT)"]
     end
 ```
 
@@ -321,21 +321,21 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    START["Model Seçimi\nBaşla"]
+    START["Model Seçimi<br/>Başla"]
 
-    START --> Q1{"Birincil\nkullanım alanı?"}
+    START --> Q1{"Birincil<br/>kullanım alanı?"}
 
-    Q1 -->|"Kodlama"| CODE["Claude 4.6 Sonnet\n+ Claude Code"]
+    Q1 -->|"Kodlama"| CODE["Claude 4.6 Sonnet<br/>+ Claude Code"]
     Q1 -->|"Genel amaçlı"| GEN{"Bütçe?"}
-    Q1 -->|"Araştırma/Analiz"| RES{"Reasoning\ngerekli mi?"}
+    Q1 -->|"Araştırma/Analiz"| RES{"Reasoning<br/>gerekli mi?"}
     Q1 -->|"Multimodal"| MULTI["Gemini 3.1 Pro"]
-    Q1 -->|"Lokal/Gizlilik"| LOCAL["Llama 4 veya\nQwen 3.5"]
+    Q1 -->|"Lokal/Gizlilik"| LOCAL["Llama 4 veya<br/>Qwen 3.5"]
 
-    GEN -->|"Yüksek"| GPT["GPT-5.4 veya\nClaude Opus"]
-    GEN -->|"Orta"| SONNET["Claude Sonnet veya\nGemini Pro"]
-    GEN -->|"Düşük"| CHEAP["DeepSeek-V3.2 veya\nGemini Flash"]
+    GEN -->|"Yüksek"| GPT["GPT-5.4 veya<br/>Claude Opus"]
+    GEN -->|"Orta"| SONNET["Claude Sonnet veya<br/>Gemini Pro"]
+    GEN -->|"Düşük"| CHEAP["DeepSeek-V3.2 veya<br/>Gemini Flash"]
 
-    RES -->|"Evet"| REASON["o3 veya\nDeepSeek-R1"]
+    RES -->|"Evet"| REASON["o3 veya<br/>DeepSeek-R1"]
     RES -->|"Hayır"| OPUS["Claude 4.6 Opus"]
 
     style CODE fill:#7c3aed,color:#fff

@@ -74,9 +74,9 @@ GPT-3 (175B parametre), Few-Shot Learning yeteneğiyle şaşırttı: sadece birk
 ```mermaid
 flowchart LR
     subgraph scaling ["Scaling Laws"]
-        A["Daha Fazla\nParametre"] --> D["Daha İyi\nPerformans"]
-        B["Daha Fazla\nVeri"] --> D
-        C["Daha Fazla\nHesaplama"] --> D
+        A["Daha Fazla<br/>Parametre"] --> D["Daha İyi<br/>Performans"]
+        B["Daha Fazla<br/>Veri"] --> D
+        C["Daha Fazla<br/>Hesaplama"] --> D
     end
 ```
 
@@ -96,13 +96,13 @@ ChatGPT, AI'yı herkesin gündemine taşıdı:
 ```mermaid
 flowchart TD
     subgraph y2023 ["2023 - Rekabet"]
-        GPT4["GPT-4\n(OpenAI)\nMultimodal"]
-        CL2["Claude 2\n(Anthropic)\n100K context"]
-        LLAMA["Llama 2\n(Meta)\nAçık kaynak"]
-        GEM["Gemini\n(Google)\nMultimodal"]
+        GPT4["GPT-4<br/>(OpenAI)<br/>Multimodal"]
+        CL2["Claude 2<br/>(Anthropic)<br/>100K context"]
+        LLAMA["Llama 2<br/>(Meta)<br/>Açık kaynak"]
+        GEM["Gemini<br/>(Google)<br/>Multimodal"]
     end
 
-    GPT4 --> RACE["Model\nYarışı"]
+    GPT4 --> RACE["Model<br/>Yarışı"]
     CL2 --> RACE
     LLAMA --> RACE
     GEM --> RACE
@@ -137,10 +137,10 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph buyume ["Parametre Büyümesi"]
-        GPT1["GPT-1\n117M\n2018"]
-        GPT2["GPT-2\n1.5B\n2019"]
-        GPT3["GPT-3\n175B\n2020"]
-        GPT4x["GPT-4\n~1.8T\n2023"]
+        GPT1["GPT-1<br/>117M<br/>2018"]
+        GPT2["GPT-2<br/>1.5B<br/>2019"]
+        GPT3["GPT-3<br/>175B<br/>2020"]
+        GPT4x["GPT-4<br/>~1.8T<br/>2023"]
     end
     
     GPT1 -->|"13x"| GPT2 -->|"117x"| GPT3 -->|"~10x"| GPT4x

@@ -17,23 +17,23 @@ Bu rehber, Claude Code kullanırken en çok karşılaşılan sorunları semptom,
 flowchart TD
     START{"Sorun Türü?"}
     
-    START -->|"Kurulum"| INSTALL{"Kurulum\nHatası?"}
-    INSTALL -->|"Node.js\nversion"| I1["Node.js 18+\nyükleyin"]
-    INSTALL -->|"npm\npermission"| I2["npm cache clean\nve sudo/admin"]
-    INSTALL -->|"Binary\nhata"| I3["OS uyumluluğu\nkontrol edin"]
+    START -->|"Kurulum"| INSTALL{"Kurulum<br/>Hatası?"}
+    INSTALL -->|"Node.js<br/>version"| I1["Node.js 18+<br/>yükleyin"]
+    INSTALL -->|"npm<br/>permission"| I2["npm cache clean<br/>ve sudo/admin"]
+    INSTALL -->|"Binary<br/>hata"| I3["OS uyumluluğu<br/>kontrol edin"]
     
-    START -->|"Bağlantı"| CONN{"Bağlantı\nHatası?"}
-    CONN -->|"API Key\nhata"| C1["API key\ndoğrulama"]
-    CONN -->|"Network\ntimeout"| C2["Proxy/firewall\nkontrol"]
-    CONN -->|"Rate\nlimit"| C3["Bekleme ve\nretry"]
+    START -->|"Bağlantı"| CONN{"Bağlantı<br/>Hatası?"}
+    CONN -->|"API Key<br/>hata"| C1["API key<br/>doğrulama"]
+    CONN -->|"Network<br/>timeout"| C2["Proxy/firewall<br/>kontrol"]
+    CONN -->|"Rate<br/>limit"| C3["Bekleme ve<br/>retry"]
     
-    START -->|"İzin"| PERM{"İzin\nHatası?"}
-    PERM -->|"Tool\nreddedildi"| P1["settings.json\nizin kuralları"]
-    PERM -->|"Dosya\nerişim"| P2["Dosya izinleri\nkontrol"]
+    START -->|"İzin"| PERM{"İzin<br/>Hatası?"}
+    PERM -->|"Tool<br/>reddedildi"| P1["settings.json<br/>izin kuralları"]
+    PERM -->|"Dosya<br/>erişim"| P2["Dosya izinleri<br/>kontrol"]
     
-    START -->|"Performans"| PERF{"Performans\nSorunu?"}
-    PERF -->|"Yavaşlama"| PF1["Context window\nkontrol"]
-    PERF -->|"Çökme"| PF2["Log analizi\nve restart"]
+    START -->|"Performans"| PERF{"Performans<br/>Sorunu?"}
+    PERF -->|"Yavaşlama"| PF1["Context window<br/>kontrol"]
+    PERF -->|"Çökme"| PF2["Log analizi<br/>ve restart"]
     
     style I1 fill:#27AE60,color:#fff
     style I2 fill:#27AE60,color:#fff
@@ -148,8 +148,8 @@ echo $ANTHROPIC_API_KEY   # Linux/macOS
 echo $env:ANTHROPIC_API_KEY  # Windows PowerShell
 
 # API key'i yeniden ayarla
-export ANTHROPIC_API_KEY="sk-ant-..."  # Linux/macOS
-$env:ANTHROPIC_API_KEY = "sk-ant-..."  # Windows PowerShell
+export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"  # Linux/macOS
+$env:ANTHROPIC_API_KEY = "YOUR_API_KEY_HERE"  # Windows PowerShell
 
 # Doğrulama yöntemini kontrol et
 claude config list

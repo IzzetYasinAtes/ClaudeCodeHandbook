@@ -20,18 +20,18 @@ Skills, Claude Code'un dahili araç setini genişleten **doğal dil tabanlı** e
 flowchart TD
     subgraph skill_system ["Skills Sistemi"]
         direction TB
-        SKILL_FILE["SKILL.md\nDosyası"] --> |"Talimatları oku"| CLAUDE["Claude Code"]
+        SKILL_FILE["SKILL.md<br/>Dosyası"] --> |"Talimatları oku"| CLAUDE["Claude Code"]
         CLAUDE --> |"Talimatları uygula"| ACTION["Eylemi Gerçekleştir"]
     end
 
     subgraph invocation ["Çağrılma Yöntemi"]
-        MODEL_INV["Model-Invoked\n(Model karar verir)"]
-        USER_INV["User-Invoked\n(Slash komutuyla)"]
+        MODEL_INV["Model-Invoked<br/>(Model karar verir)"]
+        USER_INV["User-Invoked<br/>(Slash komutuyla)"]
     end
 
     subgraph scope ["Kapsam"]
-        STANDALONE["Standalone\n(.claude/ dizininde)"]
-        NAMESPACED["Namespaced\n(Plugin içinde)"]
+        STANDALONE["Standalone<br/>(.claude/ dizininde)"]
+        NAMESPACED["Namespaced<br/>(Plugin içinde)"]
     end
 
     invocation --> skill_system
@@ -213,7 +213,7 @@ Claude Code, bir skill'i çalıştırırken **Skill** aracını kullanır. Bu ar
 
 ```mermaid
 flowchart TD
-    USER["Kullanıcı\n/deploy staging"] --> SKILL_TOOL["Skill Tool"]
+    USER["Kullanıcı<br/>/deploy staging"] --> SKILL_TOOL["Skill Tool"]
     SKILL_TOOL --> PERM{"İzin Kontrolü"}
     PERM -->|"İlk kullanım"| ASK["Kullanıcıya Sor"]
     PERM -->|"İzin verilmiş"| READ["SKILL.md Oku"]

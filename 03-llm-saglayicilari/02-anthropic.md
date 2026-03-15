@@ -49,13 +49,13 @@ Anthropic'in diğer şirketlerden en büyük farkı, güvenliği bir "ek özelli
 flowchart TD
     A["Anthropic'in AI Güvenlik Yaklaşımı"]
 
-    A --> B["Helpful\n(Yararlı)"]
-    A --> C["Harmless\n(Zararsız)"]
-    A --> D["Honest\n(Dürüst)"]
+    A --> B["Helpful<br/>(Yararlı)"]
+    A --> C["Harmless<br/>(Zararsız)"]
+    A --> D["Honest<br/>(Dürüst)"]
 
-    B --> B1["Kullanıcının ihtiyacını\nen iyi şekilde karşıla"]
-    C --> C1["Zararlı, tehlikeli veya\nayrımcı içerik üretme"]
-    D --> D1["Bilmediğini kabul et\nYanıltıcı bilgi verme"]
+    B --> B1["Kullanıcının ihtiyacını<br/>en iyi şekilde karşıla"]
+    C --> C1["Zararlı, tehlikeli veya<br/>ayrımcı içerik üretme"]
+    D --> D1["Bilmediğini kabul et<br/>Yanıltıcı bilgi verme"]
 
     style B fill:#4a9eff,color:#fff
     style C fill:#ff6b6b,color:#fff
@@ -75,17 +75,17 @@ Constitutional AI (CAI), Anthropic'in geliştirdiği özgün bir eğitim metodol
 ```mermaid
 flowchart TD
     subgraph asama1 ["Aşama 1: Supervised Learning (Denetimli Öğrenme)"]
-        A["İnsan yazarlar örnek\nsoru-cevap çiftleri oluşturur"] --> B["Model bu örneklerle\nince ayar (fine-tune) yapılır"]
+        A["İnsan yazarlar örnek<br/>soru-cevap çiftleri oluşturur"] --> B["Model bu örneklerle<br/>ince ayar (fine-tune) yapılır"]
     end
 
     subgraph asama2 ["Aşama 2: Kendi Kendini Eleştirme"]
-        C["Modelden bir yanıt\nüretmesi istenir"] --> D["Aynı modelden yanıtı\nanayasaya göre eleştirmesi istenir"]
-        D --> E["Model eleştiri doğrultusunda\nyanıtı revize eder"]
+        C["Modelden bir yanıt<br/>üretmesi istenir"] --> D["Aynı modelden yanıtı<br/>anayasaya göre eleştirmesi istenir"]
+        D --> E["Model eleştiri doğrultusunda<br/>yanıtı revize eder"]
     end
 
     subgraph asama3 ["Aşama 3: RLAIF"]
-        F["Revize edilmiş yanıtlar\nile orijinaller karşılaştırılır"] --> G["Model hangisinin anayasaya\ndaha uygun olduğunu seçer"]
-        G --> H["Bu tercihler ile\nRL eğitimi yapılır"]
+        F["Revize edilmiş yanıtlar<br/>ile orijinaller karşılaştırılır"] --> G["Model hangisinin anayasaya<br/>daha uygun olduğunu seçer"]
+        G --> H["Bu tercihler ile<br/>RL eğitimi yapılır"]
     end
 
     B --> C
@@ -114,14 +114,14 @@ Anthropic, modellerin yetenekleri arttıkça güvenlik önlemlerinin de artması
 
 ```mermaid
 flowchart LR
-    ASL1["ASL-1\nTemel sohbet\nDüşük risk"]
-    ASL2["ASL-2\nGelişmiş yetenekler\nOrta risk"]
-    ASL3["ASL-3\nUzman düzey bilgi\nYüksek risk"]
-    ASL4["ASL-4\nOtonom hareket\nÇok yüksek risk"]
+    ASL1["ASL-1<br/>Temel sohbet<br/>Düşük risk"]
+    ASL2["ASL-2<br/>Gelişmiş yetenekler<br/>Orta risk"]
+    ASL3["ASL-3<br/>Uzman düzey bilgi<br/>Yüksek risk"]
+    ASL4["ASL-4<br/>Otonom hareket<br/>Çok yüksek risk"]
 
-    ASL1 -->|"Daha fazla\ngüvenlik önlemi"| ASL2
-    ASL2 -->|"Red teaming\nAğır testler"| ASL3
-    ASL3 -->|"Harici denetim\nHükümet işbirliği"| ASL4
+    ASL1 -->|"Daha fazla<br/>güvenlik önlemi"| ASL2
+    ASL2 -->|"Red teaming<br/>Ağır testler"| ASL3
+    ASL3 -->|"Harici denetim<br/>Hükümet işbirliği"| ASL4
 
     style ASL1 fill:#51cf66,color:#fff
     style ASL2 fill:#ffd43b,color:#333
@@ -147,14 +147,14 @@ Claude, Anthropic'in amiral gemisi model ailesidir. Her nesil üç katmanda sunu
 ```mermaid
 flowchart TD
     subgraph claude3 ["Claude 3 (Mart 2024)"]
-        C3H["Haiku\n(Hızlı & Hafif)"]
-        C3S["Sonnet\n(Dengeli)"]
-        C3O["Opus\n(En Yetenekli)"]
+        C3H["Haiku<br/>(Hızlı & Hafif)"]
+        C3S["Sonnet<br/>(Dengeli)"]
+        C3O["Opus<br/>(En Yetenekli)"]
     end
 
     subgraph claude35 ["Claude 3.5 (2024)"]
         C35H["Haiku"]
-        C35S["Sonnet ⭐\n(Kodlamada lider)"]
+        C35S["Sonnet ⭐<br/>(Kodlamada lider)"]
     end
 
     subgraph claude4 ["Claude 4 (2025)"]
@@ -166,7 +166,7 @@ flowchart TD
     subgraph claude45_46 ["Claude 4.5 / 4.6 (2026)"]
         C45S["4.5 Sonnet"]
         C46S["4.6 Sonnet"]
-        C46O["4.6 Opus ⭐\n(En güncel & en güçlü)"]
+        C46O["4.6 Opus ⭐<br/>(En güncel & en güçlü)"]
     end
 
     claude3 --> claude35
@@ -242,7 +242,7 @@ Anthropic tarafından geliştirilen açık standart protokol. AI modellerinin ha
 ```python
 import anthropic
 
-client = anthropic.Anthropic(api_key="sk-ant-...")
+client = anthropic.Anthropic(api_key="YOUR_API_KEY_HERE")
 
 # Claude 4.6 Sonnet ile kod analizi
 message = client.messages.create(
@@ -300,12 +300,12 @@ for block in message.content:
 flowchart LR
     subgraph openai ["OpenAI Yaklaşımı"]
         OA1["Hızlı ürün geliştirme"] --> OA2["Geniş ekosistem"]
-        OA2 --> OA3["Güvenlik sonradan\nentegre edilir"]
+        OA2 --> OA3["Güvenlik sonradan<br/>entegre edilir"]
     end
 
     subgraph anthropic ["Anthropic Yaklaşımı"]
-        AN1["Güvenlik öncelikli\naraştırma"] --> AN2["Odaklı ürün seti"]
-        AN2 --> AN3["Güvenlik tasarımın\nparçası"]
+        AN1["Güvenlik öncelikli<br/>araştırma"] --> AN2["Odaklı ürün seti"]
+        AN2 --> AN3["Güvenlik tasarımın<br/>parçası"]
     end
 ```
 

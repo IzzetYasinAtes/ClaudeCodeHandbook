@@ -16,44 +16,51 @@ Claude Code, görevleri yerine getirmek için **30'dan fazla dahili araç** (too
 Claude Code'un araçları altı ana kategoride gruplanır:
 
 ```mermaid
-mindmap
-  root(("Claude Code\nAraçları"))
-    Dosya İşlemleri
-      Read
-      Write
-      Edit
-      Glob
-      Grep
-    Çalıştırma
-      Bash
-      Agent
-      Skill
-    Web
-      WebSearch
-      WebFetch
-    Görev Yönetimi
-      TaskCreate
-      TaskGet
-      TaskList
-      TaskUpdate
-      TaskStop
-      TaskOutput
-    Zamanlama ve Planlama
-      CronCreate
-      CronDelete
-      CronList
-      EnterPlanMode
-      ExitPlanMode
-      EnterWorktree
-      ExitWorktree
-    Yardımcılar
-      AskUserQuestion
-      LSP
-      NotebookEdit
-      TodoWrite
-      ToolSearch
-      ListMcpResourcesTool
-      ReadMcpResourceTool
+flowchart LR
+    CC(("Claude Code<br/>Araçları"))
+
+    CC --> F["Dosya İşlemleri"]
+    CC --> C["Çalıştırma"]
+    CC --> WEB["Web"]
+    CC --> T["Görev Yönetimi"]
+    CC --> Z["Zamanlama ve Planlama"]
+    CC --> Y["Yardımcılar"]
+
+    F --> F1["Read"]
+    F --> F2["Write"]
+    F --> F3["Edit"]
+    F --> F4["Glob"]
+    F --> F5["Grep"]
+
+    C --> C1["Bash"]
+    C --> C2["Agent"]
+    C --> C3["Skill"]
+
+    WEB --> W1["WebSearch"]
+    WEB --> W2["WebFetch"]
+
+    T --> T1["TaskCreate"]
+    T --> T2["TaskGet"]
+    T --> T3["TaskList"]
+    T --> T4["TaskUpdate"]
+    T --> T5["TaskStop"]
+    T --> T6["TaskOutput"]
+
+    Z --> Z1["CronCreate"]
+    Z --> Z2["CronDelete"]
+    Z --> Z3["CronList"]
+    Z --> Z4["EnterPlanMode"]
+    Z --> Z5["ExitPlanMode"]
+    Z --> Z6["EnterWorktree"]
+    Z --> Z7["ExitWorktree"]
+
+    Y --> Y1["AskUserQuestion"]
+    Y --> Y2["LSP"]
+    Y --> Y3["NotebookEdit"]
+    Y --> Y4["TodoWrite"]
+    Y --> Y5["ToolSearch"]
+    Y --> Y6["ListMcpResourcesTool"]
+    Y --> Y7["ReadMcpResourceTool"]
 ```
 
 ---
@@ -75,14 +82,14 @@ Projedeki dosyalarla etkileşim kurmak için kullanılan temel araçlardır.
 ```mermaid
 flowchart LR
     subgraph okuma ["Okuma (İzin Gereksiz)"]
-        Read["Read\nDosya oku"]
-        Glob["Glob\nDosya bul"]
-        Grep["Grep\nİçerik ara"]
+        Read["Read<br/>Dosya oku"]
+        Glob["Glob<br/>Dosya bul"]
+        Grep["Grep<br/>İçerik ara"]
     end
 
     subgraph yazma ["Yazma (İzin Gerekli)"]
-        Write["Write\nDosya yaz"]
-        Edit["Edit\nDosya düzenle"]
+        Write["Write<br/>Dosya yaz"]
+        Edit["Edit<br/>Dosya düzenle"]
     end
 
     Read --> |"İçeriği anla"| Edit
@@ -188,23 +195,23 @@ Claude Code bir görevi aldığında, hangi araçları kullanacağına şu mant�
 ```mermaid
 flowchart TD
     START["Kullanıcı görevi"] --> ANALYZE["Görevi analiz et"]
-    ANALYZE --> Q1{"Dosya okumak\ngerekiyor mu?"}
+    ANALYZE --> Q1{"Dosya okumak<br/>gerekiyor mu?"}
     Q1 -->|Evet| READ["Read / Glob / Grep"]
     Q1 -->|Hayır| Q2
 
-    READ --> Q2{"Kod değişikliği\ngerekiyor mu?"}
+    READ --> Q2{"Kod değişikliği<br/>gerekiyor mu?"}
     Q2 -->|Evet| EDIT["Edit / Write"]
     Q2 -->|Hayır| Q3
 
-    EDIT --> Q3{"Komut çalıştırmak\ngerekiyor mu?"}
+    EDIT --> Q3{"Komut çalıştırmak<br/>gerekiyor mu?"}
     Q3 -->|Evet| BASH["Bash"]
     Q3 -->|Hayır| Q4
 
-    BASH --> Q4{"Web bilgisi\ngerekiyor mu?"}
+    BASH --> Q4{"Web bilgisi<br/>gerekiyor mu?"}
     Q4 -->|Evet| WEB["WebSearch / WebFetch"]
     Q4 -->|Hayır| Q5
 
-    WEB --> Q5{"Sonuç\ndoğru mu?"}
+    WEB --> Q5{"Sonuç<br/>doğru mu?"}
     Q5 -->|Hayır| ANALYZE
     Q5 -->|Evet| DONE["Sonucu raporla"]
 ```

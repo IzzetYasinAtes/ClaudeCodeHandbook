@@ -18,16 +18,16 @@ Claude Code hook'ları dört farklı **hook type** (kanca tipi) olarak tanımlan
 flowchart TB
     subgraph types ["Hook Tipleri"]
         direction TB
-        CMD["🖥️ Command Hook\nShell komutları çalıştır"]
-        HTTP["🌐 HTTP Hook\nREST endpoint çağır"]
-        PROMPT["🤖 Prompt Hook\nLLM'e özel prompt gönder"]
-        MCP["🔌 MCP Tool Hook\nMCP sunucu aracı çağır"]
+        CMD["🖥️ Command Hook<br/>Shell komutları çalıştır"]
+        HTTP["🌐 HTTP Hook<br/>REST endpoint çağır"]
+        PROMPT["🤖 Prompt Hook<br/>LLM'e özel prompt gönder"]
+        MCP["🔌 MCP Tool Hook<br/>MCP sunucu aracı çağır"]
     end
 
-    CMD --> CMD_EX["prettier --write file.ts\nnpx eslint --fix file.ts\npython validate.py"]
-    HTTP --> HTTP_EX["POST /api/notify\nPOST /webhook/slack\nGET /health"]
-    PROMPT --> PROMPT_EX["'Bu kodu incele ve\ngüvenlik açığı var mı kontrol et'"]
-    MCP --> MCP_EX["github.create_issue\nslack.send_message\njira.update_ticket"]
+    CMD --> CMD_EX["prettier --write file.ts<br/>npx eslint --fix file.ts<br/>python validate.py"]
+    HTTP --> HTTP_EX["POST /api/notify<br/>POST /webhook/slack<br/>GET /health"]
+    PROMPT --> PROMPT_EX["'Bu kodu incele ve<br/>güvenlik açığı var mı kontrol et'"]
+    MCP --> MCP_EX["github.create_issue<br/>slack.send_message<br/>jira.update_ticket"]
 
     style CMD fill:#3498DB,color:#fff
     style HTTP fill:#27AE60,color:#fff
@@ -76,10 +76,10 @@ Command hook'lar aşağıdaki ortam değişkenlerine otomatik erişir:
 
 ```mermaid
 flowchart LR
-    CMD["Command\nçalıştırıldı"] --> EC{"Exit\nCode?"}
-    EC -->|"0"| OK["✅ Başarılı\nDevam et"]
-    EC -->|"1+"| BLOCK["❌ Engellendi\nİşlemi durdur"]
-    EC -->|"Timeout"| TO["⏰ Zaman aşımı\nVarsayılan davranış"]
+    CMD["Command<br/>çalıştırıldı"] --> EC{"Exit<br/>Code?"}
+    EC -->|"0"| OK["✅ Başarılı<br/>Devam et"]
+    EC -->|"1+"| BLOCK["❌ Engellendi<br/>İşlemi durdur"]
+    EC -->|"Timeout"| TO["⏰ Zaman aşımı<br/>Varsayılan davranış"]
 
     style OK fill:#27AE60,color:#fff
     style BLOCK fill:#E74C3C,color:#fff
@@ -276,9 +276,9 @@ LLM'e (Large Language Model — büyük dil modeli) özel bir prompt göndererek
 
 ```mermaid
 flowchart LR
-    EVENT["Olay\nTetiklendi"] --> TEMPLATE["Prompt\nTemplate Doldur"]
-    TEMPLATE --> LLM["LLM'e\nGönder"]
-    LLM --> EVAL{"LLM\nYanıtı?"}
+    EVENT["Olay<br/>Tetiklendi"] --> TEMPLATE["Prompt<br/>Template Doldur"]
+    TEMPLATE --> LLM["LLM'e<br/>Gönder"]
+    LLM --> EVAL{"LLM<br/>Yanıtı?"}
     EVAL -->|"APPROVE"| OK["✅ Devam et"]
     EVAL -->|"REJECT"| BLOCK["❌ Engelle"]
     EVAL -->|"Analiz"| LOG["📝 Sonucu logla"]
@@ -473,18 +473,18 @@ quadrantChart
 
 ```mermaid
 flowchart TD
-    START["Hook oluşturmak\nistiyorum"] --> Q1{"Yerel bir komut mu\nçalıştırmak istiyorum?"}
+    START["Hook oluşturmak<br/>istiyorum"] --> Q1{"Yerel bir komut mu<br/>çalıştırmak istiyorum?"}
     
-    Q1 -->|Evet| CMD["🖥️ Command Hook\nÖr: prettier, eslint, test"]
-    Q1 -->|Hayır| Q2{"Bir web servisine mi\nbildirim göndereceğim?"}
+    Q1 -->|Evet| CMD["🖥️ Command Hook<br/>Ör: prettier, eslint, test"]
+    Q1 -->|Hayır| Q2{"Bir web servisine mi<br/>bildirim göndereceğim?"}
     
-    Q2 -->|Evet| Q3{"MCP sunucusu\ntanımlı mı?"}
-    Q2 -->|Hayır| Q4{"AI ile değerlendirme mi\nyaptırmak istiyorum?"}
+    Q2 -->|Evet| Q3{"MCP sunucusu<br/>tanımlı mı?"}
+    Q2 -->|Hayır| Q4{"AI ile değerlendirme mi<br/>yaptırmak istiyorum?"}
     
-    Q3 -->|Evet| MCP_H["🔌 MCP Tool Hook\nÖr: GitHub, Slack, Jira"]
-    Q3 -->|Hayır| HTTP_H["🌐 HTTP Hook\nÖr: Webhook, REST API"]
+    Q3 -->|Evet| MCP_H["🔌 MCP Tool Hook<br/>Ör: GitHub, Slack, Jira"]
+    Q3 -->|Hayır| HTTP_H["🌐 HTTP Hook<br/>Ör: Webhook, REST API"]
     
-    Q4 -->|Evet| PROMPT_H["🤖 Prompt Hook\nÖr: Güvenlik analizi, kod kalitesi"]
+    Q4 -->|Evet| PROMPT_H["🤖 Prompt Hook<br/>Ör: Güvenlik analizi, kod kalitesi"]
     Q4 -->|Hayır| CMD
 
     style CMD fill:#3498DB,color:#fff

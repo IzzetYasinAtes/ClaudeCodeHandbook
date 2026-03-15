@@ -20,10 +20,10 @@ Claude Code ayar dosyaları dört farklı scope (kapsam) seviyesinde çalışır
 flowchart TB
     subgraph hierarchy ["Ayar Dosyaları Hiyerarşisi (Artan Öncelik)"]
         direction TB
-        USER["🧑 User Settings\n~/.claude/settings.json\nKullanıcının tüm projelerinde geçerli"]
-        PROJECT["📁 Project Settings\n.claude/settings.json\nProje genelinde, Git'e commit edilir"]
-        LOCAL["🔒 Local Settings\n.claude/settings.local.json\nKişisel proje ayarları, .gitignore'da"]
-        MANAGED["🏢 Managed Settings\nKurumsal yönetimli\nOverride edilemez"]
+        USER["🧑 User Settings<br/>~/.claude/settings.json<br/>Kullanıcının tüm projelerinde geçerli"]
+        PROJECT["📁 Project Settings<br/>.claude/settings.json<br/>Proje genelinde, Git'e commit edilir"]
+        LOCAL["🔒 Local Settings<br/>.claude/settings.local.json<br/>Kişisel proje ayarları, .gitignore'da"]
+        MANAGED["🏢 Managed Settings<br/>Kurumsal yönetimli<br/>Override edilemez"]
     end
 
     USER --> PROJECT --> LOCAL --> MANAGED
@@ -166,9 +166,9 @@ Kurum yöneticileri tarafından belirlenen, kullanıcıların geçersiz kılamay
 
 ```mermaid
 flowchart LR
-    ADMIN["🏢 Kurum Yöneticisi\nPolitika tanımlar"] --> SERVER["☁️ Sunucu\nAyarları dağıtır"]
-    SERVER --> CLIENT["💻 Claude Code\nUygular"]
-    CLIENT --> LOCK["🔒 Kullanıcı\nOverride edemez"]
+    ADMIN["🏢 Kurum Yöneticisi<br/>Politika tanımlar"] --> SERVER["☁️ Sunucu<br/>Ayarları dağıtır"]
+    SERVER --> CLIENT["💻 Claude Code<br/>Uygular"]
+    CLIENT --> LOCK["🔒 Kullanıcı<br/>Override edemez"]
 
     style ADMIN fill:#8E44AD,color:#fff
     style SERVER fill:#2C3E50,color:#fff
@@ -195,14 +195,14 @@ Farklı seviyelerdeki ayar dosyaları şu kurallara göre birleştirilir:
 flowchart TD
     subgraph merge ["Ayar Birleştirme Süreci"]
         direction TB
-        U["User Settings\nallow: [Read, Grep]\ndeny: [Bash(rm -rf)]"]
-        P["Project Settings\nallow: [Bash(npm run:*)]\ndeny: [Bash(npm publish)]"]
-        L["Local Settings\nallow: [Bash(docker:*)]"]
-        M["Managed Settings\ndeny: [Bash(curl|*)]"]
+        U["User Settings<br/>allow: [Read, Grep]<br/>deny: [Bash(rm -rf)]"]
+        P["Project Settings<br/>allow: [Bash(npm run:*)]<br/>deny: [Bash(npm publish)]"]
+        L["Local Settings<br/>allow: [Bash(docker:*)]"]
+        M["Managed Settings<br/>deny: [Bash(curl|*)]"]
     end
 
     subgraph result ["Sonuç"]
-        R["Birleştirilmiş Ayarlar\nallow: [Read, Grep, Bash(npm run:*), Bash(docker:*)]\ndeny: [Bash(rm -rf), Bash(npm publish), Bash(curl|*)]"]
+        R["Birleştirilmiş Ayarlar<br/>allow: [Read, Grep, Bash(npm run:*), Bash(docker:*)]<br/>deny: [Bash(rm -rf), Bash(npm publish), Bash(curl|*)]"]
     end
 
     U --> R

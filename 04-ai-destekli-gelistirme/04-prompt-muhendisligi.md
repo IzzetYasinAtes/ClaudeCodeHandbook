@@ -480,21 +480,21 @@ Kodu doğrudan yeniden yazma. Bunun yerine:
 
 ```mermaid
 flowchart TD
-    A["Yeni bir prompt\nyazacaksınız"] --> B{"Görev ne\nkadar karmaşık?"}
+    A["Yeni bir prompt<br/>yazacaksınız"] --> B{"Görev ne<br/>kadar karmaşık?"}
     
-    B -->|"Basit,\ntek adımlı"| C{"Belirli bir format\nveya stil var mı?"}
-    C -->|"Hayır"| D["Zero-Shot\n'Şunu yap'"]
-    C -->|"Evet"| E["One-Shot\n'Şu örneğe uygun yap'"]
+    B -->|"Basit,<br/>tek adımlı"| C{"Belirli bir format<br/>veya stil var mı?"}
+    C -->|"Hayır"| D["Zero-Shot<br/>'Şunu yap'"]
+    C -->|"Evet"| E["One-Shot<br/>'Şu örneğe uygun yap'"]
     
-    B -->|"Orta,\nbirkaç adımlı"| F{"Proje kalıbına\nuyması gerekli mi?"}
-    F -->|"Evet"| G["Few-Shot\n'Şu örneklere uygun yap'"]
-    F -->|"Hayır"| H{"Uzman perspektifi\ngerekli mi?"}
-    H -->|"Evet"| I["Persona-Based\n'Sen bir ... olarak'"]
-    H -->|"Hayır"| J["Zero-Shot\n+ detaylı talimat"]
+    B -->|"Orta,<br/>birkaç adımlı"| F{"Proje kalıbına<br/>uyması gerekli mi?"}
+    F -->|"Evet"| G["Few-Shot<br/>'Şu örneklere uygun yap'"]
+    F -->|"Hayır"| H{"Uzman perspektifi<br/>gerekli mi?"}
+    H -->|"Evet"| I["Persona-Based<br/>'Sen bir ... olarak'"]
+    H -->|"Hayır"| J["Zero-Shot<br/>+ detaylı talimat"]
     
-    B -->|"Karmaşık,\nçok adımlı"| K{"Akıl yürütme\ngerekli mi?"}
-    K -->|"Evet"| L["Chain-of-Thought\n'Adım adım düşün'"]
-    K -->|"Hayır"| M["Few-Shot +\nPersona-Based"]
+    B -->|"Karmaşık,<br/>çok adımlı"| K{"Akıl yürütme<br/>gerekli mi?"}
+    K -->|"Evet"| L["Chain-of-Thought<br/>'Adım adım düşün'"]
+    K -->|"Hayır"| M["Few-Shot +<br/>Persona-Based"]
     
     style D fill:#e8f5e9
     style E fill:#e3f2fd

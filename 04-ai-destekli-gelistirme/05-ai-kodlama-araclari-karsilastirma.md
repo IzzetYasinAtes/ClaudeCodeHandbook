@@ -17,17 +17,17 @@ Mart 2026 itibarıyla AI destekli kodlama araçları pazarı hızla büyümekte 
 ```mermaid
 flowchart TD
     subgraph terminal ["Terminal Tabanlı"]
-        A["Claude Code\n(Anthropic)"]
-        B["Codex CLI\n(OpenAI)"]
+        A["Claude Code<br/>(Anthropic)"]
+        B["Codex CLI<br/>(OpenAI)"]
     end
 
     subgraph ide ["IDE / Editör"]
-        C["Cursor\n(Anysphere)"]
-        D["Windsurf\n(Codeium)"]
+        C["Cursor<br/>(Anysphere)"]
+        D["Windsurf<br/>(Codeium)"]
     end
 
     subgraph plugin ["IDE Eklentisi"]
-        E["GitHub Copilot\n(Microsoft/GitHub)"]
+        E["GitHub Copilot<br/>(Microsoft/GitHub)"]
     end
 
     style terminal fill:#E3F2FD
@@ -225,7 +225,7 @@ flowchart TD
 
     subgraph terminal_arch ["Terminal Tabanlı Mimari"]
         direction TB
-        T1["Terminal"] --> T2["CLI Aracı\n(Claude Code / Codex CLI)"]
+        T1["Terminal"] --> T2["CLI Aracı<br/>(Claude Code / Codex CLI)"]
         T2 --> T3["AI Model API"]
         T2 --> T4["Dosya Sistemi"]
         T2 --> T5["Terminal/Bash"]
@@ -234,7 +234,7 @@ flowchart TD
 
     subgraph ide_arch ["IDE Tabanlı Mimari"]
         direction TB
-        I1["IDE Arayüzü\n(Cursor / Windsurf)"] --> I2["Dahili AI Motoru"]
+        I1["IDE Arayüzü<br/>(Cursor / Windsurf)"] --> I2["Dahili AI Motoru"]
         I2 --> I3["AI Model API"]
         I1 --> I4["Editör"]
         I1 --> I5["Terminal"]
@@ -243,7 +243,7 @@ flowchart TD
 
     subgraph plugin_arch ["Eklenti Tabanlı Mimari"]
         direction TB
-        P1["Mevcut IDE\n(VS Code, JetBrains)"] --> P2["Copilot Eklentisi"]
+        P1["Mevcut IDE<br/>(VS Code, JetBrains)"] --> P2["Copilot Eklentisi"]
         P2 --> P3["AI Model API"]
         P1 --> P4["Editör"]
         P1 --> P5["Diğer Eklentiler"]
@@ -295,21 +295,21 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["AI kodlama aracı\nseçeceksiniz"] --> B{"Önceliğiniz ne?"}
+    A["AI kodlama aracı<br/>seçeceksiniz"] --> B{"Önceliğiniz ne?"}
     
-    B -->|"Otonom agent\ngücü"| C{"Arayüz\ntercihi?"}
+    B -->|"Otonom agent<br/>gücü"| C{"Arayüz<br/>tercihi?"}
     C -->|"Terminal"| D["Claude Code"]
     C -->|"IDE"| E["Cursor"]
     
-    B -->|"Düşük maliyet\ngeniş IDE desteği"| F["GitHub Copilot"]
+    B -->|"Düşük maliyet<br/>geniş IDE desteği"| F["GitHub Copilot"]
     
-    B -->|"Açık kaynak\nterminal agent"| G["Codex CLI"]
+    B -->|"Açık kaynak<br/>terminal agent"| G["Codex CLI"]
     
-    B -->|"Uygun fiyat\nIDE deneyimi"| H["Windsurf"]
+    B -->|"Uygun fiyat<br/>IDE deneyimi"| H["Windsurf"]
     
-    B -->|"CI/CD\notomasyon"| I["Claude Code\n(Headless mode)"]
+    B -->|"CI/CD<br/>otomasyon"| I["Claude Code<br/>(Headless mode)"]
     
-    B -->|"Mevcut IDE'yi\nkorumak"| J["GitHub Copilot\n(eklenti)"]
+    B -->|"Mevcut IDE'yi<br/>korumak"| J["GitHub Copilot<br/>(eklenti)"]
 
     style D fill:#E3F2FD
     style E fill:#E8F5E9

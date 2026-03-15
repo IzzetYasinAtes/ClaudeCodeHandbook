@@ -19,10 +19,10 @@ Claude Code plugin ekosistemi birden fazla marketplace kaynağından oluşur:
 ```mermaid
 flowchart TD
     subgraph ecosystem ["Marketplace Ekosistemi"]
-        OFFICIAL["Anthropic Resmi Marketplace\nAnthropic tarafından doğrulanmış"]
-        COMMUNITY1["claudecodemarketplace.net\nTopluluk marketplace"]
-        COMMUNITY2["claudecodemarketplace.com\nTopluluk marketplace"]
-        GIT["Git Repository\nDoğrudan Git'ten kurulum"]
+        OFFICIAL["Anthropic Resmi Marketplace<br/>Anthropic tarafından doğrulanmış"]
+        COMMUNITY1["claudecodemarketplace.net<br/>Topluluk marketplace"]
+        COMMUNITY2["claudecodemarketplace.com<br/>Topluluk marketplace"]
+        GIT["Git Repository<br/>Doğrudan Git'ten kurulum"]
     end
 
     subgraph claude ["Claude Code"]
@@ -329,9 +329,9 @@ flowchart TD
 flowchart TD
     INSTALL["Plugin Kurulumu"] --> CHECK{"Kaynak Kontrolü"}
 
-    CHECK -->|"Resmi Marketplace"| VERIFIED["Anthropic Doğrulaması ✅\nKod incelemesi yapılmış"]
-    CHECK -->|"Topluluk Marketplace"| COMMUNITY["Topluluk Derecelendirmesi\nKullanıcı yorumları"]
-    CHECK -->|"Git Repository"| MANUAL["Manuel İnceleme\nKodu kendiniz kontrol edin"]
+    CHECK -->|"Resmi Marketplace"| VERIFIED["Anthropic Doğrulaması ✅<br/>Kod incelemesi yapılmış"]
+    CHECK -->|"Topluluk Marketplace"| COMMUNITY["Topluluk Derecelendirmesi<br/>Kullanıcı yorumları"]
+    CHECK -->|"Git Repository"| MANUAL["Manuel İnceleme<br/>Kodu kendiniz kontrol edin"]
 
     VERIFIED --> SAFE["Güvenli Kurulum"]
     COMMUNITY --> REVIEW["İzinleri İncele"]

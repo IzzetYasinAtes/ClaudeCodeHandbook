@@ -22,15 +22,15 @@ flowchart TD
     end
 
     subgraph isletim ["Desteklenen İşletim Sistemleri"]
-        MAC["macOS 12+\n✅ Doğrudan"]
-        LINUX["Linux\n(Ubuntu 20.04+, Debian, Fedora)\n✅ Doğrudan"]
-        WIN["Windows 10/11\n⚠️ WSL gerekli"]
+        MAC["macOS 12+<br/>✅ Doğrudan"]
+        LINUX["Linux<br/>(Ubuntu 20.04+, Debian, Fedora)<br/>✅ Doğrudan"]
+        WIN["Windows 10/11<br/>⚠️ WSL gerekli"]
     end
 
     subgraph onerilen ["Önerilen"]
         RAM["RAM: 4 GB+"]
         DISK["Disk: 500 MB+"]
-        NET["İnternet bağlantısı\n(API erişimi için)"]
+        NET["İnternet bağlantısı<br/>(API erişimi için)"]
     end
 
     zorunlu --> isletim
@@ -68,14 +68,14 @@ npm --version
 
 ```mermaid
 flowchart TD
-    CHECK{"Node.js\nkurulu mu?"} -->|"Hayır"| INSTALL
+    CHECK{"Node.js<br/>kurulu mu?"} -->|"Hayır"| INSTALL
     CHECK -->|"v18+"| OK["✅ Devam edin"]
     CHECK -->|"v18 altı"| UPDATE["Güncelleme gerekli"]
     UPDATE --> INSTALL
 
-    INSTALL --> MAC_I["macOS:\nbrew install node"]
-    INSTALL --> LINUX_I["Linux:\ncurl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -\nsudo apt-get install -y nodejs"]
-    INSTALL --> WIN_I["Windows:\nnodejs.org'dan indirin\nveya WSL'de kurun"]
+    INSTALL --> MAC_I["macOS:<br/>brew install node"]
+    INSTALL --> LINUX_I["Linux:<br/>curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -<br/>sudo apt-get install -y nodejs"]
+    INSTALL --> WIN_I["Windows:<br/>nodejs.org'dan indirin<br/>veya WSL'de kurun"]
 ```
 
 **macOS (Homebrew ile):**
@@ -175,22 +175,22 @@ claude --help
 
 ```mermaid
 flowchart TD
-    START(["Başla"]) --> CHECK_OS{"İşletim\nsisteminiz?"}
+    START(["Başla"]) --> CHECK_OS{"İşletim<br/>sisteminiz?"}
 
-    CHECK_OS -->|"macOS / Linux"| CHECK_NODE{"Node.js 18+\nkurulu mu?"}
-    CHECK_OS -->|"Windows"| WSL{"WSL\nkurulu mu?"}
+    CHECK_OS -->|"macOS / Linux"| CHECK_NODE{"Node.js 18+<br/>kurulu mu?"}
+    CHECK_OS -->|"Windows"| WSL{"WSL<br/>kurulu mu?"}
 
-    WSL -->|"Hayır"| INSTALL_WSL["wsl --install\nYeniden başlat"]
+    WSL -->|"Hayır"| INSTALL_WSL["wsl --install<br/>Yeniden başlat"]
     WSL -->|"Evet"| OPEN_WSL["WSL terminalini aç"]
     INSTALL_WSL --> OPEN_WSL
     OPEN_WSL --> CHECK_NODE
 
     CHECK_NODE -->|"Hayır"| INSTALL_NODE["Node.js 20 LTS kur"]
-    CHECK_NODE -->|"Evet"| CHECK_GIT{"Git\nkurulu mu?"}
+    CHECK_NODE -->|"Evet"| CHECK_GIT{"Git<br/>kurulu mu?"}
     INSTALL_NODE --> CHECK_GIT
 
     CHECK_GIT -->|"Hayır"| INSTALL_GIT["Git kur"]
-    CHECK_GIT -->|"Evet"| INSTALL_CC["npm install -g\n@anthropic-ai/claude-code"]
+    CHECK_GIT -->|"Evet"| INSTALL_CC["npm install -g<br/>@anthropic-ai/claude-code"]
     INSTALL_GIT --> INSTALL_CC
 
     INSTALL_CC --> VERIFY["claude --version"]
@@ -228,11 +228,11 @@ claude --version
 flowchart TD
     SORUN(["Kurulum Sorunu"]) --> S1{"Hata mesajı?"}
 
-    S1 -->|"EACCES permission denied"| C1["sudo ile kurma yerine\nnpm prefix değiştir"]
-    S1 -->|"node: command not found"| C2["Node.js kurulumunu\nkontrol et"]
-    S1 -->|"npm ERR! network"| C3["İnternet bağlantısını\nve proxy ayarlarını kontrol et"]
-    S1 -->|"WSL hatası"| C4["WSL kurulumunu\nve sürümünü kontrol et"]
-    S1 -->|"claude: command not found"| C5["npm global path'i\nkontrol et"]
+    S1 -->|"EACCES permission denied"| C1["sudo ile kurma yerine<br/>npm prefix değiştir"]
+    S1 -->|"node: command not found"| C2["Node.js kurulumunu<br/>kontrol et"]
+    S1 -->|"npm ERR! network"| C3["İnternet bağlantısını<br/>ve proxy ayarlarını kontrol et"]
+    S1 -->|"WSL hatası"| C4["WSL kurulumunu<br/>ve sürümünü kontrol et"]
+    S1 -->|"claude: command not found"| C5["npm global path'i<br/>kontrol et"]
 ```
 
 #### 1. EACCES Permission Denied (İzin Hatası)

@@ -16,22 +16,22 @@ Bu bölüm, Claude Code'un önceki sayfalarda detaylı ele alınmayan yardımcı
 ```mermaid
 flowchart TD
     subgraph interaction ["Kullanıcı Etkileşimi"]
-        ASK["AskUserQuestion\nYapılandırılmış soru sor"]
+        ASK["AskUserQuestion<br/>Yapılandırılmış soru sor"]
     end
 
     subgraph tracking ["Görev Takibi"]
-        TODO["TodoWrite\nYapılacaklar listesi"]
+        TODO["TodoWrite<br/>Yapılacaklar listesi"]
     end
 
     subgraph mcp ["MCP Araçları"]
-        SEARCH["ToolSearch\nErtelenmiş araç yükle"]
-        LIST["ListMcpResourcesTool\nKaynak listele"]
-        READMCP["ReadMcpResourceTool\nKaynak oku"]
+        SEARCH["ToolSearch<br/>Ertelenmiş araç yükle"]
+        LIST["ListMcpResourcesTool<br/>Kaynak listele"]
+        READMCP["ReadMcpResourceTool<br/>Kaynak oku"]
     end
 
     subgraph worktree ["Git Worktree"]
-        ENTER["EnterWorktree\nİzolasyona gir"]
-        EXIT["ExitWorktree\nİzolasyondan çık"]
+        ENTER["EnterWorktree<br/>İzolasyona gir"]
+        EXIT["ExitWorktree<br/>İzolasyondan çık"]
     end
 ```
 
@@ -53,10 +53,10 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    AMBIG["Belirsiz durum\ntespit edildi"] --> ASK["AskUserQuestion"]
-    ASK --> PRESENT["Kullanıcıya seçenekler\ngösterilir"]
+    AMBIG["Belirsiz durum<br/>tespit edildi"] --> ASK["AskUserQuestion"]
+    ASK --> PRESENT["Kullanıcıya seçenekler<br/>gösterilir"]
     PRESENT --> SELECT["Kullanıcı seçer"]
-    SELECT --> CONTINUE["Seçime göre\ndevam et"]
+    SELECT --> CONTINUE["Seçime göre<br/>devam et"]
 ```
 
 ### Pratik Örnekler
@@ -174,12 +174,12 @@ TodoWrite([
 
 ```mermaid
 flowchart TD
-    START["Claude Code başlangıcı"] --> LOAD["Temel araçlar\nyüklenir (30+)"]
-    LOAD --> MCP{"MCP sunucusu\nvar mı?"}
-    MCP -->|Evet| DEFER["MCP araçları\nertelenmiş olarak kaydedilir\n(hız optimizasyonu)"]
+    START["Claude Code başlangıcı"] --> LOAD["Temel araçlar<br/>yüklenir (30+)"]
+    LOAD --> MCP{"MCP sunucusu<br/>var mı?"}
+    MCP -->|Evet| DEFER["MCP araçları<br/>ertelenmiş olarak kaydedilir<br/>(hız optimizasyonu)"]
     MCP -->|Hayır| DONE["Hazır"]
-    DEFER --> NEED{"Araç\ngerekli mi?"}
-    NEED -->|Evet| SEARCH["ToolSearch ile\naraç yükle"]
+    DEFER --> NEED{"Araç<br/>gerekli mi?"}
+    NEED -->|Evet| SEARCH["ToolSearch ile<br/>araç yükle"]
     SEARCH --> USE["Aracı kullan"]
     NEED -->|Hayır| DONE
 ```
@@ -230,8 +230,8 @@ ReadMcpResourceTool(uri="database://users")
 
 ```mermaid
 flowchart LR
-    LIST["ListMcpResourcesTool\nKaynakları listele"] --> CHOOSE["Uygun kaynağı\nseç"]
-    CHOOSE --> READ["ReadMcpResourceTool\nKaynağı oku"]
+    LIST["ListMcpResourcesTool<br/>Kaynakları listele"] --> CHOOSE["Uygun kaynağı<br/>seç"]
+    CHOOSE --> READ["ReadMcpResourceTool<br/>Kaynağı oku"]
     READ --> USE["Bilgiyi kullan"]
 ```
 
@@ -247,11 +247,11 @@ Git worktree, aynı repository'nin farklı bir branch'ini ayrı bir dizinde chec
 
 ```mermaid
 flowchart TD
-    REPO["Ana Repository\n/project (main branch)"] --> WT["EnterWorktree"]
-    WT --> ISOLATED["İzole Worktree\n/tmp/worktree-abc\n(yeni branch)"]
-    ISOLATED --> WORK["Güvenli çalışma\n• Deneysel değişiklikler\n• Paralel branch\n• Risk almadan test"]
+    REPO["Ana Repository<br/>/project (main branch)"] --> WT["EnterWorktree"]
+    WT --> ISOLATED["İzole Worktree<br/>/tmp/worktree-abc<br/>(yeni branch)"]
+    ISOLATED --> WORK["Güvenli çalışma<br/>• Deneysel değişiklikler<br/>• Paralel branch<br/>• Risk almadan test"]
     WORK --> EXIT["ExitWorktree"]
-    EXIT --> BACK["Ana dizine dön\n/project (main branch)\nDeğişiklik yok ✅"]
+    EXIT --> BACK["Ana dizine dön<br/>/project (main branch)<br/>Değişiklik yok ✅"]
 ```
 
 ### Kullanım Senaryoları

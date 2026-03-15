@@ -15,13 +15,13 @@ API (Application Programming Interface) geliştirme, modern yazılımın temel y
 
 ```mermaid
 flowchart TD
-    A["API Tasarımı\nEndpoint planlaması"] --> B["Schema Tanımı\nRequest/Response modelleri"]
-    B --> C["Endpoint Geliştirme\nRoute + Controller + Service"]
-    C --> D["Validation\nInput doğrulama"]
-    D --> E["Error Handling\nHata yönetimi"]
-    E --> F["Authentication\nYetkilendirme"]
-    F --> G["Dokümantasyon\nOpenAPI/Swagger"]
-    G --> H["Test\nIntegration testler"]
+    A["API Tasarımı<br/>Endpoint planlaması"] --> B["Schema Tanımı<br/>Request/Response modelleri"]
+    B --> C["Endpoint Geliştirme<br/>Route + Controller + Service"]
+    C --> D["Validation<br/>Input doğrulama"]
+    D --> E["Error Handling<br/>Hata yönetimi"]
+    E --> F["Authentication<br/>Yetkilendirme"]
+    F --> G["Dokümantasyon<br/>OpenAPI/Swagger"]
+    G --> H["Test<br/>Integration testler"]
 
     style A fill:#3498DB,color:#fff
     style H fill:#27AE60,color:#fff

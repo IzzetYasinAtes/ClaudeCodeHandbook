@@ -6,11 +6,11 @@ Claude Code ile etkileşim kurmanın farklı yollarını, çalışma modlarını
 
 ```mermaid
 flowchart TD
-    A["Interactive Mode\n(İnteraktif Mod)"] --> B["Plan Mode\n(Planlama Modu)"]
-    B --> C["Fast Mode\n(Hızlı Mod)"]
-    C --> D["CLI Referansı\nTüm Bayraklar"]
-    D --> E["Slash Komutları\nDahili Komutlar"]
-    E --> F["Çıktı Stilleri\nve Formatlar"]
+    A["Interactive Mode<br/>(İnteraktif Mod)"] --> B["Plan Mode<br/>(Planlama Modu)"]
+    B --> C["Fast Mode<br/>(Hızlı Mod)"]
+    C --> D["CLI Referansı<br/>Tüm Bayraklar"]
+    D --> E["Slash Komutları<br/>Dahili Komutlar"]
+    E --> F["Çıktı Stilleri<br/>ve Formatlar"]
 ```
 
 ## İçerik
@@ -40,19 +40,19 @@ Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 flowchart LR
     subgraph modlar ["Çalışma Modları"]
         direction TB
-        IM["Interactive Mode\n(Varsayılan)"]
-        PM["Plan Mode\n(Salt okunur)"]
-        FM["Fast Mode\n(Hızlı yanıt)"]
+        IM["Interactive Mode<br/>(Varsayılan)"]
+        PM["Plan Mode<br/>(Salt okunur)"]
+        FM["Fast Mode<br/>(Hızlı yanıt)"]
     end
 
     subgraph komutlar ["Komut Arayüzleri"]
         direction TB
-        CLI["CLI Bayrakları\n(Başlatma parametreleri)"]
-        SLASH["Slash Komutları\n(Oturum içi komutlar)"]
+        CLI["CLI Bayrakları<br/>(Başlatma parametreleri)"]
+        SLASH["Slash Komutları<br/>(Oturum içi komutlar)"]
     end
 
     subgraph cikti ["Çıktı"]
-        CS["Çıktı Stilleri\nve Formatlar"]
+        CS["Çıktı Stilleri<br/>ve Formatlar"]
     end
 
     modlar --> komutlar

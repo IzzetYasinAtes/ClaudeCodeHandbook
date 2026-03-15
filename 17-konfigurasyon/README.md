@@ -6,13 +6,13 @@ Claude Code'un davranışını tam olarak kontrol altına almak için kapsamlı 
 
 ```mermaid
 flowchart TD
-    A["Ayar Dosyaları Hiyerarşisi\nuser → project → local → managed"] --> B["Settings.json Referansı\nTüm ayar anahtarları"]
-    B --> C["Ortam Değişkenleri\nCLAUDE_* ve ANTHROPIC_*"]
-    C --> D["Model Konfigürasyonu\nAlias, seçim, thinking effort"]
-    D --> E["Maliyet Yönetimi\nToken takip, limit, optimizasyon"]
-    E --> F["Durum Çubuğu\nContext, maliyet, git durumu"]
-    F --> G["Klavye Kısayolları\nÖzel tuş atamaları"]
-    G --> H["Terminal Optimizasyonu\nPerformans ve uyumluluk"]
+    A["Ayar Dosyaları Hiyerarşisi<br/>user → project → local → managed"] --> B["Settings.json Referansı<br/>Tüm ayar anahtarları"]
+    B --> C["Ortam Değişkenleri<br/>CLAUDE_* ve ANTHROPIC_*"]
+    C --> D["Model Konfigürasyonu<br/>Alias, seçim, thinking effort"]
+    D --> E["Maliyet Yönetimi<br/>Token takip, limit, optimizasyon"]
+    E --> F["Durum Çubuğu<br/>Context, maliyet, git durumu"]
+    F --> G["Klavye Kısayolları<br/>Özel tuş atamaları"]
+    G --> H["Terminal Optimizasyonu<br/>Performans ve uyumluluk"]
 ```
 
 ## İçerik

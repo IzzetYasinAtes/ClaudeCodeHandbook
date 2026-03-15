@@ -15,16 +15,16 @@ Sıfırdan bir proje başlatmak, Claude Code'un en güçlü olduğu alanlardan b
 
 ```mermaid
 flowchart TD
-    A["Proje Tanımı\nNe yapacağını belirle"] --> B["Teknoloji Seçimi\nStack ve araçlar"]
-    B --> C["CLAUDE.md Oluştur\nProje kuralları"]
-    C --> D["Proje İskeleti\nDizin yapısı + bağımlılıklar"]
-    D --> E["Veritabanı\nSchema ve migration"]
-    E --> F["Backend\nAPI endpoint'leri"]
-    F --> G["Frontend\nUI bileşenleri"]
-    G --> H["Auth\nKimlik doğrulama"]
-    H --> I["Test\nUnit ve integration"]
-    I --> J["CI/CD\nGitHub Actions"]
-    J --> K["Deploy\nProduction yayınlama"]
+    A["Proje Tanımı<br/>Ne yapacağını belirle"] --> B["Teknoloji Seçimi<br/>Stack ve araçlar"]
+    B --> C["CLAUDE.md Oluştur<br/>Proje kuralları"]
+    C --> D["Proje İskeleti<br/>Dizin yapısı + bağımlılıklar"]
+    D --> E["Veritabanı<br/>Schema ve migration"]
+    E --> F["Backend<br/>API endpoint'leri"]
+    F --> G["Frontend<br/>UI bileşenleri"]
+    G --> H["Auth<br/>Kimlik doğrulama"]
+    H --> I["Test<br/>Unit ve integration"]
+    I --> J["CI/CD<br/>GitHub Actions"]
+    J --> K["Deploy<br/>Production yayınlama"]
 
     style A fill:#F5B041,color:#000
     style K fill:#27AE60,color:#fff
@@ -170,15 +170,15 @@ claude "Projeyi tamamla:
 
 ```mermaid
 flowchart LR
-    A["Proje Yapısı\n✅ Dizinler"] --> B["Bağımlılıklar\n✅ package.json"]
-    B --> C["Veritabanı\n✅ Schema + Seed"]
-    C --> D["API\n✅ Endpoints"]
-    D --> E["Frontend\n✅ Sayfalar"]
-    E --> F["Auth\n✅ Login/Register"]
-    F --> G["Testler\n✅ Unit + Integration"]
-    G --> H["CI/CD\n✅ GitHub Actions"]
-    H --> I["Docs\n✅ README + API"]
-    I --> J["Deploy\n✅ Production"]
+    A["Proje Yapısı<br/>✅ Dizinler"] --> B["Bağımlılıklar<br/>✅ package.json"]
+    B --> C["Veritabanı<br/>✅ Schema + Seed"]
+    C --> D["API<br/>✅ Endpoints"]
+    D --> E["Frontend<br/>✅ Sayfalar"]
+    E --> F["Auth<br/>✅ Login/Register"]
+    F --> G["Testler<br/>✅ Unit + Integration"]
+    G --> H["CI/CD<br/>✅ GitHub Actions"]
+    H --> I["Docs<br/>✅ README + API"]
+    I --> J["Deploy<br/>✅ Production"]
 ```
 
 | Kontrol | Dosya/Dizin |

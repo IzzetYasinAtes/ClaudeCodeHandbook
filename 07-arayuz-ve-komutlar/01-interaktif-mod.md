@@ -15,7 +15,7 @@ Claude Code'u `claude` komutuyla başlattığınızda varsayılan olarak **Inter
 
 ```mermaid
 flowchart TD
-    START["claude komutu çalıştır"] --> REPL["Interactive REPL\n(Read-Eval-Print Loop)"]
+    START["claude komutu çalıştır"] --> REPL["Interactive REPL<br/>(Read-Eval-Print Loop)"]
     REPL --> INPUT["Kullanıcı girişi"]
     INPUT --> PROCESS["Claude Code işler"]
     PROCESS --> OUTPUT["Yanıt gösterilir"]
@@ -94,23 +94,23 @@ Claude Code'un Interactive Mode'da kullanabileceğiniz tüm klavye kısayolları
 ```mermaid
 flowchart LR
     subgraph temel ["Temel Kontroller"]
-        ENTER["Enter\nGönder"]
-        ESC["Escape\nİptal"]
-        CTRLC["Ctrl+C\nKesme"]
-        CTRLD["Ctrl+D\nÇıkış"]
+        ENTER["Enter<br/>Gönder"]
+        ESC["Escape<br/>İptal"]
+        CTRLC["Ctrl+C<br/>Kesme"]
+        CTRLD["Ctrl+D<br/>Çıkış"]
     end
 
     subgraph nav ["Navigasyon"]
         UP["↑ Önceki prompt"]
         DOWN["↓ Sonraki prompt"]
-        TAB["Tab\nOtomatik tamamla"]
-        STAB["Shift+Tab\nPlan Mode"]
+        TAB["Tab<br/>Otomatik tamamla"]
+        STAB["Shift+Tab<br/>Plan Mode"]
     end
 
     subgraph edit ["Düzenleme"]
-        CTRLW["Ctrl+W\nKelime sil"]
-        CTRLU["Ctrl+U\nSatır sil"]
-        CTRLL["Ctrl+L\nEkran temizle"]
+        CTRLW["Ctrl+W<br/>Kelime sil"]
+        CTRLU["Ctrl+U<br/>Satır sil"]
+        CTRLL["Ctrl+L<br/>Ekran temizle"]
     end
 ```
 
@@ -183,10 +183,10 @@ Mesajınızda `@` sembolü ile dosya veya dizin referansı verebilirsiniz. Claud
 
 ```mermaid
 flowchart LR
-    AT["@dosya/dizin yazılır"] --> RESOLVE["Claude Code\ndosyayı çözümler"]
-    RESOLVE --> READ["Dosya içeriği\nokunur"]
-    READ --> CTX["Bağlama (context)\neklenir"]
-    CTX --> PROCESS["Prompt ile birlikte\nişlenir"]
+    AT["@dosya/dizin yazılır"] --> RESOLVE["Claude Code<br/>dosyayı çözümler"]
+    RESOLVE --> READ["Dosya içeriği<br/>okunur"]
+    READ --> CTX["Bağlama (context)<br/>eklenir"]
+    CTX --> PROCESS["Prompt ile birlikte<br/>işlenir"]
 ```
 
 ### Dosya Sürükle-Bırak (Drag & Drop)
@@ -223,16 +223,16 @@ Claude Code, **multimodal** (çok modlu) yeteneklere sahiptir. Terminale görsel
 ```mermaid
 flowchart TD
     subgraph giris ["Giriş Yöntemleri"]
-        TEXT["Metin\n(Klavye)"]
-        FILE["Dosya Referansı\n(@-mention)"]
-        DRAG["Sürükle-Bırak\n(Drag & Drop)"]
-        IMG["Görsel\n(Image Paste)"]
-        PIPE["Pipe\n(stdin)"]
+        TEXT["Metin<br/>(Klavye)"]
+        FILE["Dosya Referansı<br/>(@-mention)"]
+        DRAG["Sürükle-Bırak<br/>(Drag & Drop)"]
+        IMG["Görsel<br/>(Image Paste)"]
+        PIPE["Pipe<br/>(stdin)"]
     end
 
     subgraph isleme ["İşleme"]
-        CTX["Bağlam\nOluşturma"]
-        MODEL["Claude Opus 4.6\nModel"]
+        CTX["Bağlam<br/>Oluşturma"]
+        MODEL["Claude Opus 4.6<br/>Model"]
     end
 
     TEXT --> CTX
@@ -371,20 +371,20 @@ flowchart TD
     SESSION --> PROMPT["Prompt yaz"]
     
     PROMPT --> MULTI{Çok satırlı mı?}
-    MULTI -->|"Evet"| BACKSLASH["Backslash (\\)\nile devam et"]
+    MULTI -->|"Evet"| BACKSLASH["Backslash (\\)<br/>ile devam et"]
     MULTI -->|"Hayır"| SEND["Enter ile gönder"]
     BACKSLASH --> SEND
     
-    SEND --> CONTEXT{Bağlam\neklendi mi?}
-    CONTEXT -->|"@-mention"| ADDCTX["Dosyaları\nbağlama ekle"]
-    CONTEXT -->|"Görsel"| ADDIMG["Görseli\nbağlama ekle"]
+    SEND --> CONTEXT{Bağlam<br/>eklendi mi?}
+    CONTEXT -->|"@-mention"| ADDCTX["Dosyaları<br/>bağlama ekle"]
+    CONTEXT -->|"Görsel"| ADDIMG["Görseli<br/>bağlama ekle"]
     CONTEXT -->|"Yok"| PROCESS["İşle"]
     ADDCTX --> PROCESS
     ADDIMG --> PROCESS
     
     PROCESS --> RESPONSE["Yanıt üret"]
     RESPONSE --> PERM{İzin gerekli?}
-    PERM -->|"Evet"| ASK["İzin iste\n(y/n)"]
+    PERM -->|"Evet"| ASK["İzin iste<br/>(y/n)"]
     PERM -->|"Hayır"| SHOW["Yanıtı göster"]
     ASK -->|"y"| EXEC["Eylemi uygula"]
     ASK -->|"n"| SHOW

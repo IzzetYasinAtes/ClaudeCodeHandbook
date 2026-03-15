@@ -25,17 +25,17 @@ flowchart LR
     end
 
     subgraph transit ["Aktarım"]
-        TLS["🔒 TLS 1.3\nŞifreli bağlantı"]
+        TLS["🔒 TLS 1.3<br/>Şifreli bağlantı"]
     end
 
     subgraph api ["Anthropic API"]
-        PROCESS["İşleme\nModel inference"]
+        PROCESS["İşleme<br/>Model inference"]
         RESPONSE["Yanıt üretme"]
     end
 
     subgraph storage ["Veri Saklama"]
-        ZDR_ON["ZDR Aktif ✅\nVeri saklanmaz\n30 gün log (sınırlı)"]
-        ZDR_OFF["ZDR Pasif ⚠️\nGüvenlik logları\n30 gün saklama"]
+        ZDR_ON["ZDR Aktif ✅<br/>Veri saklanmaz<br/>30 gün log (sınırlı)"]
+        ZDR_OFF["ZDR Pasif ⚠️<br/>Güvenlik logları<br/>30 gün saklama"]
     end
 
     CODE --> CC
@@ -78,10 +78,10 @@ ZDR, Anthropic'in veri saklama politikasının en kısıtlayıcı seviyesidir. Z
 flowchart TD
     ZDR["ZDR Etkinleştirildi"] --> DISABLED["Devre Dışı Kalan Özellikler"]
 
-    DISABLED --> D1["📊 Kullanım Analitiği\nDetaylı kullanım logları"]
-    DISABLED --> D2["🔍 Prompt Caching\nBazı cache özellikleri"]
-    DISABLED --> D3["📝 Conversation History\nSunucu taraflı geçmiş"]
-    DISABLED --> D4["🐛 Debug Support\nAnthropic debug desteği sınırlı"]
+    DISABLED --> D1["📊 Kullanım Analitiği<br/>Detaylı kullanım logları"]
+    DISABLED --> D2["🔍 Prompt Caching<br/>Bazı cache özellikleri"]
+    DISABLED --> D3["📝 Conversation History<br/>Sunucu taraflı geçmiş"]
+    DISABLED --> D4["🐛 Debug Support<br/>Anthropic debug desteği sınırlı"]
 
     style ZDR fill:#E74C3C,color:#fff
     style D1 fill:#95A5A6,color:#fff
@@ -102,10 +102,10 @@ ZDR, Enterprise plan kapsamında sunulmaktadır:
 
 ```mermaid
 flowchart TD
-    REQUEST["ZDR Talebi"] --> CONTACT["Anthropic Sales\nveya Account Manager"]
+    REQUEST["ZDR Talebi"] --> CONTACT["Anthropic Sales<br/>veya Account Manager"]
     CONTACT --> REVIEW["Talep İnceleme"]
-    REVIEW --> AGREEMENT["ZDR Anlaşması\nİmzalama"]
-    AGREEMENT --> ENABLE["ZDR Etkinleştirme\nOrganizasyon seviyesinde"]
+    REVIEW --> AGREEMENT["ZDR Anlaşması<br/>İmzalama"]
+    AGREEMENT --> ENABLE["ZDR Etkinleştirme<br/>Organizasyon seviyesinde"]
     ENABLE --> VERIFY["Doğrulama"]
 
     style REQUEST fill:#3498DB,color:#fff
@@ -142,15 +142,15 @@ curl -v https://api.anthropic.com/v1/messages \
 ```mermaid
 flowchart TD
     subgraph api_usage ["API Kullanımı (Claude Code dahil)"]
-        API_TRAIN["Model Eğitimi\n❌ Kullanılmaz"]
-        API_SAFETY["Güvenlik\n✅ Sınırlı erişim"]
-        API_LOG["Loglama\n30 gün (ZDR'sız)"]
+        API_TRAIN["Model Eğitimi<br/>❌ Kullanılmaz"]
+        API_SAFETY["Güvenlik<br/>✅ Sınırlı erişim"]
+        API_LOG["Loglama<br/>30 gün (ZDR'sız)"]
     end
 
     subgraph consumer ["Tüketici Ürünleri (claude.ai)"]
-        CON_TRAIN["Model Eğitimi\n⚠️ Opsiyonel (opt-out mevcut)"]
-        CON_SAFETY["Güvenlik\n✅ Tam erişim"]
-        CON_LOG["Loglama\n✅ Tam"]
+        CON_TRAIN["Model Eğitimi<br/>⚠️ Opsiyonel (opt-out mevcut)"]
+        CON_SAFETY["Güvenlik<br/>✅ Tam erişim"]
+        CON_LOG["Loglama<br/>✅ Tam"]
     end
 
     style API_TRAIN fill:#27AE60,color:#fff
@@ -176,11 +176,11 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph layers ["Güvenlik Katmanları"]
-        L1["1️⃣ Veri Sınıflandırma\nHangi veriler Claude'a gönderilebilir?"]
-        L2["2️⃣ Erişim Kontrolü\nKim hangi verilere erişebilir?"]
-        L3["3️⃣ Ağ Güvenliği\nProxy, mTLS, firewall"]
-        L4["4️⃣ ZDR Politikası\nSunucu tarafı veri koruma"]
-        L5["5️⃣ İzleme ve Denetim\nLog, audit, alert"]
+        L1["1️⃣ Veri Sınıflandırma<br/>Hangi veriler Claude'a gönderilebilir?"]
+        L2["2️⃣ Erişim Kontrolü<br/>Kim hangi verilere erişebilir?"]
+        L3["3️⃣ Ağ Güvenliği<br/>Proxy, mTLS, firewall"]
+        L4["4️⃣ ZDR Politikası<br/>Sunucu tarafı veri koruma"]
+        L5["5️⃣ İzleme ve Denetim<br/>Log, audit, alert"]
     end
 
     L1 --> L2 --> L3 --> L4 --> L5
@@ -247,9 +247,9 @@ export CLAUDE_CODE_USE_VERTEX=true
 ```mermaid
 flowchart TD
     subgraph options ["Veri Koruma Seçenekleri"]
-        DIRECT["Doğrudan API\n+ ZDR"]
-        BEDROCK["AWS Bedrock\nAWS altyapısında kalır"]
-        VERTEX["Google Vertex AI\nGCP altyapısında kalır"]
+        DIRECT["Doğrudan API<br/>+ ZDR"]
+        BEDROCK["AWS Bedrock<br/>AWS altyapısında kalır"]
+        VERTEX["Google Vertex AI<br/>GCP altyapısında kalır"]
     end
 
     DIRECT --> PROTECTION["Veri Koruması ✅"]

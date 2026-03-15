@@ -18,15 +18,15 @@ Büyük ölçekli refactoring için güvenli bir yaklaşım:
 
 ```mermaid
 flowchart TD
-    A["Mevcut Durumu Analiz Et"] --> B["Testlerle Koru\nMevcut davranışı test et"]
-    B --> C["Plan Oluştur\n(Plan Mode)"]
-    C --> D["Aşamalara Böl\nHer aşama bağımsız"]
+    A["Mevcut Durumu Analiz Et"] --> B["Testlerle Koru<br/>Mevcut davranışı test et"]
+    B --> C["Plan Oluştur<br/>(Plan Mode)"]
+    C --> D["Aşamalara Böl<br/>Her aşama bağımsız"]
     D --> E["Aşama 1 Uygula"]
     E --> F["Testleri Çalıştır"]
-    F --> G{"Testler\nGeçti mi?"}
+    F --> G{"Testler<br/>Geçti mi?"}
     G -->|Evet| H{"Son aşama mı?"}
-    G -->|Hayır| I["Rollback\nCheckpoint'e dön"]
-    H -->|Evet| J["Refactoring\nTamamlandı"]
+    G -->|Hayır| I["Rollback<br/>Checkpoint'e dön"]
+    H -->|Evet| J["Refactoring<br/>Tamamlandı"]
     H -->|Hayır| K["Sonraki Aşamaya Geç"]
     K --> E
     I --> E
@@ -99,12 +99,12 @@ claude --worktree refactor/incremental "Sadece UserController'ı service + repos
 
 ```mermaid
 flowchart LR
-    A["main\n(mevcut kod)"] --> B["refactor/big-bang\nTek seferde tüm katmanlar"]
-    A --> C["refactor/incremental\nKademeli geçiş"]
+    A["main<br/>(mevcut kod)"] --> B["refactor/big-bang<br/>Tek seferde tüm katmanlar"]
+    A --> C["refactor/incremental<br/>Kademeli geçiş"]
     
     B --> D{"Karşılaştır"}
     C --> D
-    D --> E["En iyi yaklaşımı\nmain'e merge et"]
+    D --> E["En iyi yaklaşımı<br/>main'e merge et"]
 
     style A fill:#3498DB,color:#fff
     style E fill:#27AE60,color:#fff

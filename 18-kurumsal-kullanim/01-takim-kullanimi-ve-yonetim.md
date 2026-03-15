@@ -19,10 +19,10 @@ Kurumsal ortamda Claude Code'u başarıyla uygulamak için katmanlı bir stratej
 ```mermaid
 flowchart TD
     subgraph strategy ["Takım Kullanım Stratejisi"]
-        RULES["📜 Paylaşılan Kurallar\nCLAUDE.md + settings.json"]
-        PERMS["🔐 Standart İzinler\nİzin verilen/engellenen araçlar"]
-        ONBOARD["👋 Onboarding\nYeni üye katılım süreci"]
-        BEST["⭐ Best Practices\nEn iyi uygulama rehberi"]
+        RULES["📜 Paylaşılan Kurallar<br/>CLAUDE.md + settings.json"]
+        PERMS["🔐 Standart İzinler<br/>İzin verilen/engellenen araçlar"]
+        ONBOARD["👋 Onboarding<br/>Yeni üye katılım süreci"]
+        BEST["⭐ Best Practices<br/>En iyi uygulama rehberi"]
     end
 
     RULES --> PERMS --> ONBOARD --> BEST
@@ -80,11 +80,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    ROOT["📁 Proje Kökü\nCLAUDE.md\nGenel proje kuralları"] --> FE["📁 frontend/\nCLAUDE.md\nFrontend spesifik kurallar"]
-    ROOT --> BE["📁 backend/\nCLAUDE.md\nBackend spesifik kurallar"]
-    ROOT --> INFRA["📁 infrastructure/\nCLAUDE.md\nInfra spesifik kurallar"]
+    ROOT["📁 Proje Kökü<br/>CLAUDE.md<br/>Genel proje kuralları"] --> FE["📁 frontend/<br/>CLAUDE.md<br/>Frontend spesifik kurallar"]
+    ROOT --> BE["📁 backend/<br/>CLAUDE.md<br/>Backend spesifik kurallar"]
+    ROOT --> INFRA["📁 infrastructure/<br/>CLAUDE.md<br/>Infra spesifik kurallar"]
 
-    FE --> COMP["📁 frontend/components/\nCLAUDE.md\nKomponent kuralları"]
+    FE --> COMP["📁 frontend/components/<br/>CLAUDE.md<br/>Komponent kuralları"]
 
     style ROOT fill:#3498DB,color:#fff
     style FE fill:#27AE60,color:#fff
@@ -103,16 +103,16 @@ Ekip genelinde tutarlı izinler için `.claude/settings.json` kullanılır ve Gi
 ```mermaid
 flowchart TD
     subgraph project ["📁 Proje İzinleri (.claude/settings.json)"]
-        PA["allow:\n- Read, Write, Edit\n- Bash(npm:*)\n- Bash(git:*)"]
-        PD["deny:\n- Bash(rm -rf:*)\n- Bash(npm publish:*)"]
+        PA["allow:<br/>- Read, Write, Edit<br/>- Bash(npm:*)<br/>- Bash(git:*)"]
+        PD["deny:<br/>- Bash(rm -rf:*)<br/>- Bash(npm publish:*)"]
     end
 
     subgraph personal ["🧑 Kişisel İzinler (.claude/settings.local.json)"]
-        LA["allow:\n- Bash(docker:*)\n- Bash(kubectl:*)"]
+        LA["allow:<br/>- Bash(docker:*)<br/>- Bash(kubectl:*)"]
     end
 
     subgraph managed ["🏢 Kurumsal İzinler (Managed)"]
-        MD["deny:\n- Bash(curl|*)\n- WebFetch\n(Override edilemez)"]
+        MD["deny:<br/>- Bash(curl|*)<br/>- WebFetch<br/>(Override edilemez)"]
     end
 
     project --> personal --> managed
@@ -168,13 +168,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    JOIN["👋 Yeni Üye Katılıyor"] --> INSTALL["1. Kurulum\nClaude Code yükle"]
-    INSTALL --> AUTH["2. Kimlik Doğrulama\nAPI key veya OAuth"]
-    AUTH --> CLONE["3. Proje Klonla\ngit clone (CLAUDE.md dahil)"]
-    CLONE --> LOCAL["4. Kişisel Ayarlar\nsettings.local.json"]
-    LOCAL --> TERMINAL["5. Terminal Kurulum\n/terminal-setup"]
-    TERMINAL --> TEST["6. Test Oturumu\nİlk Claude Code deneyimi"]
-    TEST --> GUIDE["7. Rehber Paylaş\nBest practices dokümanı"]
+    JOIN["👋 Yeni Üye Katılıyor"] --> INSTALL["1. Kurulum<br/>Claude Code yükle"]
+    INSTALL --> AUTH["2. Kimlik Doğrulama<br/>API key veya OAuth"]
+    AUTH --> CLONE["3. Proje Klonla<br/>git clone (CLAUDE.md dahil)"]
+    CLONE --> LOCAL["4. Kişisel Ayarlar<br/>settings.local.json"]
+    LOCAL --> TERMINAL["5. Terminal Kurulum<br/>/terminal-setup"]
+    TERMINAL --> TEST["6. Test Oturumu<br/>İlk Claude Code deneyimi"]
+    TEST --> GUIDE["7. Rehber Paylaş<br/>Best practices dokümanı"]
 
     style JOIN fill:#3498DB,color:#fff
     style TEST fill:#27AE60,color:#fff
@@ -298,10 +298,10 @@ Kurumsal planlarda admin dashboard (yönetici paneli) üzerinden takım yönetim
 
 ```mermaid
 flowchart TD
-    ADMIN["🏢 Admin Dashboard"] --> USERS["👥 Kullanıcı Yönetimi\nEkleme, kaldırma, roller"]
-    ADMIN --> LIMITS["💰 Harcama Limitleri\nKullanıcı/takım bazlı"]
-    ADMIN --> POLICIES["🔐 Güvenlik Politikaları\nManaged settings"]
-    ADMIN --> ANALYTICS["📊 Analitik\nKullanım raporları"]
+    ADMIN["🏢 Admin Dashboard"] --> USERS["👥 Kullanıcı Yönetimi<br/>Ekleme, kaldırma, roller"]
+    ADMIN --> LIMITS["💰 Harcama Limitleri<br/>Kullanıcı/takım bazlı"]
+    ADMIN --> POLICIES["🔐 Güvenlik Politikaları<br/>Managed settings"]
+    ADMIN --> ANALYTICS["📊 Analitik<br/>Kullanım raporları"]
 
     USERS --> ONBOARD_U["Yeni üye davet et"]
     USERS --> OFFBOARD_U["Erişimi kaldır"]

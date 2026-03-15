@@ -15,14 +15,14 @@ Performans optimizasyonu, uygulamanın darboğazlarını tespit etme, profiling 
 
 ```mermaid
 flowchart TD
-    A["Performans Sorunu Tespiti\nYavaşlık, yüksek kaynak kullanımı"] --> B["Ölçüm\nBaseline metrikler"]
-    B --> C["Darboğaz Analizi\nNerede yavaş?"]
+    A["Performans Sorunu Tespiti<br/>Yavaşlık, yüksek kaynak kullanımı"] --> B["Ölçüm<br/>Baseline metrikler"]
+    B --> C["Darboğaz Analizi<br/>Nerede yavaş?"]
     C --> D{"Darboğaz Türü?"}
-    D -->|"Veritabanı"| E["Query Optimizasyonu\nİndeks, eager loading"]
-    D -->|"Backend"| F["Kod Optimizasyonu\nAlgoritma, cache"]
-    D -->|"Frontend"| G["Render Optimizasyonu\nBundle, lazy load"]
-    D -->|"Ağ"| H["Network Optimizasyonu\nCompression, CDN"]
-    E --> I["Sonuç Ölçümü\nBefore/After karşılaştırma"]
+    D -->|"Veritabanı"| E["Query Optimizasyonu<br/>İndeks, eager loading"]
+    D -->|"Backend"| F["Kod Optimizasyonu<br/>Algoritma, cache"]
+    D -->|"Frontend"| G["Render Optimizasyonu<br/>Bundle, lazy load"]
+    D -->|"Ağ"| H["Network Optimizasyonu<br/>Compression, CDN"]
+    E --> I["Sonuç Ölçümü<br/>Before/After karşılaştırma"]
     F --> I
     G --> I
     H --> I

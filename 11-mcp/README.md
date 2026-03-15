@@ -5,11 +5,11 @@ Claude Code'un gücü sadece dahili araçlarıyla sınırlı değildir. **Model 
 ## Bu Bölümde Neler Öğreneceksiniz?
 
 ```mermaid
-flowchart TD
-    A["MCP Nedir?\nAçık Standart ve Mimari"] --> B["Kurulum ve Konfigürasyon\n.mcp.json Yapısı"]
-    B --> C["Hazır MCP Sunucuları\nGitHub, Slack, DB..."]
-    C --> D["Tool Search\nAkıllı Araç Yükleme"]
-    D --> E["MCP vs Skills\nKarar Rehberi"]
+flowchart LR
+    A["MCP Nedir?<br/>Açık Standart ve Mimari"] --> B["Kurulum ve Konfigürasyon<br/>.mcp.json Yapısı"]
+    B --> C["Hazır MCP Sunucuları<br/>GitHub, Slack, DB..."]
+    C --> D["Tool Search<br/>Akıllı Araç Yükleme"]
+    D --> E["MCP vs Skills<br/>Karar Rehberi"]
 
     style A fill:#4A90D9,color:#fff
     style C fill:#27AE60,color:#fff
@@ -43,13 +43,13 @@ Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 flowchart LR
     subgraph oncesi ["MCP Olmadan"]
         direction TB
-        O1["Her API için\nözel entegrasyon"] --> O2["N aracı × M model\n= N×M entegrasyon"]
+        O1["Her API için<br/>özel entegrasyon"] --> O2["N aracı × M model<br/>= N×M entegrasyon"]
         O2 --> O3["Bakım kabusu 😰"]
     end
 
     subgraph sonrasi ["MCP ile"]
         direction TB
-        S1["Tek standart\nprotokol"] --> S2["N aracı + M model\n= N+M entegrasyon"]
+        S1["Tek standart<br/>protokol"] --> S2["N aracı + M model<br/>= N+M entegrasyon"]
         S2 --> S3["Tak-çalıştır 🚀"]
     end
 

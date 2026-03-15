@@ -15,11 +15,11 @@ Test yazma, yazılım kalitesinin temel taşıdır. Claude Code, unit test (biri
 
 ```mermaid
 flowchart TD
-    A["Hedef Dosyayı Belirle"] --> B["Mevcut Testleri İncele\nPattern ve yapıyı anla"]
+    A["Hedef Dosyayı Belirle"] --> B["Mevcut Testleri İncele<br/>Pattern ve yapıyı anla"]
     B --> C{"Test Türü?"}
-    C -->|Unit Test| D["Fonksiyon bazında\nisolation testleri"]
-    C -->|Integration Test| E["Modüller arası\netkileşim testleri"]
-    C -->|E2E Test| F["Uçtan uca\nkullanıcı senaryoları"]
+    C -->|Unit Test| D["Fonksiyon bazında<br/>isolation testleri"]
+    C -->|Integration Test| E["Modüller arası<br/>etkileşim testleri"]
+    C -->|E2E Test| F["Uçtan uca<br/>kullanıcı senaryoları"]
     D --> G["Testleri Çalıştır"]
     E --> G
     F --> G
@@ -79,8 +79,8 @@ TDD döngüsünü Claude Code ile uygulama:
 
 ```mermaid
 flowchart LR
-    A["Red\nBaşarısız test yaz"] --> B["Green\nTesti geçir"]
-    B --> C["Refactor\nKodu iyileştir"]
+    A["Red<br/>Başarısız test yaz"] --> B["Green<br/>Testi geçir"]
+    B --> C["Refactor<br/>Kodu iyileştir"]
     C --> A
 
     style A fill:#E74C3C,color:#fff

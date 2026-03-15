@@ -6,15 +6,15 @@ Claude Code, 30'dan fazla dahili araçla (tool) donatılmış güçlü bir otono
 
 ```mermaid
 flowchart TD
-    A["Araçlara Genel Bakış\n30+ araç kategorileri"] --> B["Dosya İşlemleri\nRead, Write, Edit, Glob, Grep"]
-    B --> C["Kod Çalıştırma — Bash\nShell komutları ve ortam"]
-    C --> D["Web Erişimi\nWebSearch, WebFetch"]
-    D --> E["Görev Yönetimi\nTask araçları"]
-    E --> F["Zamanlanmış Görevler\nCron ve /loop"]
-    F --> G["Kod Zekası — LSP\nTip hataları, navigasyon"]
-    G --> H["Notebook İşlemleri\nJupyter entegrasyonu"]
-    H --> I["Diğer Araçlar\nTodoWrite, MCP, Worktree"]
-    I --> J["İzinler ve Kurallar\nPermission sistemi"]
+    A["Araçlara Genel Bakış<br/>30+ araç kategorileri"] --> B["Dosya İşlemleri<br/>Read, Write, Edit, Glob, Grep"]
+    B --> C["Kod Çalıştırma — Bash<br/>Shell komutları ve ortam"]
+    C --> D["Web Erişimi<br/>WebSearch, WebFetch"]
+    D --> E["Görev Yönetimi<br/>Task araçları"]
+    E --> F["Zamanlanmış Görevler<br/>Cron ve /loop"]
+    F --> G["Kod Zekası — LSP<br/>Tip hataları, navigasyon"]
+    G --> H["Notebook İşlemleri<br/>Jupyter entegrasyonu"]
+    H --> I["Diğer Araçlar<br/>TodoWrite, MCP, Worktree"]
+    I --> J["İzinler ve Kurallar<br/>Permission sistemi"]
 ```
 
 ## İçerik

@@ -51,14 +51,14 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    U["Kullanıcı\n(Tarayıcı)"] -->|"1. Görev tanımla"| WEB["claude.ai/code"]
-    WEB -->|"2. Repo clone"| CLOUD["Bulut Altyapı\n(Güvenli Sandbox)"]
+    U["Kullanıcı<br/>(Tarayıcı)"] -->|"1. Görev tanımla"| WEB["claude.ai/code"]
+    WEB -->|"2. Repo clone"| CLOUD["Bulut Altyapı<br/>(Güvenli Sandbox)"]
     
     subgraph cloud_env ["Bulut Ortam"]
         CLONE["Git Clone"]
-        ENV["Ortam Hazırlığı\n(Dependencies, Tools)"]
-        EXEC["Görev Yürütme\n(Claude Code Agent)"]
-        RESULT["Sonuçlar\n(PR, Rapor, Dosyalar)"]
+        ENV["Ortam Hazırlığı<br/>(Dependencies, Tools)"]
+        EXEC["Görev Yürütme<br/>(Claude Code Agent)"]
+        RESULT["Sonuçlar<br/>(PR, Rapor, Dosyalar)"]
     end
 
     CLOUD --> CLONE --> ENV --> EXEC --> RESULT
@@ -93,9 +93,9 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    A["GitHub/GitLab\nhesabını bağla"] --> B["Repository\nseç"]
-    B --> C["Branch\nseç (opsiyonel)"]
-    C --> D["Görev\ntanımla"]
+    A["GitHub/GitLab<br/>hesabını bağla"] --> B["Repository<br/>seç"]
+    B --> C["Branch<br/>seç (opsiyonel)"]
+    C --> D["Görev<br/>tanımla"]
 
     style A fill:#3B82F6,color:#fff
     style D fill:#10B981,color:#fff
@@ -126,9 +126,9 @@ Büyük görevleri başlatıp, tamamlanmasını beklemeden diğer işlerinize de
 flowchart TB
     subgraph async ["Asenkron İş Akışı"]
         direction LR
-        T1["Sabah\nGörev başlat"]
-        T2["Gün içi\nDiğer işlerle uğraş"]
-        T3["Akşam\nPR'ı incele"]
+        T1["Sabah<br/>Görev başlat"]
+        T2["Gün içi<br/>Diğer işlerle uğraş"]
+        T3["Akşam<br/>PR'ı incele"]
     end
 
     T1 -->|"Claude Code çalışıyor"| T2
@@ -162,9 +162,9 @@ Birden fazla görevi eş zamanlı çalıştırma:
 flowchart TB
     U["Kullanıcı"]
     
-    U --> G1["Görev 1\nFrontend: React 18 → 19 migration"]
-    U --> G2["Görev 2\nBackend: API v2 endpoint'leri"]
-    U --> G3["Görev 3\nDocs: API dokümantasyonu"]
+    U --> G1["Görev 1<br/>Frontend: React 18 → 19 migration"]
+    U --> G2["Görev 2<br/>Backend: API v2 endpoint'leri"]
+    U --> G3["Görev 3<br/>Docs: API dokümantasyonu"]
 
     G1 -->|"~45 dk"| PR1["PR #101"]
     G2 -->|"~30 dk"| PR2["PR #102"]
@@ -287,10 +287,10 @@ Açıklama:
 flowchart TB
     subgraph sandbox ["Güvenli Sandbox"]
         direction TB
-        ISO["🔒 İzole Konteyner\nHer görev ayrı ortam"]
-        NET["🌐 Ağ Kısıtlaması\nSadece gerekli erişimler"]
-        TTL["⏱️ Zaman Limiti\nOtomatik sonlandırma"]
-        CLN["🧹 Temizlik\nGörev sonrası veri silme"]
+        ISO["🔒 İzole Konteyner<br/>Her görev ayrı ortam"]
+        NET["🌐 Ağ Kısıtlaması<br/>Sadece gerekli erişimler"]
+        TTL["⏱️ Zaman Limiti<br/>Otomatik sonlandırma"]
+        CLN["🧹 Temizlik<br/>Görev sonrası veri silme"]
     end
 
     style sandbox fill:#FEF3C7,stroke:#F59E0B

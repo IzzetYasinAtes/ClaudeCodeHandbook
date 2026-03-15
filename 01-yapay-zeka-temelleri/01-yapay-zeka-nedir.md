@@ -55,31 +55,44 @@ timeline
 Yapay zeka geniş bir şemsiye kavramdır. Altında birçok alt dal bulunur:
 
 ```mermaid
-mindmap
-  root((Artificial Intelligence))
-    Machine Learning
-      Supervised Learning
-      Unsupervised Learning
-      Reinforcement Learning
-      Deep Learning
-        CNN
-        RNN
-        Transformer
-    Natural Language Processing
-      Text Classification
-      Sentiment Analysis
-      Machine Translation
-      Text Generation
-    Computer Vision
-      Image Recognition
-      Object Detection
-      Face Recognition
-    Robotics
-      Motion Planning
-      Manipulation
-    Expert Systems
-      Rule-based Systems
-      Knowledge Graphs
+flowchart LR
+    AI((Artificial Intelligence))
+
+    ML[Machine Learning]
+    NLP[Natural Language Processing]
+    CV[Computer Vision]
+    ROB[Robotics]
+    ES[Expert Systems]
+
+    AI --> ML
+    AI --> NLP
+    AI --> CV
+    AI --> ROB
+    AI --> ES
+
+    ML --> SL[Supervised Learning]
+    ML --> UL[Unsupervised Learning]
+    ML --> RL[Reinforcement Learning]
+    ML --> DL[Deep Learning]
+
+    DL --> CNN[CNN]
+    DL --> RNN[RNN]
+    DL --> TF[Transformer]
+
+    NLP --> TC[Text Classification]
+    NLP --> SA[Sentiment Analysis]
+    NLP --> MT[Machine Translation]
+    NLP --> TG[Text Generation]
+
+    CV --> IR[Image Recognition]
+    CV --> OD[Object Detection]
+    CV --> FR[Face Recognition]
+
+    ROB --> MP[Motion Planning]
+    ROB --> MAN[Manipulation]
+
+    ES --> RBS[Rule-based Systems]
+    ES --> KG[Knowledge Graphs]
 ```
 
 ### Önemli alt dallar:
@@ -124,17 +137,17 @@ Yapay zeka, yazılım geliştirme sürecini kökten değiştiriyor:
 ```mermaid
 flowchart LR
     subgraph once ["Geleneksel Geliştirme"]
-        A1["Gereksinim\nAnalizi"] --> A2["Tasarım"]
-        A2 --> A3["Kodlama\n(elle)"]
-        A3 --> A4["Test\n(elle)"]
-        A4 --> A5["Hata Ayıklama\n(elle)"]
+        A1["Gereksinim<br/>Analizi"] --> A2["Tasarım"]
+        A2 --> A3["Kodlama<br/>(elle)"]
+        A3 --> A4["Test<br/>(elle)"]
+        A4 --> A5["Hata Ayıklama<br/>(elle)"]
     end
 
     subgraph simdi ["AI Destekli Geliştirme"]
-        B1["Gereksinim\nAnalizi"] --> B2["AI ile\nTasarım"]
-        B2 --> B3["AI ile\nKodlama"]
-        B3 --> B4["AI ile\nTest Üretme"]
-        B4 --> B5["AI ile\nHata Tespiti"]
+        B1["Gereksinim<br/>Analizi"] --> B2["AI ile<br/>Tasarım"]
+        B2 --> B3["AI ile<br/>Kodlama"]
+        B3 --> B4["AI ile<br/>Test Üretme"]
+        B4 --> B5["AI ile<br/>Hata Tespiti"]
     end
 
     once -.->|"Evrim"| simdi

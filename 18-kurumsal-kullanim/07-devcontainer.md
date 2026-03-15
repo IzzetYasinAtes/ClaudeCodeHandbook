@@ -28,7 +28,7 @@ flowchart TD
         CLAUDE["Claude Code"]
         GIT["Git"]
         TOOLS["Linter, Formatter, vb."]
-        CODE["📁 Proje Kaynak Kodu\n(Volume mount)"]
+        CODE["📁 Proje Kaynak Kodu<br/>(Volume mount)"]
     end
 
     IDE --> |"Remote connection"| container
@@ -56,12 +56,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    JSON["devcontainer.json"] --> IMAGE["image / Dockerfile\nBase image"]
-    JSON --> FEATURES["features\nEklentiler"]
-    JSON --> SETTINGS["customizations\nIDE ayarları"]
-    JSON --> LIFECYCLE["lifecycle hooks\npostCreate, vb."]
-    JSON --> ENVS["containerEnv\nOrtam değişkenleri"]
-    JSON --> MOUNTS["mounts\nVolume bağlantıları"]
+    JSON["devcontainer.json"] --> IMAGE["image / Dockerfile<br/>Base image"]
+    JSON --> FEATURES["features<br/>Eklentiler"]
+    JSON --> SETTINGS["customizations<br/>IDE ayarları"]
+    JSON --> LIFECYCLE["lifecycle hooks<br/>postCreate, vb."]
+    JSON --> ENVS["containerEnv<br/>Ortam değişkenleri"]
+    JSON --> MOUNTS["mounts<br/>Volume bağlantıları"]
 
     style JSON fill:#2C3E50,color:#fff
     style IMAGE fill:#3498DB,color:#fff
@@ -230,8 +230,8 @@ DevContainer, Claude Code için doğal bir sandbox (kum havuzu) ortamı sağlar:
 flowchart TD
     subgraph container_sandbox ["DevContainer Sandbox"]
         CC["Claude Code"]
-        FILES["📁 Proje Dosyaları\n(mount)"]
-        TOOLS["Araçlar\n(npm, git, vb.)"]
+        FILES["📁 Proje Dosyaları<br/>(mount)"]
+        TOOLS["Araçlar<br/>(npm, git, vb.)"]
     end
 
     subgraph host_protected ["Korunan Host Sistemi"]
@@ -273,9 +273,9 @@ GitHub Codespaces, DevContainer'ları bulutta çalıştırır:
 ```mermaid
 flowchart LR
     DEV["Geliştirici"] --> |"codespace oluştur"| GH["GitHub"]
-    GH --> CS["Codespace\n(Cloud VM)"]
-    CS --> DC["DevContainer\n(Docker)"]
-    DC --> CC["Claude Code\nHazır"]
+    GH --> CS["Codespace<br/>(Cloud VM)"]
+    CS --> DC["DevContainer<br/>(Docker)"]
+    DC --> CC["Claude Code<br/>Hazır"]
 
     style DEV fill:#3498DB,color:#fff
     style GH fill:#24292E,color:#fff
@@ -332,7 +332,7 @@ flowchart TD
     CLONE["git clone project"] --> OPEN["VS Code ile aç"]
     OPEN --> DETECT["DevContainer algılandı"]
     DETECT --> BUILD["Container build edilir"]
-    BUILD --> SETUP["postCreateCommand çalışır\n- Claude Code yüklenir\n- Bağımlılıklar yüklenir"]
+    BUILD --> SETUP["postCreateCommand çalışır<br/>- Claude Code yüklenir<br/>- Bağımlılıklar yüklenir"]
     SETUP --> READY["✅ Geliştirme ortamı hazır!"]
     READY --> CLAUDE["claude komutu ile başla"]
 

@@ -18,11 +18,11 @@ Bir sinir ağı, birbirine bağlı "nöron" adı verilen hesaplama birimlerinden
 
 ```mermaid
 flowchart LR
-    X1["Girdi 1\n(x₁)"] -->|"Ağırlık (w₁)"| N["Nöron\nΣ + Aktivasyon"]
-    X2["Girdi 2\n(x₂)"] -->|"Ağırlık (w₂)"| N
-    X3["Girdi 3\n(x₃)"] -->|"Ağırlık (w₃)"| N
-    B["Bias\n(b)"] --> N
-    N --> Y["Çıktı\n(y)"]
+    X1["Girdi 1<br/>(x₁)"] -->|"Ağırlık (w₁)"| N["Nöron<br/>Σ + Aktivasyon"]
+    X2["Girdi 2<br/>(x₂)"] -->|"Ağırlık (w₂)"| N
+    X3["Girdi 3<br/>(x₃)"] -->|"Ağırlık (w₃)"| N
+    B["Bias<br/>(b)"] --> N
+    N --> Y["Çıktı<br/>(y)"]
 ```
 
 **Formül:** `y = aktivasyon(w₁·x₁ + w₂·x₂ + w₃·x₃ + b)`
@@ -35,26 +35,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    subgraph input ["Input Layer\n(Girdi Katmanı)"]
+    subgraph input ["Input Layer<br/>(Girdi Katmanı)"]
         I1["x₁"]
         I2["x₂"]
         I3["x₃"]
     end
 
-    subgraph hidden1 ["Hidden Layer 1\n(Gizli Katman 1)"]
+    subgraph hidden1 ["Hidden Layer 1<br/>(Gizli Katman 1)"]
         H1["n₁"]
         H2["n₂"]
         H3["n₃"]
         H4["n₄"]
     end
 
-    subgraph hidden2 ["Hidden Layer 2\n(Gizli Katman 2)"]
+    subgraph hidden2 ["Hidden Layer 2<br/>(Gizli Katman 2)"]
         H5["n₅"]
         H6["n₆"]
         H7["n₇"]
     end
 
-    subgraph output ["Output Layer\n(Çıktı Katmanı)"]
+    subgraph output ["Output Layer<br/>(Çıktı Katmanı)"]
         O1["y₁"]
         O2["y₂"]
     end
@@ -77,15 +77,15 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A["1. Forward Pass\n(İleri Geçiş)"] --> B["2. Loss Hesaplama\n(Hata Ölçümü)"]
-    B --> C["3. Backpropagation\n(Geri Yayılım)"]
-    C --> D["4. Weight Güncelleme\n(Ağırlık Ayarı)"]
+    A["1. Forward Pass<br/>(İleri Geçiş)"] --> B["2. Loss Hesaplama<br/>(Hata Ölçümü)"]
+    B --> C["3. Backpropagation<br/>(Geri Yayılım)"]
+    C --> D["4. Weight Güncelleme<br/>(Ağırlık Ayarı)"]
     D --> A
 
-    A -.- A1["Girdiyi ağ boyunca ilerlet,\nçıktı üret"]
-    B -.- B1["Üretilen çıktı ile beklenen\nçıktı arasındaki farkı hesapla"]
-    C -.- C1["Hatanın her ağırlığa\nne kadar bağlı olduğunu hesapla"]
-    D -.- D1["Hatayı azaltacak şekilde\nağırlıkları güncelle"]
+    A -.- A1["Girdiyi ağ boyunca ilerlet,<br/>çıktı üret"]
+    B -.- B1["Üretilen çıktı ile beklenen<br/>çıktı arasındaki farkı hesapla"]
+    C -.- C1["Hatanın her ağırlığa<br/>ne kadar bağlı olduğunu hesapla"]
+    D -.- D1["Hatayı azaltacak şekilde<br/>ağırlıkları güncelle"]
 ```
 
 Bu döngü, model yeterli doğruluğa ulaşana kadar milyonlarca kez tekrarlanır.
@@ -130,17 +130,17 @@ RNN, "İstanbul" kelimesini bu kadar uzak mesafede hatırlayamayabilir.
 flowchart TD
     subgraph transformer ["Transformer Mimarisi"]
         subgraph encoder ["Encoder (Kodlayıcı)"]
-            E1["Input Embedding\n+ Positional Encoding"]
-            E2["Multi-Head\nSelf-Attention"]
-            E3["Feed Forward\nNeural Network"]
+            E1["Input Embedding<br/>+ Positional Encoding"]
+            E2["Multi-Head<br/>Self-Attention"]
+            E3["Feed Forward<br/>Neural Network"]
             E1 --> E2 --> E3
         end
         
         subgraph decoder ["Decoder (Kod Çözücü)"]
-            D1["Output Embedding\n+ Positional Encoding"]
-            D2["Masked Multi-Head\nSelf-Attention"]
-            D3["Cross-Attention\n(Encoder'a bakış)"]
-            D4["Feed Forward\nNeural Network"]
+            D1["Output Embedding<br/>+ Positional Encoding"]
+            D2["Masked Multi-Head<br/>Self-Attention"]
+            D3["Cross-Attention<br/>(Encoder'a bakış)"]
+            D4["Feed Forward<br/>Neural Network"]
             D1 --> D2 --> D3 --> D4
         end
         
@@ -208,17 +208,17 @@ Tek bir Attention yerine, birden fazla Attention hesaplaması paralel olarak yap
 
 ```mermaid
 flowchart LR
-    INPUT["Girdi"] --> H1["Head 1\n(Gramer ilişkileri)"]
-    INPUT --> H2["Head 2\n(Anlamsal ilişkiler)"]
-    INPUT --> H3["Head 3\n(Uzak bağımlılıklar)"]
-    INPUT --> H4["Head 4\n(Yerel kalıplar)"]
+    INPUT["Girdi"] --> H1["Head 1<br/>(Gramer ilişkileri)"]
+    INPUT --> H2["Head 2<br/>(Anlamsal ilişkiler)"]
+    INPUT --> H3["Head 3<br/>(Uzak bağımlılıklar)"]
+    INPUT --> H4["Head 4<br/>(Yerel kalıplar)"]
     
-    H1 --> CONCAT["Birleştir\n(Concat)"]
+    H1 --> CONCAT["Birleştir<br/>(Concat)"]
     H2 --> CONCAT
     H3 --> CONCAT
     H4 --> CONCAT
     
-    CONCAT --> OUTPUT["Zengin\nTemsil"]
+    CONCAT --> OUTPUT["Zengin<br/>Temsil"]
 ```
 
 ---
@@ -231,15 +231,15 @@ Transformer mimarisi iki farklı şekilde kullanılır:
 flowchart TD
     TR["Transformer"]
     
-    TR --> ENCODER["Sadece Encoder\n(BERT tarzı)"]
-    TR --> DECODER["Sadece Decoder\n(GPT tarzı)"]
-    TR --> BOTH["Encoder + Decoder\n(T5, BART tarzı)"]
+    TR --> ENCODER["Sadece Encoder<br/>(BERT tarzı)"]
+    TR --> DECODER["Sadece Decoder<br/>(GPT tarzı)"]
+    TR --> BOTH["Encoder + Decoder<br/>(T5, BART tarzı)"]
     
-    ENCODER --> E1["Metin anlama\nSınıflandırma\nSoru cevaplama"]
-    DECODER --> D1["Metin üretme\nKod yazma\nSohbet"]
-    BOTH --> B1["Çeviri\nÖzetleme"]
+    ENCODER --> E1["Metin anlama<br/>Sınıflandırma<br/>Soru cevaplama"]
+    DECODER --> D1["Metin üretme<br/>Kod yazma<br/>Sohbet"]
+    BOTH --> B1["Çeviri<br/>Özetleme"]
     
-    D1 --> LLM["Modern LLM'ler\n(Claude, GPT, Gemini)"]
+    D1 --> LLM["Modern LLM'ler<br/>(Claude, GPT, Gemini)"]
 ```
 
 | Özellik | BERT (Encoder) | GPT (Decoder) |
@@ -303,15 +303,15 @@ Bir modelin "boyutu", sahip olduğu parametre sayısıyla ölçülür. Parametre
 
 ```mermaid
 flowchart TD
-    NN["Neural Network\n(Temel yapı taşı)"] --> DNN["Deep Neural Network\n(Çok katmanlı)"]
-    DNN --> RNN["RNN / LSTM\n(Sıralı işlem - eski)"]
-    DNN --> TR["Transformer\n(Paralel işlem - 2017)"]
+    NN["Neural Network<br/>(Temel yapı taşı)"] --> DNN["Deep Neural Network<br/>(Çok katmanlı)"]
+    DNN --> RNN["RNN / LSTM<br/>(Sıralı işlem - eski)"]
+    DNN --> TR["Transformer<br/>(Paralel işlem - 2017)"]
     
-    TR --> ATT["Self-Attention\n(Her kelime diğerlerine bakar)"]
-    TR --> POS["Positional Encoding\n(Sıra bilgisi)"]
-    TR --> MHA["Multi-Head Attention\n(Farklı açılardan analiz)"]
+    TR --> ATT["Self-Attention<br/>(Her kelime diğerlerine bakar)"]
+    TR --> POS["Positional Encoding<br/>(Sıra bilgisi)"]
+    TR --> MHA["Multi-Head Attention<br/>(Farklı açılardan analiz)"]
     
-    TR --> NTP["Next Token Prediction\n(LLM'lerin çalışma prensibi)"]
+    TR --> NTP["Next Token Prediction<br/>(LLM'lerin çalışma prensibi)"]
 ```
 
 | Kavram | Açıklama |

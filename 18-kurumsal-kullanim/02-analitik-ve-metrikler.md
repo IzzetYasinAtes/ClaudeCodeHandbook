@@ -16,10 +16,10 @@ Claude Code'un kurumsal ortamda etkin kullanılıp kullanılmadığını ölçme
 ```mermaid
 flowchart TD
     subgraph data ["📊 Veri Kaynakları"]
-        USAGE["Kullanım Verileri\nOturum sayısı, süre, token"]
-        COST["Maliyet Verileri\nHarcama, model dağılımı"]
-        ADOPTION["Adopsiyon Verileri\nAktif kullanıcı, sıklık"]
-        VELOCITY["Verimlilik Verileri\nCommit, PR, döngü süresi"]
+        USAGE["Kullanım Verileri<br/>Oturum sayısı, süre, token"]
+        COST["Maliyet Verileri<br/>Harcama, model dağılımı"]
+        ADOPTION["Adopsiyon Verileri<br/>Aktif kullanıcı, sıklık"]
+        VELOCITY["Verimlilik Verileri<br/>Commit, PR, döngü süresi"]
     end
 
     subgraph dashboard ["📈 Analytics Dashboard"]
@@ -58,15 +58,15 @@ flowchart TD
 flowchart LR
     subgraph weekly ["Haftalık Trend"]
         direction TB
-        W1["Hafta 1\n15 oturum/gün"]
-        W2["Hafta 2\n22 oturum/gün"]
-        W3["Hafta 3\n28 oturum/gün"]
-        W4["Hafta 4\n35 oturum/gün"]
+        W1["Hafta 1<br/>15 oturum/gün"]
+        W2["Hafta 2<br/>22 oturum/gün"]
+        W3["Hafta 3<br/>28 oturum/gün"]
+        W4["Hafta 4<br/>35 oturum/gün"]
     end
 
     W1 --> W2 --> W3 --> W4
 
-    W4 --> TREND["📈 Artan Trend\nAdopsiyon başarılı"]
+    W4 --> TREND["📈 Artan Trend<br/>Adopsiyon başarılı"]
 
     style TREND fill:#27AE60,color:#fff
 ```
@@ -80,10 +80,10 @@ Organizasyondaki Claude Code benimseme oranını ölçmek:
 ```mermaid
 flowchart TD
     subgraph adoption ["Adopsiyon Aşamaları"]
-        PILOT["🧪 Pilot\n5-10 kişi\nDeğerlendirme"]
-        EARLY["🌱 Erken Adopsiyon\n%20 ekip\nÖncüler"]
-        GROWTH["📈 Büyüme\n%50 ekip\nYaygınlaşma"]
-        MATURE["🏆 Olgunluk\n%80+ ekip\nStandart araç"]
+        PILOT["🧪 Pilot<br/>5-10 kişi<br/>Değerlendirme"]
+        EARLY["🌱 Erken Adopsiyon<br/>%20 ekip<br/>Öncüler"]
+        GROWTH["📈 Büyüme<br/>%50 ekip<br/>Yaygınlaşma"]
+        MATURE["🏆 Olgunluk<br/>%80+ ekip<br/>Standart araç"]
     end
 
     PILOT --> EARLY --> GROWTH --> MATURE
@@ -129,7 +129,7 @@ flowchart TD
     before --> COMPARE["📊 Karşılaştırma"]
     after --> COMPARE
 
-    COMPARE --> RESULT["✅ %40 hız artışı\n%100 PR artışı\n%50 review iyileşme\n%37 hata azalma"]
+    COMPARE --> RESULT["✅ %40 hız artışı<br/>%100 PR artışı<br/>%50 review iyileşme<br/>%37 hata azalma"]
 
     style before fill:#E74C3C,color:#fff
     style after fill:#27AE60,color:#fff
@@ -188,9 +188,9 @@ Detaylı telemetri için OpenTelemetry entegrasyonu kullanılabilir (bir sonraki
 
 ```mermaid
 flowchart LR
-    CC["Claude Code\nOturumları"] --> OTEL["OpenTelemetry\nCollector"]
-    OTEL --> BACKEND["Analytics Backend\n(Datadog, Grafana, vb.)"]
-    BACKEND --> DASHBOARD["📊 Dashboard\nGörselleştirme"]
+    CC["Claude Code<br/>Oturumları"] --> OTEL["OpenTelemetry<br/>Collector"]
+    OTEL --> BACKEND["Analytics Backend<br/>(Datadog, Grafana, vb.)"]
+    BACKEND --> DASHBOARD["📊 Dashboard<br/>Görselleştirme"]
 
     style CC fill:#3498DB,color:#fff
     style OTEL fill:#F39C12,color:#fff
@@ -217,11 +217,11 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    COST["💰 Aylık Maliyet\nLisans: $2,000\nAPI: $3,400\nToplam: $5,400"] --> ROI["📊 ROI Hesabı"]
+    COST["💰 Aylık Maliyet<br/>Lisans: $2,000<br/>API: $3,400<br/>Toplam: $5,400"] --> ROI["📊 ROI Hesabı"]
 
-    SAVINGS["💎 Aylık Kazanım\nZaman tasarrufu: 320 saat\nSaat değeri: $75\nToplam: $24,000"] --> ROI
+    SAVINGS["💎 Aylık Kazanım<br/>Zaman tasarrufu: 320 saat<br/>Saat değeri: $75<br/>Toplam: $24,000"] --> ROI
 
-    ROI --> RESULT["✅ Net ROI\n$24,000 - $5,400 = $18,600\nROI: %344"]
+    ROI --> RESULT["✅ Net ROI<br/>$24,000 - $5,400 = $18,600<br/>ROI: %344"]
 
     style COST fill:#E74C3C,color:#fff
     style SAVINGS fill:#27AE60,color:#fff

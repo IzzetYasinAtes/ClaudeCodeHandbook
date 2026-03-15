@@ -6,10 +6,10 @@ Claude Code, geliştirme iş akışlarının ötesinde CI/CD pipeline'larına (s
 
 ```mermaid
 flowchart TD
-    A["GitHub Actions\nOtomatik PR, issue çözüm"] --> B["GitLab CI/CD\nPipeline entegrasyonu"]
-    B --> C["Kod İnceleme Otomasyonu\nGüvenlik, logic, regression"]
-    C --> D["Headless Mode ve SDK\nCLI, Python, TypeScript"]
-    D --> E["Otomasyon Tarifleri\nIssue→PR, test, release notes"]
+    A["GitHub Actions<br/>Otomatik PR, issue çözüm"] --> B["GitLab CI/CD<br/>Pipeline entegrasyonu"]
+    B --> C["Kod İnceleme Otomasyonu<br/>Güvenlik, logic, regression"]
+    C --> D["Headless Mode ve SDK<br/>CLI, Python, TypeScript"]
+    D --> E["Otomasyon Tarifleri<br/>Issue→PR, test, release notes"]
 ```
 
 ## İçerik
@@ -27,17 +27,17 @@ flowchart TD
 ```mermaid
 flowchart TB
     subgraph triggers ["Tetikleyiciler"]
-        ISS["GitHub Issue\n📋"]
-        PR_C["PR Comment\n💬"]
-        MR["GitLab MR\n🔀"]
-        SCHED["Zamanlama\n⏰"]
-        CLI_T["CLI / SDK\n💻"]
+        ISS["GitHub Issue<br/>📋"]
+        PR_C["PR Comment<br/>💬"]
+        MR["GitLab MR<br/>🔀"]
+        SCHED["Zamanlama<br/>⏰"]
+        CLI_T["CLI / SDK<br/>💻"]
     end
 
     subgraph claude ["Claude Code"]
-        CC["Claude Code\nAgent"]
-        TOOLS["Araçlar\n(30+)"]
-        AI["AI Analiz\nÇoklu model"]
+        CC["Claude Code<br/>Agent"]
+        TOOLS["Araçlar<br/>(30+)"]
+        AI["AI Analiz<br/>Çoklu model"]
     end
 
     subgraph outputs ["Çıktılar"]

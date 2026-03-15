@@ -23,11 +23,11 @@ flowchart TD
     BENCH --> REASON["Muhakeme"]
     BENCH --> SAFE["Güvenlik"]
     
-    GENEL --> G1["MMLU\nMMLU-Pro"]
-    KOD --> K1["HumanEval\nSWE-bench\nMBPP"]
-    MATH_B --> M1["MATH-500\nGSM8K"]
-    REASON --> R1["GPQA Diamond\nARC-Challenge"]
-    SAFE --> S1["TruthfulQA\nBBQ"]
+    GENEL --> G1["MMLU<br/>MMLU-Pro"]
+    KOD --> K1["HumanEval<br/>SWE-bench<br/>MBPP"]
+    MATH_B --> M1["MATH-500<br/>GSM8K"]
+    REASON --> R1["GPQA Diamond<br/>ARC-Challenge"]
+    SAFE --> S1["TruthfulQA<br/>BBQ"]
 ```
 
 ---
@@ -127,9 +127,9 @@ Modelin ne sıklıkla yanlış bilgi "uydurduğu".
 ```mermaid
 flowchart LR
     subgraph halluc ["Hallucination Oranları (Mart 2026)"]
-        CL["Claude 4.6\n%2.8"]
-        GPT["GPT-5.4\n~%4"]
-        GEM["Gemini 3.1\n~%5"]
+        CL["Claude 4.6<br/>%2.8"]
+        GPT["GPT-5.4<br/>~%4"]
+        GEM["Gemini 3.1<br/>~%5"]
     end
 ```
 

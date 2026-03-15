@@ -25,20 +25,20 @@ flowchart TD
 
     subgraph events ["Event (Olay)"]
         direction TB
-        EVT["PostToolUse\nPreToolUse\nSessionStart\n..."]
+        EVT["PostToolUse<br/>PreToolUse<br/>SessionStart<br/>..."]
     end
 
     subgraph hookGroup ["Hook Group (Kanca Grubu)"]
         direction TB
-        MATCHER["matcher (opsiyonel)\nAraç adı filtresi"]
-        HOOKS_ARR["hooks[]\nKanca dizisi"]
+        MATCHER["matcher (opsiyonel)<br/>Araç adı filtresi"]
+        HOOKS_ARR["hooks[]<br/>Kanca dizisi"]
     end
 
     subgraph hookDef ["Hook Definition (Kanca Tanımı)"]
         direction TB
-        TYPE["type\ncommand | http | prompt | mcp_tool"]
-        CMD["command / url / prompt\nÇalıştırılacak eylem"]
-        OPTS["timeout_ms, async, ...\nOpsiyonel ayarlar"]
+        TYPE["type<br/>command | http | prompt | mcp_tool"]
+        CMD["command / url / prompt<br/>Çalıştırılacak eylem"]
+        OPTS["timeout_ms, async, ...<br/>Opsiyonel ayarlar"]
     end
 
     root --> events --> hookGroup --> hookDef
@@ -328,15 +328,15 @@ Hook'lar üç farklı kapsamda tanımlanabilir:
 flowchart TD
     subgraph hierarchy ["Hook Kapsam Hiyerarşisi"]
         direction TB
-        USER["👤 User (Kullanıcı) Kapsamı\n~/.claude/settings.json\nTüm projelerinizde geçerli"]
-        PROJECT["📁 Project (Proje) Kapsamı\n.claude/settings.json\nSadece bu projede geçerli"]
-        LOCAL["🔒 Local (Yerel) Kapsamı\n.claude/settings.local.json\nSadece sizin makinenizde, git'e eklenmez"]
+        USER["👤 User (Kullanıcı) Kapsamı<br/>~/.claude/settings.json<br/>Tüm projelerinizde geçerli"]
+        PROJECT["📁 Project (Proje) Kapsamı<br/>.claude/settings.json<br/>Sadece bu projede geçerli"]
+        LOCAL["🔒 Local (Yerel) Kapsamı<br/>.claude/settings.local.json<br/>Sadece sizin makinenizde, git'e eklenmez"]
     end
 
     USER --> PROJECT --> LOCAL
 
     subgraph merge ["Birleştirme Kuralı"]
-        RULE["Daha dar kapsam → daha yüksek öncelik\nAynı olay + matcher = local kazanır"]
+        RULE["Daha dar kapsam → daha yüksek öncelik<br/>Aynı olay + matcher = local kazanır"]
     end
 
     LOCAL --> merge

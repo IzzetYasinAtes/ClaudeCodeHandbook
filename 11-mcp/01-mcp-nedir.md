@@ -20,15 +20,15 @@ Telefonlar, dizüstü bilgisayarlar ve tabletler bir dönemde farklı şarj ve v
 flowchart LR
     subgraph eski ["USB-C Öncesi (Eski Dünya)"]
         direction TB
-        E1["Micro-USB\n(Android)"]
-        E2["Lightning\n(iPhone)"]
-        E3["USB-A\n(PC)"]
-        E4["Barrel Jack\n(Laptop)"]
+        E1["Micro-USB<br/>(Android)"]
+        E2["Lightning<br/>(iPhone)"]
+        E3["USB-A<br/>(PC)"]
+        E4["Barrel Jack<br/>(Laptop)"]
     end
 
     subgraph yeni ["USB-C Sonrası"]
         direction TB
-        Y1["USB-C\n(Hepsi için tek kablo)"]
+        Y1["USB-C<br/>(Hepsi için tek kablo)"]
     end
 
     subgraph ai_eski ["MCP Öncesi"]
@@ -41,7 +41,7 @@ flowchart LR
 
     subgraph ai_yeni ["MCP Sonrası"]
         direction TB
-        B1["MCP\n(Hepsi için tek protokol)"]
+        B1["MCP<br/>(Hepsi için tek protokol)"]
     end
 
     eski -.->|"Benzetme"| ai_eski
@@ -98,13 +98,13 @@ flowchart TD
         M3["Gemini"]
     end
 
-    MCP_LAYER["MCP Protokolü\n(Evrensel Standart)"]
+    MCP_LAYER["MCP Protokolü<br/>(Evrensel Standart)"]
 
     subgraph sunucular ["MCP Sunucuları"]
-        S1["GitHub\nMCP Server"]
-        S2["Slack\nMCP Server"]
-        S3["PostgreSQL\nMCP Server"]
-        S4["Google Drive\nMCP Server"]
+        S1["GitHub<br/>MCP Server"]
+        S2["Slack<br/>MCP Server"]
+        S3["PostgreSQL<br/>MCP Server"]
+        S4["Google Drive<br/>MCP Server"]
     end
 
     M1 --> MCP_LAYER
@@ -130,7 +130,7 @@ MCP, klasik bir **client-server** (istemci-sunucu) mimarisi kullanır. Bu mimari
 ```mermaid
 flowchart LR
     subgraph host ["Host (Ana Uygulama)"]
-        H["Claude Code\n(Terminal)"]
+        H["Claude Code<br/>(Terminal)"]
     end
 
     subgraph clients ["MCP Client'ları"]
@@ -140,18 +140,18 @@ flowchart LR
     end
 
     subgraph servers ["MCP Server'ları"]
-        S1["GitHub\nServer"]
-        S2["Slack\nServer"]
-        S3["PostgreSQL\nServer"]
+        S1["GitHub<br/>Server"]
+        S2["Slack<br/>Server"]
+        S3["PostgreSQL<br/>Server"]
     end
 
     H --> C1
     H --> C2
     H --> C3
 
-    C1 <-->|"JSON-RPC 2.0\n(stdio)"| S1
-    C2 <-->|"JSON-RPC 2.0\n(stdio)"| S2
-    C3 <-->|"JSON-RPC 2.0\n(SSE)"| S3
+    C1 <-->|"JSON-RPC 2.0<br/>(stdio)"| S1
+    C2 <-->|"JSON-RPC 2.0<br/>(stdio)"| S2
+    C3 <-->|"JSON-RPC 2.0<br/>(SSE)"| S3
 
     style host fill:#4A90D9,color:#fff
     style clients fill:#F39C12,color:#fff
@@ -214,13 +214,13 @@ MCP iki ana taşıma yöntemi destekler:
 flowchart TD
     subgraph stdio_transport ["stdio Transport"]
         direction LR
-        CC1["Claude Code"] -->|"stdin"| SP["MCP Server\n(Yerel süreç)"]
+        CC1["Claude Code"] -->|"stdin"| SP["MCP Server<br/>(Yerel süreç)"]
         SP -->|"stdout"| CC1
     end
 
     subgraph sse_transport ["SSE Transport"]
         direction LR
-        CC2["Claude Code"] -->|"HTTP POST"| RS["MCP Server\n(Uzak URL)"]
+        CC2["Claude Code"] -->|"HTTP POST"| RS["MCP Server<br/>(Uzak URL)"]
         RS -->|"SSE stream"| CC2
     end
 
@@ -236,13 +236,13 @@ Bir MCP sunucusu üç tür yetenek sunabilir:
 
 ```mermaid
 flowchart LR
-    MCP["MCP Server"] --> T["Tools\n(Araçlar)"]
-    MCP --> R["Resources\n(Kaynaklar)"]
-    MCP --> P["Prompts\n(Şablonlar)"]
+    MCP["MCP Server"] --> T["Tools<br/>(Araçlar)"]
+    MCP --> R["Resources<br/>(Kaynaklar)"]
+    MCP --> P["Prompts<br/>(Şablonlar)"]
 
-    T --> T1["Fonksiyonlar\nModel tarafından çağrılır"]
-    R --> R1["Veri kaynakları\nDosya benzeri veriler"]
-    P --> P1["Hazır şablonlar\nKullanıcı tetikler"]
+    T --> T1["Fonksiyonlar<br/>Model tarafından çağrılır"]
+    R --> R1["Veri kaynakları<br/>Dosya benzeri veriler"]
+    P --> P1["Hazır şablonlar<br/>Kullanıcı tetikler"]
 
     style T fill:#4A90D9,color:#fff
     style R fill:#27AE60,color:#fff
@@ -344,14 +344,14 @@ def create_github_issue(owner, repo, title, body):
 ```mermaid
 flowchart TD
     subgraph problem ["Problem: Bir Bug Düzeltme Akışı (MCP Öncesi)"]
-        P1["1. GitHub'da issue oku\n(Tarayıcıya geç)"] --> P2["2. Slack'te tartışmayı bul\n(Başka bir sekmede)"]
-        P2 --> P3["3. Veritabanı şemasına bak\n(Terminal aç, psql bağlan)"]
-        P3 --> P4["4. Kodu düzenle\n(IDE'ye dön)"]
-        P4 --> P5["5. PR oluştur\n(Tarayıcıya tekrar geç)"]
+        P1["1. GitHub'da issue oku<br/>(Tarayıcıya geç)"] --> P2["2. Slack'te tartışmayı bul<br/>(Başka bir sekmede)"]
+        P2 --> P3["3. Veritabanı şemasına bak<br/>(Terminal aç, psql bağlan)"]
+        P3 --> P4["4. Kodu düzenle<br/>(IDE'ye dön)"]
+        P4 --> P5["5. PR oluştur<br/>(Tarayıcıya tekrar geç)"]
     end
 
     subgraph cozum ["Çözüm: Aynı Akış (MCP ile)"]
-        C1["Claude Code tek arayüzden\nher şeyi yapar"]
+        C1["Claude Code tek arayüzden<br/>her şeyi yapar"]
         C1 --> C2["GitHub issue → MCP"]
         C1 --> C3["Slack mesaj → MCP"]
         C1 --> C4["PostgreSQL → MCP"]

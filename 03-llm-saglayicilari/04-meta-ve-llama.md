@@ -22,10 +22,10 @@ flowchart TD
     S --> E3["Standart Belirleme"]
     S --> E4["Maliyetleri Paylaşma"]
 
-    E1 --> E1D["Binlerce geliştirici\nLlama üzerine projeler inşa eder"]
-    E2 --> E2D["En iyi AI araştırmacıları\naçık projelere katılmak ister"]
-    E3 --> E3D["Llama standardı yayılırsa\nMeta ekosisteminin merkezi olur"]
-    E4 --> E4D["Topluluk katkıları ile\nmodel geliştirme maliyeti düşer"]
+    E1 --> E1D["Binlerce geliştirici<br/>Llama üzerine projeler inşa eder"]
+    E2 --> E2D["En iyi AI araştırmacıları<br/>açık projelere katılmak ister"]
+    E3 --> E3D["Llama standardı yayılırsa<br/>Meta ekosisteminin merkezi olur"]
+    E4 --> E4D["Topluluk katkıları ile<br/>model geliştirme maliyeti düşer"]
 
     style S fill:#0668E1,color:#fff
 ```
@@ -40,14 +40,14 @@ Meta'nın AI araştırma bölümü **FAIR** (Fundamental AI Research), 2013'ten 
 
 ```mermaid
 flowchart LR
-    L1["Llama 1\n(Şubat 2023)\n7B - 65B\nAraştırma lisansı"]
-    L2["Llama 2\n(Temmuz 2023)\n7B - 70B\nTicari lisans"]
-    L3["Llama 3\n(Nisan 2024)\n8B - 405B\nGelişmiş yetenek"]
-    L4["Llama 4\n(2025-2026)\nScout & Maverick\nMoE mimarisi"]
+    L1["Llama 1<br/>(Şubat 2023)<br/>7B - 65B<br/>Araştırma lisansı"]
+    L2["Llama 2<br/>(Temmuz 2023)<br/>7B - 70B<br/>Ticari lisans"]
+    L3["Llama 3<br/>(Nisan 2024)<br/>8B - 405B<br/>Gelişmiş yetenek"]
+    L4["Llama 4<br/>(2025-2026)<br/>Scout & Maverick<br/>MoE mimarisi"]
 
-    L1 -->|"Ticari kullanıma\naçıldı"| L2
-    L2 -->|"405B parametre\nile büyük sıçrama"| L3
-    L3 -->|"MoE mimarisi\nve dev context"| L4
+    L1 -->|"Ticari kullanıma<br/>açıldı"| L2
+    L2 -->|"405B parametre<br/>ile büyük sıçrama"| L3
+    L3 -->|"MoE mimarisi<br/>ve dev context"| L4
 
     style L4 fill:#0668E1,color:#fff
 ```
@@ -74,12 +74,12 @@ Llama 4, Meta'nın **Mixture of Experts (MoE)** mimarisine geçiş yaptığı il
 ```mermaid
 flowchart TD
     subgraph dense ["Dense (Yoğun) Model - Geleneksel"]
-        D_IN["Giriş"] --> D_ALL["Tüm parametreler\nher token için çalışır\n(405B hepsi aktif)"]
+        D_IN["Giriş"] --> D_ALL["Tüm parametreler<br/>her token için çalışır<br/>(405B hepsi aktif)"]
         D_ALL --> D_OUT["Çıkış"]
     end
 
     subgraph moe ["MoE (Mixture of Experts) - Llama 4"]
-        M_IN["Giriş"] --> ROUTER["Router\n(Yönlendirici)"]
+        M_IN["Giriş"] --> ROUTER["Router<br/>(Yönlendirici)"]
         ROUTER --> E1["Expert 1 ✓"]
         ROUTER --> E2["Expert 2"]
         ROUTER --> E3["Expert 3 ✓"]
@@ -123,17 +123,17 @@ MoE'de her token yalnızca birkaç "uzman" (expert) tarafından işlenir. Toplam
 ```mermaid
 flowchart LR
     subgraph scout ["Llama 4 Scout"]
-        S1["109B toplam\n17B aktif"]
+        S1["109B toplam<br/>17B aktif"]
         S2["16 expert"]
         S3["10M context ⭐"]
-        S4["Uzun bağlam\nuzmanı"]
+        S4["Uzun bağlam<br/>uzmanı"]
     end
 
     subgraph maverick ["Llama 4 Maverick"]
-        M1["400B toplam\n17B aktif"]
+        M1["400B toplam<br/>17B aktif"]
         M2["128 expert"]
         M3["1M context"]
-        M4["Genel amaçlı\nen iyi kalite"]
+        M4["Genel amaçlı<br/>en iyi kalite"]
     end
 
     style S3 fill:#ff922b,color:#fff
@@ -158,11 +158,11 @@ Llama modelleri, Meta'nın **özel açık kaynak lisansı** altında yayınlanı
 
 ```mermaid
 flowchart TD
-    Q["Llama'yı ticari olarak\nkullanabilir miyim?"]
-    Q --> Q1{"Aylık aktif\nkullanıcınız 700M'dan\naz mı?"}
-    Q1 -->|Evet| OK["✅ Ücretsiz kullanabilirsiniz\n(Lisans koşullarına uyarak)"]
-    Q1 -->|Hayır| META["📧 Meta ile özel lisans\ngörüşmesi gerekir"]
-    OK --> Q2{"Yasaklı bir alanda mı\nkullanacaksınız?"}
+    Q["Llama'yı ticari olarak<br/>kullanabilir miyim?"]
+    Q --> Q1{"Aylık aktif<br/>kullanıcınız 700M'dan<br/>az mı?"}
+    Q1 -->|Evet| OK["✅ Ücretsiz kullanabilirsiniz<br/>(Lisans koşullarına uyarak)"]
+    Q1 -->|Hayır| META["📧 Meta ile özel lisans<br/>görüşmesi gerekir"]
+    OK --> Q2{"Yasaklı bir alanda mı<br/>kullanacaksınız?"}
     Q2 -->|Hayır| DEVAM["✅ Devam edin"]
     Q2 -->|Evet| YASAK["❌ Lisans bunu yasaklar"]
 
@@ -180,12 +180,12 @@ Llama'nın açık kaynak olması, etrafında büyük bir ekosistem oluşmasını
 
 ```mermaid
 flowchart TD
-    LLAMA["Llama 4\n(Temel Model)"]
+    LLAMA["Llama 4<br/>(Temel Model)"]
 
-    LLAMA --> FT["Fine-tuning\n(İnce Ayar)"]
-    LLAMA --> QT["Quantization\n(Nicemleme)"]
+    LLAMA --> FT["Fine-tuning<br/>(İnce Ayar)"]
+    LLAMA --> QT["Quantization<br/>(Nicemleme)"]
     LLAMA --> FR["Framework'ler"]
-    LLAMA --> HOST["Hosting\n(Barındırma)"]
+    LLAMA --> HOST["Hosting<br/>(Barındırma)"]
 
     FT --> FT1["LoRA / QLoRA"]
     FT --> FT2["Unsloth"]
@@ -195,9 +195,9 @@ flowchart TD
     QT --> QT2["GPTQ"]
     QT --> QT3["AWQ"]
 
-    FR --> FR1["Hugging Face\nTransformers"]
+    FR --> FR1["Hugging Face<br/>Transformers"]
     FR --> FR2["vLLM"]
-    FR --> FR3["Ollama\n(Lokal çalıştırma)"]
+    FR --> FR3["Ollama<br/>(Lokal çalıştırma)"]
 
     HOST --> HOST1["AWS Bedrock"]
     HOST --> HOST2["Azure ML"]

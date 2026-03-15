@@ -19,19 +19,19 @@ Varsayılan davranışta Claude Code, oturum başladığında tüm MCP sunucular
 ```mermaid
 flowchart TD
     subgraph eager ["Eager Loading (Varsayılan)"]
-        START["Oturum Başlıyor"] --> LOAD_ALL["TÜM araç tanımları\ncontext window'a yükleniyor"]
+        START["Oturum Başlıyor"] --> LOAD_ALL["TÜM araç tanımları<br/>context window'a yükleniyor"]
         LOAD_ALL --> CTX["Context Window"]
 
-        CTX --> T1["GitHub: 12 araç tanımı\n~2400 token"]
-        CTX --> T2["Slack: 7 araç tanımı\n~1400 token"]
-        CTX --> T3["PostgreSQL: 3 araç tanımı\n~600 token"]
-        CTX --> T4["Puppeteer: 7 araç tanımı\n~1400 token"]
-        CTX --> T5["Jira: 15 araç tanımı\n~3000 token"]
-        CTX --> T6["Linear: 8 araç tanımı\n~1600 token"]
-        CTX --> T7["Notion: 10 araç tanımı\n~2000 token"]
-        CTX --> T8["MongoDB: 5 araç tanımı\n~1000 token"]
+        CTX --> T1["GitHub: 12 araç tanımı<br/>~2400 token"]
+        CTX --> T2["Slack: 7 araç tanımı<br/>~1400 token"]
+        CTX --> T3["PostgreSQL: 3 araç tanımı<br/>~600 token"]
+        CTX --> T4["Puppeteer: 7 araç tanımı<br/>~1400 token"]
+        CTX --> T5["Jira: 15 araç tanımı<br/>~3000 token"]
+        CTX --> T6["Linear: 8 araç tanımı<br/>~1600 token"]
+        CTX --> T7["Notion: 10 araç tanımı<br/>~2000 token"]
+        CTX --> T8["MongoDB: 5 araç tanımı<br/>~1000 token"]
 
-        TOTAL["Toplam: ~13.400 token\nsadece araç tanımları için! 😰"]
+        TOTAL["Toplam: ~13.400 token<br/>sadece araç tanımları için! 😰"]
     end
 
     style eager fill:#f8d7da,stroke:#dc3545
@@ -49,16 +49,16 @@ Tool Search etkinleştirildiğinde, araç tanımları bağlama yüklenmez. Bunun
 ```mermaid
 flowchart TD
     subgraph deferred ["Deferred Loading (Tool Search ile)"]
-        START["Oturum Başlıyor"] --> INDEX["Araç tanımları\nindeksleniyor\n(bağlama yüklenmez)"]
+        START["Oturum Başlıyor"] --> INDEX["Araç tanımları<br/>indeksleniyor<br/>(bağlama yüklenmez)"]
         INDEX --> SMALL_CTX["Context Window"]
 
-        SMALL_CTX --> TS["ToolSearch aracı\n~200 token"]
+        SMALL_CTX --> TS["ToolSearch aracı<br/>~200 token"]
 
-        USER["Kullanıcı: 'GitHub issue listele'"] --> SEARCH["ToolSearch:\n'github issue' araması"]
-        SEARCH --> FOUND["Bulunan: list_issues,\nget_issue, create_issue"]
-        FOUND --> LOAD["Sadece bu 3 araç\nbağlama yükleniyor\n~600 token"]
+        USER["Kullanıcı: 'GitHub issue listele'"] --> SEARCH["ToolSearch:<br/>'github issue' araması"]
+        SEARCH --> FOUND["Bulunan: list_issues,<br/>get_issue, create_issue"]
+        FOUND --> LOAD["Sadece bu 3 araç<br/>bağlama yükleniyor<br/>~600 token"]
 
-        TOTAL2["Toplam: ~800 token\n%94 tasarruf! 🚀"]
+        TOTAL2["Toplam: ~800 token<br/>%94 tasarruf! 🚀"]
     end
 
     style deferred fill:#d4edda,stroke:#28a745
@@ -74,9 +74,9 @@ flowchart LR
     subgraph eager ["Eager Loading"]
         direction TB
         E_START["Oturum başlangıcı"]
-        E_LOAD["67 araç tanımı yüklendi\n~13.400 token"]
-        E_USE["Kullanıcı 3 araç kullandı\n~600 token faydalı"]
-        E_WASTE["64 araç = ~12.800 token\nboşa gitti 😰"]
+        E_LOAD["67 araç tanımı yüklendi<br/>~13.400 token"]
+        E_USE["Kullanıcı 3 araç kullandı<br/>~600 token faydalı"]
+        E_WASTE["64 araç = ~12.800 token<br/>boşa gitti 😰"]
 
         E_START --> E_LOAD --> E_USE --> E_WASTE
     end
@@ -84,9 +84,9 @@ flowchart LR
     subgraph deferred ["Deferred Loading"]
         direction TB
         D_START["Oturum başlangıcı"]
-        D_INDEX["67 araç indekslendi\n~200 token (ToolSearch)"]
-        D_SEARCH["Arama: 3 araç bulundu\n~600 token yüklendi"]
-        D_TOTAL["Toplam: ~800 token\n%94 tasarruf 🚀"]
+        D_INDEX["67 araç indekslendi<br/>~200 token (ToolSearch)"]
+        D_SEARCH["Arama: 3 araç bulundu<br/>~600 token yüklendi"]
+        D_TOTAL["Toplam: ~800 token<br/>%94 tasarruf 🚀"]
 
         D_START --> D_INDEX --> D_SEARCH --> D_TOTAL
     end
@@ -301,16 +301,16 @@ $ claude
 flowchart TD
     subgraph claudecode ["Claude Code"]
         CC["Ana Motor"]
-        TS["ToolSearch\nAracı"]
-        IDX["Araç İndeksi\n(Düşük token maliyeti)"]
+        TS["ToolSearch<br/>Aracı"]
+        IDX["Araç İndeksi<br/>(Düşük token maliyeti)"]
         CTX["Context Window"]
     end
 
     subgraph mcpservers ["MCP Sunucuları"]
-        S1["GitHub\n12 araç"]
-        S2["Slack\n7 araç"]
-        S3["PostgreSQL\n3 araç"]
-        S4["...diğer\nN araç"]
+        S1["GitHub<br/>12 araç"]
+        S2["Slack<br/>7 araç"]
+        S3["PostgreSQL<br/>3 araç"]
+        S4["...diğer<br/>N araç"]
     end
 
     S1 -->|"Araç listesi"| IDX

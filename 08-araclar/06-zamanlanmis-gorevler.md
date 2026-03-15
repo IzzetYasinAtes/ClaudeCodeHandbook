@@ -61,13 +61,13 @@ Claude Code üç adet Cron aracı sunar:
 ```mermaid
 flowchart TD
     CREATE["CronCreate"] --> TYPE{"Tür?"}
-    TYPE -->|"Tekrarlayan"| RECURRING["Cron ifadesiyle\nperiyodik çalışma"]
-    TYPE -->|"Tek seferlik"| ONESHOT["one_shot=true\nBir kez çalış"]
+    TYPE -->|"Tekrarlayan"| RECURRING["Cron ifadesiyle<br/>periyodik çalışma"]
+    TYPE -->|"Tek seferlik"| ONESHOT["one_shot=true<br/>Bir kez çalış"]
 
-    RECURRING --> EXEC["Her tetiklemede\ngörev prompt'u çalışır"]
+    RECURRING --> EXEC["Her tetiklemede<br/>görev prompt'u çalışır"]
     EXEC --> EXEC
 
-    ONESHOT --> ONCE["Belirtilen zamanda\nbir kez çalışır"]
+    ONESHOT --> ONCE["Belirtilen zamanda<br/>bir kez çalışır"]
     ONCE --> DONE["Tamamlandı"]
 
     EXEC --> |"Oturum kapanırsa"| END["Cron sonlanır"]
@@ -151,14 +151,14 @@ CronList()
 flowchart TD
     LOOP["/loop komutu"] --> TYPE{"Döngü türü?"}
     TYPE -->|"Sayı bazlı"| COUNT["N kez tekrarla"]
-    TYPE -->|"Koşul bazlı"| CONDITION["Koşul sağlanana\nkadar tekrarla"]
+    TYPE -->|"Koşul bazlı"| CONDITION["Koşul sağlanana<br/>kadar tekrarla"]
 
     COUNT --> EXEC["Görevi çalıştır"]
     CONDITION --> EXEC
 
-    EXEC --> CHECK{"Devam\nedilsin mi?"}
-    CHECK -->|"Sayı dolmadı /\nKoşul sağlanmadı"| EXEC
-    CHECK -->|"Sayı doldu /\nKoşul sağlandı"| DONE["Tamamlandı"]
+    EXEC --> CHECK{"Devam<br/>edilsin mi?"}
+    CHECK -->|"Sayı dolmadı /<br/>Koşul sağlanmadı"| EXEC
+    CHECK -->|"Sayı doldu /<br/>Koşul sağlandı"| DONE["Tamamlandı"]
 ```
 
 ### /loop Kullanım Örnekleri

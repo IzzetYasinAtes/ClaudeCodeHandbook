@@ -26,7 +26,7 @@ flowchart LR
 
     subgraph sonrasi ["CLAUDE.md İle"]
         direction TB
-        S1["CLAUDE.md:\n'TypeScript kullan'"]
+        S1["CLAUDE.md:<br/>'TypeScript kullan'"]
         S2["Oturum 1: ✅ Otomatik"]
         S3["Oturum 2: ✅ Otomatik"]
         S4["Oturum 3: ✅ Otomatik"]
@@ -48,10 +48,10 @@ CLAUDE.md dosyası birden fazla konuma yerleştirilebilir. Her konum farklı bir
 flowchart TD
     subgraph hierarchy ["CLAUDE.md Kapsam Hiyerarşisi"]
         direction TB
-        ORG["🏢 Enterprise (Organizasyon)\n~/.claude/organization/CLAUDE.md\nTüm kullanıcılar için geçerli"]
-        USER["👤 User (Kullanıcı)\n~/.claude/CLAUDE.md\nTüm projelerinizde geçerli"]
-        PROJ["📁 Project (Proje Kökü)\n./CLAUDE.md veya ./.claude/CLAUDE.md\nBu projede geçerli"]
-        SUB["📂 Subdirectory (Alt Dizin)\nsrc/api/CLAUDE.md\nSadece o dizinde geçerli"]
+        ORG["🏢 Enterprise (Organizasyon)<br/>~/.claude/organization/CLAUDE.md<br/>Tüm kullanıcılar için geçerli"]
+        USER["👤 User (Kullanıcı)<br/>~/.claude/CLAUDE.md<br/>Tüm projelerinizde geçerli"]
+        PROJ["📁 Project (Proje Kökü)<br/>./CLAUDE.md veya ./.claude/CLAUDE.md<br/>Bu projede geçerli"]
+        SUB["📂 Subdirectory (Alt Dizin)<br/>src/api/CLAUDE.md<br/>Sadece o dizinde geçerli"]
     end
 
     ORG --> USER --> PROJ --> SUB
@@ -59,7 +59,7 @@ flowchart TD
     LOAD["Oturum Başlangıcı"] --> ORG
     LOAD --> USER
     LOAD --> PROJ
-    SUB -.->|"İstek üzerine\nyüklenir"| ONDEMAND["İlgili dizine\ngirildiğinde yüklenir"]
+    SUB -.->|"İstek üzerine<br/>yüklenir"| ONDEMAND["İlgili dizine<br/>girildiğinde yüklenir"]
 
     style ORG fill:#9B59B6,color:#fff
     style USER fill:#3498DB,color:#fff
@@ -85,28 +85,33 @@ flowchart TD
 Etkili bir CLAUDE.md dosyası şu kategorilerden bilgiler içerir:
 
 ```mermaid
-mindmap
-  root(("CLAUDE.md\nİçeriği"))
-    Kodlama Standartları
-      Dil tercihleri
-      Linting kuralları
-      İsimlendirme kuralları
-      Import sıralaması
-    Mimari Notlar
-      Dizin yapısı
-      Kullanılan pattern'ler
-      Veritabanı şeması
-      API yapısı
-    İş Akışları
-      Build komutları
-      Test komutları
-      Deploy süreci
-      PR kuralları
-    Proje Bağlamı
-      Teknoloji stack'i
-      Üçüncü parti servisler
-      Ortam değişkenleri
-      Bilinen sorunlar
+flowchart LR
+    ROOT(("CLAUDE.md<br/>İçeriği"))
+
+    ROOT --> KS["Kodlama Standartları"]
+    ROOT --> MN["Mimari Notlar"]
+    ROOT --> IA["İş Akışları"]
+    ROOT --> PB["Proje Bağlamı"]
+
+    KS --> KS1["Dil tercihleri"]
+    KS --> KS2["Linting kuralları"]
+    KS --> KS3["İsimlendirme kuralları"]
+    KS --> KS4["Import sıralaması"]
+
+    MN --> MN1["Dizin yapısı"]
+    MN --> MN2["Kullanılan pattern'ler"]
+    MN --> MN3["Veritabanı şeması"]
+    MN --> MN4["API yapısı"]
+
+    IA --> IA1["Build komutları"]
+    IA --> IA2["Test komutları"]
+    IA --> IA3["Deploy süreci"]
+    IA --> IA4["PR kuralları"]
+
+    PB --> PB1["Teknoloji stack'i"]
+    PB --> PB2["Üçüncü parti servisler"]
+    PB --> PB3["Ortam değişkenleri"]
+    PB --> PB4["Bilinen sorunlar"]
 ```
 
 ---
@@ -248,10 +253,10 @@ CLAUDE.md boyutu doğrudan performansı etkiler:
 flowchart LR
     subgraph boyut ["CLAUDE.md Boyut Rehberi"]
         direction TB
-        IDEAL["✅ İdeal: 50-150 satır\nOdaklı, net kurallar"]
-        OK["⚠️ Kabul edilebilir: 150-200 satır\nDetaylı ama yönetilebilir"]
-        FAZLA["❌ Çok fazla: 200-300 satır\nTakip oranı düşer"]
-        ASIRI["🚫 Aşırı: 300+ satır\nKurallar göz ardı edilir"]
+        IDEAL["✅ İdeal: 50-150 satır<br/>Odaklı, net kurallar"]
+        OK["⚠️ Kabul edilebilir: 150-200 satır<br/>Detaylı ama yönetilebilir"]
+        FAZLA["❌ Çok fazla: 200-300 satır<br/>Takip oranı düşer"]
+        ASIRI["🚫 Aşırı: 300+ satır<br/>Kurallar göz ardı edilir"]
     end
 
     IDEAL --> OK --> FAZLA --> ASIRI

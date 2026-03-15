@@ -16,18 +16,18 @@ Claude Code, **WebSearch** ve **WebFetch** araçlarıyla web'den gerçek zamanl�
 ```mermaid
 flowchart LR
     subgraph search ["WebSearch"]
-        S1["Anahtar kelime\nile arama"]
-        S2["Sonuç özetleri\nve URL'ler"]
+        S1["Anahtar kelime<br/>ile arama"]
+        S2["Sonuç özetleri<br/>ve URL'ler"]
     end
 
     subgraph fetch ["WebFetch"]
         F1["URL belirt"]
-        F2["İçeriği markdown\nolarak çek"]
+        F2["İçeriği markdown<br/>olarak çek"]
     end
 
     USER["Kullanıcı isteği"] --> search
     search -->|"Uygun URL bul"| fetch
-    fetch --> RESULT["İçeriği analiz et\nve kullan"]
+    fetch --> RESULT["İçeriği analiz et<br/>ve kullan"]
 ```
 
 | Araç | İşlev | İzin |
@@ -52,9 +52,9 @@ flowchart LR
 ```mermaid
 flowchart TD
     SORU["Kullanıcı sorusu"] --> TIP{"Bilgi türü?"}
-    TIP -->|"Güncel bilgi\n(API sürümleri, haberler)"| SEARCH["WebSearch ✅"]
-    TIP -->|"Statik bilgi\n(temel kavramlar)"| NOTSEARCH["Model bilgisi yeterli ❌"]
-    TIP -->|"Belirli sayfa\n(URL biliniyor)"| FETCH["WebFetch ✅"]
+    TIP -->|"Güncel bilgi<br/>(API sürümleri, haberler)"| SEARCH["WebSearch ✅"]
+    TIP -->|"Statik bilgi<br/>(temel kavramlar)"| NOTSEARCH["Model bilgisi yeterli ❌"]
+    TIP -->|"Belirli sayfa<br/>(URL biliniyor)"| FETCH["WebFetch ✅"]
     SEARCH --> RESULT["Sonuçları değerlendir"]
     RESULT -->|"Detay gerekli"| FETCH
 ```

@@ -15,11 +15,11 @@ Veritabanı işlemleri — migration (göç) oluşturma, schema (şema) tasarım
 
 ```mermaid
 flowchart TD
-    A["Schema Tasarımı\nEntity ve ilişkiler"] --> B["Migration Oluşturma\nSchema değişiklikleri"]
-    B --> C["Seed Data\nBaşlangıç verisi"]
-    C --> D["Query Yazma\nCRUD işlemleri"]
-    D --> E["Optimizasyon\nİndeks ve performans"]
-    E --> F["Monitoring\nSorgu analizi"]
+    A["Schema Tasarımı<br/>Entity ve ilişkiler"] --> B["Migration Oluşturma<br/>Schema değişiklikleri"]
+    B --> C["Seed Data<br/>Başlangıç verisi"]
+    C --> D["Query Yazma<br/>CRUD işlemleri"]
+    D --> E["Optimizasyon<br/>İndeks ve performans"]
+    E --> F["Monitoring<br/>Sorgu analizi"]
 
     style A fill:#3498DB,color:#fff
     style F fill:#27AE60,color:#fff

@@ -17,20 +17,20 @@ Claude Code, yaşam döngüsünün farklı noktalarında tetiklenen 9 farklı **
 flowchart TB
     subgraph session ["Oturum Yaşam Döngüsü"]
         direction TB
-        SS["🟢 SessionStart\nOturum başladı"]
-        IL["📋 InstructionsLoaded\nTalimatlar yüklendi"]
-        CC["⚙️ ConfigChange\nAyar değişti"]
+        SS["🟢 SessionStart<br/>Oturum başladı"]
+        IL["📋 InstructionsLoaded<br/>Talimatlar yüklendi"]
+        CC["⚙️ ConfigChange<br/>Ayar değişti"]
         
         subgraph loop ["Agentic Loop — Tekrar Eden Döngü"]
             direction TB
-            UPS["💬 UserPromptSubmit\nKullanıcı mesaj gönderdi"]
-            PR["🔐 PermissionRequest\nİzin isteniyor"]
-            PRE["⏳ PreToolUse\nAraç kullanılacak"]
-            POST["✅ PostToolUse\nAraç kullanıldı"]
-            FAIL["❌ PostToolUseFailure\nAraç başarısız"]
+            UPS["💬 UserPromptSubmit<br/>Kullanıcı mesaj gönderdi"]
+            PR["🔐 PermissionRequest<br/>İzin isteniyor"]
+            PRE["⏳ PreToolUse<br/>Araç kullanılacak"]
+            POST["✅ PostToolUse<br/>Araç kullanıldı"]
+            FAIL["❌ PostToolUseFailure<br/>Araç başarısız"]
         end
         
-        SE["🔴 SessionEnd\nOturum sonlandı"]
+        SE["🔴 SessionEnd<br/>Oturum sonlandı"]
     end
 
     SS --> IL --> CC
@@ -617,7 +617,7 @@ flowchart TD
     UPS -->|Engellenmedi| THINK["Claude Düşünür"]
     UPS -->|Engellendi| WAIT
     
-    THINK --> NEED_PERM{"İzin\ngerekli mi?"}
+    THINK --> NEED_PERM{"İzin<br/>gerekli mi?"}
     NEED_PERM -->|Evet| PERM["PermissionRequest"]
     NEED_PERM -->|Hayır| PRE["PreToolUse"]
     

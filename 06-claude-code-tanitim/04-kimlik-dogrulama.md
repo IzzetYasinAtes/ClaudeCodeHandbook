@@ -16,18 +16,18 @@ Claude Code iki farklı **authentication** (kimlik doğrulama) yöntemi sunar:
 
 ```mermaid
 flowchart TD
-    START(["claude login"]) --> METHOD{"Hangi yöntemi\nkullanmak istiyorsunuz?"}
+    START(["claude login"]) --> METHOD{"Hangi yöntemi<br/>kullanmak istiyorsunuz?"}
 
-    METHOD -->|"Tarayıcı ile"| OAUTH["OAuth Akışı\n(Önerilen)"]
-    METHOD -->|"API key ile"| API["API Key\nGirişi"]
+    METHOD -->|"Tarayıcı ile"| OAUTH["OAuth Akışı<br/>(Önerilen)"]
+    METHOD -->|"API key ile"| API["API Key<br/>Girişi"]
 
     OAUTH --> BROWSER["Tarayıcı açılır"]
-    BROWSER --> ANTHROPIC["console.anthropic.com\nGiriş yapın"]
+    BROWSER --> ANTHROPIC["console.anthropic.com<br/>Giriş yapın"]
     ANTHROPIC --> APPROVE["İzni onaylayın"]
-    APPROVE --> TOKEN["Token otomatik\nalınır"]
+    APPROVE --> TOKEN["Token otomatik<br/>alınır"]
     TOKEN --> DONE(["✅ Giriş başarılı"])
 
-    API --> KEY_INPUT["API key girin:\nsk-ant-..."]
+    API --> KEY_INPUT["API key girin:<br/>YOUR_API_KEY_HERE"]
     KEY_INPUT --> VALIDATE["Key doğrulanır"]
     VALIDATE --> DONE
 
@@ -68,7 +68,7 @@ claude login
 #   Anthropic Console (OAuth - recommended)
 # > API Key
 #
-# ? Enter your API key: sk-ant-api03-xxxxxxxxxxxxx
+# ? Enter your API key: YOUR_API_KEY_HERE
 # ✓ API key validated and saved!
 ```
 
@@ -86,16 +86,16 @@ Claude Code kullanımı için bir Anthropic aboneliğine ihtiyacınız vardır:
 flowchart LR
     subgraph planlar ["Abonelik Planları"]
         direction TB
-        PRO["Claude Pro\n$20/ay"]
-        MAX5["Claude Max 5x\n$100/ay"]
-        MAX20["Claude Max 20x\n$200/ay"]
-        TEAM["Claude Team\n$30/kullanıcı/ay"]
-        ENT["Claude Enterprise\nÖzel fiyat"]
+        PRO["Claude Pro<br/>$20/ay"]
+        MAX5["Claude Max 5x<br/>$100/ay"]
+        MAX20["Claude Max 20x<br/>$200/ay"]
+        TEAM["Claude Team<br/>$30/kullanıcı/ay"]
+        ENT["Claude Enterprise<br/>Özel fiyat"]
     end
 
-    PRO -->|"Daha fazla\nkullanım"| MAX5
-    MAX5 -->|"Daha fazla\nkullanım"| MAX20
-    TEAM -->|"Kurumsal\nözellikler"| ENT
+    PRO -->|"Daha fazla<br/>kullanım"| MAX5
+    MAX5 -->|"Daha fazla<br/>kullanım"| MAX20
+    TEAM -->|"Kurumsal<br/>özellikler"| ENT
 ```
 
 ### Detaylı Plan Karşılaştırması
@@ -116,17 +116,17 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    START(["Claude Code\nkullanmak istiyorum"]) --> Q1{"Günde kaç saat\nkullanacaksınız?"}
+    START(["Claude Code<br/>kullanmak istiyorum"]) --> Q1{"Günde kaç saat<br/>kullanacaksınız?"}
 
-    Q1 -->|"1-2 saat"| PRO["✅ Claude Pro\n$20/ay\nHobby / hafif kullanım"]
-    Q1 -->|"3-6 saat"| MAX5["✅ Claude Max 5x\n$100/ay\nProfesyonel geliştirici"]
-    Q1 -->|"Tam gün"| Q2{"Takım mı,\nbireysel mi?"}
+    Q1 -->|"1-2 saat"| PRO["✅ Claude Pro<br/>$20/ay<br/>Hobby / hafif kullanım"]
+    Q1 -->|"3-6 saat"| MAX5["✅ Claude Max 5x<br/>$100/ay<br/>Profesyonel geliştirici"]
+    Q1 -->|"Tam gün"| Q2{"Takım mı,<br/>bireysel mi?"}
 
-    Q2 -->|"Bireysel"| MAX20["✅ Claude Max 20x\n$200/ay\nPower user"]
+    Q2 -->|"Bireysel"| MAX20["✅ Claude Max 20x<br/>$200/ay<br/>Power user"]
     Q2 -->|"Takım"| Q3{"Kaç kişi?"}
 
-    Q3 -->|"2-20 kişi"| TEAM["✅ Claude Team\n$30/kişi/ay"]
-    Q3 -->|"20+ kişi"| ENT["✅ Claude Enterprise\nÖzel fiyat"]
+    Q3 -->|"2-20 kişi"| TEAM["✅ Claude Team<br/>$30/kişi/ay"]
+    Q3 -->|"20+ kişi"| ENT["✅ Claude Enterprise<br/>Özel fiyat"]
 
     style PRO fill:#3498DB,color:#fff
     style MAX5 fill:#2ECC71,color:#fff
@@ -155,7 +155,7 @@ Claude Code'u **API key** ile kullanmak istiyorsanız (abonelik yerine doğrudan
 2. **API Keys** bölümüne tıklayın
 3. **Create Key** butonuna tıklayın
 4. Key'e bir isim verin (ör: "claude-code-laptop")
-5. Oluşturulan key'i kopyalayın (`sk-ant-api03-...`)
+5. Oluşturulan key'i kopyalayın (`YOUR_API_KEY_HERE`)
 
 ### API Key ile Yapılandırma
 
@@ -166,10 +166,10 @@ claude login
 # Key'i yapıştırın
 
 # Yöntem 2: Ortam değişkeni ile
-export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxx"
+export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"
 
 # Windows (WSL içinde)
-echo 'export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxx"' >> ~/.bashrc
+echo 'export ANTHROPIC_API_KEY="YOUR_API_KEY_HERE"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -213,7 +213,7 @@ flowchart TD
         X1["API key'i koda yazmak"]
         X2["Key'i git'e commit etmek"]
         X3["Key'i başkalarıyla paylaşmak"]
-        X4["Key'i .env dosyasına\nkoyup commit etmek"]
+        X4["Key'i .env dosyasına<br/>koyup commit etmek"]
     end
 
     subgraph yap ["✅ Yapın"]

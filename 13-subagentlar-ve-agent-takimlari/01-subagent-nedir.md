@@ -18,11 +18,11 @@ Bir subagent, ana agent'tan tamamen izole bir şekilde çalışır. Kendi conver
 
 ```mermaid
 flowchart TD
-    USER["👤 Kullanıcı"] --> PARENT["🤖 Ana Agent\n(Parent Agent)"]
+    USER["👤 Kullanıcı"] --> PARENT["🤖 Ana Agent<br/>(Parent Agent)"]
 
-    PARENT --> |"Görev 1"| SUB1["🔧 Subagent 1\nKod İnceleme"]
-    PARENT --> |"Görev 2"| SUB2["🔧 Subagent 2\nTest Yazma"]
-    PARENT --> |"Görev 3"| SUB3["🔧 Subagent 3\nDokümantasyon"]
+    PARENT --> |"Görev 1"| SUB1["🔧 Subagent 1<br/>Kod İnceleme"]
+    PARENT --> |"Görev 2"| SUB2["🔧 Subagent 2<br/>Test Yazma"]
+    PARENT --> |"Görev 3"| SUB3["🔧 Subagent 3<br/>Dokümantasyon"]
 
     SUB1 --> |"Sonuç 1"| PARENT
     SUB2 --> |"Sonuç 2"| PARENT
@@ -49,7 +49,7 @@ flowchart LR
     subgraph parent ["Ana Agent Context Window"]
         P1["Kullanıcı isteği"]
         P2["Proje analizi"]
-        P3["Subagent sonucu\n(özet)"]
+        P3["Subagent sonucu<br/>(özet)"]
     end
 
     subgraph sub ["Subagent Context Window (İzole)"]
@@ -76,15 +76,15 @@ Birden fazla subagent **eş zamanlı olarak** çalışabilir. Bu, büyük görev
 flowchart TD
     PARENT["Ana Agent"] --> |"t=0"| FORK["Görevleri dağıt"]
 
-    FORK --> SUB1["Subagent 1\nFrontend analizi\n⏱️ 30 sn"]
-    FORK --> SUB2["Subagent 2\nBackend analizi\n⏱️ 45 sn"]
-    FORK --> SUB3["Subagent 3\nDB analizi\n⏱️ 20 sn"]
+    FORK --> SUB1["Subagent 1<br/>Frontend analizi<br/>⏱️ 30 sn"]
+    FORK --> SUB2["Subagent 2<br/>Backend analizi<br/>⏱️ 45 sn"]
+    FORK --> SUB3["Subagent 3<br/>DB analizi<br/>⏱️ 20 sn"]
 
     SUB1 --> JOIN["Sonuçları birleştir"]
     SUB2 --> JOIN
     SUB3 --> JOIN
 
-    JOIN --> RESULT["Toplam: ~45 sn\n(Seri olsaydı: ~95 sn)"]
+    JOIN --> RESULT["Toplam: ~45 sn<br/>(Seri olsaydı: ~95 sn)"]
 
     style FORK fill:#3498DB,color:#fff
     style JOIN fill:#27AE60,color:#fff
@@ -124,7 +124,7 @@ flowchart LR
         R3["Grep"]
     end
 
-    full --> |"allowedTools:\nRead, Glob, Grep"| restricted
+    full --> |"allowedTools:<br/>Read, Glob, Grep"| restricted
 
     style full fill:#d4edda,stroke:#28a745
     style restricted fill:#fff3cd,stroke:#ffc107
@@ -138,17 +138,17 @@ Claude Code'da subagent'lar üç farklı yöntemle tanımlanabilir:
 
 ```mermaid
 flowchart TD
-    ROOT["Subagent Tanımlama\nYöntemleri"] --> BUILTIN["1. Dahili Subagent'lar\n(Built-in)"]
-    ROOT --> FILESYSTEM["2. Dosya Sistemi\n(Filesystem)"]
-    ROOT --> PROGRAMMATIC["3. Programatik\n(SDK)"]
+    ROOT["Subagent Tanımlama<br/>Yöntemleri"] --> BUILTIN["1. Dahili Subagent'lar<br/>(Built-in)"]
+    ROOT --> FILESYSTEM["2. Dosya Sistemi<br/>(Filesystem)"]
+    ROOT --> PROGRAMMATIC["3. Programatik<br/>(SDK)"]
 
     BUILTIN --> B1["Explore"]
     BUILTIN --> B2["Plan"]
     BUILTIN --> B3["GeneralPurpose"]
 
-    FILESYSTEM --> FS1[".claude/agents/\ndizinindeki\n.md dosyaları"]
+    FILESYSTEM --> FS1[".claude/agents/<br/>dizinindeki<br/>.md dosyaları"]
 
-    PROGRAMMATIC --> PR1["Claude SDK ile\nAgentDefinition\nnesnesi"]
+    PROGRAMMATIC --> PR1["Claude SDK ile<br/>AgentDefinition<br/>nesnesi"]
 
     style BUILTIN fill:#3498DB,color:#fff
     style FILESYSTEM fill:#E67E22,color:#fff
@@ -246,14 +246,14 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    START["Görev geldi"] --> Q1{"Görev karmaşık mı?\n(3+ adım)"}
+    START["Görev geldi"] --> Q1{"Görev karmaşık mı?<br/>(3+ adım)"}
     Q1 --> |"Hayır"| DIRECT["Ana agent ile yap"]
     Q1 --> |"Evet"| Q2{"Paralel yapılabilir mi?"}
 
-    Q2 --> |"Evet"| PARALLEL["Paralel subagent'lar\noluştur"]
-    Q2 --> |"Hayır"| Q3{"Context window\ndolacak mı?"}
+    Q2 --> |"Evet"| PARALLEL["Paralel subagent'lar<br/>oluştur"]
+    Q2 --> |"Hayır"| Q3{"Context window<br/>dolacak mı?"}
 
-    Q3 --> |"Evet"| SINGLE_SUB["Tek subagent\ndevret"]
+    Q3 --> |"Evet"| SINGLE_SUB["Tek subagent<br/>devret"]
     Q3 --> |"Hayır"| DIRECT
 
     style PARALLEL fill:#27AE60,color:#fff

@@ -17,17 +17,17 @@ Claude Code, JetBrains IDE ailesi — IntelliJ IDEA, PyCharm, WebStorm, GoLand, 
 ```mermaid
 flowchart TB
     subgraph jetbrains ["JetBrains IDE Ailesi"]
-        IJ["IntelliJ IDEA\nJava, Kotlin, Scala"]
-        PC["PyCharm\nPython"]
-        WS["WebStorm\nJavaScript, TypeScript"]
-        GL["GoLand\nGo"]
-        RD["Rider\nC#, .NET"]
-        PH["PhpStorm\nPHP"]
-        RB["RubyMine\nRuby"]
-        CL["CLion\nC, C++"]
+        IJ["IntelliJ IDEA<br/>Java, Kotlin, Scala"]
+        PC["PyCharm<br/>Python"]
+        WS["WebStorm<br/>JavaScript, TypeScript"]
+        GL["GoLand<br/>Go"]
+        RD["Rider<br/>C#, .NET"]
+        PH["PhpStorm<br/>PHP"]
+        RB["RubyMine<br/>Ruby"]
+        CL["CLion<br/>C, C++"]
     end
 
-    CC["Claude Code\nTerminal Entegrasyonu"]
+    CC["Claude Code<br/>Terminal Entegrasyonu"]
 
     IJ --> CC
     PC --> CC
@@ -72,9 +72,9 @@ Plugin yüklemeden de JetBrains'in dahili terminalinden doğrudan Claude Code ku
 
 ```mermaid
 flowchart LR
-    A["JetBrains IDE\naçın"] --> B["Alt+F12\nTerminal aç"]
-    B --> C["'claude' yazın\nEnter"]
-    C --> D["Claude Code\noturumu başlar"]
+    A["JetBrains IDE<br/>açın"] --> B["Alt+F12<br/>Terminal aç"]
+    B --> C["'claude' yazın<br/>Enter"]
+    C --> D["Claude Code<br/>oturumu başlar"]
 
     style A fill:#F43F5E,color:#fff
     style D fill:#10B981,color:#fff
@@ -122,14 +122,14 @@ JetBrains plugin'i otomatik olarak şu bilgileri Claude Code'a aktarır:
 flowchart TB
     subgraph context ["Otomatik Bağlam"]
         direction TB
-        A["Proje Yapısı\nModüller, paketler"]
-        B["Açık Dosyalar\nAktif editor sekmeleri"]
-        C["Seçili Kod\nEditor'daki seçim"]
-        D["Hata Listesi\nIDE'nin tespit ettiği hatalar"]
-        E["VCS Durumu\nGit branch, değişiklikler"]
+        A["Proje Yapısı<br/>Modüller, paketler"]
+        B["Açık Dosyalar<br/>Aktif editor sekmeleri"]
+        C["Seçili Kod<br/>Editor'daki seçim"]
+        D["Hata Listesi<br/>IDE'nin tespit ettiği hatalar"]
+        E["VCS Durumu<br/>Git branch, değişiklikler"]
     end
 
-    context --> CC["Claude Code\nZengin bağlam"]
+    context --> CC["Claude Code<br/>Zengin bağlam"]
 
     style CC fill:#7C3AED,color:#fff
     style context fill:#DBEAFE,stroke:#3B82F6
@@ -171,9 +171,9 @@ Farklı görevler için birden fazla Claude Code oturumu açabilirsiniz:
 ```mermaid
 flowchart LR
     subgraph tabs ["Terminal Sekmeleri"]
-        T1["Sekme 1\nClaude Code\n(Backend geliştirme)"]
-        T2["Sekme 2\nClaude Code\n(Frontend geliştirme)"]
-        T3["Sekme 3\nGenel terminal\n(Git, build, test)"]
+        T1["Sekme 1<br/>Claude Code<br/>(Backend geliştirme)"]
+        T2["Sekme 2<br/>Claude Code<br/>(Frontend geliştirme)"]
+        T3["Sekme 3<br/>Genel terminal<br/>(Git, build, test)"]
     end
 
     style T1 fill:#3B82F6,color:#fff

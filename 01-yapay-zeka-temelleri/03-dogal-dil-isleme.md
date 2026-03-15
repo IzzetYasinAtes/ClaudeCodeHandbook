@@ -16,18 +16,18 @@ Natural Language Processing (NLP), bilgisayarların insan dilini anlamasını, y
 ```mermaid
 flowchart TD
     subgraph zorluklar ["İnsan Dilinin Zorlukları"]
-        A["Belirsizlik\n(Ambiguity)"]
-        B["Bağlam Bağımlılığı\n(Context Dependency)"]
-        C["Deyimler ve Mecazlar\n(Idioms)"]
-        D["İroni ve Alaycılık\n(Sarcasm)"]
-        E["Dil Çeşitliliği\n(Multilingual)"]
+        A["Belirsizlik<br/>(Ambiguity)"]
+        B["Bağlam Bağımlılığı<br/>(Context Dependency)"]
+        C["Deyimler ve Mecazlar<br/>(Idioms)"]
+        D["İroni ve Alaycılık<br/>(Sarcasm)"]
+        E["Dil Çeşitliliği<br/>(Multilingual)"]
     end
 
-    A --> A1["'Bankaya git'\nFinans mı? Oturma yeri mi?"]
-    B --> B1["'O çok sıcak'\nHava mı? Yemek mi? Kişi mi?"]
-    C --> C1["'Ayağını denk al'\nGerçek bir ayak hareketi değil"]
-    D --> D1["'Harika bir gün!'\n(Yağmurda söylendiğinde ters anlam)"]
-    E --> E1["7000+ dil\nFarklı gramer yapıları"]
+    A --> A1["'Bankaya git'<br/>Finans mı? Oturma yeri mi?"]
+    B --> B1["'O çok sıcak'<br/>Hava mı? Yemek mi? Kişi mi?"]
+    C --> C1["'Ayağını denk al'<br/>Gerçek bir ayak hareketi değil"]
+    D --> D1["'Harika bir gün!'<br/>(Yağmurda söylendiğinde ters anlam)"]
+    E --> E1["7000+ dil<br/>Farklı gramer yapıları"]
 ```
 
 ---
@@ -111,18 +111,18 @@ Girdi: [500 satırlık teknik doküman]
 ```mermaid
 flowchart TD
     subgraph eski ["Eski Yaklaşımlar (1950-2012)"]
-        A["Rule-Based\n(Kural tabanlı)"] --> B["Statistical Methods\n(İstatistiksel yöntemler)"]
-        B --> C["Bag of Words\nTF-IDF"]
+        A["Rule-Based<br/>(Kural tabanlı)"] --> B["Statistical Methods<br/>(İstatistiksel yöntemler)"]
+        B --> C["Bag of Words<br/>TF-IDF"]
     end
 
     subgraph orta ["Geçiş Dönemi (2013-2017)"]
-        D["Word2Vec\n(Kelime gömmeleri)"] --> E["RNN / LSTM\n(Sıralı modeller)"]
+        D["Word2Vec<br/>(Kelime gömmeleri)"] --> E["RNN / LSTM<br/>(Sıralı modeller)"]
     end
 
     subgraph modern ["Modern Dönem (2017+)"]
-        F["Transformer\n(Attention mekanizması)"] --> G["BERT\n(Anlama modeli)"]
-        F --> H["GPT\n(Üretim modeli)"]
-        G --> I["Modern LLM'ler\n(Claude, GPT-5, Gemini)"]
+        F["Transformer<br/>(Attention mekanizması)"] --> G["BERT<br/>(Anlama modeli)"]
+        F --> H["GPT<br/>(Üretim modeli)"]
+        G --> I["Modern LLM'ler<br/>(Claude, GPT-5, Gemini)"]
         H --> I
     end
 
@@ -190,7 +190,7 @@ claude "Bu projdeki tüm API endpoint'lerini bul ve her birinin
 
 ```mermaid
 flowchart LR
-    NLP["NLP\n(İnsan dilini anlama)"]
+    NLP["NLP<br/>(İnsan dilini anlama)"]
     
     NLP --> ANLAMA["Anlama Görevleri"]
     NLP --> URETIM["Üretim Görevleri"]
@@ -203,7 +203,7 @@ flowchart LR
     URETIM --> B2["Translation"]
     URETIM --> B3["Summarization"]
     
-    B1 --> LLM["LLM'ler\n(Claude, GPT)"]
+    B1 --> LLM["LLM'ler<br/>(Claude, GPT)"]
 ```
 
 NLP, yapay zekanın insan diliyle köprüsüdür. Claude Code gibi araçlar, NLP'nin en gelişmiş uygulamalarından biridir: kodunuzu okur, anlar ve yeni kod üretir.

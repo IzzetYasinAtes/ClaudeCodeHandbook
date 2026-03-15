@@ -33,11 +33,11 @@ Anthropic, 2021 yılında eski OpenAI araştırmacıları **Dario Amodei** ve **
 flowchart TD
     CLAUDE["Claude AI"]
 
-    CLAUDE --> CODE["Kodlama\n(Coding)"]
-    CLAUDE --> ANALYSIS["Analiz\n(Analysis)"]
-    CLAUDE --> WRITING["Yazım\n(Writing)"]
-    CLAUDE --> MATH["Matematik\n(Math)"]
-    CLAUDE --> VISION["Görsel Anlama\n(Vision)"]
+    CLAUDE --> CODE["Kodlama<br/>(Coding)"]
+    CLAUDE --> ANALYSIS["Analiz<br/>(Analysis)"]
+    CLAUDE --> WRITING["Yazım<br/>(Writing)"]
+    CLAUDE --> MATH["Matematik<br/>(Math)"]
+    CLAUDE --> VISION["Görsel Anlama<br/>(Vision)"]
 
     CODE --> CODE1["Kod üretme ve düzenleme"]
     CODE --> CODE2["Bug tespiti ve düzeltme"]
@@ -143,18 +143,18 @@ Claude'un en temel farkı, **Constitutional AI** (Anayasal AI) yaklaşımıyla e
 ```mermaid
 flowchart TD
     subgraph rlhf ["Geleneksel Yaklaşım: RLHF"]
-        R1["Model yanıt üretir"] --> R2["İnsan değerlendiriciler\nyanıtları sıralar"]
-        R2 --> R3["Reward Model\neğitilir"]
+        R1["Model yanıt üretir"] --> R2["İnsan değerlendiriciler<br/>yanıtları sıralar"]
+        R2 --> R3["Reward Model<br/>eğitilir"]
         R3 --> R4["Model optimize edilir"]
     end
 
     subgraph cai ["Claude'un Yaklaşımı: Constitutional AI"]
-        C1["Model yanıt üretir"] --> C2["Model kendi yanıtını\nilkelere göre eleştirir"]
-        C2 --> C3["Model yanıtını\nkendi düzeltir"]
-        C3 --> C4["Düzeltilmiş yanıtlarla\neğitim yapılır"]
+        C1["Model yanıt üretir"] --> C2["Model kendi yanıtını<br/>ilkelere göre eleştirir"]
+        C2 --> C3["Model yanıtını<br/>kendi düzeltir"]
+        C3 --> C4["Düzeltilmiş yanıtlarla<br/>eğitim yapılır"]
     end
 
-    cai --> RESULT["Daha tutarlı, ölçeklenebilir\nve şeffaf hizalama"]
+    cai --> RESULT["Daha tutarlı, ölçeklenebilir<br/>ve şeffaf hizalama"]
 ```
 
 ### Constitutional AI İlkeleri
@@ -186,11 +186,11 @@ Claude'un "anayasası" şu temel ilkelere dayanır:
 ```mermaid
 flowchart LR
     subgraph claude ["Claude'un Farkları"]
-        F1["En düşük\nHallucination\noranı (%2.8)"]
-        F2["Constitutional AI\nile güvenlik"]
-        F3["200K Context\nWindow"]
-        F4["Kodlama\nliderliği"]
-        F5["Extended\nThinking"]
+        F1["En düşük<br/>Hallucination<br/>oranı (%2.8)"]
+        F2["Constitutional AI<br/>ile güvenlik"]
+        F3["200K Context<br/>Window"]
+        F4["Kodlama<br/>liderliği"]
+        F5["Extended<br/>Thinking"]
     end
 ```
 
@@ -253,16 +253,16 @@ Karmaşık problemlerde Claude, yanıt vermeden önce "düşünme" süreci geçi
 flowchart TD
     subgraph areas ["Kullanım Alanları"]
         direction TB
-        WEB["Web Arayüzü\nclaude.ai"]
-        API_USE["API Entegrasyonu\napi.anthropic.com"]
-        CCODE["Claude Code\nTerminal AI Agent"]
-        MOBILE["Mobil Uygulama\niOS ve Android"]
+        WEB["Web Arayüzü<br/>claude.ai"]
+        API_USE["API Entegrasyonu<br/>api.anthropic.com"]
+        CCODE["Claude Code<br/>Terminal AI Agent"]
+        MOBILE["Mobil Uygulama<br/>iOS ve Android"]
     end
 
-    WEB --> W1["Sohbet, analiz,\ndokümantasyon"]
-    API_USE --> A1["Uygulama geliştirme,\notomasyon"]
-    CCODE --> C1["Yazılım geliştirme,\nrefactoring"]
-    MOBILE --> M1["Hareket halinde\nhızlı sorgular"]
+    WEB --> W1["Sohbet, analiz,<br/>dokümantasyon"]
+    API_USE --> A1["Uygulama geliştirme,<br/>otomasyon"]
+    CCODE --> C1["Yazılım geliştirme,<br/>refactoring"]
+    MOBILE --> M1["Hareket halinde<br/>hızlı sorgular"]
 ```
 
 | Platform | Kullanım Senaryosu | Hedef Kitle |

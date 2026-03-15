@@ -24,7 +24,7 @@ flowchart TD
 
     subgraph cagri2 ["Çağrı 2"]
         CMD2["echo $MY_VAR"]
-        ENV2["MY_VAR=??? ❌\nOrtam değişkeni kaybolur"]
+        ENV2["MY_VAR=??? ❌<br/>Ortam değişkeni kaybolur"]
     end
 
     subgraph cagri3 ["Çağrı 3"]
@@ -34,7 +34,7 @@ flowchart TD
 
     subgraph cagri4 ["Çağrı 4"]
         CMD4["pwd"]
-        CWD4["CWD: /project/src ✅\nÇalışma dizini korunur"]
+        CWD4["CWD: /project/src ✅<br/>Çalışma dizini korunur"]
     end
 
     cagri1 -->|"Ayrı process"| cagri2
@@ -78,13 +78,13 @@ export CLAUDE_ENV_FILE=~/.claude-env
 
 # ~/.claude-env dosyası:
 export DATABASE_URL="postgresql://localhost:5432/mydb"
-export API_KEY="sk-..."
+export API_KEY="YOUR_API_KEY_HERE"
 export NODE_ENV="development"
 ```
 
 ```mermaid
 flowchart LR
-    ENV_FILE["~/.claude-env\nDATABASE_URL=...\nAPI_KEY=...\nNODE_ENV=..."]
+    ENV_FILE["~/.claude-env<br/>DATABASE_URL=...<br/>API_KEY=...<br/>NODE_ENV=..."]
     BASH1["Bash Çağrısı 1"] -->|"source"| ENV_FILE
     BASH2["Bash Çağrısı 2"] -->|"source"| ENV_FILE
     BASH3["Bash Çağrısı 3"] -->|"source"| ENV_FILE
@@ -132,11 +132,11 @@ conda activate myenv
 
 ```mermaid
 flowchart TD
-    START["Python komutu çalıştır"] --> CHECK{"Sanal ortam\ngerekli mi?"}
+    START["Python komutu çalıştır"] --> CHECK{"Sanal ortam<br/>gerekli mi?"}
     CHECK -->|Hayır| RUN["Doğrudan çalıştır"]
     CHECK -->|Evet| METHOD{"Yöntem?"}
-    METHOD -->|"Tek çağrı"| SINGLE["source venv/bin/activate &&\npython script.py"]
-    METHOD -->|"CLAUDE_ENV_FILE"| ENVFILE["Env dosyasına\naktivasyonu ekle"]
+    METHOD -->|"Tek çağrı"| SINGLE["source venv/bin/activate &&<br/>python script.py"]
+    METHOD -->|"CLAUDE_ENV_FILE"| ENVFILE["Env dosyasına<br/>aktivasyonu ekle"]
     SINGLE --> DONE["Çalıştır"]
     ENVFILE --> DONE
 ```
@@ -249,12 +249,12 @@ Bash aracı, uzun süren komutlar için timeout mekanizması içerir:
 
 ```mermaid
 flowchart TD
-    START["Bash komutu\nçalıştır"] --> RUN["Process başlat"]
-    RUN --> WAIT{"Timeout\naşıldı mı?"}
-    WAIT -->|Hayır| CHECK{"Komut\ntamamlandı mı?"}
+    START["Bash komutu<br/>çalıştır"] --> RUN["Process başlat"]
+    RUN --> WAIT{"Timeout<br/>aşıldı mı?"}
+    WAIT -->|Hayır| CHECK{"Komut<br/>tamamlandı mı?"}
     CHECK -->|Hayır| WAIT
     CHECK -->|Evet| OUTPUT["Çıktıyı döndür"]
-    WAIT -->|Evet| TIMEOUT["Timeout hatası\nProcess sonlandırılır"]
+    WAIT -->|Evet| TIMEOUT["Timeout hatası<br/>Process sonlandırılır"]
 ```
 
 ### Uzun Süren Komutlar İçin İpuçları
