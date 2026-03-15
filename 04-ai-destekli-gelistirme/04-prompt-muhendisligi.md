@@ -638,6 +638,19 @@ Claude Code ile çalışırken:
 
 ---
 
+## Pozisyona Göre Prompt Stratejileri
+
+Claude Code'u farklı pozisyonlar farklı şekilde kullanır. Her birimin detaylı rehberi için [Bölüm 19: Birim ve Pozisyon Bazlı Rehberler](../19-rol-bazli-rehberler/README.md) bölümüne bakınız.
+
+| Birim | Örnek Prompt Yaklaşımı |
+|-------|----------------------|
+| **Teknik** | "Bu fonksiyonu SOLID prensiplerine uygun refactor et" |
+| **Ürün & Analiz** | "Bu toplantı notlarından yapılandırılmış gereksinimler çıkar" |
+| **Ticari** | "Bu müşteri verilerinden satış trend analizi oluştur" |
+| **Operasyon** | "Bu çeyrek için yönetim kurulu raporu şablonu hazırla" |
+
+---
+
 ## Sonraki Adım
 
 Prompt mühendisliği tekniklerini öğrendiniz. Şimdi bu teknikleri kullanabileceğiniz farklı AI kodlama araçlarını karşılaştıralım:

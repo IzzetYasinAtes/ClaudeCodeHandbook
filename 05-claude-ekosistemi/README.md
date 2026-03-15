@@ -36,12 +36,12 @@ flowchart LR
     end
 ```
 
-| Rol | Bu Bölümden Ne Öğrenir? |
-|-----|------------------------|
-| **Yazılımcı** | Claude'un kodlama yetenekleri, API entegrasyonu, hangi model ne zaman kullanılır |
-| **Yazılım Mimarı** | Model seçimi, maliyet optimizasyonu, mimari kararlarda Claude kullanımı |
-| **İş Analisti** | Claude'un analiz ve metin yetenekleri, rakiplerle karşılaştırma |
-| **Vibe Coder** | Hangi modeli seçmeli, Claude'un güçlü/zayıf yönleri |
+| Birim | Bu Bölümden Ne Öğrenir? |
+|-------|------------------------|
+| **Teknik** | Claude'un kodlama yetenekleri, API entegrasyonu, hangi model ne zaman kullanılır |
+| **Ürün & Analiz** | Claude'un analiz ve metin yetenekleri, model seçimi, rakiplerle karşılaştırma |
+| **Ticari** | Claude'un doğal dil yetenekleri, içerik üretimi ve veri analizi kapasitesi |
+| **Operasyon** | Claude modelleri arasındaki farklar, maliyet optimizasyonu, kurumsal kullanım |
 
 ## Sonraki Adım
 

@@ -1,20 +1,40 @@
 # Claude Code Handbook
 
-Yapay zeka hakkında hiçbir şey bilmeyen birinden, Claude Code'u profesyonel düzeyde kullanan bir yazılım ekibine kadar uzanan kapsamlı Türkçe rehber.
+AI ve Claude Code ekosistemini Türkçe ve pratik bir şekilde öğrenmek için hazırlanmış kapsamlı bir rehber.
 
-> **Not:** Teknik terimler sektörde kullanıldığı şekliyle İngilizce bırakılmış, ilk geçtikleri yerde Türkçe karşılıkları parantez içinde verilmiştir.
+## TL;DR
+
+Bu repo;
+
+- Yapay zeka ve LLM kavramlarını
+- Claude Code kullanımını
+- AI destekli geliştirme süreçlerini
+- Gerçek iş senaryolarında AI kullanımını
+
+**sıfırdan başlayarak pratik şekilde öğrenebileceğiniz Türkçe bir kaynak sunar.**
+
+İster teknik bir rolde olun ister ürün, analiz veya operasyon tarafında çalışıyor olun, içerikler AI’ı günlük iş akışınıza entegre etmenize yardımcı olacak şekilde tasarlanmıştır.
+
+## Proje Hakkında
+
+Bu proje, yapay zeka dünyasını ve Claude Code kullanımını Türkçe olarak anlaşılır ve sistematik bir şekilde anlatmak amacıyla hazırlanmıştır. İçerik; temel yapay zeka kavramlarından başlayarak LLM ekosistemine, Claude Code kullanımına ve gerçek iş senaryolarına kadar adım adım ilerler.
+
+Her bölüm bağımsız olarak okunabilecek şekilde yapılandırılmıştır. Böylece ister konuyu baştan öğrenebilir ister doğrudan ihtiyaç duyduğunuz bölüme geçebilirsiniz.
 
 ---
 
 ## Bu Rehber Kimin İçin?
 
-| Rol | Başlangıç Noktası | Odak Bölümleri |
-|-----|-------------------|----------------|
-| **Yapay zekaya yeni başlayan** | Bölüm 01'den başlayın | 01 → 05 |
-| **Yazılımcı** | Bölüm 06'dan başlayabilirsiniz | 06 → 14, 20 |
-| **Yazılım Mimarı** | Bölüm 04'ten başlayabilirsiniz | 04, 09, 13, 17, 18, 19 |
-| **İş Analisti** | Bölüm 01'den başlayın | 01 → 05, 19 |
-| **Vibe Coder** | Bölüm 04'ten başlayabilirsiniz | 04, 06, 07, 08, 19, 20 |
+Bölüm 01–04 yapay zeka, LLM ve AI destekli geliştirme gibi temel ve tarihsel bilgileri içerir. AI konusuna yeni olan herkes bu bölümlerle başlayabilir. Sonraki bölümler doğrudan Claude Code kullanımına odaklanır.
+
+| Birim | Pozisyonlar | Nereden Başlamalı? | Odak Bölümleri |
+|-------|------------|-------------------|----------------|
+| **Teknik** | Yazılım Geliştirici, QA / Test, Sistem Uzmanı, UI/UX | Bölüm 06 | 06–14, 19, 20 |
+| **Ürün & Analiz** | Ürün Müdürü, İş Analisti, Proje Yöneticisi | Bölüm 01 | 01–05, 08, 19, 20 |
+| **Ticari** | Satış, Pazarlama | Bölüm 01 | 01–05, 19 |
+| **Operasyon** | İK, Finans, Yönetim | Bölüm 01 | 01–05, 17, 18, 19 |
+
+> Teknik birim zaten AI ve yazılım geliştirme süreçlerine aşina olduğu için doğrudan Bölüm 06'dan başlayabilir. Diğer birimler için Bölüm 01–04 arası temel kavramları anlamak faydalı olacaktır.
 
 ---
 
@@ -48,13 +68,13 @@ Yapay zeka hakkında hiçbir şey bilmeyen birinden, Claude Code'u profesyonel d
   Interactive Mode, Plan Mode, Fast Mode, CLI referansı, Slash komutları ve çıktı stilleri.
 
 - **[08 - Claude Code: Araçlar (Tools)](./08-araclar/README.md)**
-  30+ dahili araç detaylı: dosya işlemleri, Bash, web erişimi, görev yönetimi, LSP, Notebook ve daha fazlası.
+  30+ dahili araç: dosya işlemleri, Bash, web erişimi, görev yönetimi, LSP, Notebook.
 
 - **[09 - Claude Code: Bellek ve Bağlam Yönetimi](./09-bellek-ve-baglam/README.md)**
   CLAUDE.md, AGENTS.md, Rules, Auto Memory, Context Window yönetimi, oturum yönetimi, Checkpointing, Worktree.
 
 - **[10 - Claude Code: İzinler ve Güvenlik](./10-izinler-ve-guvenlik/README.md)**
-  Permission sistemi, izin kuralları, izin modları, Sandboxing ve güvenlik en iyi uygulamaları.
+  Permission sistemi, izin kuralları, izin modları, Sandboxing ve güvenlik uygulamaları.
 
 ### Claude Code Genişletme
 
@@ -68,7 +88,7 @@ Yapay zeka hakkında hiçbir şey bilmeyen birinden, Claude Code'u profesyonel d
   Subagent nedir, dahili subagent'lar, özel subagent oluşturma, Agent Teams ve Agent Tool.
 
 - **[14 - Hooks ve Otomasyon](./14-hooks-ve-otomasyon/README.md)**
-  Hook sistemi, 17 hook event, hook tipleri (Command/HTTP/Prompt), konfigürasyon ve pratik örnekler.
+  Hook sistemi, hook event'leri, hook tipleri (Command/HTTP/Prompt), konfigürasyon ve örnekler.
 
 ### Entegrasyon ve Operasyon
 
@@ -86,18 +106,18 @@ Yapay zeka hakkında hiçbir şey bilmeyen birinden, Claude Code'u profesyonel d
 
 ### Pratik Rehberler
 
-- **[19 - Rol Bazlı Kullanım Rehberleri](./19-rol-bazli-rehberler/README.md)**
-  Yazılımcı, yazılım mimarı, iş analisti ve Vibe Coder için özel rehberler.
+- **[19 - Birim ve Pozisyon Bazlı Kullanım Rehberleri](./19-rol-bazli-rehberler/README.md)**
+  Teknik, Ürün & Analiz, Ticari ve Operasyon birimleri için 12 pozisyon rehberi.
 
 - **[20 - Pratik Senaryolar ve Tarifler](./20-pratik-senaryolar/README.md)**
-  Proje keşfetme, bug düzeltme, refactoring, test yazma, dokümantasyon, sıfırdan proje ve daha fazlası.
+  Proje keşfetme, bug düzeltme, refactoring, test yazma, dokümantasyon, sıfırdan proje.
 
 - **[21 - Sorun Giderme ve SSS](./21-sorun-giderme/README.md)**
-  Çok karşılaşılan sorunlar, Context Window sorunları ve sıkça sorulan sorular.
+  Sık karşılaşılan sorunlar, Context Window sorunları ve sıkça sorulan sorular.
 
 ---
 
-## Nasıl Okunmalı?
+## Okuma Sırası
 
 ```mermaid
 flowchart LR
@@ -123,14 +143,14 @@ flowchart LR
         M --> N["14<br/>Hooks"]
     end
 
-    subgraph operasyon ["Operasyon"]
+    subgraph entOps ["Operasyon"]
         O["15<br/>Entegrasyonlar"] --> P["16<br/>CI/CD"]
         P --> Q["17<br/>Konfigürasyon"]
         Q --> R["18<br/>Kurumsal"]
     end
 
     subgraph pratik ["Pratik"]
-        S["19<br/>Rol Bazlı<br/>Rehberler"] --> T["20<br/>Senaryolar"]
+        S["19<br/>Birim Bazlı<br/>Rehberler"] --> T["20<br/>Senaryolar"]
         T --> U["21<br/>Sorun<br/>Giderme"]
     end
 
@@ -141,20 +161,20 @@ flowchart LR
     R --> S
 ```
 
-> **İpucu:** Sıralı okumak en iyi deneyimi sağlar, ancak her bölüm kendi başına da okunabilir. Her dosyanın başında "Ön Koşullar" bölümü hangi konuları bilmeniz gerektiğini belirtir.
+Her bölüm kendi başına da okunabilir. Dosyaların başındaki "Ön Koşullar" bölümü gerekli ön bilgileri belirtir.
 
 ---
 
 ## Güncellik
 
-Bu rehber **Mart 2026** verileriyle hazırlanmıştır. Model isimleri, benchmark sonuçları ve fiyatlandırma bilgileri bu tarihe aittir.
+Mart 2026 verileriyle hazırlanmıştır.
 
 ---
 
 ## Katkıda Bulunma
 
-Katkıda bulunmak için [CONTRIBUTING.md](./CONTRIBUTING.md) dosyasını inceleyin.
+[CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Lisans
 
-Bu proje MIT lisansı altında sunulmaktadır. Detaylar için [LICENSE](./LICENSE) dosyasına bakınız.
+MIT — [LICENSE](./LICENSE)

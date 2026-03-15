@@ -1,57 +1,70 @@
-# Bölüm 19: Rol Bazlı Kullanım Rehberleri
+# Bölüm 19: Birim ve Pozisyon Bazlı Kullanım Rehberleri
 
-Claude Code, farklı rollerdeki profesyoneller için farklı iş akışları sunar. Bu bölüm; yazılımcılar, yazılım mimarları, iş analistleri ve Vibe Coder'lar için özelleştirilmiş kullanım rehberlerini içerir.
+Claude Code'un farklı birimlerdeki günlük iş akışlarına nasıl entegre edilebileceğini gösteren 12 pozisyon rehberi. Her rehber, ilgili pozisyona özel kullanım senaryoları, örnek prompt'lar ve en iyi uygulamaları içerir.
 
-## Bu Bölümde Neler Öğreneceksiniz?
-
-```mermaid
-flowchart TD
-    A["Yazılımcı Rehberi<br/>Günlük geliştirme iş akışı"] --> B["Yazılım Mimarı Rehberi<br/>Mimari analiz ve karar alma"]
-    B --> C["Analist Rehberi<br/>Gereksinim analizi ve modelleme"]
-    C --> D["Vibe Coder Rehberi<br/>Prompt-first hızlı geliştirme"]
-```
+---
 
 ## İçerik
 
-| # | Dosya | Konu | Süre |
-|---|-------|------|------|
-| 01 | [Yazılımcı Rehberi](./01-yazilimci-rehberi.md) | Günlük geliştirme iş akışı, bug fixing, PR hazırlama, code review | ~20 dk |
-| 02 | [Yazılım Mimarı Rehberi](./02-yazilim-mimari-rehberi.md) | Mimari analiz, refactoring planlama, standart belirleme | ~20 dk |
-| 03 | [Analist Rehberi](./03-analist-rehberi.md) | Gereksinim analizi, user story, prototipleme, veri analizi | ~18 dk |
-| 04 | [Vibe Coder Rehberi](./04-vibe-coder-rehberi.md) | Prompt-first geliştirme, sıfırdan proje, AI-native iş akışı | ~22 dk |
+| Birim | # | Dosya | Pozisyon | Süre |
+|-------|---|-------|----------|------|
+| **Teknik** | 01 | [Yazılım Geliştirici](./01-teknik-yazilim-gelistirici.md) | Yazılım Geliştirici | ~25 dk |
+| **Teknik** | 02 | [QA / Test](./02-teknik-qa-test.md) | QA / Test | ~18 dk |
+| **Teknik** | 03 | [Sistem Uzmanı](./03-teknik-sistem-uzmani.md) | Sistem Uzmanı | ~20 dk |
+| **Teknik** | 04 | [UI/UX](./04-teknik-ui-ux.md) | UI/UX | ~18 dk |
+| **Ürün & Analiz** | 05 | [Ürün Müdürü](./05-urun-urun-muduru.md) | Ürün Müdürü | ~18 dk |
+| **Ürün & Analiz** | 06 | [İş Analisti](./06-urun-is-analisti.md) | İş Analisti | ~20 dk |
+| **Ürün & Analiz** | 07 | [Proje Yöneticisi](./07-urun-proje-yoneticisi.md) | Proje Yöneticisi | ~18 dk |
+| **Ticari** | 08 | [Satış](./08-ticari-satis.md) | Satış | ~15 dk |
+| **Ticari** | 09 | [Pazarlama](./09-ticari-pazarlama.md) | Pazarlama | ~15 dk |
+| **Operasyon** | 10 | [İK](./10-operasyon-ik.md) | İK | ~15 dk |
+| **Operasyon** | 11 | [Finans](./11-operasyon-finans.md) | Finans | ~15 dk |
+| **Operasyon** | 12 | [Yönetim](./12-operasyon-yonetim.md) | Yönetim | ~15 dk |
+
+---
+
+## Hangi Birim Nereden Başlamalı?
+
+```mermaid
+flowchart TD
+    START{"Hangi birimde<br/>çalışıyorsunuz?"}
+
+    START -->|"Teknik"| TECH{"Claude Code<br/>deneyiminiz var mı?"}
+    TECH -->|"Evet"| TECH_EXP["Doğrudan<br/>Bölüm 19'a geçin"]
+    TECH -->|"Hayır"| TECH_NEW["Bölüm 06'dan<br/>başlayın"]
+
+    START -->|"Ürün & Analiz"| PROD{"Yapay zeka<br/>temellerini biliyor<br/>musunuz?"}
+    PROD -->|"Evet"| PROD_EXP["Bölüm 04'ten<br/>başlayın"]
+    PROD -->|"Hayır"| PROD_NEW["Bölüm 01'den<br/>başlayın"]
+
+    START -->|"Ticari"| COMM["Bölüm 01'den<br/>başlayın"]
+
+    START -->|"Operasyon"| OPS{"Yapay zeka<br/>temellerini biliyor<br/>musunuz?"}
+    OPS -->|"Evet"| OPS_EXP["Bölüm 17'den<br/>başlayın"]
+    OPS -->|"Hayır"| OPS_NEW["Bölüm 01'den<br/>başlayın"]
+```
+
+---
 
 ## Ön Koşullar
 
 Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
 
-| Konu | Bölüm |
-|------|-------|
-| Claude Code nasıl çalışır | [Bölüm 06](../06-claude-code-tanitim/README.md) |
-| Arayüz ve komutlar | [Bölüm 07](../07-arayuz-ve-komutlar/README.md) |
-| Araçlar (Tools) | [Bölüm 08](../08-araclar/README.md) |
-| Bellek ve bağlam yönetimi | [Bölüm 09](../09-bellek-ve-baglam/README.md) |
+| Konu | Bölüm | Gereklilik |
+|------|-------|------------|
+| Yapay zeka temel kavramları | [Bölüm 01](../01-yapay-zeka-temelleri/README.md) | Tüm birimler |
+| AI destekli geliştirme yaklaşımları | [Bölüm 04](../04-ai-destekli-gelistirme/README.md) | Tüm birimler |
+| Claude Code nasıl çalışır | [Bölüm 06](../06-claude-code-tanitim/README.md) | Teknik birim |
+| Arayüz ve komutlar | [Bölüm 07](../07-arayuz-ve-komutlar/README.md) | Teknik birim |
+| Araçlar (Tools) | [Bölüm 08](../08-araclar/README.md) | Teknik, Ürün & Analiz |
+| Bellek ve bağlam yönetimi | [Bölüm 09](../09-bellek-ve-baglam/README.md) | Teknik birim |
 
-## Hangi Rehber Size Uygun?
-
-```mermaid
-flowchart TD
-    START{"Günlük işinizde<br/>ne yapıyorsunuz?"}
-    
-    START -->|"Kod yazıyorum,<br/>bug düzeltiyorum"| DEV["Yazılımcı Rehberi<br/>01-yazilimci-rehberi.md"]
-    START -->|"Mimari kararlar<br/>alıyorum"| ARCH["Yazılım Mimarı Rehberi<br/>02-yazilim-mimari-rehberi.md"]
-    START -->|"Gereksinim topluyorum,<br/>analiz yapıyorum"| ANALYST["Analist Rehberi<br/>03-analist-rehberi.md"]
-    START -->|"Hızlıca proje<br/>oluşturuyorum"| VIBE["Vibe Coder Rehberi<br/>04-vibe-coder-rehberi.md"]
-    
-    style DEV fill:#3498DB,color:#fff
-    style ARCH fill:#9B59B6,color:#fff
-    style ANALYST fill:#27AE60,color:#fff
-    style VIBE fill:#E74C3C,color:#fff
-```
+---
 
 ## Önceki Bölüm
 
 ← [18 - Kurumsal Kullanım](../18-kurumsal-kullanim/README.md)
 
-## Sonraki Adım
+## Sonraki Bölüm
 
-Bu bölümü tamamladıktan sonra → [20 - Pratik Senaryolar ve Tarifler](../20-pratik-senaryolar/README.md)
+→ [20 - Pratik Senaryolar ve Tarifler](../20-pratik-senaryolar/README.md)

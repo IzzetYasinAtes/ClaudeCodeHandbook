@@ -65,6 +65,14 @@ flowchart LR
 
 ← [19 - Rol Bazlı Kullanım Rehberleri](../19-rol-bazli-rehberler/README.md)
 
+---
+
+## Birim Bazlı Rehberler
+
+Bu senaryolar ağırlıklı olarak teknik ekipler için hazırlanmıştır. Diğer birimler için özelleştirilmiş kullanım rehberleri:
+
+→ [Bölüm 19: Birim ve Pozisyon Bazlı Rehberler](../19-rol-bazli-rehberler/README.md)
+
 ## Sonraki Adım
 
 Bu bölümü tamamladıktan sonra → [21 - Sorun Giderme ve SSS](../21-sorun-giderme/README.md)
