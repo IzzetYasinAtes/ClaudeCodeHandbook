@@ -29,35 +29,26 @@ Claude Code'un farklı birimlerdeki günlük iş akışlarına nasıl entegre ed
 flowchart TD
     START{"Hangi birimde<br/>çalışıyorsunuz?"}
 
-    START -->|"Teknik"| TECH{"Claude Code<br/>deneyiminiz var mı?"}
-    TECH -->|"Evet"| TECH_EXP["Doğrudan<br/>Bölüm 19'a geçin"]
-    TECH -->|"Hayır"| TECH_NEW["Bölüm 06'dan<br/>başlayın"]
-
-    START -->|"Ürün & Analiz"| PROD{"Yapay zeka<br/>temellerini biliyor<br/>musunuz?"}
-    PROD -->|"Evet"| PROD_EXP["Bölüm 04'ten<br/>başlayın"]
-    PROD -->|"Hayır"| PROD_NEW["Bölüm 01'den<br/>başlayın"]
-
-    START -->|"Ticari"| COMM["Bölüm 01'den<br/>başlayın"]
-
-    START -->|"Operasyon"| OPS{"Yapay zeka<br/>temellerini biliyor<br/>musunuz?"}
-    OPS -->|"Evet"| OPS_EXP["Bölüm 17'den<br/>başlayın"]
-    OPS -->|"Hayır"| OPS_NEW["Bölüm 01'den<br/>başlayın"]
+    START -->|"Teknik"| TECH["Bölüm 01'den başlayın<br/>01–14, 19, 20"]
+    START -->|"Ürün & Analiz"| PROD["Bölüm 01'den başlayın<br/>01–03, 05, 19"]
+    START -->|"Ticari"| COMM["Doğrudan Bölüm 19<br/>Satış / Pazarlama rehberi"]
+    START -->|"Operasyon"| OPS["Doğrudan Bölüm 19<br/>+ Bölüm 18"]
 ```
+
+Teknik ve Ürün & Analiz birimleri yapay zeka temellerini öğrenerek başlar. Ticari ve Operasyon birimleri doğrudan kendi pozisyon rehberlerine geçebilir.
 
 ---
 
 ## Ön Koşullar
 
-Bu bölümü okumadan önce aşağıdaki konulara aşina olmanız önerilir:
+Bu bölümdeki rehberler bağımsız okunabilir; ancak teknik birim için aşağıdaki konulara aşinalık önerilir:
 
-| Konu | Bölüm | Gereklilik |
-|------|-------|------------|
-| Yapay zeka temel kavramları | [Bölüm 01](../01-yapay-zeka-temelleri/README.md) | Tüm birimler |
-| AI destekli geliştirme yaklaşımları | [Bölüm 04](../04-ai-destekli-gelistirme/README.md) | Tüm birimler |
-| Claude Code nasıl çalışır | [Bölüm 06](../06-claude-code-tanitim/README.md) | Teknik birim |
-| Arayüz ve komutlar | [Bölüm 07](../07-arayuz-ve-komutlar/README.md) | Teknik birim |
-| Araçlar (Tools) | [Bölüm 08](../08-araclar/README.md) | Teknik, Ürün & Analiz |
-| Bellek ve bağlam yönetimi | [Bölüm 09](../09-bellek-ve-baglam/README.md) | Teknik birim |
+| Konu | Bölüm |
+|------|-------|
+| Claude Code nasıl çalışır | [Bölüm 06](../06-claude-code-tanitim/README.md) |
+| Arayüz ve komutlar | [Bölüm 07](../07-arayuz-ve-komutlar/README.md) |
+| Araçlar (Tools) | [Bölüm 08](../08-araclar/README.md) |
+| Bellek ve bağlam yönetimi | [Bölüm 09](../09-bellek-ve-baglam/README.md) |
 
 ---
 

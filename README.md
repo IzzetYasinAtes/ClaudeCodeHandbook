@@ -25,16 +25,14 @@ Her bölüm bağımsız olarak okunabilecek şekilde yapılandırılmıştır. B
 
 ## Bu Rehber Kimin İçin?
 
-Bölüm 01–04 yapay zeka, LLM ve AI destekli geliştirme gibi temel ve tarihsel bilgileri içerir. AI konusuna yeni olan herkes bu bölümlerle başlayabilir. Sonraki bölümler doğrudan Claude Code kullanımına odaklanır.
-
 | Birim | Pozisyonlar | Nereden Başlamalı? | Odak Bölümleri |
 |-------|------------|-------------------|----------------|
-| **Teknik** | Yazılım Geliştirici, QA / Test, Sistem Uzmanı, UI/UX | Bölüm 06 | 06–14, 19, 20 |
-| **Ürün & Analiz** | Ürün Müdürü, İş Analisti, Proje Yöneticisi | Bölüm 01 | 01–05, 08, 19, 20 |
-| **Ticari** | Satış, Pazarlama | Bölüm 01 | 01–05, 19 |
-| **Operasyon** | İK, Finans, Yönetim | Bölüm 01 | 01–05, 17, 18, 19 |
+| **Teknik** | Yazılım Geliştirici, QA / Test, Sistem Uzmanı, UI/UX | Bölüm 01 | 01–14, 19, 20 |
+| **Ürün & Analiz** | Ürün Müdürü, İş Analisti, Proje Yöneticisi | Bölüm 01 | 01–03, 05, 19 |
+| **Ticari** | Satış, Pazarlama | Bölüm 19 | 19 |
+| **Operasyon** | İK, Finans, Yönetim | Bölüm 19 | 18, 19 |
 
-> Teknik birim zaten AI ve yazılım geliştirme süreçlerine aşina olduğu için doğrudan Bölüm 06'dan başlayabilir. Diğer birimler için Bölüm 01–04 arası temel kavramları anlamak faydalı olacaktır.
+Bölüm 01–05 yapay zekanın nasıl çalıştığını ve Claude ekosistemini anlatır; teknik ekipler ve ürün/analiz birimleri için önerilir. Ticari ve operasyon birimleri doğrudan kendi pozisyon rehberlerine (Bölüm 19) geçebilir.
 
 ---
 
