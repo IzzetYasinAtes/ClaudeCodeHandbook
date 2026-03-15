@@ -28,6 +28,8 @@ Yapay zekayı muhtemelen her gün kullanıyorsunuz, farkında olmasanız bile:
 ```mermaid
 timeline
     title Artificial Intelligence Tarihçesi
+    1943 : Enigma
+         : Alan Turing, Nazi şifrelerini kırmak için ilk hesaplama makinelerini geliştirdi
     1950 : Alan Turing - "Turing Test"
          : Makine düşünebilir mi sorusu
     1956 : Dartmouth Konferansı
