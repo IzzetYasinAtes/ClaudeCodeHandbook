@@ -1,10 +1,10 @@
 # Claude Code Handbook
 
-AI ve Claude Code ekosistemini Türkçe ve pratik bir şekilde öğrenmek için hazırlanmış kapsamlı bir rehber.
+Bu rehberde, yapay zeka dünyasını ve Claude Code kullanımını Türkçe olarak anlaşılır ve pratik bir şekilde bir araya getiren kapsamlı bir kaynaktır. İster konuya yeni başlıyor olun ister günlük iş akışınızda AI’dan daha fazla faydalanmak isteyin, içerikler sizi adım adım ilerletecek şekilde tasarlanmıştır.
 
-## TL;DR
+## Kısaca
 
-Bu repo;
+Bu rehberde;
 
 - Yapay zeka ve LLM kavramlarını
 - Claude Code kullanımını
