@@ -67,13 +67,32 @@ flowchart LR
 
 Context window doluluk oranı ile Claude Code performansı arasında doğrudan bir ilişki vardır:
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '14px'}}}%%
-xychart-beta
-    title "Context Window Doluluk vs Performans"
-    x-axis "Doluluk (%)" [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    y-axis "Performans (%)" 0 --> 100
-    line "Performans" [95, 95, 93, 90, 85, 78, 70, 60, 45, 30, 15]
+```
+Performans (%)
+100 ┤ ■■■■
+ 95 ┤■■■■■■■■■■■■
+ 90 ┤            ■■■■■
+ 85 ┤                 ■■■■
+ 80 ┤                     ■■■
+ 75 ┤                        ■■■
+ 70 ┤                           ■■
+ 65 ┤                             ■■
+ 60 ┤                               ■■
+ 55 ┤                                 ■
+ 50 ┤                                  ■
+ 45 ┤                                   ■■
+ 40 ┤                                     ■
+ 35 ┤                                      ■
+ 30 ┤                                       ■
+ 25 ┤                                        ■
+ 20 ┤                                         ■
+ 15 ┤                                          ■
+    └──────────────────────────────────────────────
+     0   10   20   30   40   50   60   70   80  90  100
+                        Doluluk (%)
+
+     ■■■■ Optimal    ■■■■ İyi    ■■■■ Dikkat    ■■■■ Uyarı    ■■ Kritik
+     (0-25%)         (25-50%)    (50-73%)        (73-80%)      (80%+)
 ```
 
 ### Performans Aşamaları
