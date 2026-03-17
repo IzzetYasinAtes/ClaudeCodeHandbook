@@ -2,6 +2,48 @@
 
 Claude Code ile etkileşim kurmanın farklı yollarını, çalışma modlarını ve komut satırı referansını kapsayan bölüm. Temel kullanımdan ileri düzey CLI otomasyonuna kadar tüm arayüz özelliklerini öğreneceksiniz.
 
+## Hızlı Referans Tabloları
+
+### CLI Bayrakları
+
+| Bayrak | Kısa | Açıklama | Varsayılan |
+|--------|------|----------|------------|
+| `--print` | `-p` | Non-interactive mod | Kapalı |
+| `--continue` | `-c` | Son oturuma devam | - |
+| `--resume` | `-r` | Belirli oturuma devam | - |
+| `--session-id` | - | Oturum ID belirle | Otomatik |
+| `--worktree` | `-w` | Çalışma dizini | Geçerli dizin |
+| `--output-format` | - | Çıktı formatı | `text` |
+| `--model` | - | Model seçimi | `claude-opus-4-20250514` |
+| `--max-tokens` | - | Maks. yanıt token | Model limiti |
+| `--allowedTools` | - | İzinli araçlar | Tümü |
+| `--disallowedTools` | - | Yasaklı araçlar | Yok |
+| `--dangerously-skip-permissions` | - | İzinleri atla | Kapalı |
+| `--fast` | - | Hızlı mod | Kapalı |
+| `--verbose` | - | Detaylı çıktı | Kapalı |
+| `--version` | - | Sürüm bilgisi | - |
+| `--help` | - | Yardım | - |
+
+### Slash Komutları
+
+| Komut | Kategori | Açıklama | Parametre |
+|-------|----------|----------|-----------|
+| `/help` | Bilgi | Tüm komutları listele | - |
+| `/compact` | Bağlam | Konuşma geçmişini sıkıştır | `[talimat]` (opsiyonel) |
+| `/context` | Bağlam | Context window durumunu göster | - |
+| `/permissions` | Güvenlik | İzin ayarlarını görüntüle | - |
+| `/resume` | Oturum | Önceki oturuma devam et | - |
+| `/init` | Konfigürasyon | CLAUDE.md oluştur | - |
+| `/install-github-app` | Entegrasyon | GitHub App kur | - |
+| `/plugin` | Eklenti | Eklenti yönetimi | `list\|add\|install` |
+| `/loop` | Çalışma | Döngü modunu aç/kapa | - |
+| `/clear` | Oturum | Konuşmayı temizle | - |
+| `/doctor` | Bilgi | Sistem sağlık kontrolü | - |
+| `/config` | Konfigürasyon | Ayarları görüntüle/düzenle | `[set key value]` |
+| `/cost` | Bilgi | Oturum maliyet bilgisi | - |
+| `/vim` | Görüntüleme | Vim modunu aç/kapa | - |
+| `/terminal-setup` | Konfigürasyon | Terminal entegrasyonu kur | - |
+
 ## Bu Bölümde Neler Öğreneceksiniz?
 
 ```mermaid
@@ -58,48 +100,6 @@ flowchart LR
     modlar --> komutlar
     komutlar --> cikti
 ```
-
-## Hızlı Referans Tabloları
-
-### CLI Bayrakları
-
-| Bayrak | Kısa | Açıklama | Varsayılan |
-|--------|------|----------|------------|
-| `--print` | `-p` | Non-interactive mod | Kapalı |
-| `--continue` | `-c` | Son oturuma devam | - |
-| `--resume` | `-r` | Belirli oturuma devam | - |
-| `--session-id` | - | Oturum ID belirle | Otomatik |
-| `--worktree` | `-w` | Çalışma dizini | Geçerli dizin |
-| `--output-format` | - | Çıktı formatı | `text` |
-| `--model` | - | Model seçimi | `claude-opus-4-20250514` |
-| `--max-tokens` | - | Maks. yanıt token | Model limiti |
-| `--allowedTools` | - | İzinli araçlar | Tümü |
-| `--disallowedTools` | - | Yasaklı araçlar | Yok |
-| `--dangerously-skip-permissions` | - | İzinleri atla | Kapalı |
-| `--fast` | - | Hızlı mod | Kapalı |
-| `--verbose` | - | Detaylı çıktı | Kapalı |
-| `--version` | - | Sürüm bilgisi | - |
-| `--help` | - | Yardım | - |
-
-### Slash Komutları
-
-| Komut | Kategori | Açıklama | Parametre |
-|-------|----------|----------|-----------|
-| `/help` | Bilgi | Tüm komutları listele | - |
-| `/compact` | Bağlam | Konuşma geçmişini sıkıştır | `[talimat]` (opsiyonel) |
-| `/context` | Bağlam | Context window durumunu göster | - |
-| `/permissions` | Güvenlik | İzin ayarlarını görüntüle | - |
-| `/resume` | Oturum | Önceki oturuma devam et | - |
-| `/init` | Konfigürasyon | CLAUDE.md oluştur | - |
-| `/install-github-app` | Entegrasyon | GitHub App kur | - |
-| `/plugin` | Eklenti | Eklenti yönetimi | `list\|add\|install` |
-| `/loop` | Çalışma | Döngü modunu aç/kapa | - |
-| `/clear` | Oturum | Konuşmayı temizle | - |
-| `/doctor` | Bilgi | Sistem sağlık kontrolü | - |
-| `/config` | Konfigürasyon | Ayarları görüntüle/düzenle | `[set key value]` |
-| `/cost` | Bilgi | Oturum maliyet bilgisi | - |
-| `/vim` | Görüntüleme | Vim modunu aç/kapa | - |
-| `/terminal-setup` | Konfigürasyon | Terminal entegrasyonu kur | - |
 
 ## Sonraki Adım
 
