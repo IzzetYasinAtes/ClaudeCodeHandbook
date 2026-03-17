@@ -37,10 +37,6 @@ flowchart TB
     CA --> CE
     CM -.->|"Uyumlu"| CR[".cursorrules"]
 
-    style CA fill:#6366F1,color:#fff
-    style CC fill:#7C3AED,color:#fff
-    style CR fill:#F59E0B,color:#fff
-    style CM fill:#10B981,color:#fff
 ```
 
 ---
@@ -96,9 +92,6 @@ flowchart TB
     SH --> CR
     SH --> CM
 
-    style CR fill:#6366F1,color:#fff
-    style CM fill:#10B981,color:#fff
-    style SH fill:#F59E0B,color:#fff
 ```
 
 ### Senkronizasyon Stratejileri
@@ -162,8 +155,6 @@ flowchart TB
     C -->|Evet| CA
     C -->|Hayır| CC
 
-    style CA fill:#6366F1,color:#fff
-    style CC fill:#7C3AED,color:#fff
 ```
 
 ### Cursor AI Tercih Edin

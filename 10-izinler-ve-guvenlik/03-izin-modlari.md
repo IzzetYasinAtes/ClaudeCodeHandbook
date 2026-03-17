@@ -236,11 +236,6 @@ flowchart TD
     Q4 -->|"Evet"| ACCEPT["📝 acceptEdits<br/>Dosya düzenlemeleri otomatik"]
     Q4 -->|"Hayır"| DEFAULT["⚖️ default<br/>Her şeyi sor"]
 
-    style PLAN fill:#d4edda,stroke:#28a745
-    style DEFAULT fill:#cce5ff,stroke:#007bff
-    style ACCEPT fill:#fff3cd,stroke:#ffc107
-    style DONTASK fill:#e2e3e5,stroke:#6c757d
-    style BYPASS fill:#f8d7da,stroke:#dc3545
 ```
 
 ---

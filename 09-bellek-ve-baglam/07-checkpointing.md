@@ -29,11 +29,6 @@ flowchart LR
     CP1 --> CP2 --> CP3 --> CP4
     CP4 -.->|"Geri al<br/>(undo)"| CP3
 
-    style CP1 fill:#4A90D9,color:#fff
-    style CP2 fill:#4A90D9,color:#fff
-    style CP3 fill:#27AE60,color:#fff
-    style CP4 fill:#E74C3C,color:#fff
-    style CP5 fill:#27AE60,color:#fff
 ```
 
 ---
@@ -129,8 +124,6 @@ flowchart TD
     CP3 -->|"Değişiklikler onaylandıktan<br/>sonra commit"| GC2
     CP1 -.->|"Checkpoint geri alma<br/>(git stash veya restore)"| GC1
 
-    style checkpoint_layer fill:#f0f0ff
-    style git_layer fill:#f0fff0
 ```
 
 ### Checkpoint vs Git Karşılaştırması
@@ -206,8 +199,6 @@ flowchart TD
     A2 --> TEST2["Benchmark: %85 ✅"]
     TEST2 --> COMMIT["Commit et 🎉"]
 
-    style UNDO fill:#E74C3C,color:#fff
-    style COMMIT fill:#27AE60,color:#fff
 ```
 
 ---

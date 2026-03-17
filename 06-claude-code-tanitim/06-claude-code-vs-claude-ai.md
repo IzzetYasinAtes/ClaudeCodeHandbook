@@ -140,11 +140,6 @@ flowchart TD
     Q4 -->|"Sadece soru-cevap"| CLAUDE_AI_3["Claude AI veya<br/>Claude Code<br/>(ikisi de olur)"]
     Q4 -->|"Okuma + Yazma + Çalıştırma"| CLAUDE_CODE_2["Claude Code<br/>(Otonom ajan)"]
 
-    style CLAUDE_AI_1 fill:#3498DB,color:#fff
-    style CLAUDE_AI_2 fill:#3498DB,color:#fff
-    style CLAUDE_AI_3 fill:#9B59B6,color:#fff
-    style CLAUDE_CODE_1 fill:#27AE60,color:#fff
-    style CLAUDE_CODE_2 fill:#27AE60,color:#fff
 ```
 
 ---
@@ -244,8 +239,6 @@ flowchart TD
     CODE4 --> AI3["Claude AI:<br/>Sprint raporu yaz"]
     AI3 --> AKSAM(["Akşam"])
 
-    style SABAH fill:#4A90D9,color:#fff
-    style AKSAM fill:#27AE60,color:#fff
 ```
 
 ---

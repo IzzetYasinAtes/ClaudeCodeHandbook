@@ -27,7 +27,6 @@ flowchart TD
     E3 --> E3D["Llama standardı yayılırsa<br/>Meta ekosisteminin merkezi olur"]
     E4 --> E4D["Topluluk katkıları ile<br/>model geliştirme maliyeti düşer"]
 
-    style S fill:#0668E1,color:#fff
 ```
 
 ### Meta AI Araştırma — FAIR
@@ -49,7 +48,6 @@ flowchart LR
     L2 -->|"405B parametre<br/>ile büyük sıçrama"| L3
     L3 -->|"MoE mimarisi<br/>ve dev context"| L4
 
-    style L4 fill:#0668E1,color:#fff
 ```
 
 ### Nesil Karşılaştırması
@@ -89,11 +87,6 @@ flowchart TD
         E3 --> M_OUT
     end
 
-    style E1 fill:#51cf66,color:#fff
-    style E3 fill:#51cf66,color:#fff
-    style E2 fill:#dee2e6,color:#666
-    style E4 fill:#dee2e6,color:#666
-    style EN fill:#dee2e6,color:#666
 ```
 
 MoE'de her token yalnızca birkaç "uzman" (expert) tarafından işlenir. Toplam parametre sayısı çok yüksek olsa da, aktif parametre sayısı düşük kalır → **daha az hesaplama maliyeti**.
@@ -136,8 +129,6 @@ flowchart LR
         M4["Genel amaçlı<br/>en iyi kalite"]
     end
 
-    style S3 fill:#ff922b,color:#fff
-    style M4 fill:#0668E1,color:#fff
 ```
 
 ---
@@ -166,8 +157,6 @@ flowchart TD
     Q2 -->|Hayır| DEVAM["✅ Devam edin"]
     Q2 -->|Evet| YASAK["❌ Lisans bunu yasaklar"]
 
-    style OK fill:#51cf66,color:#fff
-    style YASAK fill:#ff6b6b,color:#fff
 ```
 
 > **700M MAU limiti kimler için geçerli?** Pratikte bu limit yalnızca Google, Meta, Amazon gibi devleri etkiler. Küçük ve orta ölçekli tüm şirketler için Llama tamamen ücretsizdir.

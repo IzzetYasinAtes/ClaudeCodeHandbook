@@ -34,8 +34,6 @@ flowchart TB
         A4["Çok boyutlu<br/>(güvenlik, performans, mantık)"]
     end
 
-    style traditional fill:#FEE2E2,stroke:#EF4444
-    style ai fill:#D1FAE5,stroke:#10B981
 ```
 
 ---
@@ -62,8 +60,6 @@ flowchart TB
 
     L6 --> REPORT["📋 İnceleme Raporu"]
 
-    style PR fill:#3B82F6,color:#fff
-    style REPORT fill:#10B981,color:#fff
 ```
 
 ### Her Katmanın Detayı
@@ -101,11 +97,6 @@ flowchart TB
 
     MERGE --> REPORT["📋 Kapsamlı<br/>İnceleme Raporu"]
 
-    style ORCH fill:#7C3AED,color:#fff
-    style SA1 fill:#EF4444,color:#fff
-    style SA2 fill:#3B82F6,color:#fff
-    style SA3 fill:#F59E0B,color:#fff
-    style SA4 fill:#10B981,color:#fff
 ```
 
 ### Multi-Agent Avantajları
@@ -298,8 +289,6 @@ flowchart LR
     R4 --> PASS
     R5 --> PASS
 
-    style PR fill:#3B82F6,color:#fff
-    style SEC fill:#EF4444,color:#fff
 ```
 
 ### Örnek 2: Otomatik Düzeltme ile İnceleme

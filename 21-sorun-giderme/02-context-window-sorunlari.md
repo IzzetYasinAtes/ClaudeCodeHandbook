@@ -31,10 +31,6 @@ flowchart LR
     G -->|"%80-95<br/>Kritik"| J["Belirgin yavaşlama<br/>Kalite düşüşü"]
     G -->|"%95-100<br/>Aşım"| K["Oturum sonlanır<br/>Veri kaybı riski"]
 
-    style H fill:#27AE60,color:#fff
-    style I fill:#F39C12,color:#fff
-    style J fill:#E67E22,color:#fff
-    style K fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -75,8 +71,6 @@ flowchart LR
     C --> D["Eski mesajlar<br/>kaldırılır"]
     D --> E["Temiz Context<br/>(~10k token)"]
 
-    style A fill:#E74C3C,color:#fff
-    style E fill:#27AE60,color:#fff
 ```
 
 **Ne zaman kullanmalı:**
@@ -124,8 +118,6 @@ flowchart TD
     E --> F
     F --> G["Bütünleştir"]
 
-    style A fill:#E74C3C,color:#fff
-    style G fill:#27AE60,color:#fff
 ```
 
 ### Strateji 3: --worktree ile İzolasyon
@@ -196,8 +188,6 @@ flowchart TD
     H -->|Evet| I["Yeni oturum<br/>veya devam"]
     H -->|Hayır| B
 
-    style A fill:#3498DB,color:#fff
-    style G fill:#F39C12,color:#fff
 ```
 
 ### Proaktif Context Yönetimi

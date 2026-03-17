@@ -32,8 +32,6 @@ flowchart TB
         WC4["Yerel kurulum gerektirmez"]
     end
 
-    style rc fill:#DBEAFE,stroke:#3B82F6
-    style web fill:#D1FAE5,stroke:#10B981
 ```
 
 | Özellik | Remote Control | Web Claude Code |
@@ -66,9 +64,6 @@ flowchart TB
     RESULT -->|"3. PR oluştur"| GH["GitHub/GitLab"]
     RESULT -->|"4. Bildirim"| U
 
-    style U fill:#3B82F6,color:#fff
-    style CLOUD fill:#7C3AED,color:#fff
-    style GH fill:#10B981,color:#fff
 ```
 
 ### İşleyiş Adımları
@@ -97,8 +92,6 @@ flowchart LR
     B --> C["Branch<br/>seç (opsiyonel)"]
     C --> D["Görev<br/>tanımla"]
 
-    style A fill:#3B82F6,color:#fff
-    style D fill:#10B981,color:#fff
 ```
 
 ### Adım 3: Görev Başlatma
@@ -134,8 +127,6 @@ flowchart TB
     T1 -->|"Claude Code çalışıyor"| T2
     T2 -->|"Tamamlandı bildirimi"| T3
 
-    style T1 fill:#F59E0B,color:#fff
-    style T3 fill:#10B981,color:#fff
 ```
 
 Örnek görevler:
@@ -170,10 +161,6 @@ flowchart TB
     G2 -->|"~30 dk"| PR2["PR #102"]
     G3 -->|"~20 dk"| PR3["PR #103"]
 
-    style U fill:#3B82F6,color:#fff
-    style PR1 fill:#10B981,color:#fff
-    style PR2 fill:#10B981,color:#fff
-    style PR3 fill:#10B981,color:#fff
 ```
 
 ---
@@ -293,7 +280,6 @@ flowchart TB
         CLN["🧹 Temizlik<br/>Görev sonrası veri silme"]
     end
 
-    style sandbox fill:#FEF3C7,stroke:#F59E0B
 ```
 
 | Güvenlik | Açıklama |

@@ -37,8 +37,6 @@ flowchart LR
 
     mcp_side ---|"vs"| skill_side
 
-    style mcp_side fill:#4A90D9,color:#fff
-    style skill_side fill:#27AE60,color:#fff
 ```
 
 | Özellik | MCP Server | Skill |
@@ -79,8 +77,6 @@ flowchart TD
     Q5 -->|"Evet, doküman olarak"| SKILL
     Q5 -->|"Hayır, kişisel"| SKILL
 
-    style MCP fill:#4A90D9,color:#fff
-    style SKILL fill:#27AE60,color:#fff
 ```
 
 ---
@@ -111,10 +107,6 @@ flowchart TD
         S_FILE --> S_TOTAL
     end
 
-    style mcp_approach fill:#f8d7da,stroke:#dc3545
-    style skill_approach fill:#d4edda,stroke:#28a745
-    style M_TOTAL fill:#dc3545,color:#fff
-    style S_TOTAL fill:#28a745,color:#fff
 ```
 
 ### MCP Yaklaşımı: LangSmith MCP Server
@@ -332,8 +324,6 @@ flowchart TD
         end
     end
 
-    style mcp_katman fill:#4A90D9,color:#fff
-    style skill_katman fill:#27AE60,color:#fff
 ```
 
 ```jsonc
@@ -466,9 +456,6 @@ flowchart LR
         CONVERSATION["Konuşma<br/>~188K token<br/>kullanılabilir ✅"]
     end
 
-    style CONVERSATION fill:#27AE60,color:#fff
-    style MCP_TOOLS fill:#4A90D9,color:#fff
-    style SKILLS fill:#F39C12,color:#fff
 ```
 
 ```bash

@@ -11,9 +11,6 @@ flowchart LR
     C --> D["Tool Search<br/>Akıllı Araç Yükleme"]
     D --> E["MCP vs Skills<br/>Karar Rehberi"]
 
-    style A fill:#4A90D9,color:#fff
-    style C fill:#27AE60,color:#fff
-    style E fill:#E74C3C,color:#fff
 ```
 
 ## İçerik

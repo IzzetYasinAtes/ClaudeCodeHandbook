@@ -31,8 +31,6 @@ flowchart TD
     KEY_INPUT --> VALIDATE["Key doğrulanır"]
     VALIDATE --> DONE
 
-    style START fill:#4A90D9,color:#fff
-    style DONE fill:#27AE60,color:#fff
 ```
 
 ### Yöntem 1: OAuth ile Giriş (Önerilen)
@@ -128,11 +126,6 @@ flowchart TD
     Q3 -->|"2-20 kişi"| TEAM["✅ Claude Team<br/>$30/kişi/ay"]
     Q3 -->|"20+ kişi"| ENT["✅ Claude Enterprise<br/>Özel fiyat"]
 
-    style PRO fill:#3498DB,color:#fff
-    style MAX5 fill:#2ECC71,color:#fff
-    style MAX20 fill:#E67E22,color:#fff
-    style TEAM fill:#9B59B6,color:#fff
-    style ENT fill:#E74C3C,color:#fff
 ```
 
 | Kullanım Senaryosu | Önerilen Plan |

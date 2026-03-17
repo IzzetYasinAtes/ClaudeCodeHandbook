@@ -38,9 +38,6 @@ flowchart TB
     katman1 -->|"Daha yüksek risk"| katman2
     katman2 -->|"En yüksek risk"| katman3
 
-    style katman1 fill:#d4edda,stroke:#28a745
-    style katman2 fill:#fff3cd,stroke:#ffc107
-    style katman3 fill:#f8d7da,stroke:#dc3545
 ```
 
 ---
@@ -177,10 +174,6 @@ flowchart TD
     ASK_USER_EDIT -->|"Don't ask<br/>this session"| SESSION_SAVE["Oturum İzni<br/>Kaydet + Çalıştır"]
     ASK_USER_EDIT -->|"No"| SKIP
 
-    style AUTO_ALLOW fill:#d4edda,stroke:#28a745
-    style AUTO_DENY fill:#f8d7da,stroke:#dc3545
-    style EXECUTE fill:#d4edda,stroke:#28a745
-    style SKIP fill:#f8d7da,stroke:#dc3545
 ```
 
 ---

@@ -25,9 +25,6 @@ flowchart LR
     PLAN --> P_DESC["Araştırma + plan<br/>Karar desteği<br/>Varsayılan model"]
     GP --> GP_DESC["Tam araç erişimi<br/>Çok adımlı görevler<br/>Varsayılan model"]
 
-    style EXPLORE fill:#3498DB,color:#fff
-    style PLAN fill:#E67E22,color:#fff
-    style GP fill:#27AE60,color:#fff
 ```
 
 ---
@@ -96,8 +93,6 @@ flowchart TD
         L3["❌ Web'e erişemez"]
     end
 
-    style explore_strength fill:#d4edda,stroke:#28a745
-    style explore_limit fill:#f8d7da,stroke:#dc3545
 ```
 
 ---
@@ -253,10 +248,6 @@ flowchart TD
     PLAN --> TIP2["💡 Araştır ve planla,<br/>uygulamadan önce"]
     EXPLORE --> TIP3["💡 En hızlı ve en ucuz"]
 
-    style GP fill:#27AE60,color:#fff
-    style PLAN fill:#E67E22,color:#fff
-    style EXPLORE fill:#3498DB,color:#fff
-    style DIRECT fill:#95a5a6,color:#fff
 ```
 
 ---
@@ -314,9 +305,6 @@ flowchart LR
     E["🔍 Explore<br/>N+1 sorunlarını bul"] --> P["📋 Plan<br/>Düzeltme stratejisi"]
     P --> G["⚙️ GeneralPurpose<br/>Düzeltmeleri uygula"]
 
-    style E fill:#3498DB,color:#fff
-    style P fill:#E67E22,color:#fff
-    style G fill:#27AE60,color:#fff
 ```
 
 ---

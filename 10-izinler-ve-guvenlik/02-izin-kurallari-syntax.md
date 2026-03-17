@@ -54,10 +54,6 @@ flowchart TD
     ALLOW -->|"Eşleşme var"| ALLOWED["✅ İzin Verildi<br/>Otomatik çalışır"]
     ALLOW -->|"Eşleşme yok"| DEFAULT["Varsayılan Davranış<br/>(mode'a bağlı)"]
 
-    style DENIED fill:#f8d7da,stroke:#dc3545
-    style PROMPT fill:#fff3cd,stroke:#ffc107
-    style ALLOWED fill:#d4edda,stroke:#28a745
-    style DEFAULT fill:#e2e3e5,stroke:#6c757d
 ```
 
 > **Kritik:** `deny` her zaman önce değerlendirilir. Bir komut hem `allow` hem `deny` listesindeyse, **deny kazanır**.
@@ -276,10 +272,6 @@ flowchart TD
     A -.->|"En yüksek öncelik"| NOTE1["Yönetici tarafından<br/>belirlenir, değiştirilemez"]
     D -.->|"En düşük öncelik"| NOTE2["Sadece aktif<br/>oturum boyunca"]
 
-    style A fill:#e2e3e5,stroke:#6c757d
-    style B fill:#cce5ff,stroke:#007bff
-    style C fill:#d4edda,stroke:#28a745
-    style D fill:#fff3cd,stroke:#ffc107
 ```
 
 | Dosya | Kapsam | Kullanım |

@@ -22,11 +22,6 @@ flowchart LR
     SERVER --> CC2["💻 Dev Makinesi 2<br/>Otomatik uygular"]
     SERVER --> CC3["💻 CI/CD Runner<br/>Otomatik uygular"]
 
-    style ADMIN fill:#8E44AD,color:#fff
-    style SERVER fill:#3498DB,color:#fff
-    style CC1 fill:#27AE60,color:#fff
-    style CC2 fill:#27AE60,color:#fff
-    style CC3 fill:#27AE60,color:#fff
 ```
 
 ### Geleneksel vs Sunucu Tabanlı Yaklaşım
@@ -51,8 +46,6 @@ flowchart TD
         S1 --> S2 --> S3 --> S4
     end
 
-    style traditional fill:#FADBD8,stroke:#E74C3C
-    style server_managed fill:#D5F5E3,stroke:#27AE60
 ```
 
 ---
@@ -182,8 +175,6 @@ flowchart TD
     SETTINGS --> MANAGED["Managed Policies<br/>Bölümü"]
     MANAGED --> CREATE["Yeni Politika<br/>Oluşturun"]
 
-    style LOGIN fill:#3498DB,color:#fff
-    style CREATE fill:#27AE60,color:#fff
 ```
 
 ### Adım 3: Politika Tanımlama

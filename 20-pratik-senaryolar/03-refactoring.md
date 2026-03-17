@@ -30,10 +30,6 @@ flowchart TD
     H -->|Hayır| K["Sonraki Aşamaya Geç"]
     K --> E
     I --> E
-
-    style A fill:#AF7AC5,color:#fff
-    style J fill:#27AE60,color:#fff
-    style I fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -105,9 +101,6 @@ flowchart LR
     B --> D{"Karşılaştır"}
     C --> D
     D --> E["En iyi yaklaşımı<br/>main'e merge et"]
-
-    style A fill:#3498DB,color:#fff
-    style E fill:#27AE60,color:#fff
 ```
 
 ---

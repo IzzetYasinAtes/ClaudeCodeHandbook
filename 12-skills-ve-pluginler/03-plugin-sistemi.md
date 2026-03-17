@@ -36,8 +36,6 @@ flowchart TD
 
     MCP --> M1["database-mcp"]
 
-    style PLUGIN fill:#7e57c2,stroke:#4527a0,color:#fff
-    style MANIFEST fill:#fff9c4,stroke:#f9a825
 ```
 
 ---
@@ -132,11 +130,6 @@ flowchart TD
     M_DB --> M_DB_CFG["config.json"]
     M_DB --> M_DB_SRC["index.js"]
 
-    style MANIFEST_DIR fill:#fff9c4,stroke:#f9a825
-    style SKILLS_DIR fill:#e8f5e9,stroke:#4caf50
-    style AGENTS_DIR fill:#e3f2fd,stroke:#2196f3
-    style HOOKS_DIR fill:#fce4ec,stroke:#e91e63
-    style MCP_DIR fill:#f3e5f5,stroke:#9c27b0
 ```
 
 **Tam dizin ağacı:**

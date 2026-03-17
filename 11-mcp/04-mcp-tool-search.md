@@ -34,8 +34,6 @@ flowchart TD
         TOTAL["Toplam: ~13.400 token<br/>sadece araç tanımları için! 😰"]
     end
 
-    style eager fill:#f8d7da,stroke:#dc3545
-    style TOTAL fill:#dc3545,color:#fff
 ```
 
 **Sorun:** Kullanıcı sadece "GitHub'daki issue'ları listele" dese bile, Puppeteer, Jira, MongoDB ve diğer tüm sunucuların araç tanımları gereksiz yere bağlamda yer kaplar.
@@ -61,8 +59,6 @@ flowchart TD
         TOTAL2["Toplam: ~800 token<br/>%94 tasarruf! 🚀"]
     end
 
-    style deferred fill:#d4edda,stroke:#28a745
-    style TOTAL2 fill:#28a745,color:#fff
 ```
 
 ---
@@ -91,8 +87,6 @@ flowchart LR
         D_START --> D_INDEX --> D_SEARCH --> D_TOTAL
     end
 
-    style eager fill:#f8d7da,stroke:#dc3545
-    style deferred fill:#d4edda,stroke:#28a745
 ```
 
 | Metrik | Eager Loading | Deferred Loading |
@@ -324,9 +318,6 @@ flowchart TD
     TS -->|"4. Tanımları yükle"| CTX
     CC -->|"5. Aracı çağır"| S1
 
-    style TS fill:#4A90D9,color:#fff
-    style IDX fill:#27AE60,color:#fff
-    style CTX fill:#F39C12,color:#fff
 ```
 
 ---

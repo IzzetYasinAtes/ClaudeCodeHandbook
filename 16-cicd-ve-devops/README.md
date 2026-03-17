@@ -63,9 +63,6 @@ flowchart TB
     CC --> REPORT
     CC --> DOCS
 
-    style CC fill:#7C3AED,color:#fff
-    style triggers fill:#DBEAFE,stroke:#3B82F6
-    style outputs fill:#D1FAE5,stroke:#10B981
 ```
 
 ## Ön Koşullar

@@ -26,10 +26,6 @@ flowchart LR
         MODE["📋 Mod<br/>agent"]
     end
 
-    style MODEL fill:#3498DB,color:#fff
-    style CONTEXT fill:#F39C12,color:#fff
-    style COST fill:#E74C3C,color:#fff
-    style MODE fill:#27AE60,color:#fff
 ```
 
 ### Bileşen Detayları
@@ -59,10 +55,6 @@ flowchart TD
     RED --> COMPACT["/compact<br/>Bağlamı özetle"]
     COMPACT --> GREEN
 
-    style GREEN fill:#27AE60,color:#fff
-    style YELLOW fill:#F39C12,color:#fff
-    style RED fill:#E74C3C,color:#fff
-    style COMPACT fill:#3498DB,color:#fff
 ```
 
 ### Context Doluluk Renkleri
@@ -113,10 +105,6 @@ flowchart LR
     GIT --> CHANGES["📝 Değişiklikler<br/>3 modified, 1 added"]
     GIT --> STATUS["🔄 Durum<br/>Clean / Dirty"]
 
-    style GIT fill:#2C3E50,color:#fff
-    style BRANCH fill:#27AE60,color:#fff
-    style CHANGES fill:#F39C12,color:#fff
-    style STATUS fill:#3498DB,color:#fff
 ```
 
 ---

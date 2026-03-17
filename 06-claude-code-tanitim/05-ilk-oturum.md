@@ -24,8 +24,6 @@ flowchart TD
     G --> H["İzin sistemini anlayın"]
     H --> I(["Oturumu kapatın"])
 
-    style A fill:#4A90D9,color:#fff
-    style I fill:#27AE60,color:#fff
 ```
 
 ---

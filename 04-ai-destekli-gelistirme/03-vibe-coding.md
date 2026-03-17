@@ -44,8 +44,6 @@ flowchart TD
         V6 --> V2
     end
 
-    style geleneksel fill:#fff5f5
-    style vibe fill:#f5fff5
 ```
 
 | Boyut | Geleneksel Kodlama | Vibe Coding |
@@ -72,11 +70,6 @@ flowchart TD
     E --> A
     D -->|"Evet"| F["✅ ACCEPT<br/>Kodu kabul et"]
     
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#FF9800,color:#fff
-    style E fill:#F44336,color:#fff
-    style F fill:#4CAF50,color:#fff
 ```
 
 ### Adım Adım Bir Vibe Coding Oturumu
@@ -123,8 +116,6 @@ flowchart LR
     A["Fikir"] -->|"Vibe Coding<br/>~30 dk"| B["Çalışan Prototip"]
     A -->|"Geleneksel<br/>~3-5 gün"| B
 
-    style A fill:#FFF9C4
-    style B fill:#C8E6C9
 ```
 
 - Dakikalar içinde MVP (Minimum Viable Product) oluşturma

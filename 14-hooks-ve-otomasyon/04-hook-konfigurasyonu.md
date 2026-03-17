@@ -43,10 +43,6 @@ flowchart TD
 
     root --> events --> hookGroup --> hookDef
 
-    style HOOKS fill:#3498DB,color:#fff
-    style EVT fill:#F39C12,color:#fff
-    style MATCHER fill:#9B59B6,color:#fff
-    style TYPE fill:#27AE60,color:#fff
 ```
 
 ### Tam JSON Şeması
@@ -175,13 +171,6 @@ flowchart TB
         I1["Exit 1+"] --> ILOG["⚠️ Hata loglanır ama akış devam eder"]
     end
 
-    style S0 fill:#27AE60,color:#fff
-    style S1 fill:#E74C3C,color:#fff
-    style P0 fill:#27AE60,color:#fff
-    style P1 fill:#E74C3C,color:#fff
-    style P2 fill:#F39C12,color:#fff
-    style I0 fill:#27AE60,color:#fff
-    style I1 fill:#F39C12,color:#fff
 ```
 
 ### Exit Code Özet Tablosu
@@ -341,9 +330,6 @@ flowchart TD
 
     LOCAL --> merge
 
-    style USER fill:#3498DB,color:#fff
-    style PROJECT fill:#27AE60,color:#fff
-    style LOCAL fill:#F39C12,color:#fff
 ```
 
 ### Kapsam Detayları

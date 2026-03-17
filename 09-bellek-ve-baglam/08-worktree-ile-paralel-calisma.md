@@ -35,8 +35,6 @@ flowchart TD
         P3 --> TOTAL_P
     end
 
-    style TOTAL_S fill:#E74C3C,color:#fff
-    style TOTAL_P fill:#27AE60,color:#fff
 ```
 
 ---
@@ -76,8 +74,6 @@ flowchart TD
     WT2 --> CS2
     WT3 --> CS3
 
-    style main_repo fill:#4A90D9,color:#fff
-    style worktrees fill:#F39C12,color:#fff
 ```
 
 ---
@@ -185,8 +181,6 @@ flowchart TD
         TA --> ISO2["İstenen görevler<br/>için worktree oluşturulur"]
     end
 
-    style desktop fill:#4A90D9,color:#fff
-    style terminal fill:#F39C12,color:#fff
 ```
 
 ---
@@ -209,8 +203,6 @@ flowchart TD
     SUB2 -->|"Tamamlandı"| MERGE
     SUB3 -->|"Tamamlandı"| MERGE
 
-    style MAIN fill:#4A90D9,color:#fff
-    style MERGE fill:#27AE60,color:#fff
 ```
 
 Subagent oluştururken izolasyon modunu belirtebilirsiniz:
@@ -313,8 +305,6 @@ flowchart TD
     MERGE -->|"Evet"| GIT_MERGE["git merge worktree-<isim>"]
     MERGE -->|"Hayır"| DELETE_BRANCH["git branch -d worktree-<isim>"]
 
-    style CLEANUP fill:#F39C12,color:#fff
-    style GIT_MERGE fill:#27AE60,color:#fff
 ```
 
 ### Manuel Temizlik
@@ -345,10 +335,6 @@ flowchart TD
     Q2 -->|"Evet, bağımsız"| WORKTREE["Worktree ile<br/>paralel çalışın"]
     Q2 -->|"Hayır, birbirine<br/>bağlı"| SERIAL["Sıralı oturumlar<br/>(biri bitsin diğeri başlasın)"]
 
-    style NORMAL fill:#95A5A6,color:#fff
-    style WORKTREE fill:#27AE60,color:#fff
-    style MULTI fill:#27AE60,color:#fff
-    style SERIAL fill:#F39C12,color:#fff
 ```
 
 | Senaryo | Worktree Gerekli mi? | Neden |

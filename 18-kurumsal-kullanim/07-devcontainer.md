@@ -34,9 +34,6 @@ flowchart TD
     IDE --> |"Remote connection"| container
     DOCKER --> container
 
-    style IDE fill:#007ACC,color:#fff
-    style container fill:#2496ED,color:#fff
-    style CLAUDE fill:#D97706,color:#fff
 ```
 
 ### DevContainer Avantajları
@@ -63,12 +60,6 @@ flowchart TD
     JSON --> ENVS["containerEnv<br/>Ortam değişkenleri"]
     JSON --> MOUNTS["mounts<br/>Volume bağlantıları"]
 
-    style JSON fill:#2C3E50,color:#fff
-    style IMAGE fill:#3498DB,color:#fff
-    style FEATURES fill:#27AE60,color:#fff
-    style SETTINGS fill:#F39C12,color:#fff
-    style LIFECYCLE fill:#E67E22,color:#fff
-    style ENVS fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -245,8 +236,6 @@ flowchart TD
     CC -.->|"❌ Erişim yok"| HOST_FS
     CC -.->|"❌ Erişim yok"| HOST_PROC
 
-    style container_sandbox fill:#D5F5E3,stroke:#27AE60
-    style host_protected fill:#FADBD8,stroke:#E74C3C
 ```
 
 ### Güvenlik Konfigürasyonu
@@ -277,10 +266,6 @@ flowchart LR
     CS --> DC["DevContainer<br/>(Docker)"]
     DC --> CC["Claude Code<br/>Hazır"]
 
-    style DEV fill:#3498DB,color:#fff
-    style GH fill:#24292E,color:#fff
-    style CS fill:#9B59B6,color:#fff
-    style CC fill:#27AE60,color:#fff
 ```
 
 ### Codespaces Konfigürasyonu
@@ -336,9 +321,6 @@ flowchart TD
     SETUP --> READY["✅ Geliştirme ortamı hazır!"]
     READY --> CLAUDE["claude komutu ile başla"]
 
-    style CLONE fill:#3498DB,color:#fff
-    style READY fill:#27AE60,color:#fff
-    style CLAUDE fill:#F39C12,color:#fff
 ```
 
 ---

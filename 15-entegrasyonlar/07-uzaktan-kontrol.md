@@ -40,10 +40,6 @@ flowchart TB
     CC --> GIT
     CC --> TERM
 
-    style CC fill:#7C3AED,color:#fff
-    style RELAY fill:#3B82F6,color:#fff
-    style WEB fill:#10B981,color:#fff
-    style MOB fill:#10B981,color:#fff
 ```
 
 Önemli noktalar:
@@ -91,7 +87,6 @@ flowchart LR
 
     options --> CC["Yerel<br/>Claude Code<br/>Oturumu"]
 
-    style CC fill:#7C3AED,color:#fff
 ```
 
 **Tarayıcıdan:**
@@ -199,7 +194,6 @@ flowchart TB
         PERM["🛡️ İzin Modları<br/>Yerel izin kuralları geçerli"]
     end
 
-    style security fill:#FEF3C7,stroke:#F59E0B
 ```
 
 | Güvenlik Özelliği | Açıklama |
@@ -239,10 +233,6 @@ flowchart TB
 
     morning --> lunch --> meeting --> evening
 
-    style morning fill:#FEF3C7,stroke:#F59E0B
-    style lunch fill:#D1FAE5,stroke:#10B981
-    style meeting fill:#DBEAFE,stroke:#3B82F6
-    style evening fill:#E0E7FF,stroke:#6366F1
 ```
 
 ---

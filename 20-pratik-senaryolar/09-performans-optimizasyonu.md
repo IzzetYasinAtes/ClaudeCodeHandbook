@@ -26,9 +26,6 @@ flowchart TD
     F --> I
     G --> I
     H --> I
-
-    style A fill:#E74C3C,color:#fff
-    style I fill:#27AE60,color:#fff
 ```
 
 ---

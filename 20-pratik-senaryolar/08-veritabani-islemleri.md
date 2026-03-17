@@ -20,9 +20,6 @@ flowchart TD
     C --> D["Query Yazma<br/>CRUD işlemleri"]
     D --> E["Optimizasyon<br/>İndeks ve performans"]
     E --> F["Monitoring<br/>Sorgu analizi"]
-
-    style A fill:#3498DB,color:#fff
-    style F fill:#27AE60,color:#fff
 ```
 
 ---

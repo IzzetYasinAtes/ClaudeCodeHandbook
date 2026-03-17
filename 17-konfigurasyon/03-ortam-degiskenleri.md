@@ -32,10 +32,6 @@ flowchart TD
 
     sources --> categories
 
-    style AUTH fill:#E74C3C,color:#fff
-    style BEHAVIOR fill:#3498DB,color:#fff
-    style NETWORK fill:#F39C12,color:#fff
-    style DISPLAY fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -122,8 +118,6 @@ flowchart LR
     LOAD --> SESSION["Claude Code<br/>Oturumu"]
     SESSION --> USE["Değişkenler<br/>Bash komutlarında kullanılır"]
 
-    style ENV_FILE fill:#27AE60,color:#fff
-    style SESSION fill:#3498DB,color:#fff
 ```
 
 ---
@@ -226,11 +220,6 @@ flowchart TD
         C3["ANTHROPIC_MODEL"]
     end
 
-    style auth fill:#E74C3C,color:#fff
-    style behavior fill:#3498DB,color:#fff
-    style files fill:#27AE60,color:#fff
-    style network fill:#F39C12,color:#fff
-    style cloud fill:#9B59B6,color:#fff
 ```
 
 ---

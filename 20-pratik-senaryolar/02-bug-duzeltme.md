@@ -28,9 +28,6 @@ flowchart TD
     H --> I{"Testler<br/>Geçti mi?"}
     I -->|Hayır| G
     I -->|Evet| J["PR Aç<br/>Code review"]
-
-    style A fill:#E74C3C,color:#fff
-    style J fill:#27AE60,color:#fff
 ```
 
 ---
@@ -96,8 +93,6 @@ flowchart TD
     E --> J["Dosyayı parse et,<br/>sözdizimini düzelt"]
     F --> K["Bağlantı ayarları,<br/>retry mekanizması"]
     G --> L["Migration, index,<br/>query optimizasyonu"]
-
-    style A fill:#E74C3C,color:#fff
 ```
 
 ---

@@ -90,8 +90,6 @@ flowchart TD
     G31 --> G31F["Flash<br/>Çok düşük maliyet"]
     G31 --> G31N["Nano<br/>On-device"]
 
-    style G31P fill:#4285f4,color:#fff
-    style G31F fill:#34a853,color:#fff
 ```
 
 ### Gemini Katmanları

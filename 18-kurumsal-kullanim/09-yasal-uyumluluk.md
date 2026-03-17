@@ -23,12 +23,6 @@ flowchart TD
     CC --> SECURITY["🛡️ Güvenlik<br/>SOC 2, ISO 27001"]
     CC --> INDUSTRY["🏭 Sektörel<br/>Finans, sağlık, kamu"]
 
-    style CC fill:#2C3E50,color:#fff
-    style CONTRACTS fill:#3498DB,color:#fff
-    style PRIVACY fill:#E74C3C,color:#fff
-    style IP fill:#F39C12,color:#fff
-    style SECURITY fill:#27AE60,color:#fff
-    style INDUSTRY fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -49,9 +43,6 @@ flowchart LR
     API_TOS --> API_USAGE["Claude Code<br/>(API üzerinden)"]
     ENTERPRISE --> CUSTOM["Özelleştirilmiş<br/>kurumsal kullanım"]
 
-    style TOS fill:#3498DB,color:#fff
-    style API_TOS fill:#F39C12,color:#fff
-    style ENTERPRISE fill:#8E44AD,color:#fff
 ```
 
 ### Claude Code İçin Geçerli Sözleşme
@@ -88,9 +79,6 @@ flowchart TD
 
     certs --> practices
 
-    style SOC2 fill:#27AE60,color:#fff
-    style CSA fill:#3498DB,color:#fff
-    style PENTEST fill:#F39C12,color:#fff
 ```
 
 ### Sertifika Durumları
@@ -120,8 +108,6 @@ flowchart TD
     GDPR --> TRANSFER["Veri Transferi<br/>AB dışına aktarım kuralları"]
     GDPR --> DPA["DPA<br/>Veri İşleme Sözleşmesi"]
 
-    style GDPR fill:#003399,color:#fff
-    style DPA fill:#E74C3C,color:#fff
 ```
 
 ### GDPR Kontrol Listesi
@@ -165,7 +151,6 @@ flowchart TD
     KVKK --> SECURITY_KVKK["Güvenlik Önlemleri<br/>Teknik ve idari tedbirler"]
     KVKK --> NOTIFY["İhlal Bildirimi<br/>72 saat içinde KVK Kurulu'na"]
 
-    style KVKK fill:#E30A17,color:#fff
 ```
 
 ### KVKK Kontrol Listesi
@@ -192,9 +177,6 @@ flowchart LR
 
     US --> MECHANISM["Aktarım Mekanizması:<br/>- Yeterli koruma kararı<br/>- Taahhütname<br/>- Açık rıza"]
 
-    style TR fill:#E30A17,color:#fff
-    style US fill:#3C3B6E,color:#fff
-    style MECHANISM fill:#F39C12,color:#fff
 ```
 
 **Öneriler:**
@@ -226,7 +208,6 @@ flowchart TD
     IP_PROTECT --> DOCUMENT["Belgeleme<br/>Hangi kodun AI ile üretildiğini belirtin"]
     IP_PROTECT --> POLICY["Politika<br/>AI kullanım politikası oluşturun"]
 
-    style IP_PROTECT fill:#F39C12,color:#fff
 ```
 
 ---
@@ -301,9 +282,6 @@ flowchart TD
     GET_DPA --> DPA_CHECK
     SECTOR_CHECK --> ZDR_CHECK
 
-    style START fill:#3498DB,color:#fff
-    style READY fill:#27AE60,color:#fff
-    style GET_DPA fill:#E74C3C,color:#fff
 ```
 
 ---

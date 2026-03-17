@@ -101,11 +101,6 @@ flowchart TD
         P_LOW["🟢 WebSearch<br/>WebFetch<br/>ExitPlanMode"]
     end
 
-    style izinsiz fill:#d4edda,stroke:#28a745
-    style izinli fill:#f8d7da,stroke:#dc3545
-    style P_HIGH fill:#f5c6cb,stroke:#dc3545
-    style P_MED fill:#ffeeba,stroke:#ffc107
-    style P_LOW fill:#d1ecf1,stroke:#17a2b8
 ```
 
 ---

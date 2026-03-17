@@ -37,8 +37,6 @@ flowchart TB
     TEST --> CREATE_PR
     CREATE_PR -->|"PR #43"| github
 
-    style github fill:#24292E,color:#fff
-    style claude fill:#7C3AED,color:#fff
 ```
 
 ---
@@ -70,8 +68,6 @@ flowchart TB
     C --> D["4. İzinleri<br/>yapılandır"]
     D --> E["✅ Kurulum<br/>tamamlandı"]
 
-    style A fill:#3B82F6,color:#fff
-    style E fill:#10B981,color:#fff
 ```
 
 #### Adım 1: GitHub App Yükleme
@@ -203,10 +199,6 @@ flowchart TB
 
     auth --> CC["Claude Code<br/>GitHub Actions"]
 
-    style A1 fill:#7C3AED,color:#fff
-    style A2 fill:#FF9900,color:#fff
-    style A3 fill:#4285F4,color:#fff
-    style A4 fill:#0078D4,color:#fff
 ```
 
 ### Anthropic API (Doğrudan)
@@ -383,8 +375,6 @@ flowchart LR
     CC --> PR["✅ PR #44<br/>Bug fix"]
     CC --> CMT["💬 Issue yorumu<br/>Düzeltme detayları"]
 
-    style BUG fill:#EF4444,color:#fff
-    style PR fill:#10B981,color:#fff
 ```
 
 ### Örnek 2: Feature İmplementasyonu

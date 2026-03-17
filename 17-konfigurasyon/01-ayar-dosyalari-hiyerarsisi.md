@@ -28,10 +28,6 @@ flowchart TB
 
     USER --> PROJECT --> LOCAL --> MANAGED
 
-    style USER fill:#3498DB,color:#fff
-    style PROJECT fill:#F39C12,color:#fff
-    style LOCAL fill:#E74C3C,color:#fff
-    style MANAGED fill:#8E44AD,color:#fff
 ```
 
 ### Öncelik Sırası (Precedence)
@@ -170,10 +166,6 @@ flowchart LR
     SERVER --> CLIENT["💻 Claude Code<br/>Uygular"]
     CLIENT --> LOCK["🔒 Kullanıcı<br/>Override edemez"]
 
-    style ADMIN fill:#8E44AD,color:#fff
-    style SERVER fill:#2C3E50,color:#fff
-    style CLIENT fill:#3498DB,color:#fff
-    style LOCK fill:#E74C3C,color:#fff
 ```
 
 ### Managed Settings Özellikleri
@@ -210,7 +202,6 @@ flowchart TD
     L --> R
     M --> R
 
-    style R fill:#27AE60,color:#fff
 ```
 
 ### Birleştirme Kuralları

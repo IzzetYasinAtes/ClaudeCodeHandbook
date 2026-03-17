@@ -41,8 +41,6 @@ flowchart TD
     T4 --> S4
     T5 --> S5
 
-    style tehditler fill:#f8d7da,stroke:#dc3545
-    style savunma fill:#d4edda,stroke:#28a745
 ```
 
 ---
@@ -75,8 +73,6 @@ flowchart TD
     D --> G
     D --> H
 
-    style saldiri fill:#f8d7da,stroke:#dc3545
-    style koruma fill:#d4edda,stroke:#28a745
 ```
 
 ### Korunma Yöntemleri
@@ -361,10 +357,6 @@ flowchart TD
         CI_PERM["İzinler: görev bazlı"]
     end
 
-    style dev fill:#d4edda,stroke:#28a745
-    style staging fill:#fff3cd,stroke:#ffc107
-    style prod fill:#f8d7da,stroke:#dc3545
-    style cicd fill:#cce5ff,stroke:#007bff
 ```
 
 ### Geliştirme Ortamı
@@ -573,8 +565,6 @@ flowchart TD
     H4 --> D4
     H5 --> D5
 
-    style hatalar fill:#f8d7da,stroke:#dc3545
-    style dogru fill:#d4edda,stroke:#28a745
 ```
 
 ---

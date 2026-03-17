@@ -36,8 +36,6 @@ flowchart LR
     B --> C["Terminal Paneli<br/>Claude Code Görünür"]
     C --> D["Status Bar<br/>Claude İkonu ✅"]
 
-    style A fill:#3B82F6,color:#fff
-    style D fill:#10B981,color:#fff
 ```
 
 ### Adım 3: İlk Yapılandırma
@@ -121,8 +119,6 @@ flowchart TB
     C -->|"Reddet"| F["Plan<br/>iptal edilir"]
     E --> B
 
-    style A fill:#3B82F6,color:#fff
-    style D fill:#10B981,color:#fff
 ```
 
 ### 4. Terminal Panel Entegrasyonu
@@ -182,8 +178,6 @@ flowchart LR
     D --> E["Önerileri<br/>inceleyin"]
     E --> F["Accept/Reject<br/>her değişiklik"]
 
-    style A fill:#3B82F6,color:#fff
-    style F fill:#10B981,color:#fff
 ```
 
 **Adım adım:**

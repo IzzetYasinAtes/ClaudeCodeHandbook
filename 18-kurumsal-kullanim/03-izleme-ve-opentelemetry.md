@@ -38,10 +38,6 @@ flowchart TD
     METRICS --> CC
     LOGS --> CC
 
-    style TRACES fill:#3498DB,color:#fff
-    style METRICS fill:#27AE60,color:#fff
-    style LOGS fill:#F39C12,color:#fff
-    style COLLECTOR fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -213,13 +209,6 @@ flowchart TD
     OTEL --> SPLUNK["Splunk<br/>Log analizi"]
     OTEL --> JAEGER["Jaeger<br/>Distributed tracing"]
 
-    style CC fill:#2C3E50,color:#fff
-    style OTEL fill:#F39C12,color:#fff
-    style DD fill:#632CA6,color:#fff
-    style GRAF fill:#E74C3C,color:#fff
-    style NR fill:#008C99,color:#fff
-    style SPLUNK fill:#65A637,color:#fff
-    style JAEGER fill:#66CFE3,color:#fff
 ```
 
 ### Datadog Konfigürasyonu

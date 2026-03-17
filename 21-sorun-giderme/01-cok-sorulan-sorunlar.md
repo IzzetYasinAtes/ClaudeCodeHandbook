@@ -35,16 +35,6 @@ flowchart TD
     PERF -->|"Yavaşlama"| PF1["Context window<br/>kontrol"]
     PERF -->|"Çökme"| PF2["Log analizi<br/>ve restart"]
     
-    style I1 fill:#27AE60,color:#fff
-    style I2 fill:#27AE60,color:#fff
-    style I3 fill:#27AE60,color:#fff
-    style C1 fill:#27AE60,color:#fff
-    style C2 fill:#27AE60,color:#fff
-    style C3 fill:#27AE60,color:#fff
-    style P1 fill:#27AE60,color:#fff
-    style P2 fill:#27AE60,color:#fff
-    style PF1 fill:#27AE60,color:#fff
-    style PF2 fill:#27AE60,color:#fff
 ```
 
 ---

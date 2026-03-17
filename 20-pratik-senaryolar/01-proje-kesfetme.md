@@ -24,9 +24,6 @@ flowchart TD
     E --> F["Veri Akışı<br/>Request → Response"]
     F --> G["Bağımlılık Haritası<br/>Modüller arası ilişkiler"]
     G --> H["Kritik Dosyalar<br/>En çok değişen dosyalar"]
-
-    style A fill:#3498DB,color:#fff
-    style H fill:#27AE60,color:#fff
 ```
 
 ---

@@ -82,8 +82,6 @@ flowchart TD
     M3 -->|"Özel entegrasyon 11"| K3
     M3 -->|"Özel entegrasyon 12"| K4
 
-    style modeller fill:#4A90D9,color:#fff
-    style kaynaklar fill:#E74C3C,color:#fff
 ```
 
 **Sonuç:** 3 model × 4 kaynak = **12 ayrı entegrasyon** 😰
@@ -116,7 +114,6 @@ flowchart TD
     MCP_LAYER --> S3
     MCP_LAYER --> S4
 
-    style MCP_LAYER fill:#27AE60,color:#fff,stroke-width:3px
 ```
 
 **Sonuç:** 3 model + 4 sunucu = **7 entegrasyon** 🚀
@@ -153,9 +150,6 @@ flowchart LR
     C2 <-->|"JSON-RPC 2.0<br/>(stdio)"| S2
     C3 <-->|"JSON-RPC 2.0<br/>(SSE)"| S3
 
-    style host fill:#4A90D9,color:#fff
-    style clients fill:#F39C12,color:#fff
-    style servers fill:#27AE60,color:#fff
 ```
 
 ### Bileşenler
@@ -224,8 +218,6 @@ flowchart TD
         RS -->|"SSE stream"| CC2
     end
 
-    style stdio_transport fill:#d4edda,stroke:#28a745
-    style sse_transport fill:#fff3cd,stroke:#ffc107
 ```
 
 ---
@@ -244,9 +236,6 @@ flowchart LR
     R --> R1["Veri kaynakları<br/>Dosya benzeri veriler"]
     P --> P1["Hazır şablonlar<br/>Kullanıcı tetikler"]
 
-    style T fill:#4A90D9,color:#fff
-    style R fill:#27AE60,color:#fff
-    style P fill:#F39C12,color:#fff
 ```
 
 | Yetenek | Açıklama | Örnek |

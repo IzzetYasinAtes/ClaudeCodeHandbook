@@ -29,10 +29,6 @@ flowchart TB
     PROMPT --> PROMPT_EX["'Bu kodu incele ve<br/>güvenlik açığı var mı kontrol et'"]
     MCP --> MCP_EX["github.create_issue<br/>slack.send_message<br/>jira.update_ticket"]
 
-    style CMD fill:#3498DB,color:#fff
-    style HTTP fill:#27AE60,color:#fff
-    style PROMPT fill:#9B59B6,color:#fff
-    style MCP fill:#E67E22,color:#fff
 ```
 
 ---
@@ -81,9 +77,6 @@ flowchart LR
     EC -->|"1+"| BLOCK["❌ Engellendi<br/>İşlemi durdur"]
     EC -->|"Timeout"| TO["⏰ Zaman aşımı<br/>Varsayılan davranış"]
 
-    style OK fill:#27AE60,color:#fff
-    style BLOCK fill:#E74C3C,color:#fff
-    style TO fill:#F39C12,color:#fff
 ```
 
 ### Pratik Örnek: Python Dosyalarını Formatlama
@@ -283,9 +276,6 @@ flowchart LR
     EVAL -->|"REJECT"| BLOCK["❌ Engelle"]
     EVAL -->|"Analiz"| LOG["📝 Sonucu logla"]
 
-    style LLM fill:#9B59B6,color:#fff
-    style OK fill:#27AE60,color:#fff
-    style BLOCK fill:#E74C3C,color:#fff
 ```
 
 ### Pratik Örnek: Güvenlik İncelemesi
@@ -487,10 +477,6 @@ flowchart TD
     Q4 -->|Evet| PROMPT_H["🤖 Prompt Hook<br/>Ör: Güvenlik analizi, kod kalitesi"]
     Q4 -->|Hayır| CMD
 
-    style CMD fill:#3498DB,color:#fff
-    style HTTP_H fill:#27AE60,color:#fff
-    style PROMPT_H fill:#9B59B6,color:#fff
-    style MCP_H fill:#E67E22,color:#fff
 ```
 
 ---

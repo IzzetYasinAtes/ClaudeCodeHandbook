@@ -31,10 +31,6 @@ flowchart TD
 
     data --> dashboard
 
-    style USAGE fill:#3498DB,color:#fff
-    style COST fill:#E74C3C,color:#fff
-    style ADOPTION fill:#27AE60,color:#fff
-    style VELOCITY fill:#F39C12,color:#fff
 ```
 
 ---
@@ -68,7 +64,6 @@ flowchart LR
 
     W4 --> TREND["📈 Artan Trend<br/>Adopsiyon başarılı"]
 
-    style TREND fill:#27AE60,color:#fff
 ```
 
 ---
@@ -88,10 +83,6 @@ flowchart TD
 
     PILOT --> EARLY --> GROWTH --> MATURE
 
-    style PILOT fill:#9B59B6,color:#fff
-    style EARLY fill:#3498DB,color:#fff
-    style GROWTH fill:#F39C12,color:#fff
-    style MATURE fill:#27AE60,color:#fff
 ```
 
 ### Adopsiyon Metrikleri
@@ -131,9 +122,6 @@ flowchart TD
 
     COMPARE --> RESULT["✅ %40 hız artışı<br/>%100 PR artışı<br/>%50 review iyileşme<br/>%37 hata azalma"]
 
-    style before fill:#E74C3C,color:#fff
-    style after fill:#27AE60,color:#fff
-    style RESULT fill:#3498DB,color:#fff
 ```
 
 ### Verimlilik Metrikleri
@@ -192,10 +180,6 @@ flowchart LR
     OTEL --> BACKEND["Analytics Backend<br/>(Datadog, Grafana, vb.)"]
     BACKEND --> DASHBOARD["📊 Dashboard<br/>Görselleştirme"]
 
-    style CC fill:#3498DB,color:#fff
-    style OTEL fill:#F39C12,color:#fff
-    style BACKEND fill:#27AE60,color:#fff
-    style DASHBOARD fill:#8E44AD,color:#fff
 ```
 
 ---
@@ -223,9 +207,6 @@ flowchart TD
 
     ROI --> RESULT["✅ Net ROI<br/>$24,000 - $5,400 = $18,600<br/>ROI: %344"]
 
-    style COST fill:#E74C3C,color:#fff
-    style SAVINGS fill:#27AE60,color:#fff
-    style RESULT fill:#3498DB,color:#fff
 ```
 
 ---

@@ -230,10 +230,6 @@ flowchart TD
     Q2 -->|"Veri dışarı çıkamaz"| A3["Llama 4 Maverick<br/>(lokal) veya<br/>Qwen2.5-Coder"]
     Q2 -->|"Sorun değil"| A4["DeepSeek-R1<br/>En ucuz reasoning"]
 
-    style A1 fill:#7c3aed,color:#fff
-    style A2 fill:#4a9eff,color:#fff
-    style A3 fill:#51cf66,color:#fff
-    style A4 fill:#4ecdc4,color:#fff
 ```
 
 ### Genel Amaçlı Kullanım
@@ -274,9 +270,6 @@ flowchart TD
     K4 -->|"Yüksek"| K4A["Claude Sonnet<br/>(API)"]
     K4 -->|"Düşük/Orta"| K4B["GPT-5<br/>(Azure OpenAI)"]
 
-    style K2A fill:#51cf66,color:#fff
-    style K3A fill:#7c3aed,color:#fff
-    style K4A fill:#4a9eff,color:#fff
 ```
 
 ---
@@ -338,10 +331,6 @@ flowchart TD
     RES -->|"Evet"| REASON["o3 veya<br/>DeepSeek-R1"]
     RES -->|"Hayır"| OPUS["Claude 4.6 Opus"]
 
-    style CODE fill:#7c3aed,color:#fff
-    style MULTI fill:#4285f4,color:#fff
-    style LOCAL fill:#51cf66,color:#fff
-    style REASON fill:#ff922b,color:#fff
 ```
 
 ---

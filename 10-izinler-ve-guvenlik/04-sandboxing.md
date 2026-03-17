@@ -35,8 +35,6 @@ flowchart TB
         S_SANDBOX --> S_SYS["Sistem<br/>❌ Engelli"]
     end
 
-    style normal fill:#f8d7da,stroke:#dc3545
-    style sandbox fill:#d4edda,stroke:#28a745
 ```
 
 ---
@@ -76,9 +74,6 @@ flowchart TD
         BLOCKED_NET --> ERROR
     end
 
-    style isolated_env fill:#e8f5e9,stroke:#4caf50
-    style BLOCKED_FS fill:#f8d7da,stroke:#dc3545
-    style BLOCKED_NET fill:#f8d7da,stroke:#dc3545
 ```
 
 ---
@@ -163,8 +158,6 @@ flowchart TD
         E6["SSH bağlantıları"]
     end
 
-    style izinli fill:#d4edda,stroke:#28a745
-    style engelli fill:#f8d7da,stroke:#dc3545
 ```
 
 ---
@@ -259,11 +252,6 @@ flowchart TD
         C5["bypassPermissions - sandbox<br/>⚠️ Yalnızca container içi"]
     end
 
-    style C1 fill:#d4edda,stroke:#28a745
-    style C2 fill:#d4edda,stroke:#28a745
-    style C3 fill:#d4edda,stroke:#28a745
-    style C4 fill:#d4edda,stroke:#28a745
-    style C5 fill:#f8d7da,stroke:#dc3545
 ```
 
 | Kombinasyon | Güvenlik | Üretkenlik | Kullanım Alanı |

@@ -26,13 +26,6 @@ flowchart LR
     E --> F["Hata Ayıklama<br/>👤 İnsan"]
     F --> G["Deployment<br/>👤 İnsan"]
 
-    style A fill:#ffcccc
-    style B fill:#ffcccc
-    style C fill:#ffcccc
-    style D fill:#ffcccc
-    style E fill:#ffcccc
-    style F fill:#ffcccc
-    style G fill:#ffcccc
 ```
 
 ### AI Destekli Yazılım Geliştirme
@@ -48,13 +41,6 @@ flowchart LR
     E --> F["Hata Tespiti<br/>🤖 + 👤"]
     F --> G["Deployment<br/>👤 + 🤖"]
 
-    style A fill:#ccffcc
-    style B fill:#ccffcc
-    style C fill:#ccffcc
-    style D fill:#ccffcc
-    style E fill:#ccffcc
-    style F fill:#ccffcc
-    style G fill:#ccffcc
 ```
 
 ### Detaylı Karşılaştırma
@@ -216,10 +202,6 @@ flowchart TD
     n2 -->|"Etkileşim"| n3
     n3 -->|"Araç kullanımı"| n4
 
-    style n1 fill:#ffe0e0
-    style n2 fill:#fff0cc
-    style n3 fill:#e0f0ff
-    style n4 fill:#e0ffe0
 ```
 
 | Özellik | Nesil 1 | Nesil 2 | Nesil 3 | Nesil 4 |

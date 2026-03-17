@@ -38,8 +38,6 @@ flowchart LR
 
     CHROME --> ops
 
-    style CC fill:#7C3AED,color:#fff
-    style CHROME fill:#4285F4,color:#fff
 ```
 
 ### Bağlantı Kurma
@@ -120,10 +118,6 @@ flowchart TB
     E1 --> CC["Claude Code<br/>Hata analizi"]
     CC --> FIX["Düzeltme<br/>önerisi"]
 
-    style E1 fill:#EF4444,color:#fff
-    style W1 fill:#F59E0B,color:#fff
-    style I1 fill:#3B82F6,color:#fff
-    style FIX fill:#10B981,color:#fff
 ```
 
 ```
@@ -164,8 +158,6 @@ flowchart LR
     
     DATA --> output
 
-    style WEB fill:#4285F4,color:#fff
-    style CC fill:#7C3AED,color:#fff
 ```
 
 ```

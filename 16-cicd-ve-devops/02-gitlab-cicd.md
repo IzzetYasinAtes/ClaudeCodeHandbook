@@ -46,9 +46,6 @@ flowchart TB
     CC --> NEW_MR
     CC --> REPORT
 
-    style gitlab fill:#FC6D26,color:#fff
-    style CC fill:#7C3AED,color:#fff
-    style outputs fill:#D1FAE5,stroke:#10B981
 ```
 
 ---
@@ -177,8 +174,6 @@ flowchart TB
     S2 --> S3
     S3 --> S4
 
-    style trigger fill:#FC6D26,color:#fff
-    style pipeline fill:#F3E8FF,stroke:#7C3AED
 ```
 
 ---

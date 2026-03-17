@@ -40,11 +40,6 @@ flowchart TD
     A -->|"Claude yavaşladı<br/>veya durdu"| E["02: Context Window"]
     A -->|"Genel sorular<br/>var"| F["03: SSS"]
     
-    style B fill:#E74C3C,color:#fff
-    style C fill:#E67E22,color:#fff
-    style D fill:#F39C12,color:#fff
-    style E fill:#9B59B6,color:#fff
-    style F fill:#3498DB,color:#fff
 ```
 
 ## Önceki Bölüm

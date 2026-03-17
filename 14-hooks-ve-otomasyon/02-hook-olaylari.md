@@ -39,15 +39,6 @@ flowchart TB
     PRE --> FAIL
     loop -.-> SE
 
-    style SS fill:#27AE60,color:#fff
-    style SE fill:#E74C3C,color:#fff
-    style UPS fill:#3498DB,color:#fff
-    style PRE fill:#F39C12,color:#fff
-    style POST fill:#27AE60,color:#fff
-    style FAIL fill:#E74C3C,color:#fff
-    style PR fill:#9B59B6,color:#fff
-    style IL fill:#1ABC9C,color:#fff
-    style CC fill:#95A5A6,color:#fff
 ```
 
 ---
@@ -640,13 +631,6 @@ flowchart TD
     WAIT -->|"/exit"| SE["SessionEnd"]
     SE --> END(["Oturum Bitti"])
 
-    style SS fill:#27AE60,color:#fff
-    style SE fill:#E74C3C,color:#fff
-    style UPS fill:#3498DB,color:#fff
-    style PRE fill:#F39C12,color:#fff
-    style POST fill:#27AE60,color:#fff
-    style FAIL fill:#E74C3C,color:#fff
-    style PERM fill:#9B59B6,color:#fff
 ```
 
 ---

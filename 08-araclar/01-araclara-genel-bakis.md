@@ -186,8 +186,6 @@ flowchart TD
         P7["NotebookEdit"] ~~~ P8["ExitPlanMode"]
     end
 
-    style izinsiz fill:#d4edda,stroke:#28a745
-    style izinli fill:#f8d7da,stroke:#dc3545
 ```
 
 ---

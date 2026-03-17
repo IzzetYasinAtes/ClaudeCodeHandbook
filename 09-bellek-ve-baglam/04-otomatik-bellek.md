@@ -43,7 +43,6 @@ flowchart TD
     L3 --> M2
     L3 --> M3
 
-    style bellek fill:#27AE60,color:#fff
 ```
 
 ---
@@ -77,9 +76,6 @@ flowchart LR
     claude_md --> CONTEXT["Birleşik<br/>Bağlam"]
     auto_mem --> CONTEXT
 
-    style claude_md fill:#4A90D9,color:#fff
-    style auto_mem fill:#E67E22,color:#fff
-    style CONTEXT fill:#27AE60,color:#fff
 ```
 
 ### Detaylı Karşılaştırma
@@ -169,8 +165,6 @@ flowchart TD
 
     PARTIAL --> ACTION["Dosyayı düzenleyin:<br/>- Eski/gereksiz girdileri silin<br/>- Benzer girdileri birleştirin<br/>- Önceliklendirin"]
 
-    style ALL fill:#27AE60,color:#fff
-    style PARTIAL fill:#F39C12,color:#fff
 ```
 
 ### Limit Yönetimi İpuçları
@@ -251,10 +245,6 @@ flowchart TD
 
     CTX --> CLAUDE["Claude Code<br/>yönlendirilmiş çalışır"]
 
-    style UM fill:#E67E22,color:#fff
-    style UC fill:#3498DB,color:#fff
-    style PC fill:#27AE60,color:#fff
-    style PR fill:#F39C12,color:#fff
 ```
 
 ---

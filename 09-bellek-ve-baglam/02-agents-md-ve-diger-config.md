@@ -33,8 +33,6 @@ flowchart TD
     AGENTS -->|"Destekler"| CURSOR
     AGENTS -->|"Destekler"| CONTINUE
 
-    style AGENTS fill:#9B59B6,color:#fff
-    style CLAUDE_MD fill:#4A90D9,color:#fff
 ```
 
 ---
@@ -58,9 +56,6 @@ flowchart TD
     CHECK_AGENTS -->|"Evet"| LOAD_AGENTS["AGENTS.md yükle<br/>(fallback)"]
     CHECK_AGENTS -->|"Hayır"| NO_CONFIG["Config dosyası yok"]
 
-    style LOAD_CLAUDE fill:#4A90D9,color:#fff
-    style LOAD_AGENTS fill:#9B59B6,color:#fff
-    style LOAD_BOTH fill:#27AE60,color:#fff
 ```
 
 > **Önemli:** Hem CLAUDE.md hem AGENTS.md varsa, ikisi de yüklenir. Çelişen kurallar olursa CLAUDE.md öncelik kazanır.
@@ -229,7 +224,6 @@ flowchart LR
     COMMON --> RESULT["Hem Cursor<br/>hem Claude Code<br/>çalışır"]
     SPECIFIC --> RESULT
 
-    style RESULT fill:#27AE60,color:#fff
 ```
 
 **Dönüştürme adımları:**
@@ -253,8 +247,6 @@ flowchart TD
     Q3 -->|"Cursor"| CURSOR_F[".cursorrules<br/>kullanın"]
     Q3 -->|"Copilot"| COPILOT_F["copilot-instructions.md<br/>kullanın"]
 
-    style CLAUDE fill:#4A90D9,color:#fff
-    style BOTH fill:#27AE60,color:#fff
 ```
 
 | Senaryo | Önerilen Dosya(lar) |

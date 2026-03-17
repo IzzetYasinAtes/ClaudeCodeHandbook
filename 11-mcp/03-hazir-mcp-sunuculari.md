@@ -36,9 +36,6 @@ flowchart TD
     COMMUNITY --> C4["Notion"]
     COMMUNITY --> C5["1000+<br/>diğer..."]
 
-    style OFFICIAL fill:#4A90D9,color:#fff
-    style COMMUNITY fill:#27AE60,color:#fff
-    style CUSTOM fill:#F39C12,color:#fff
 ```
 
 ---
@@ -438,9 +435,6 @@ flowchart LR
         Puppeteer
     end
 
-    style veri fill:#4A90D9,color:#fff
-    style iletisim fill:#27AE60,color:#fff
-    style arastirma fill:#F39C12,color:#fff
 ```
 
 | Sunucu | Kategori | Araç Sayısı | Tipik Kullanım |

@@ -22,9 +22,6 @@ flowchart TD
     E --> F["Authentication<br/>Yetkilendirme"]
     F --> G["Dokümantasyon<br/>OpenAPI/Swagger"]
     G --> H["Test<br/>Integration testler"]
-
-    style A fill:#3498DB,color:#fff
-    style H fill:#27AE60,color:#fff
 ```
 
 ---

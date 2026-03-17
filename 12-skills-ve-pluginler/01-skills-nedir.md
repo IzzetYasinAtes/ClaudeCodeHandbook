@@ -201,8 +201,6 @@ flowchart TD
         NS_CALL["Çağırma: /team-tools:lint"]
     end
 
-    style standalone fill:#e8f5e9,stroke:#4caf50
-    style namespaced fill:#e3f2fd,stroke:#2196f3
 ```
 
 ---
@@ -221,8 +219,6 @@ flowchart TD
     READ --> EXECUTE["Talimatları Uygula"]
     EXECUTE --> RESULT["Sonuç"]
 
-    style PERM fill:#fff3cd,stroke:#ffc107
-    style ASK fill:#f8d7da,stroke:#dc3545
 ```
 
 Skill izinleri `settings.json` ile yapılandırılabilir:

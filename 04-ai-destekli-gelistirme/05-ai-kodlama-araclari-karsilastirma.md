@@ -30,9 +30,6 @@ flowchart TD
         E["GitHub Copilot<br/>(Microsoft/GitHub)"]
     end
 
-    style terminal fill:#E3F2FD
-    style ide fill:#E8F5E9
-    style plugin fill:#FFF3E0
 ```
 
 ---
@@ -253,9 +250,6 @@ flowchart TD
     U --> I1
     U --> P1
 
-    style terminal_arch fill:#E3F2FD
-    style ide_arch fill:#E8F5E9
-    style plugin_arch fill:#FFF3E0
 ```
 
 ### Mimari Yaklaşımların Artı ve Eksileri
@@ -311,13 +305,6 @@ flowchart TD
     
     B -->|"Mevcut IDE'yi<br/>korumak"| J["GitHub Copilot<br/>(eklenti)"]
 
-    style D fill:#E3F2FD
-    style E fill:#E8F5E9
-    style F fill:#FFF3E0
-    style G fill:#F3E5F5
-    style H fill:#FFEBEE
-    style I fill:#E3F2FD
-    style J fill:#FFF3E0
 ```
 
 ---

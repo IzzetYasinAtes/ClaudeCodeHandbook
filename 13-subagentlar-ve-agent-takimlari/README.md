@@ -11,9 +11,6 @@ flowchart LR
     C --> D["Agent Takımları<br/>Çoklu agent koordinasyonu"]
     D --> E["Agent Tool Kullanımı<br/>SDK ile programatik yönetim"]
 
-    style A fill:#4A90D9,color:#fff
-    style C fill:#E67E22,color:#fff
-    style D fill:#27AE60,color:#fff
 ```
 
 ## İçerik

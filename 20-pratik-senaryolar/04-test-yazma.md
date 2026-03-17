@@ -28,9 +28,6 @@ flowchart TD
     I -->|Evet| J["Tamamlandı"]
     I -->|Hayır| K["Eksik Senaryoları Ekle"]
     K --> G
-
-    style A fill:#3498DB,color:#fff
-    style J fill:#27AE60,color:#fff
 ```
 
 ---
@@ -82,10 +79,6 @@ flowchart LR
     A["Red<br/>Başarısız test yaz"] --> B["Green<br/>Testi geçir"]
     B --> C["Refactor<br/>Kodu iyileştir"]
     C --> A
-
-    style A fill:#E74C3C,color:#fff
-    style B fill:#27AE60,color:#fff
-    style C fill:#3498DB,color:#fff
 ```
 
 ```bash

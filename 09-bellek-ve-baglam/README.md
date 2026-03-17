@@ -14,9 +14,6 @@ flowchart TD
     F --> G["Checkpointing"]
     G --> H["Worktree ile<br/>Paralel Çalışma"]
 
-    style A fill:#4A90D9,color:#fff
-    style E fill:#E74C3C,color:#fff
-    style H fill:#27AE60,color:#fff
 ```
 
 ## İçerik

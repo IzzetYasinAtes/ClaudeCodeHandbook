@@ -28,11 +28,6 @@ flowchart LR
         FIREWALL
     end
 
-    style CC fill:#3498DB,color:#fff
-    style PROXY fill:#E67E22,color:#fff
-    style FIREWALL fill:#E74C3C,color:#fff
-    style API fill:#27AE60,color:#fff
-    style corporate fill:#ECF0F1,stroke:#2C3E50
 ```
 
 ---
@@ -89,10 +84,6 @@ flowchart TD
 
     DIRECT --> SUCCESS
 
-    style CC fill:#3498DB,color:#fff
-    style CORP_CA fill:#E74C3C,color:#fff
-    style CONFIG fill:#F39C12,color:#fff
-    style SUCCESS fill:#27AE60,color:#fff
 ```
 
 ### Sertifika Ayarları
@@ -159,10 +150,6 @@ flowchart LR
     CC --> |"3. İstemci sertifikası gönder"| API
     API --> |"4. Doğrulama başarılı ✅"| CC
 
-    style CC fill:#3498DB,color:#fff
-    style API fill:#27AE60,color:#fff
-    style CLIENT_CERT fill:#F39C12,color:#fff
-    style SERVER_CERT fill:#9B59B6,color:#fff
 ```
 
 ### mTLS Konfigürasyonu
@@ -245,9 +232,6 @@ flowchart TD
     API_CHECK -->|Hayır| DEBUG["Debug:<br/>curl -v api.anthropic.com"]
     DEBUG --> FIX_PROXY
 
-    style SUCCESS fill:#27AE60,color:#fff
-    style FIX_PROXY fill:#E74C3C,color:#fff
-    style FIX_CERT fill:#E74C3C,color:#fff
 ```
 
 ### Test Komutları

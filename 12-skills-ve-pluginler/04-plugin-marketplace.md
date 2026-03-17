@@ -34,10 +34,6 @@ flowchart TD
     COMMUNITY2 --> CLI
     GIT --> CLI
 
-    style OFFICIAL fill:#7e57c2,stroke:#4527a0,color:#fff
-    style COMMUNITY1 fill:#42a5f5,stroke:#1565c0,color:#fff
-    style COMMUNITY2 fill:#42a5f5,stroke:#1565c0,color:#fff
-    style GIT fill:#66bb6a,stroke:#2e7d32,color:#fff
 ```
 
 ### Marketplace Kaynakları
@@ -190,10 +186,6 @@ flowchart TD
         end
     end
 
-    style commands fill:#e8f5e9,stroke:#4caf50
-    style agents fill:#e3f2fd,stroke:#2196f3
-    style hooks_cat fill:#fce4ec,stroke:#e91e63
-    style mcp_cat fill:#f3e5f5,stroke:#9c27b0
 ```
 
 ### Kategori Detayları
@@ -339,8 +331,6 @@ flowchart TD
 
     REVIEW --> SAFE
 
-    style VERIFIED fill:#d4edda,stroke:#28a745
-    style REVIEW fill:#fff3cd,stroke:#ffc107
 ```
 
 **Güvenlik ipuçları:**

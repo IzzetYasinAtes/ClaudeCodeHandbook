@@ -40,9 +40,6 @@ flowchart TD
         TERM_APP["Terminal.app<br/>macOS varsayılanı<br/>Sınırlı true color"]
     end
 
-    style recommended fill:#D5F5E3,stroke:#27AE60
-    style acceptable fill:#FEF9E7,stroke:#F39C12
-    style avoid fill:#FADBD8,stroke:#E74C3C
 ```
 
 ### Platform Bazlı Öneriler
@@ -77,9 +74,6 @@ flowchart TD
     REPORT --> OK["✅ Uyumlu<br/>Her şey hazır"]
     REPORT --> WARN["⚠️ Sorunlar<br/>Öneriler gösterilir"]
 
-    style CMD fill:#3498DB,color:#fff
-    style OK fill:#27AE60,color:#fff
-    style WARN fill:#F39C12,color:#fff
 ```
 
 ### Kontrol Edilen Öğeler
@@ -187,9 +181,6 @@ flowchart LR
 
     L1 --> L2 --> L3
 
-    style L1 fill:#E74C3C,color:#fff
-    style L2 fill:#F39C12,color:#fff
-    style L3 fill:#27AE60,color:#fff
 ```
 
 ### TERM Değişkeni Ayarı
@@ -270,8 +261,6 @@ flowchart TD
     CONFIG --> SHELL["4. Zsh Konfigürasyonu"]
     SHELL --> VERIFY["5. /terminal-setup<br/>ile doğrula"]
 
-    style INSTALL fill:#3498DB,color:#fff
-    style VERIFY fill:#27AE60,color:#fff
 ```
 
 **Adımlar:**
@@ -372,10 +361,6 @@ flowchart TD
         SHELL["🐚 Shell Başlatma<br/>Plugin sayısını azaltın"]
     end
 
-    style GPU fill:#27AE60,color:#fff
-    style SCROLL fill:#3498DB,color:#fff
-    style EFFECT fill:#F39C12,color:#fff
-    style SHELL fill:#E67E22,color:#fff
 ```
 
 | Optimizasyon | Etki | Nasıl |

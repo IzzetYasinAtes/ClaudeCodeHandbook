@@ -49,11 +49,6 @@ flowchart LR
     PROCESS --> ZDR_ON
     PROCESS --> ZDR_OFF
 
-    style CC fill:#3498DB,color:#fff
-    style TLS fill:#27AE60,color:#fff
-    style PROCESS fill:#F39C12,color:#fff
-    style ZDR_ON fill:#27AE60,color:#fff
-    style ZDR_OFF fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -83,11 +78,6 @@ flowchart TD
     DISABLED --> D3["📝 Conversation History<br/>Sunucu taraflı geçmiş"]
     DISABLED --> D4["🐛 Debug Support<br/>Anthropic debug desteği sınırlı"]
 
-    style ZDR fill:#E74C3C,color:#fff
-    style D1 fill:#95A5A6,color:#fff
-    style D2 fill:#95A5A6,color:#fff
-    style D3 fill:#95A5A6,color:#fff
-    style D4 fill:#95A5A6,color:#fff
 ```
 
 > **Not:** ZDR etkinleştirildiğinde bazı özellikler kısıtlanabilir. Güncel bilgi için Anthropic ile iletişime geçin.
@@ -108,9 +98,6 @@ flowchart TD
     AGREEMENT --> ENABLE["ZDR Etkinleştirme<br/>Organizasyon seviyesinde"]
     ENABLE --> VERIFY["Doğrulama"]
 
-    style REQUEST fill:#3498DB,color:#fff
-    style AGREEMENT fill:#F39C12,color:#fff
-    style ENABLE fill:#27AE60,color:#fff
 ```
 
 ### Adım 2: Talep Süreci
@@ -153,8 +140,6 @@ flowchart TD
         CON_LOG["Loglama<br/>✅ Tam"]
     end
 
-    style API_TRAIN fill:#27AE60,color:#fff
-    style CON_TRAIN fill:#F39C12,color:#fff
 ```
 
 ### Claude Code Spesifik Politika
@@ -185,11 +170,6 @@ flowchart TD
 
     L1 --> L2 --> L3 --> L4 --> L5
 
-    style L1 fill:#E74C3C,color:#fff
-    style L2 fill:#E67E22,color:#fff
-    style L3 fill:#F39C12,color:#fff
-    style L4 fill:#3498DB,color:#fff
-    style L5 fill:#27AE60,color:#fff
 ```
 
 ### Veri Sınıflandırma Rehberi
@@ -256,10 +236,6 @@ flowchart TD
     BEDROCK --> PROTECTION
     VERTEX --> PROTECTION
 
-    style DIRECT fill:#E74C3C,color:#fff
-    style BEDROCK fill:#FF9900,color:#fff
-    style VERTEX fill:#4285F4,color:#fff
-    style PROTECTION fill:#27AE60,color:#fff
 ```
 
 ---

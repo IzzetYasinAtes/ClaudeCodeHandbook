@@ -33,11 +33,6 @@ flowchart TD
 
     ORCH --> |"Birleşik rapor"| USER
 
-    style ORCH fill:#E74C3C,color:#fff
-    style W1 fill:#3498DB,color:#fff
-    style W2 fill:#27AE60,color:#fff
-    style W3 fill:#E67E22,color:#fff
-    style W4 fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -81,8 +76,6 @@ flowchart LR
         W4["✅ Kendi testlerini çalıştırma"]
     end
 
-    style orch_role fill:#fce4ec,stroke:#e91e63
-    style worker_role fill:#e8f5e9,stroke:#4caf50
 ```
 
 ---
@@ -105,7 +98,6 @@ flowchart TD
     W3 --> ORCH
     W4 --> ORCH
 
-    style ORCH fill:#E74C3C,color:#fff
 ```
 
 **Ne zaman:** Bağımsız, paralel çalışabilen görevler.
@@ -122,7 +114,6 @@ flowchart LR
     W3 --> W4["Worker 4<br/>Test"]
     W4 --> ORCH
 
-    style ORCH fill:#E74C3C,color:#fff
 ```
 
 **Ne zaman:** Sıralı bağımlılığı olan görevler (analiz → tasarım → uygulama → test).
@@ -150,9 +141,6 @@ flowchart TD
     SUB1 --> ORCH
     SUB2 --> ORCH
 
-    style ORCH fill:#E74C3C,color:#fff
-    style SUB1 fill:#E67E22,color:#fff
-    style SUB2 fill:#E67E22,color:#fff
 ```
 
 **Ne zaman:** Çok büyük projeler, farklı alan uzmanlıkları gereken durumlar.
@@ -179,7 +167,6 @@ flowchart TD
     MODELS --> TESTS
     QUERIES --> TESTS
 
-    style ORCH fill:#E74C3C,color:#fff
 ```
 
 ```bash
@@ -211,8 +198,6 @@ flowchart TD
 
     MERGE --> FINAL["✅ Integration Test"]
 
-    style ORCH fill:#E74C3C,color:#fff
-    style MERGE fill:#27AE60,color:#fff
 ```
 
 ```bash
@@ -241,7 +226,6 @@ flowchart TD
     W1 --> |"Yeni API kontratı"| W3
     W1 --> |"Yeni API kontratı"| W4
 
-    style ORCH fill:#E74C3C,color:#fff
 ```
 
 ```bash
@@ -302,8 +286,6 @@ flowchart TD
     STRATEGIES --> S2["Manuel birleştirme"]
     STRATEGIES --> S3["Bir worker'ı önceliklendir"]
 
-    style CHECK fill:#ffc107,color:#000
-    style RESOLVE fill:#E74C3C,color:#fff
 ```
 
 ### Worktree ile İzolasyon
@@ -320,8 +302,6 @@ flowchart LR
     WT2 --> MERGE
     WT3 --> MERGE
 
-    style REPO fill:#4A90D9,color:#fff
-    style MERGE fill:#27AE60,color:#fff
 ```
 
 ---
@@ -338,9 +318,6 @@ flowchart TD
     S6 --> S7["7. Çalıştır ve izle"]
     S7 --> S8["8. Sonuçları birleştir"]
 
-    style S1 fill:#3498DB,color:#fff
-    style S5 fill:#E67E22,color:#fff
-    style S8 fill:#27AE60,color:#fff
 ```
 
 ### Adım Adım Uygulama

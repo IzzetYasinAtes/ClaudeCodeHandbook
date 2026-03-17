@@ -61,10 +61,6 @@ flowchart TD
     LOAD --> PROJ
     SUB -.->|"İstek üzerine<br/>yüklenir"| ONDEMAND["İlgili dizine<br/>girildiğinde yüklenir"]
 
-    style ORG fill:#9B59B6,color:#fff
-    style USER fill:#3498DB,color:#fff
-    style PROJ fill:#27AE60,color:#fff
-    style SUB fill:#F39C12,color:#fff
 ```
 
 ### Yerleşim Detayları
@@ -261,10 +257,6 @@ flowchart LR
 
     IDEAL --> OK --> FAZLA --> ASIRI
 
-    style IDEAL fill:#27AE60,color:#fff
-    style OK fill:#F39C12,color:#fff
-    style FAZLA fill:#E67E22,color:#fff
-    style ASIRI fill:#E74C3C,color:#fff
 ```
 
 | Metrik | Önerilen |

@@ -36,9 +36,6 @@ flowchart TD
         S3["Ctrl+L<br/>Ekranı temizle"]
     end
 
-    style navigation fill:#3498DB,color:#fff
-    style editing fill:#27AE60,color:#fff
-    style special fill:#E67E22,color:#fff
 ```
 
 ### Temel Kısayol Referans Tablosu
@@ -74,11 +71,6 @@ flowchart TD
     OPTIONS --> D["d<br/>Her zaman izin ver (settings'e ekle)"]
     OPTIONS --> N["n / Esc Esc<br/>Reddet"]
 
-    style PROMPT fill:#F39C12,color:#fff
-    style Y fill:#27AE60,color:#fff
-    style A fill:#3498DB,color:#fff
-    style D fill:#2C3E50,color:#fff
-    style N fill:#E74C3C,color:#fff
 ```
 
 | Kısayol | İşlev | Kalıcılık |
@@ -98,8 +90,6 @@ Uzun mesajlar veya kod blokları girmek için çok satırlı giriş modunu kulla
 flowchart LR
     SINGLE["Tek Satır<br/>Enter = Gönder"] --> MULTI["Çok Satır<br/>Shift+Enter = Yeni satır<br/>Enter = Gönder"]
 
-    style SINGLE fill:#3498DB,color:#fff
-    style MULTI fill:#27AE60,color:#fff
 ```
 
 ### Çok Satırlı Giriş Örneği
@@ -167,8 +157,6 @@ flowchart TD
         J2["Özelleştirilebilir<br/>Keymap ayarlarından"]
     end
 
-    style vscode fill:#007ACC,color:#fff
-    style jetbrains fill:#FE315D,color:#fff
 ```
 
 ### VS Code Kısayolları

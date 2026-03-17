@@ -38,7 +38,6 @@ flowchart TD
     MATCH -->|"src/api/users.ts"| R3
     MATCH -->|"Her dosya"| R4
 
-    style rules_dir fill:#f0f0ff
 ```
 
 ---
@@ -64,8 +63,6 @@ flowchart TD
     ALWAYS --> LOAD_RULE
     LOAD_RULE --> CONTEXT["Bağlama ekle"]
 
-    style LOAD_RULE fill:#27AE60,color:#fff
-    style SKIP fill:#95A5A6,color:#fff
 ```
 
 ---
@@ -254,9 +251,6 @@ flowchart TD
     claude_md -.->|"Genel bağlam<br/>sağlar"| CONTEXT["Tam Bağlam"]
     rules -.->|"Spesifik kurallar<br/>ekler"| CONTEXT
 
-    style claude_md fill:#4A90D9,color:#fff
-    style rules fill:#F39C12,color:#fff
-    style CONTEXT fill:#27AE60,color:#fff
 ```
 
 | Nereye Yazmalı? | CLAUDE.md | .claude/rules/*.md |

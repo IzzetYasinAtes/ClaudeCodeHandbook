@@ -29,10 +29,6 @@ flowchart TD
     END -.->|"--resume"| RESUME_PICK["Belirli oturuma<br/>devam et"]
     END -.->|"Yeni oturum"| START
 
-    style START fill:#4A90D9,color:#fff
-    style END fill:#95A5A6,color:#fff
-    style RESUME_LATEST fill:#27AE60,color:#fff
-    style RESUME_PICK fill:#F39C12,color:#fff
 ```
 
 ---
@@ -61,8 +57,6 @@ flowchart LR
 
     cold -.->|"--continue ile<br/>önlenebilir"| warm
 
-    style C5 fill:#E74C3C,color:#fff
-    style W3 fill:#27AE60,color:#fff
 ```
 
 | Senaryo | Token Maliyeti | Açıklama |
@@ -171,10 +165,6 @@ flowchart TD
 
     Q2 -->|"Zaten oturumdayım"| REPL_RESUME["/resume<br/>REPL içi geçiş"]
 
-    style CONTINUE fill:#27AE60,color:#fff
-    style RESUME fill:#4A90D9,color:#fff
-    style SESSION_ID fill:#9B59B6,color:#fff
-    style REPL_RESUME fill:#F39C12,color:#fff
 ```
 
 | Yöntem | Kullanım | Senaryo |
@@ -269,7 +259,6 @@ flowchart LR
     S2 -->|"PLAN.md<br/>güncellenir"| FILE
     FILE -->|"PLAN.md<br/>okunur"| S3["Oturum 3<br/>(Adım 2 uygula)"]
 
-    style FILE fill:#F39C12,color:#fff
 ```
 
 ---

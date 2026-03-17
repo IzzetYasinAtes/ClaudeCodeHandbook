@@ -28,11 +28,6 @@ flowchart TD
 
     SYS --> MEM --> CONV --> TOOL --> FREE
 
-    style SYS fill:#95A5A6,color:#fff
-    style MEM fill:#3498DB,color:#fff
-    style CONV fill:#F39C12,color:#fff
-    style TOOL fill:#E67E22,color:#fff
-    style FREE fill:#27AE60,color:#fff
 ```
 
 ---
@@ -54,11 +49,6 @@ flowchart LR
 
     G1 --> G2 --> G3 --> G4 --> G5
 
-    style G1 fill:#27AE60,color:#fff
-    style G2 fill:#2ECC71,color:#fff
-    style G3 fill:#F39C12,color:#fff
-    style G4 fill:#E67E22,color:#fff
-    style G5 fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -129,10 +119,6 @@ flowchart LR
     STATUS -->|"%73-80"| ORANGE["🔶 Uyarı<br/>/compact çalıştırın"]
     STATUS -->|"> %80"| RED["🔴 Yeniden<br/>başlatın"]
 
-    style GREEN fill:#27AE60,color:#fff
-    style YELLOW fill:#F39C12,color:#fff
-    style ORANGE fill:#E67E22,color:#fff
-    style RED fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -177,8 +163,6 @@ flowchart TD
     PROCESS --> korunan
     PROCESS --> silinen
 
-    style BEFORE fill:#E74C3C,color:#fff
-    style AFTER fill:#27AE60,color:#fff
 ```
 
 ### /compact Ne Zaman Kullanılmalı?
@@ -252,12 +236,6 @@ flowchart TD
         G5["Oturum 5:<br/>CI/CD ve docs"]
     end
 
-    style OVERFLOW fill:#E74C3C,color:#fff
-    style G1 fill:#27AE60,color:#fff
-    style G2 fill:#27AE60,color:#fff
-    style G3 fill:#27AE60,color:#fff
-    style G4 fill:#27AE60,color:#fff
-    style G5 fill:#27AE60,color:#fff
 ```
 
 ### Parçalama Stratejileri
@@ -365,8 +343,6 @@ flowchart TD
     CHECK -->|"Evet"| NEW["Yeni oturum başlat<br/>--continue ile"]
     CHUNK --> PLAN["Plan dosyası oluştur<br/>Oturumlar arası bağlam"]
 
-    style DONE fill:#27AE60,color:#fff
-    style NEW fill:#E74C3C,color:#fff
 ```
 
 ---

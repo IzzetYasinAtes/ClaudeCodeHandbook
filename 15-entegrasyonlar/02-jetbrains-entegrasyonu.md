@@ -38,8 +38,6 @@ flowchart TB
     RB --> CC
     CL --> CC
 
-    style CC fill:#7C3AED,color:#fff
-    style jetbrains fill:#FFE4E6,stroke:#F43F5E
 ```
 
 ---
@@ -76,8 +74,6 @@ flowchart LR
     B --> C["'claude' yazın<br/>Enter"]
     C --> D["Claude Code<br/>oturumu başlar"]
 
-    style A fill:#F43F5E,color:#fff
-    style D fill:#10B981,color:#fff
 ```
 
 ```bash
@@ -131,8 +127,6 @@ flowchart TB
 
     context --> CC["Claude Code<br/>Zengin bağlam"]
 
-    style CC fill:#7C3AED,color:#fff
-    style context fill:#DBEAFE,stroke:#3B82F6
 ```
 
 ---
@@ -176,9 +170,6 @@ flowchart LR
         T3["Sekme 3<br/>Genel terminal<br/>(Git, build, test)"]
     end
 
-    style T1 fill:#3B82F6,color:#fff
-    style T2 fill:#10B981,color:#fff
-    style T3 fill:#F59E0B,color:#fff
 ```
 
 ---

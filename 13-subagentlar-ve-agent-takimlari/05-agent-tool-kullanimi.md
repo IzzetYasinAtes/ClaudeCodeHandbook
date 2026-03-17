@@ -25,8 +25,6 @@ flowchart TD
     WORK --> |"Sonuç"| TOOL
     TOOL --> |"Sonucu döndür"| PARENT
 
-    style TOOL fill:#E74C3C,color:#fff
-    style SUB fill:#3498DB,color:#fff
 ```
 
 ### Agent Aracının Özellikleri
@@ -398,9 +396,6 @@ flowchart TD
     RESULT --> RETURN["Sonucu ana agent'a<br/>döndür"]
     RETURN --> CLEANUP["Subagent context'ini<br/>temizle"]
 
-    style START fill:#3498DB,color:#fff
-    style LOOP fill:#E67E22,color:#fff
-    style RETURN fill:#27AE60,color:#fff
 ```
 
 ---
@@ -470,9 +465,6 @@ flowchart LR
         F1["Agent 1<br/>Dosya yaz"] --> F2["Dosya<br/>sistemi"] --> F3["Agent 2<br/>Dosya oku"]
     end
 
-    style direct fill:#dbeafe,stroke:#3b82f6
-    style chain fill:#d4edda,stroke:#28a745
-    style file fill:#fff3cd,stroke:#ffc107
 ```
 
 ---
@@ -579,7 +571,6 @@ flowchart TD
     FORMAT --> STRUCTURED["Yapılandırılmış<br/>rapor (JSON)"]
     FORMAT --> SUMMARY["Özet çıkarma<br/>(LLM ile)"]
 
-    style MERGE fill:#E67E22,color:#fff
 ```
 
 ```python
@@ -758,7 +749,6 @@ flowchart TD
         T5["🎯 Tek sorumluluk<br/>Her agent tek konuya"]
     end
 
-    style tips fill:#d4edda,stroke:#28a745
 ```
 
 | Strateji | Etki | Açıklama |

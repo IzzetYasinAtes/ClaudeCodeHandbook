@@ -36,9 +36,6 @@ flowchart LR
 
     E1 --> M1 --> A1
 
-    style EVENT fill:#3498DB,color:#fff
-    style MATCHER fill:#F39C12,color:#fff
-    style ACTION fill:#27AE60,color:#fff
 ```
 
 ### Üç Bileşen Detaylı
@@ -203,9 +200,6 @@ flowchart LR
     C -->|Hayır| E["Hook atlanır"]
     D --> F["Dosya<br/>formatlandı ✅"]
 
-    style A fill:#3498DB,color:#fff
-    style D fill:#27AE60,color:#fff
-    style F fill:#27AE60,color:#fff
 ```
 
 ---
@@ -284,8 +278,6 @@ flowchart TB
         H1 --> H3
     end
 
-    style manuel fill:#FADBD8,stroke:#E74C3C
-    style hooks fill:#D5F5E3,stroke:#27AE60
 ```
 
 ---

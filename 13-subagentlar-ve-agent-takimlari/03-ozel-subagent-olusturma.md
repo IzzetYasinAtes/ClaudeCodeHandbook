@@ -43,12 +43,6 @@ flowchart TD
     AGENTS --> A4["security-auditor.md"]
     AGENTS --> A5["db-migration.md"]
 
-    style AGENTS fill:#E67E22,color:#fff
-    style A1 fill:#fff3cd,stroke:#ffc107
-    style A2 fill:#fff3cd,stroke:#ffc107
-    style A3 fill:#fff3cd,stroke:#ffc107
-    style A4 fill:#fff3cd,stroke:#ffc107
-    style A5 fill:#fff3cd,stroke:#ffc107
 ```
 
 ---
@@ -111,8 +105,6 @@ flowchart LR
     frontmatter --> |"Yapılandırma"| AGENT["🔧 Özel Subagent"]
     body --> |"Davranış"| AGENT
 
-    style frontmatter fill:#dbeafe,stroke:#3b82f6
-    style body fill:#d4edda,stroke:#28a745
 ```
 
 ---
@@ -525,8 +517,6 @@ flowchart TD
         A4["Pahalı model gereksiz kullanımı"]
     end
 
-    style best fill:#d4edda,stroke:#28a745
-    style avoid fill:#f8d7da,stroke:#dc3545
 ```
 
 | Uygulama | Açıklama |

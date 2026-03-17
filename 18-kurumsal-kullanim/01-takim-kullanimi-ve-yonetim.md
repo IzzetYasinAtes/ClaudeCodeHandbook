@@ -28,10 +28,6 @@ flowchart TD
     RULES --> PERMS --> ONBOARD --> BEST
     BEST -->|Geri bildirim| RULES
 
-    style RULES fill:#3498DB,color:#fff
-    style PERMS fill:#E74C3C,color:#fff
-    style ONBOARD fill:#27AE60,color:#fff
-    style BEST fill:#F39C12,color:#fff
 ```
 
 ---
@@ -86,10 +82,6 @@ flowchart TD
 
     FE --> COMP["📁 frontend/components/<br/>CLAUDE.md<br/>Komponent kuralları"]
 
-    style ROOT fill:#3498DB,color:#fff
-    style FE fill:#27AE60,color:#fff
-    style BE fill:#E67E22,color:#fff
-    style INFRA fill:#9B59B6,color:#fff
 ```
 
 ---
@@ -117,9 +109,6 @@ flowchart TD
 
     project --> personal --> managed
 
-    style project fill:#3498DB,color:#fff
-    style personal fill:#27AE60,color:#fff
-    style managed fill:#E74C3C,color:#fff
 ```
 
 ### Önerilen Proje İzinleri
@@ -176,9 +165,6 @@ flowchart TD
     TERMINAL --> TEST["6. Test Oturumu<br/>İlk Claude Code deneyimi"]
     TEST --> GUIDE["7. Rehber Paylaş<br/>Best practices dokümanı"]
 
-    style JOIN fill:#3498DB,color:#fff
-    style TEST fill:#27AE60,color:#fff
-    style GUIDE fill:#F39C12,color:#fff
 ```
 
 ### Adım Adım Onboarding
@@ -308,11 +294,6 @@ flowchart TD
     LIMITS --> DAILY["Günlük limit"]
     LIMITS --> MONTHLY["Aylık limit"]
 
-    style ADMIN fill:#8E44AD,color:#fff
-    style USERS fill:#3498DB,color:#fff
-    style LIMITS fill:#E74C3C,color:#fff
-    style POLICIES fill:#F39C12,color:#fff
-    style ANALYTICS fill:#27AE60,color:#fff
 ```
 
 ---

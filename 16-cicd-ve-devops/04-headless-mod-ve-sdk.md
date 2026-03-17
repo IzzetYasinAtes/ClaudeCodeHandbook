@@ -33,9 +33,6 @@ flowchart TB
     PY --> features
     TS --> features
 
-    style CLI fill:#22C55E,color:#fff
-    style PY fill:#3776AB,color:#fff
-    style TS fill:#3178C6,color:#fff
 ```
 
 ---
@@ -340,8 +337,6 @@ flowchart TB
     sources --> SS["setting_sources<br/>API"]
     SS --> AGENT["Claude Code<br/>Agent"]
 
-    style SS fill:#7C3AED,color:#fff
-    style AGENT fill:#10B981,color:#fff
 ```
 
 ### Python'da setting_sources

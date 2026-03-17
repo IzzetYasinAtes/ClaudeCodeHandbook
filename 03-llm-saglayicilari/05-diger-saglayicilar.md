@@ -22,12 +22,6 @@ flowchart TD
     D --> CO["Cohere 🇨🇦<br/>Kurumsal RAG"]
     D --> YI["01.AI Yi 🇨🇳<br/>Multimodal"]
 
-    style DS fill:#4ecdc4,color:#fff
-    style QW fill:#ff6b35,color:#fff
-    style MI fill:#7c3aed,color:#fff
-    style PH fill:#0078d4,color:#fff
-    style CO fill:#39d353,color:#fff
-    style YI fill:#e63946,color:#fff
 ```
 
 ---
@@ -62,8 +56,6 @@ flowchart TD
 
     CODER --> COD["Coder V3<br/>(Kod uzmanı)"]
 
-    style R1 fill:#4ecdc4,color:#fff
-    style V32 fill:#4ecdc4,color:#fff
 ```
 
 ### DeepSeek-R1: Reasoning Devrimi
@@ -149,8 +141,6 @@ flowchart TD
     QC --> QC_7["Coder 7B"]
     QC --> QC_32["Coder 32B ⭐<br/>(Kod benchmark lideri)"]
 
-    style Q35_122 fill:#ff6b35,color:#fff
-    style QC_32 fill:#ff6b35,color:#fff
 ```
 
 ### Qwen 3.5-122B
@@ -223,7 +213,6 @@ flowchart TD
     KAPALI --> MC["Codestral<br/>(Kod uzmanı)"]
     KAPALI --> MN["Mistral NeMo<br/>(NVIDIA işbirliği)"]
 
-    style ML fill:#7c3aed,color:#fff
 ```
 
 ### Mistral Large 2
@@ -288,7 +277,6 @@ flowchart LR
 
     P1 --> P2 --> P3 --> P4
 
-    style P4 fill:#0078d4,color:#fff
 ```
 
 ### Phi-4

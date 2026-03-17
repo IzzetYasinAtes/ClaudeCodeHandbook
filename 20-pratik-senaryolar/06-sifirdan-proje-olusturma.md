@@ -25,9 +25,6 @@ flowchart TD
     H --> I["Test<br/>Unit ve integration"]
     I --> J["CI/CD<br/>GitHub Actions"]
     J --> K["Deploy<br/>Production yayınlama"]
-
-    style A fill:#F5B041,color:#000
-    style K fill:#27AE60,color:#fff
 ```
 
 ---

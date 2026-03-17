@@ -34,8 +34,6 @@ flowchart TB
     CC --> PR
     CC -->|"Durum güncelleme"| TH
 
-    style slack fill:#4A154B,color:#fff
-    style CC fill:#7C3AED,color:#fff
 ```
 
 ---
@@ -52,8 +50,6 @@ flowchart LR
     D --> E["İzinleri<br/>onaylayın"]
     E --> F["✅ Kurulum<br/>tamamlandı"]
 
-    style A fill:#3B82F6,color:#fff
-    style F fill:#10B981,color:#fff
 ```
 
 ### Adım 2: Kanal Yapılandırması
@@ -188,10 +184,6 @@ flowchart TB
     A5 --> SL["Slack'e bildir:<br/>🔗 PR #89 oluşturuldu"]
     A5 --> PR["GitHub PR #89"]
 
-    style ISS fill:#EF4444,color:#fff
-    style CC fill:#7C3AED,color:#fff
-    style SL fill:#4A154B,color:#fff
-    style PR fill:#10B981,color:#fff
 ```
 
 Slack'te yazmanız gereken tek mesaj:
@@ -263,7 +255,6 @@ flowchart TB
 
     S1 --> S2 --> S3 --> S4
 
-    style security fill:#FEF3C7,stroke:#F59E0B
 ```
 
 | Güvenlik Ayarı | Açıklama |

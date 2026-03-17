@@ -197,8 +197,6 @@ flowchart TD
     VERIFY --> LOGIN["claude login"]
     LOGIN --> DONE(["Kurulum tamam ✅"])
 
-    style START fill:#4A90D9,color:#fff
-    style DONE fill:#27AE60,color:#fff
 ```
 
 ---

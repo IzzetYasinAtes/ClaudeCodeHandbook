@@ -117,11 +117,6 @@ flowchart TD
 
     HOOKS --> HK1["pre-push-test.json"]
 
-    style ROOT fill:#f5f5f5,stroke:#9e9e9e
-    style PLUGIN_DIR fill:#fff9c4,stroke:#f9a825
-    style SKILLS fill:#e8f5e9,stroke:#4caf50
-    style AGENTS fill:#e3f2fd,stroke:#2196f3
-    style HOOKS fill:#fce4ec,stroke:#e91e63
 ```
 
 ```
@@ -197,8 +192,6 @@ flowchart TD
     OPTIONAL --> O4["repository: string<br/>Repo URL'si"]
     OPTIONAL --> O5["keywords: string[]<br/>Arama etiketleri"]
 
-    style REQUIRED fill:#ffcdd2,stroke:#e53935
-    style OPTIONAL fill:#c8e6c9,stroke:#43a047
 ```
 
 ### 3.2 — Skill'leri Yazma
@@ -449,7 +442,6 @@ flowchart TD
     T5 -->|"Hayır"| FIX5["Hook event adını kontrol et"]
     T6 -->|"Hayır"| FIX6["settings.json kontrol et"]
 
-    style PASS fill:#d4edda,stroke:#28a745
 ```
 
 ---
@@ -527,9 +519,6 @@ flowchart TD
     UPDATE_JSON --> TEST_NEW["Tekrar test et"]
     TEST_NEW --> PUBLISH_NEW["Yeni versiyon yayınla<br/>/plugin publish"]
 
-    style PATCH fill:#d4edda,stroke:#28a745
-    style MINOR fill:#fff3cd,stroke:#ffc107
-    style MAJOR fill:#f8d7da,stroke:#dc3545
 ```
 
 ### Semantic Versioning Kuralları
@@ -710,8 +699,6 @@ flowchart TD
     PUBLISH --> MAINTAIN["Bakım<br/>Bug fix + yeni özellik"]
     MAINTAIN --> DEV
 
-    style PUBLISH fill:#d4edda,stroke:#28a745
-    style LOCAL_TEST fill:#e3f2fd,stroke:#2196f3
 ```
 
 ---

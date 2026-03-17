@@ -35,8 +35,6 @@ flowchart LR
         A5 -->|"Evet"| A6["Sonuç sunar"]
     end
 
-    style chatbot fill:#ffe0e0
-    style agent fill:#e0ffe0
 ```
 
 | Özellik | Chatbot | AI Agent |
@@ -189,12 +187,6 @@ flowchart TD
     E --> A
     D -->|"Evet"| F["📦 RESULT<br/>(Sonuç)"]
 
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#FF9800,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style E fill:#F44336,color:#fff
-    style F fill:#4CAF50,color:#fff
 ```
 
 ### Döngünün Her Adımı
@@ -270,11 +262,6 @@ flowchart LR
     
     E -->|"Revizyon gerekli"| B
     
-    style A fill:#E3F2FD
-    style B fill:#FFF3E0
-    style C fill:#E8F5E9
-    style D fill:#F3E5F5
-    style E fill:#FFEBEE
 ```
 
 ### 1. Task Input (Görev Girdisi)
@@ -457,10 +444,6 @@ flowchart LR
         A["Tamamen Manuel<br/>(İnsan yapar)"] ---- B["Copilot Mode<br/>(AI öneri yapar)"] ---- C["Supervised Agent<br/>(AI yapar,<br/>insan onaylar)"] ---- D["Autonomous Agent<br/>(AI yapar,<br/>insan inceler)"]
     end
 
-    style A fill:#ffcccc
-    style B fill:#ffffcc
-    style C fill:#ccffcc
-    style D fill:#ccccff
 ```
 
 | Seviye | Açıklama | Risk | Kullanım Alanı |

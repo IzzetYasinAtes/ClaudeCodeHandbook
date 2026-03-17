@@ -59,11 +59,6 @@ flowchart TB
     SL --> CC
     RC --> CC
     WB --> CC
-
-    style CC fill:#7C3AED,color:#fff
-    style ide fill:#DBEAFE,stroke:#3B82F6
-    style platform fill:#D1FAE5,stroke:#10B981
-    style remote fill:#FEF3C7,stroke:#F59E0B
 ```
 
 ## Ön Koşullar

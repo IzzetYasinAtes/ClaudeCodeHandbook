@@ -30,10 +30,6 @@ flowchart TD
 
     PARENT --> |"Birleşik sonuç"| USER
 
-    style PARENT fill:#4A90D9,color:#fff
-    style SUB1 fill:#E67E22,color:#fff
-    style SUB2 fill:#E67E22,color:#fff
-    style SUB3 fill:#E67E22,color:#fff
 ```
 
 ---
@@ -62,8 +58,6 @@ flowchart LR
     P2 --> |"Sadece görev tanımı"| S1
     S4 --> |"Sadece özet sonuç"| P3
 
-    style parent fill:#d4edda,stroke:#28a745
-    style sub fill:#fff3cd,stroke:#ffc107
 ```
 
 **Neden önemli?** Bir subagent 50 dosya okuyup binlerce satır kod analiz edebilir, ancak ana agent'ın context window'una yalnızca birkaç paragraflık sonuç eklenir.
@@ -86,8 +80,6 @@ flowchart TD
 
     JOIN --> RESULT["Toplam: ~45 sn<br/>(Seri olsaydı: ~95 sn)"]
 
-    style FORK fill:#3498DB,color:#fff
-    style JOIN fill:#27AE60,color:#fff
 ```
 
 ### 3. Specialized Instructions (Özelleştirilmiş Talimatlar)
@@ -126,8 +118,6 @@ flowchart LR
 
     full --> |"allowedTools:<br/>Read, Glob, Grep"| restricted
 
-    style full fill:#d4edda,stroke:#28a745
-    style restricted fill:#fff3cd,stroke:#ffc107
 ```
 
 ---
@@ -150,9 +140,6 @@ flowchart TD
 
     PROGRAMMATIC --> PR1["Claude SDK ile<br/>AgentDefinition<br/>nesnesi"]
 
-    style BUILTIN fill:#3498DB,color:#fff
-    style FILESYSTEM fill:#E67E22,color:#fff
-    style PROGRAMMATIC fill:#9B59B6,color:#fff
 ```
 
 ### 1. Dahili Subagent'lar (Built-in Subagents)
@@ -256,9 +243,6 @@ flowchart TD
     Q3 --> |"Evet"| SINGLE_SUB["Tek subagent<br/>devret"]
     Q3 --> |"Hayır"| DIRECT
 
-    style PARALLEL fill:#27AE60,color:#fff
-    style SINGLE_SUB fill:#E67E22,color:#fff
-    style DIRECT fill:#3498DB,color:#fff
 ```
 
 ---
@@ -335,8 +319,6 @@ flowchart LR
         SE["❌ Sadece ana agent'a rapor verir"]
     end
 
-    style parent_ctx fill:#d4edda,stroke:#28a745
-    style sub_ctx fill:#dbeafe,stroke:#3b82f6
 ```
 
 | Özellik | Ana Agent | Subagent |

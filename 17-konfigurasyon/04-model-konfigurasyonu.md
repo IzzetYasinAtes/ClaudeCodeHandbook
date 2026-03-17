@@ -26,10 +26,6 @@ flowchart TD
     ALIAS -->|Evet| USE_ALIAS["Alias'ın karşılığı<br/>modeli kullan"]
     ALIAS -->|Hayır| DEFAULT["Varsayılan modeli<br/>kullan (Sonnet)"]
 
-    style USE_FLAG fill:#27AE60,color:#fff
-    style USE_ENV fill:#3498DB,color:#fff
-    style USE_ALIAS fill:#F39C12,color:#fff
-    style DEFAULT fill:#95A5A6,color:#fff
 ```
 
 ### Model Belirleme Yöntemleri
@@ -60,10 +56,6 @@ flowchart LR
     DEFAULT_ALIAS --> SONNET["claude-sonnet-4-20250514"]
     PLAN_ALIAS --> OPUS["claude-opus-4-20250514"]
 
-    style DEFAULT_ALIAS fill:#3498DB,color:#fff
-    style PLAN_ALIAS fill:#F39C12,color:#fff
-    style SONNET fill:#2C3E50,color:#fff
-    style OPUS fill:#8E44AD,color:#fff
 ```
 
 | Alias | Varsayılan Model | Kullanım Alanı |
@@ -136,9 +128,6 @@ flowchart LR
     MEDIUM --> M_USE["Genel kodlama<br/>Hata düzeltme<br/>Refactoring"]
     HIGH --> H_USE["Mimari tasarım<br/>Karmaşık algoritmalar<br/>Güvenlik analizi"]
 
-    style LOW fill:#27AE60,color:#fff
-    style MEDIUM fill:#F39C12,color:#fff
-    style HIGH fill:#E74C3C,color:#fff
 ```
 
 | Seviye | Token Kullanımı | Yanıt Süresi | Ne Zaman Kullanılır |
@@ -187,10 +176,6 @@ flowchart TD
     COMPLEX -->|Evet| ARCH["Model: Opus (plan)<br/>Thinking: high<br/><br/>Örnek: Sistem tasarımı,<br/>refactoring planı"]
     COMPLEX -->|Hayır| DEEP["Model: Sonnet<br/>Thinking: high<br/><br/>Örnek: Büyük refactoring,<br/>karmaşık algoritma"]
 
-    style SIMPLE fill:#27AE60,color:#fff
-    style MEDIUM_TASK fill:#F39C12,color:#fff
-    style ARCH fill:#8E44AD,color:#fff
-    style DEEP fill:#E74C3C,color:#fff
 ```
 
 ### Otomatik Model Geçiş Senaryosu
@@ -271,10 +256,6 @@ flowchart TD
     BEDROCK --> CLAUDE
     VERTEX --> CLAUDE
 
-    style DIRECT fill:#E74C3C,color:#fff
-    style BEDROCK fill:#FF9900,color:#fff
-    style VERTEX fill:#4285F4,color:#fff
-    style CLAUDE fill:#2C3E50,color:#fff
 ```
 
 ---

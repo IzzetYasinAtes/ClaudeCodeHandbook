@@ -29,12 +29,6 @@ flowchart TD
     HOOKS --> POST["PostToolUse"]
     HOOKS --> SESSION["SessionStart / Stop"]
 
-    style ROOT fill:#2C3E50,color:#fff
-    style PERM fill:#3498DB,color:#fff
-    style HOOKS fill:#E67E22,color:#fff
-    style ENV fill:#27AE60,color:#fff
-    style MCP fill:#9B59B6,color:#fff
-    style MISC fill:#1ABC9C,color:#fff
 ```
 
 ---
@@ -240,8 +234,6 @@ flowchart LR
 
     tools --> hooks_diagram
 
-    style tools fill:#3498DB,color:#fff
-    style hooks_diagram fill:#27AE60,color:#fff
 ```
 
 ```json
@@ -404,9 +396,6 @@ flowchart LR
     VALIDATE -->|Hayır| ERROR["❌ Hata mesajı<br/>gösterilir"]
     MERGE --> READY["✅ Claude Code<br/>Hazır"]
 
-    style START fill:#3498DB,color:#fff
-    style READY fill:#27AE60,color:#fff
-    style ERROR fill:#E74C3C,color:#fff
 ```
 
 ---

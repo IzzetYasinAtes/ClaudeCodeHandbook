@@ -26,9 +26,6 @@ flowchart TD
     CHECK -->|"Evet"| RESPOND["5. Yanıt<br/>(Response)"]
     RESPOND --> END(["Kullanıcıya<br/>sonuç gösterilir"])
 
-    style START fill:#4A90D9,color:#fff
-    style END fill:#27AE60,color:#fff
-    style CHECK fill:#F39C12,color:#fff
 ```
 
 ### Adım Adım Açıklama
@@ -201,10 +198,6 @@ flowchart TD
     READONLY ~~~ NOTE1["Örnekler:<br/>Read, Glob, Grep,<br/>LS, TodoRead"]
     ALLOW ~~~ NOTE2["Örnekler:<br/>Önceden onaylanmış<br/>komutlar"]
 
-    style READONLY fill:#27AE60,color:#fff
-    style ALLOW fill:#27AE60,color:#fff
-    style DENY fill:#E74C3C,color:#fff
-    style ASK fill:#F39C12,color:#fff
 ```
 
 ### İzin Kategorileri

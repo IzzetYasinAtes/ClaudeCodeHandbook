@@ -57,9 +57,6 @@ flowchart TD
     C --> C1["Zararlı, tehlikeli veya<br/>ayrımcı içerik üretme"]
     D --> D1["Bilmediğini kabul et<br/>Yanıltıcı bilgi verme"]
 
-    style B fill:#4a9eff,color:#fff
-    style C fill:#ff6b6b,color:#fff
-    style D fill:#51cf66,color:#fff
 ```
 
 Bu üç ilke birbiriyle bazen çelişebilir. Örneğin, "yararlı" olmak bazen "zararsız" olmakla çatışabilir. Constitutional AI, bu dengeyi sağlamak için geliştirilmiştir.
@@ -91,7 +88,6 @@ flowchart TD
     B --> C
     E --> F
 
-    style asama2 fill:#f0f4ff,stroke:#4a9eff
 ```
 
 > **RLAIF** = Reinforcement Learning from AI Feedback (yapay zeka geri bildiriminden pekiştirmeli öğrenme). Geleneksel RLHF'den (insan geri bildirimi) farklı olarak, modelin kendisi geri bildirim verir.
@@ -123,10 +119,6 @@ flowchart LR
     ASL2 -->|"Red teaming<br/>Ağır testler"| ASL3
     ASL3 -->|"Harici denetim<br/>Hükümet işbirliği"| ASL4
 
-    style ASL1 fill:#51cf66,color:#fff
-    style ASL2 fill:#ffd43b,color:#333
-    style ASL3 fill:#ff922b,color:#fff
-    style ASL4 fill:#ff6b6b,color:#fff
 ```
 
 | Seviye | Yetenek | Güvenlik Gereksinimi |

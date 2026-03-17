@@ -33,8 +33,6 @@ flowchart TD
     PF --> MERGE["Birleştirilmiş<br/>MCP Sunucu Listesi"]
     UF --> MERGE
 
-    style proje fill:#d4edda,stroke:#28a745
-    style kullanici fill:#fff3cd,stroke:#ffc107
 ```
 
 ### Kapsam Karşılaştırması
@@ -221,8 +219,6 @@ flowchart TD
     USE --> END["Oturum Sona<br/>Erdi"]
     END --> SHUTDOWN["Sunucu Süreci<br/>Kapatılıyor"]
 
-    style READY fill:#d4edda,stroke:#28a745
-    style ERROR fill:#f8d7da,stroke:#dc3545
 ```
 
 ---

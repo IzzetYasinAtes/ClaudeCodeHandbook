@@ -27,9 +27,6 @@ flowchart TD
     INPUT --> COST["💰 Toplam Maliyet<br/>input_tokens × birim_fiyat +<br/>output_tokens × birim_fiyat"]
     OUTPUT --> COST
 
-    style INPUT fill:#3498DB,color:#fff
-    style OUTPUT fill:#E67E22,color:#fff
-    style COST fill:#E74C3C,color:#fff
 ```
 
 ### Model Bazlı Fiyatlandırma (Referans)
@@ -69,9 +66,6 @@ flowchart LR
     WORK --> COST_CMD["/cost<br/>komutu"]
     COST_CMD --> REPORT["Maliyet Raporu<br/>- Token dağılımı<br/>- Tahmini ücret<br/>- Cache durumu"]
 
-    style SESSION fill:#3498DB,color:#fff
-    style COST_CMD fill:#F39C12,color:#fff
-    style REPORT fill:#27AE60,color:#fff
 ```
 
 ---
@@ -89,9 +83,6 @@ flowchart TD
     EVAL -->|Orta| SONNET["Sonnet<br/>💰 $0.50-2/oturum<br/><br/>Genel geliştirme,<br/>bug fix, feature"]
     EVAL -->|Karmaşık| OPUS["Opus<br/>💰 $5-20/oturum<br/><br/>Mimari tasarım,<br/>karmaşık analiz"]
 
-    style HAIKU fill:#27AE60,color:#fff
-    style SONNET fill:#F39C12,color:#fff
-    style OPUS fill:#E74C3C,color:#fff
 ```
 
 **Tavsiye:** Günlük geliştirmenin %80'i Sonnet ile yapılabilir. Opus'u yalnızca plan modu ve mimari kararlar için kullanın.
@@ -121,8 +112,6 @@ flowchart TD
         S3 --> S4["Yeni oturum<br/>Gerekirse başla"]
     end
 
-    style problem fill:#FADBD8,stroke:#E74C3C
-    style solution fill:#D5F5E3,stroke:#27AE60
 ```
 
 **Pratik İpuçları:**
@@ -174,8 +163,6 @@ flowchart LR
 
     cache --> tips
 
-    style FIRST fill:#E74C3C,color:#fff
-    style CACHED fill:#27AE60,color:#fff
 ```
 
 ### Strateji 5: Preprocessing Hook'ları
@@ -221,9 +208,6 @@ flowchart TD
     ORG_LIMIT --> ALERT
     ALERT --> BLOCK["🚫 %100'de engelle"]
 
-    style ADMIN fill:#8E44AD,color:#fff
-    style ALERT fill:#F39C12,color:#fff
-    style BLOCK fill:#E74C3C,color:#fff
 ```
 
 ### Limit Konfigürasyonu

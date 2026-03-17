@@ -27,7 +27,6 @@ flowchart TB
         CN["Connectors<br/>Dış servis bağlantıları"]
     end
 
-    style desktop fill:#F3E8FF,stroke:#7C3AED
 ```
 
 ---
@@ -52,8 +51,6 @@ flowchart LR
     C --> D["Giriş yapın<br/>(Anthropic hesabı)"]
     D --> E["Proje klasörü<br/>seçin"]
 
-    style A fill:#3B82F6,color:#fff
-    style E fill:#10B981,color:#fff
 ```
 
 ---
@@ -82,10 +79,6 @@ flowchart TB
     S2 -->|"PR oluştur"| PR2["PR #46"]
     S3 -->|"PR oluştur"| PR3["PR #47"]
 
-    style REPO fill:#3B82F6,color:#fff
-    style S1 fill:#10B981,color:#fff
-    style S2 fill:#F59E0B,color:#fff
-    style S3 fill:#EF4444,color:#fff
 ```
 
 Her oturum için:
@@ -153,8 +146,6 @@ flowchart LR
     CC -->|"Kod güncelle"| PREV
     PREV -->|"Anlık yenileme"| WEB
 
-    style CC fill:#7C3AED,color:#fff
-    style WEB fill:#10B981,color:#fff
 ```
 
 Desteklenen framework'ler:
@@ -189,8 +180,6 @@ flowchart TB
     S2 -->|"Otomatik düzelt"| CC["Claude Code<br/>Düzeltme uygula"]
     S3 -->|"Çakışma çöz"| CC
 
-    style PR fill:#3B82F6,color:#fff
-    style CC fill:#7C3AED,color:#fff
 ```
 
 ---
@@ -212,9 +201,6 @@ flowchart LR
     BM -->|"Okuma serbest<br/>yazma onaylı"| MED["Orta Risk<br/>Günlük geliştirme"]
     AM -->|"Tüm işlemler<br/>otomatik"| HIGH["Yüksek Risk<br/>Güvenilir görevler"]
 
-    style SM fill:#10B981,color:#fff
-    style BM fill:#F59E0B,color:#fff
-    style AM fill:#EF4444,color:#fff
 ```
 
 | Mod | Okuma | Yazma | Terminal | Git |
@@ -288,8 +274,6 @@ flowchart TB
     PR2 --> REV
     PR3 --> REV
 
-    style START fill:#3B82F6,color:#fff
-    style REV fill:#10B981,color:#fff
 ```
 
 1. Desktop app'te 3 yeni oturum açın

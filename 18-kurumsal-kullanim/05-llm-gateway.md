@@ -39,11 +39,6 @@ flowchart LR
 
     clients --> gateway --> providers
 
-    style ROUTE fill:#3498DB,color:#fff
-    style AUTH fill:#E74C3C,color:#fff
-    style RATE fill:#F39C12,color:#fff
-    style LOG fill:#27AE60,color:#fff
-    style CACHE fill:#9B59B6,color:#fff
 ```
 
 ### Gateway Avantajları
@@ -80,9 +75,6 @@ flowchart LR
     CC["Claude Code<br/>ANTHROPIC_BASE_URL=<br/>https://gateway/v1"] --> GW["LLM Gateway<br/>https://gateway/v1"]
     GW --> API["Anthropic API<br/>https://api.anthropic.com"]
 
-    style CC fill:#3498DB,color:#fff
-    style GW fill:#F39C12,color:#fff
-    style API fill:#27AE60,color:#fff
 ```
 
 ---
@@ -99,9 +91,6 @@ flowchart TD
         KONG["Kong AI Gateway<br/>Kong tabanlı<br/>Plugin ekosistemi"]
     end
 
-    style LITELLM fill:#3498DB,color:#fff
-    style PORTKEY fill:#27AE60,color:#fff
-    style KONG fill:#E67E22,color:#fff
 ```
 
 ### LiteLLM Proxy Kurulumu
@@ -176,11 +165,6 @@ flowchart TD
     GW --> |"Failover"| VERTEX["Google Vertex AI<br/>(Yedek)"]
     GW --> |"Son çare"| DIRECT["Anthropic API<br/>(Doğrudan)"]
 
-    style CC fill:#3498DB,color:#fff
-    style GW fill:#F39C12,color:#fff
-    style BEDROCK fill:#FF9900,color:#fff
-    style VERTEX fill:#4285F4,color:#fff
-    style DIRECT fill:#27AE60,color:#fff
 ```
 
 ---
@@ -204,9 +188,6 @@ flowchart TD
 
     GW --> API["Anthropic API<br/>Tek master key"]
 
-    style ADMIN fill:#8E44AD,color:#fff
-    style GW fill:#F39C12,color:#fff
-    style API fill:#27AE60,color:#fff
 ```
 
 ### Rate Limiting Konfigürasyonu
@@ -268,10 +249,6 @@ flowchart TD
     GW1 --> LOGS
     GW2 --> LOGS
 
-    style LB fill:#3498DB,color:#fff
-    style GW1 fill:#F39C12,color:#fff
-    style GW2 fill:#F39C12,color:#fff
-    style ANTHROPIC fill:#27AE60,color:#fff
 ```
 
 ---

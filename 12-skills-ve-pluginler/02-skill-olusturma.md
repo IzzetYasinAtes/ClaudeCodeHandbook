@@ -30,11 +30,6 @@ flowchart TD
     S3 --> S3F["SKILL.md"]
     S4 --> S4F["SKILL.md"]
 
-    style SKILLS fill:#e8f5e9,stroke:#4caf50
-    style S1F fill:#fff9c4,stroke:#f9a825
-    style S2F fill:#fff9c4,stroke:#f9a825
-    style S3F fill:#fff9c4,stroke:#f9a825
-    style S4F fill:#fff9c4,stroke:#f9a825
 ```
 
 ```
@@ -74,8 +69,6 @@ flowchart TD
     INST --> I2["Kurallar ve kısıtlamalar"]
     INST --> I3["Örnek kullanımlar"]
 
-    style META fill:#e3f2fd,stroke:#2196f3
-    style INST fill:#fff3e0,stroke:#ff9800
 ```
 
 ### Genel Format
@@ -347,8 +340,6 @@ flowchart TD
     DEPLOY --> VERIFY["Rollout kontrolü"]
     VERIFY --> SUCCESS["Deploy başarılı ✅"]
 
-    style STOP fill:#f8d7da,stroke:#dc3545
-    style SUCCESS fill:#d4edda,stroke:#28a745
 ```
 
 ---
@@ -521,8 +512,6 @@ flowchart TD
     SHARE --> FEEDBACK["Geri Bildirim Al"]
     FEEDBACK --> ITERATE
 
-    style CREATE fill:#e3f2fd,stroke:#2196f3
-    style SHARE fill:#e8f5e9,stroke:#4caf50
 ```
 
 ---

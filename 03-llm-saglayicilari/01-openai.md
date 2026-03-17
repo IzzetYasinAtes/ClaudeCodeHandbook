@@ -60,8 +60,6 @@ flowchart TD
     O --> O3["o3<br/>(Gelişmiş reasoning)"]
     O --> O4M["o4-mini<br/>(Hızlı reasoning)"]
 
-    style GPT54 fill:#10a37f,color:#fff
-    style O3 fill:#10a37f,color:#fff
 ```
 
 ### GPT Serisi — Genel Amaçlı Modeller

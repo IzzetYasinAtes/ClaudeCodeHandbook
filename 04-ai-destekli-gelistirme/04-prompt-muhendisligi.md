@@ -51,14 +51,6 @@ flowchart LR
     C -.-> G
     D -.-> H
 
-    style A fill:#ffcccc
-    style B fill:#ffe0cc
-    style C fill:#ccffcc
-    style D fill:#ccccff
-    style E fill:#ffcccc
-    style F fill:#ffe0cc
-    style G fill:#ccffcc
-    style H fill:#ccccff
 ```
 
 ---
@@ -496,13 +488,6 @@ flowchart TD
     K -->|"Evet"| L["Chain-of-Thought<br/>'Adım adım düşün'"]
     K -->|"Hayır"| M["Few-Shot +<br/>Persona-Based"]
     
-    style D fill:#e8f5e9
-    style E fill:#e3f2fd
-    style G fill:#fff3e0
-    style I fill:#f3e5f5
-    style J fill:#e8f5e9
-    style L fill:#ffebee
-    style M fill:#fce4ec
 ```
 
 ---

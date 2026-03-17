@@ -25,11 +25,6 @@ flowchart TB
         R5["🔍 Kalite Kontrolü<br/>Zamanlı analiz"]
     end
 
-    style R1 fill:#3B82F6,color:#fff
-    style R2 fill:#10B981,color:#fff
-    style R3 fill:#F59E0B,color:#fff
-    style R4 fill:#EF4444,color:#fff
-    style R5 fill:#8B5CF6,color:#fff
 ```
 
 ---
@@ -59,8 +54,6 @@ flowchart TB
     
     CREATE_PR --> COMMENT["💬 Issue'ya<br/>Yorum Yaz"]
 
-    style ISS fill:#3B82F6,color:#fff
-    style CREATE_PR fill:#10B981,color:#fff
 ```
 
 ### GitHub Actions Yapılandırması
@@ -177,8 +170,6 @@ flowchart LR
     ANALYZE --> UPDATE["Dokümantasyonu<br/>Güncelle"]
     UPDATE --> COMMIT["Commit &<br/>Push"]
 
-    style PR fill:#3B82F6,color:#fff
-    style COMMIT fill:#10B981,color:#fff
 ```
 
 ### GitHub Actions Yapılandırması
@@ -267,8 +258,6 @@ flowchart TB
     CHECK -->|Evet| PR["✅ PR Oluştur"]
     CHECK -->|Hayır| GEN
     
-    style TRIG fill:#3B82F6,color:#fff
-    style PR fill:#10B981,color:#fff
 ```
 
 ### GitHub Actions Yapılandırması
@@ -368,8 +357,6 @@ flowchart LR
     ANALYZE --> NOTES["📝 Release Notes<br/>Oluştur"]
     NOTES --> RELEASE["🚀 GitHub Release<br/>Yayınla"]
 
-    style TAG fill:#F59E0B,color:#fff
-    style RELEASE fill:#10B981,color:#fff
 ```
 
 ### GitHub Actions Yapılandırması
@@ -496,8 +483,6 @@ flowchart TB
     REPORT --> ISSUE["📋 GitHub Issue<br/>Otomasyon"]
     REPORT --> SLACK["💬 Slack<br/>Bildirim"]
 
-    style CRON fill:#8B5CF6,color:#fff
-    style REPORT fill:#10B981,color:#fff
 ```
 
 ### GitHub Actions Yapılandırması
@@ -616,10 +601,6 @@ flowchart TB
     onMerge --> weekly
     weekly --> release
 
-    style daily fill:#DBEAFE,stroke:#3B82F6
-    style onMerge fill:#D1FAE5,stroke:#10B981
-    style weekly fill:#FEF3C7,stroke:#F59E0B
-    style release fill:#E0E7FF,stroke:#6366F1
 ```
 
 ---

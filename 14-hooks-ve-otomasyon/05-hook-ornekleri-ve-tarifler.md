@@ -31,16 +31,6 @@ flowchart TD
         R10["🔐 Tarif 10<br/>Gizli Bilgi Sızıntı Koruması"]
     end
 
-    style R1 fill:#3498DB,color:#fff
-    style R2 fill:#E74C3C,color:#fff
-    style R3 fill:#1ABC9C,color:#fff
-    style R4 fill:#27AE60,color:#fff
-    style R5 fill:#9B59B6,color:#fff
-    style R6 fill:#F39C12,color:#fff
-    style R7 fill:#2ECC71,color:#fff
-    style R8 fill:#E67E22,color:#fff
-    style R9 fill:#3498DB,color:#fff
-    style R10 fill:#E74C3C,color:#fff
 ```
 
 ---
@@ -65,7 +55,6 @@ flowchart LR
     E --> H
     F --> H
 
-    style H fill:#27AE60,color:#fff
 ```
 
 ### Konfigürasyon
@@ -139,8 +128,6 @@ flowchart TD
     D -->|"rm -rf /, DROP TABLE,<br/>git push --force, mkfs..."| E["❌ Exit 1<br/>Komut engellendi"]
     D -->|"Güvenli"| F["✅ Exit 0<br/>Komut çalışabilir"]
 
-    style E fill:#E74C3C,color:#fff
-    style F fill:#27AE60,color:#fff
 ```
 
 ### Konfigürasyon
@@ -279,10 +266,6 @@ flowchart TD
     C -->|"Bash: rm, mv, chmod,<br/>git push, npm publish"| F["Exit 1<br/>❌ Otomatik reddet"]
     C -->|"Diğer"| G["Exit 2<br/>❓ Kullanıcıya sor"]
 
-    style D fill:#27AE60,color:#fff
-    style E fill:#27AE60,color:#fff
-    style F fill:#E74C3C,color:#fff
-    style G fill:#F39C12,color:#fff
 ```
 
 ### Konfigürasyon
@@ -379,8 +362,6 @@ flowchart LR
     C --> E["📊 Analiz için<br/>hazır loglar"]
     D --> E
 
-    style C fill:#27AE60,color:#fff
-    style D fill:#E74C3C,color:#fff
 ```
 
 ### Konfigürasyon
@@ -465,8 +446,6 @@ flowchart TD
     F -->|"✅ Geçti"| G["Claude'a bildir:<br/>'Testler geçti'"]
     F -->|"❌ Kaldı"| H["Claude'a bildir:<br/>'Testler kaldı, düzelt'"]
 
-    style G fill:#27AE60,color:#fff
-    style H fill:#E74C3C,color:#fff
 ```
 
 ### Konfigürasyon
@@ -538,8 +517,6 @@ flowchart TD
     H -->|❌| INSTALL["npm install<br/>çalıştır"]
     INSTALL --> OK
 
-    style OK fill:#27AE60,color:#fff
-    style WARN fill:#F39C12,color:#fff
 ```
 
 ### Konfigürasyon
@@ -816,11 +793,6 @@ flowchart TD
     Q4 -->|Evet| R4["Tarif 4: Otomatik onay<br/>Tarif 5: Kural zorlama<br/>Tarif 8: Ortam doğrulama"]
     Q4 -->|Hayır| R5["Tarif 9: Metrik<br/>ve telemetri"]
 
-    style R1 fill:#3498DB,color:#fff
-    style R2 fill:#E74C3C,color:#fff
-    style R3 fill:#1ABC9C,color:#fff
-    style R4 fill:#27AE60,color:#fff
-    style R5 fill:#9B59B6,color:#fff
 ```
 
 ---
