@@ -208,7 +208,7 @@ Claude Code, **multimodal** (çok modlu) yeteneklere sahiptir. Terminale görsel
 
 ```bash
 # Ekran görüntüsünü panoya kopyalayın (Ctrl+C / Cmd+C)
-# Terminal'de Ctrl+V ile yapıştırın
+# Terminal'de Alt+V ile yapıştırın
 
 > [Görsel yapıştırıldı: screenshot.png]
   Bu UI tasarımını React componenti olarak implemente et
