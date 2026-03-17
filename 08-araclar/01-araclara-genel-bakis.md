@@ -2,6 +2,10 @@
 
 Claude Code, görevleri yerine getirmek için **30'dan fazla dahili araç** (tool) kullanır. Her araç belirli bir işlevi yerine getirir — dosya okuma, kod çalıştırma, web'de arama yapma gibi. Claude Code, kullanıcının verdiği göreve göre hangi araçları hangi sırayla kullanacağını **otomatik olarak** belirler.
 
+> **Araçlar vs Skill'ler (Slash Komutları):** Bu bölümde anlatılan araçlar (Read, Write, Bash, CronCreate vb.) **kullanıcının doğrudan çağırabileceği komutlar değildir.** Bu araçları `/Read` veya `/CronCreate` şeklinde yazarak kullanamazsınız. Araçlar, Claude Code'un görevlerinizi yerine getirirken **kendi kararıyla arka planda** kullandığı dahili mekanizmalardır. Siz sadece doğal dilde görev verirsiniz; Claude Code hangi aracı ne zaman kullanacağını kendisi belirler.
+>
+> Kullanıcının `/` ile doğrudan çağırabildiği komutlar ise **skill** (beceri) olarak adlandırılır: `/compact`, `/loop`, `/help` gibi. Skill'ler hakkında detaylı bilgi için → [Bölüm 07 - Dahili Komutlar](../07-arayuz-ve-komutlar/05-dahili-komutlar.md).
+
 ## Ön Koşullar
 
 | Konu | Bölüm |

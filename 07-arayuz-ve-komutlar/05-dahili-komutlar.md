@@ -2,6 +2,8 @@
 
 Claude Code oturumu içinde `/` ile başlayan **slash commands** (eğik çizgi komutları) kullanarak çeşitli işlemleri hızla gerçekleştirebilirsiniz. Bu komutlar prompt olarak gönderilmez; doğrudan Claude Code'un dahili işlevlerini tetikler.
 
+> **Skill Kavramı:** Slash komutları teknik olarak birer **skill**'dir (beceri). Skill'ler, Claude Code'un önceden tanımlanmış ve `/` ile doğrudan çağrılabilen özel yetenekleridir. Araçlardan (tools) farklı olarak skill'ler **kullanıcı tarafından doğrudan tetiklenir** — örneğin `/compact`, `/loop`, `/init` gibi. Araçlar (Read, Write, Bash, CronCreate vb.) ise Claude Code'un arka planda görevleri yerine getirmek için **kendi kararıyla otomatik olarak** kullandığı dahili mekanizmalardır ve `/` ile çağrılamazlar. Araçlar hakkında detaylı bilgi için → [Bölüm 08 - Araçlar](../08-araclar/README.md).
+
 ## Ön Koşullar
 
 | Konu | Bölüm |

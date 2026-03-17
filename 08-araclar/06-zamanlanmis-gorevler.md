@@ -1,6 +1,11 @@
 # Zamanlanmış Görevler
 
-Claude Code, belirli aralıklarla veya tek seferlik olarak çalışacak görevler tanımlamanızı sağlayan **Cron** araçlarını ve tekrarlayan işlemler için **/loop** komutunu sunar. Bu araçlar durum izleme, periyodik kontroller ve otomatik hatırlatmalar için kullanılır.
+Claude Code, belirli aralıklarla veya tek seferlik olarak çalışacak görevler tanımlamanızı sağlayan **Cron** araçlarını ve tekrarlayan işlemler için **/loop** skill'ini sunar. Bu mekanizmalar durum izleme, periyodik kontroller ve otomatik hatırlatmalar için kullanılır.
+
+> **Önemli Ayrım — Cron (araç) vs /loop (skill):**
+>
+> - **Cron araçları** (CronCreate, CronDelete, CronList) birer **dahili araçtır.** Terminalde `/cron` veya `/CronCreate` şeklinde yazarak kullanamazsınız. Bu araçları Claude Code, siz doğal dilde "her 10 dakikada testleri çalıştır" gibi bir görev verdiğinizde **kendi kararıyla arka planda** çağırır.
+> - **/loop** ise bir **skill**'dir ve doğrudan `/loop` yazarak çağırabilirsiniz. Skill'ler, kullanıcının `/` ile tetikleyebildiği komutlardır; araçlar ise Claude Code'un otomatik olarak kullandığı dahili mekanizmalardır.
 
 ## Ön Koşullar
 
