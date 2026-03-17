@@ -265,20 +265,15 @@ $ claude -w feature-dashboard "Dashboard sayfasını geliştirmeye
   devam et, grafikleri ekle"
 ```
 
-```mermaid
-gitgraph
-    commit id: "main"
-    branch worktree-hotfix
-    checkout worktree-hotfix
-    commit id: "fix: login 500"
-    checkout main
-    branch worktree-feature-dashboard
-    checkout worktree-feature-dashboard
-    commit id: "feat: chart component"
-    commit id: "feat: dashboard layout"
-    checkout main
-    merge worktree-hotfix id: "merge hotfix"
-    merge worktree-feature-dashboard id: "merge feature"
+```
+main          ●───────────────────●── merge hotfix ──●── merge feature ──●
+               \                 /                  /
+worktree-      ●── fix: login ──●                  /
+hotfix              500                           /
+               \                                 /
+worktree-      ●── feat: chart ──●── feat: ─────●
+feature-           component        dashboard
+dashboard                           layout
 ```
 
 ---
